@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Button from '../components/Button.astro';
+import { useDict } from '../i18n';
+
+const lang = 'en';
+const t = useDict(lang);
+const c = t.notFound;
+---
+
+<Base lang={lang} title={c.title} description={c.description} noindex>
+  <PageHero title={c.heading} text={c.text}>
+    <div class="not-found__cta">
+      <Button href="/" block>{c.cta}</Button>
+    </div>
+  </PageHero>
+  <div class="not-found__space" aria-hidden="true"></div>
+</Base>
+
+<style>
+  .not-found__cta {
+    margin-top: 8px;
+    display: flex;
+  }
+  .not-found__space {
+    height: var(--section-y);
+  }
+</style>

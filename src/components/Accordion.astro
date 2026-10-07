@@ -1,0 +1,158 @@
+---
+import Icon from './Icon.astro';
+
+interface Item {
+  q: string;
+  a: string;
+  bullets?: string[];
+}
+interface Props {
+  items: Item[];
+  /** Unique per page; ties the items into one exclusive group. */
+  name: string;
+  /** "band": sits on the grey band, open item is a white card. "white": open item is a grey panel. */
+  surface?: 'band' | 'white';
+  id?: string;
+}
+const { items, name, surface = 'band', id } = Astro.props;
+---
+
+<div class:list={['accordion', `accordion--${surface}`]} id={id}>
+  {
+    items.map((item, i) => (
+      <details class="acc-item" name={name} open={i === 0}>
+        <summary>
+          <span class="acc-item__q">{item.q}</span>
+          <span class="acc-item__icon" aria-hidden="true">
+            <Icon name="plus" size={18} class="acc-item__plus" />
+            <Icon name="minus" size={18} class="acc-item__minus" />
+          </span>
+        </summary>
+        <div class="acc-item__body">
+          <p>{item.a}</p>
+          {item.bullets && (
+            <ul class="plain acc-item__list">
+              {item.bullets.map((b) => (
+                <li>
+                  <Icon name="check" size={16} />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </details>
+    ))
+  }
+</div>
+
+<style>
+  /* Native <details name>: works without JavaScript and keeps one item open. */
+  .accordion {
+    width: 100%;
+    max-width: 920px;
+    display: flex;
+    flex-direction: column;
+    --open-bg: var(--surface);
+    --open-ring: var(--line);
+    --icon-bg: var(--surface);
+  }
+  .accordion--white {
+    --open-bg: var(--bg);
+    --open-ring: transparent;
+    --icon-bg: var(--bg);
+  }
+  .acc-item {
+    border-radius: 16px;
+    border-top: 1px solid var(--line);
+  }
+  .acc-item:first-child,
+  .acc-item[open],
+  .acc-item[open] + .acc-item {
+    border-top-color: transparent;
+  }
+  .acc-item[open] {
+    background: var(--open-bg);
+    box-shadow: 0 0 0 1px var(--open-ring);
+  }
+  summary {
+    min-height: 72px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.25;
+    cursor: pointer;
+    list-style: none;
+    border-radius: 16px;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary:hover .acc-item__q {
+    color: var(--forest);
+  }
+  .acc-item__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--icon-bg);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .acc-item[open] .acc-item__icon {
+    background: var(--forest);
+    color: #fff;
+  }
+  .acc-item :global(.acc-item__minus),
+  .acc-item[open] :global(.acc-item__plus) {
+    display: none;
+  }
+  .acc-item[open] :global(.acc-item__minus) {
+    display: block;
+  }
+  .acc-item__body {
+    padding: 0 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .acc-item__body p {
+    max-width: 640px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .acc-item__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .acc-item__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .acc-item__list :global(svg) {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--forest);
+  }
+  @media (min-width: 768px) {
+    summary {
+      padding: 12px 24px;
+      font-size: 20px;
+    }
+    .acc-item__body {
+      padding: 0 24px 24px;
+    }
+  }
+</style>

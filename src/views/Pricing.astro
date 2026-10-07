@@ -2,7 +2,11 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { routes, useDict, type Locale } from '../i18n';
+import Accordion from '../components/Accordion.astro';
+import IconTile from '../components/IconTile.astro';
+import PlanCard from '../components/PlanCard.astro';
+import { localePath, routes, useDict, type Locale } from '../i18n';
+import { rich } from '../lib/rich';
 
 interface Props {
   lang: Locale;
@@ -10,9 +14,194 @@ interface Props {
 const { lang } = Astro.props;
 const t = useDict(lang);
 const c = t.pricing;
+const { free, parents, family } = c.plans;
 ---
 
 <Base lang={lang} title={c.title} description={c.description} route={routes.pricing} current="pricing">
-  <PageHero title={c.hero.title} text={c.hero.text} />
-  <CtaBand lang={lang} />
+  <PageHero title={c.hero.title} text={c.hero.text}>
+    <!-- Hidden until the script runs: without JS the monthly prices and yearly notes still show. -->
+    <div class="period" role="group" aria-label={c.toggle.label} data-period-toggle hidden>
+      <button type="button" aria-pressed="true" data-set-period="monthly">{c.toggle.monthly}</button>
+      <button type="button" aria-pressed="false" data-set-period="yearly">
+        {c.toggle.yearly}<span class="period__badge">{c.toggle.badge}</span>
+      </button>
+    </div>
+  </PageHero>
+
+  <section aria-label={c.plansLabel} class="container plans-wrap">
+    <div class="plans">
+      <PlanCard
+        name={free.name}
+        text={free.text}
+        monthly={{ price: free.price, unit: free.unit, note: free.note }}
+        features={free.features}
+        excluded={free.excluded}
+        cta={t.cta.startFree}
+        ctaVariant="white"
+      />
+      <PlanCard
+        name={parents.name}
+        text={parents.text}
+        monthly={parents.monthly}
+        yearly={parents.yearly}
+        features={parents.features}
+        cta={t.cta.startTrial}
+      />
+      <PlanCard
+        name={family.name}
+        badge={family.badge}
+        text={family.text}
+        monthly={family.monthly}
+        yearly={family.yearly}
+        features={family.features}
+        cta={t.cta.startTrial}
+        ctaVariant="lilac"
+        dark
+      />
+    </div>
+    <p class="vat-note" set:html={rich(c.vatNote)} />
+  </section>
+
+  <section aria-label={c.good.label} class="band">
+    <div class="container section">
+      <h2 class="display h2" set:html={rich(c.good.title)} />
+      <ul class="plain good-grid">
+        {
+          c.good.items.map((item) => (
+            <li class="good">
+              <IconTile icon={item.icon} tone={item.tone} />
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section aria-label={c.paying.label} class="container section paying">
+    <div class="section-head section-head--row">
+      <h2 class="display h2" set:html={rich(c.paying.title)} />
+      <a href={localePath(lang, routes.faq)} class="text-link">{c.paying.link}</a>
+    </div>
+    <Accordion items={c.paying.items} name="paying" surface="white" />
+  </section>
+
+  <CtaBand lang={lang} pricingLink={false} />
 </Base>
+
+<script>
+  const toggle = document.querySelector<HTMLElement>('[data-period-toggle]');
+  if (toggle) {
+    const buttons = toggle.querySelectorAll<HTMLButtonElement>('[data-set-period]');
+    const setPeriod = (period: string) => {
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.setPeriod === period)));
+      document.querySelectorAll<HTMLElement>('[data-period]').forEach((el) => {
+        el.hidden = el.dataset.period !== period;
+      });
+    };
+    buttons.forEach((b) => b.addEventListener('click', () => setPeriod(b.dataset.setPeriod!)));
+    toggle.hidden = false;
+  }
+</script>
+
+<style>
+  .period {
+    align-self: flex-start;
+    display: flex;
+    padding: 4px;
+    border-radius: 14px;
+    background: var(--bg);
+  }
+  .period[hidden] {
+    display: none;
+  }
+  .period button {
+    height: 44px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .period button[aria-pressed='true'] {
+    background: var(--ink);
+    color: #fff;
+  }
+  .period__badge {
+    height: 22px;
+    padding: 0 8px;
+    border-radius: 8px;
+    background: var(--mint);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .plans-wrap {
+    padding-bottom: var(--section-y);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .plans {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .vat-note {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  @media (min-width: 768px) {
+    .plans {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .plans > :global(:last-child) {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (min-width: 960px) {
+    .plans > :global(:last-child) {
+      grid-column: auto;
+    }
+    .plans {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .good-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .good {
+    padding: 24px;
+    border-radius: var(--radius-card);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .good h3 {
+    margin-top: 4px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .good p {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .paying {
+    padding-bottom: 0;
+  }
+</style>

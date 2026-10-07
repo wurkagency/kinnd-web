@@ -1,8 +1,12 @@
 ---
+import { Picture } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
+import IconTile from '../components/IconTile.astro';
+import orchard from '../assets/family-orchard-grey.jpg';
 import { routes, useDict, type Locale } from '../i18n';
+import { isEmail, rich } from '../lib/rich';
 
 interface Props {
   lang: Locale;
@@ -10,9 +14,231 @@ interface Props {
 const { lang } = Astro.props;
 const t = useDict(lang);
 const c = t.about;
+const contact = t.site.contactEmail;
+const safety = t.site.safetyEmail;
 ---
 
 <Base lang={lang} title={c.title} description={c.description} route={routes.about} current="about">
   <PageHero title={c.hero.title} text={c.hero.text} />
+
+  <section aria-label={c.story.label} class="container story-wrap">
+    <div class="story">
+      <div class="story__photo">
+        <Picture
+          src={orchard}
+          alt=""
+          formats={['avif', 'webp']}
+          fallbackFormat="jpg"
+          widths={[480, 720, 1000]}
+          sizes="(min-width: 960px) 580px, calc(100vw - 32px)"
+          quality={55}
+        />
+        <span class="story__tint" aria-hidden="true"></span>
+      </div>
+      <div class="story__text">
+        <h2 class="display" set:html={rich(c.story.title)} />
+        <p class="story__lead">{c.story.lead}</p>
+        {c.story.body.map((p) => <p class="story__body">{p}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section aria-label={c.believe.label} class="band">
+    <div class="container section">
+      <h2 class="display h2" set:html={rich(c.believe.title)} />
+      <ul class="plain believe">
+        {
+          c.believe.items.map((item) => (
+            <li>
+              <h3 class="display">
+                <em>{item.title}</em>
+              </h3>
+              <p>{item.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section aria-label={c.contact.label} class="container section contact" id="contact">
+    <h2 class="display h2" set:html={rich(c.contact.title)} />
+    <ul class="plain contact-grid">
+      <li class="contact-card contact-card--dark on-dark">
+        <IconTile icon="mail" tone="lilac" size={52} />
+        <h3>{c.contact.write.title}</h3>
+        <p>{c.contact.write.text}</p>
+        {
+          isEmail(contact) ? (
+            <a class="contact-card__mail" href={`mailto:${contact}`}>{contact}</a>
+          ) : (
+            <span class="contact-card__mail" set:html={rich(contact)} />
+          )
+        }
+      </li>
+      <li class="contact-card">
+        <IconTile icon="shield" tone="mint" size={52} />
+        <h3>{c.contact.report.title}</h3>
+        <p>{c.contact.report.text}</p>
+        {
+          isEmail(safety) ? (
+            <a class="contact-card__mail" href={`mailto:${safety}`}>{safety}</a>
+          ) : (
+            <span class="contact-card__mail" set:html={rich(safety)} />
+          )
+        }
+      </li>
+      <li class="contact-card">
+        <IconTile icon="globe" tone="orange" size={52} />
+        <h3>{c.contact.company.title}</h3>
+        <p class="contact-card__address">
+          {c.contact.company.lines.map((line, i) => (i > 0 ? [<br />, line] : line))}
+        </p>
+      </li>
+    </ul>
+  </section>
+
   <CtaBand lang={lang} />
 </Base>
+
+<style>
+  .story-wrap {
+    padding-bottom: var(--section-y);
+  }
+  .story {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .story__photo {
+    position: relative;
+    min-height: 280px;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    background: var(--forest);
+  }
+  .story__photo :global(img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 55% 45%;
+  }
+  .story__tint {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 61, 53, 0.6);
+  }
+  .story__text {
+    padding: 24px;
+    border-radius: var(--radius-card);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+  .story__text h2 {
+    font-size: clamp(34px, calc(30.29px + 0.952vw), 44px);
+  }
+  .story__lead,
+  .story__body {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .story__body {
+    color: var(--muted);
+  }
+  @media (min-width: 768px) {
+    .story__photo {
+      min-height: 420px;
+    }
+    .story__text {
+      padding: 40px;
+    }
+  }
+  @media (min-width: 960px) {
+    .story {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+  }
+
+  .believe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .believe li {
+    padding: 24px;
+    border-radius: var(--radius-card);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .believe h3 {
+    font-size: 30px;
+  }
+  .believe p {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .contact {
+    padding-bottom: 0;
+    scroll-margin-top: 16px;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 16px;
+  }
+  .contact-card {
+    padding: 24px;
+    border-radius: var(--radius-card);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .contact-card--dark {
+    background: var(--forest);
+    color: #fff;
+  }
+  .contact-card h3 {
+    margin-top: 6px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .contact-card p {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+  .contact-card--dark p {
+    color: var(--on-forest);
+  }
+  .contact-card__address {
+    line-height: 1.6;
+  }
+  .contact-card__mail {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+  .contact-card--dark .placeholder,
+  .contact-card--dark .contact-card__mail :global(.placeholder) {
+    color: var(--ink);
+  }
+  @media (min-width: 768px) {
+    .contact-card {
+      padding: 32px;
+    }
+  }
+</style>

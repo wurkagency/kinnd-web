@@ -1,17 +1,172 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
-import { routes, useDict, type Locale } from '../i18n';
+import { localePath, routes, useDict, type Locale } from '../i18n';
+import { rich } from '../lib/rich';
 
+type Doc = 'privacy' | 'terms' | 'cookies';
 interface Props {
   lang: Locale;
-  doc: 'privacy' | 'terms' | 'cookies';
+  doc: Doc;
 }
 const { lang, doc } = Astro.props;
 const t = useDict(lang);
-const c = t.legal[doc];
+const l = t.legal;
+const c = l[doc];
+const docs: Doc[] = ['privacy', 'terms', 'cookies'];
 ---
 
 <Base lang={lang} title={c.title} description={c.description} route={routes[doc]}>
-  <PageHero title={c.heading} text={c.text} />
+  <PageHero title={c.heading} text={c.text}>
+    <!-- Separate pages, so this is a link row, not an ARIA tab widget. -->
+    <nav class="doc-tabs" aria-label={l.tabsLabel}>
+      {
+        docs.map((d) => (
+          <a href={localePath(lang, routes[d])} aria-current={d === doc ? 'page' : undefined}>
+            {l[d].tab}
+          </a>
+        ))
+      }
+    </nav>
+  </PageHero>
+
+  <section aria-label={l[doc].tab} class="container legal">
+    <nav class="toc" aria-label={l.onThisPage}>
+      <span class="toc__title">{l.onThisPage}</span>
+      {
+        c.sections.map((s, i) => (
+          <a href={`#section-${i + 1}`}>
+            <span class="toc__num">{i + 1}</span>
+            <span set:html={rich(s)} />
+          </a>
+        ))
+      }
+    </nav>
+    <div class="legal__body">
+      <p class="legal__updated" set:html={rich(l.lastUpdated)} />
+      {
+        c.sections.map((s, i) => (
+          <section id={`section-${i + 1}`}>
+            <h2 set:html={rich(`${i + 1}. ${s}`)} />
+            <p set:html={rich(l.placeholder)} />
+          </section>
+        ))
+      }
+    </div>
+  </section>
 </Base>
+
+<style>
+  .doc-tabs {
+    align-self: flex-start;
+    max-width: 100%;
+    display: flex;
+    padding: 4px;
+    border-radius: 14px;
+    background: var(--bg);
+    overflow-x: auto;
+  }
+  .doc-tabs a {
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .doc-tabs a:hover {
+    color: var(--forest);
+  }
+  .doc-tabs a[aria-current='page'] {
+    background: var(--ink);
+    color: #fff;
+  }
+
+  .legal {
+    padding-bottom: var(--section-y);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .toc {
+    width: 100%;
+    padding: 20px;
+    border-radius: var(--radius-card);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .toc__title {
+    padding-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .toc a {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .toc a:hover {
+    color: var(--forest);
+    text-decoration: underline;
+  }
+  .toc__num {
+    width: 20px;
+    flex-shrink: 0;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .legal__body {
+    flex: 1;
+    min-width: 0;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .legal__updated {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .legal__body section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scroll-margin-top: 16px;
+  }
+  .legal__body h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .legal__body p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  @media (min-width: 768px) {
+    .doc-tabs a {
+      padding: 0 20px;
+    }
+  }
+  @media (min-width: 960px) {
+    .legal {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 64px;
+    }
+    .toc {
+      position: sticky;
+      top: 24px;
+      width: 280px;
+      flex-shrink: 0;
+    }
+  }
+</style>

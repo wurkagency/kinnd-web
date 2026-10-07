@@ -24,6 +24,11 @@ body {
   overflow-x: clip;
 }
 
+/* <picture> wrappers should not take a layout slot; the <img> is styled directly. */
+picture {
+  display: contents;
+}
+
 img,
 svg {
   display: block;

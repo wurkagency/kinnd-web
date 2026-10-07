@@ -1,8 +1,15 @@
 ---
+import { Picture } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { routes, useDict, type Locale } from '../i18n';
+import Accordion from '../components/Accordion.astro';
+import IconTile from '../components/IconTile.astro';
+import Icon from '../components/Icon.astro';
+import Button from '../components/Button.astro';
+import orchard from '../assets/family-orchard-grey.jpg';
+import { routes, useDict, APP_URL, type Locale } from '../i18n';
+import { rich } from '../lib/rich';
 
 interface Props {
   lang: Locale;
@@ -14,5 +21,453 @@ const c = t.features;
 
 <Base lang={lang} title={c.title} description={c.description} route={routes.features} current="features">
   <PageHero title={c.hero.title} text={c.hero.text} />
+
+  <section aria-label={c.highlightsLabel} class="container highlights">
+    <article class="hl hl--calendar on-dark">
+      <Picture
+        src={orchard}
+        alt=""
+        class="hl__bg"
+        formats={['avif', 'webp']}
+        fallbackFormat="jpg"
+        widths={[400, 600, 800]}
+        sizes="(min-width: 1100px) 380px, (min-width: 768px) 50vw, 100vw"
+        quality={50}
+      />
+      <span class="hl__tint" aria-hidden="true"></span>
+      <div class="hl__stack">
+        <span class="hl__stack-back" aria-hidden="true"></span>
+        <span class="hl__stack-mid" aria-hidden="true"></span>
+        <div class="hl__child">
+          <span class="hl__avatar" aria-hidden="true">{c.calendar.initial}</span>
+          <span class="hl__child-text">
+            <span class="hl__child-name">{c.calendar.name}</span>
+            <span class="hl__child-status">{c.calendar.status}</span>
+          </span>
+          <span class="hl__week">{c.calendar.week}</span>
+        </div>
+      </div>
+      <div class="hl__calendar-foot">
+        <div class="hl__digits" aria-hidden="true">
+          {c.calendar.digits.map((d) => <span>{d}</span>)}
+        </div>
+        <h2>{c.calendar.title}</h2>
+        <p>{c.calendar.text}</p>
+      </div>
+    </article>
+
+    <article class="hl hl--access">
+      <span class="hl__person">
+        <span class="hl__person-avatar" aria-hidden="true">{c.access.initial}</span>
+        <span class="hl__person-text">
+          <span class="hl__person-role">{c.access.role}</span>
+          <span class="hl__person-name">{c.access.name}</span>
+        </span>
+      </span>
+      <div class="hl__access-body">
+        <h2 set:html={rich(c.access.title)} />
+        <p>{c.access.text}</p>
+        <div class="hl__more">
+          <a href="#all-features" class="text-link">{c.access.more}</a>
+          <a href="#all-features" class="hl__more-btn" aria-label={c.access.moreLabel}>
+            <Icon name="arrowUpRight" size={18} />
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="hl hl--today">
+      <div class="hl__today-head">
+        <span class="hl__eyebrow">{c.today.eyebrow}</span>
+        <h2>{c.today.title}</h2>
+      </div>
+      <ul class="plain hl__today-list">
+        {
+          c.today.items.map((item) => (
+            <li>
+              <IconTile icon={item.icon} tone={item.tone} />
+              <span class="hl__today-text">
+                <span class="hl__today-title">{item.title}</span>
+                <span class="hl__today-desc">{item.text}</span>
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </section>
+
+  <section aria-label={c.explained.label} class="band">
+    <div class="container section">
+      <div class="section-head">
+        <h2 class="display h2" set:html={rich(c.explained.title)} />
+        <p class="lead">{c.explained.text}</p>
+      </div>
+      <Accordion items={c.explained.items} name="features" surface="band" id="all-features" />
+    </div>
+  </section>
+
+  <section aria-label={c.where.label} class="container section">
+    <div class="section-head section-head--row where-head">
+      <div class="section-head">
+        <h2 class="display h2" set:html={rich(c.where.title)} />
+        <p class="lead">{c.where.text}</p>
+      </div>
+      <Button href={APP_URL} block>{t.cta.startTrial}</Button>
+    </div>
+    <ul class="plain tile-grid">
+      {
+        c.where.items.map((item) => (
+          <li class="tile">
+            <IconTile icon={item.icon} tone={item.tone} />
+            <span class="tile__text">
+              <span class="tile__title">{item.title}</span>
+              <span class="tile__desc">{item.text}</span>
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
   <CtaBand lang={lang} />
 </Base>
+
+<style>
+  .highlights {
+    padding-bottom: var(--section-y);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .hl {
+    position: relative;
+    min-height: 440px;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .hl h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  /* Calendar card */
+  .hl--calendar {
+    background: var(--forest);
+    color: #fff;
+    gap: 0;
+  }
+  .hl--calendar :global(.hl__bg) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 58% 50%;
+  }
+  .hl__tint {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 61, 53, 0.8);
+  }
+  .hl__stack {
+    position: relative;
+    margin: 20px 20px 0;
+    padding-bottom: 22px;
+  }
+  .hl__stack-back,
+  .hl__stack-mid {
+    position: absolute;
+    height: 40px;
+    border-radius: 12px;
+  }
+  .hl__stack-back {
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.35);
+  }
+  .hl__stack-mid {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .hl__child {
+    position: relative;
+    min-height: 60px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hl__avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .hl__child-text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .hl__child-name {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .hl__child-status {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .hl__week {
+    height: 24px;
+    padding: 0 9px;
+    border-radius: 8px;
+    background: var(--mint);
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .hl__calendar-foot {
+    position: relative;
+    padding: 0 20px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .hl__calendar-foot h2 {
+    font-size: 20px;
+  }
+  .hl__calendar-foot p {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--on-forest);
+  }
+  .hl__digits {
+    display: flex;
+    gap: 8px;
+  }
+  .hl__digits span {
+    width: 64px;
+    height: 76px;
+    border-radius: 12px;
+    background: rgba(20, 32, 25, 0.55);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: 500;
+  }
+
+  /* Access card */
+  .hl--access {
+    padding: 20px;
+    background: var(--lilac);
+  }
+  .hl__person {
+    align-self: flex-start;
+    height: 52px;
+    padding: 0 22px 0 8px;
+    border-radius: 26px;
+    background: var(--surface);
+    box-shadow: 0 3px 0 var(--lilac-edge);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hl__person-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .hl__person-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .hl__person-role {
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .hl__person-name {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .hl__access-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .hl__access-body :global(em) {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 28px;
+  }
+  .hl__access-body p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .hl__more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .hl__more .text-link {
+    font-size: 15px;
+  }
+  .hl__more-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hl__more-btn:hover {
+    background: var(--bg);
+  }
+
+  /* Today card */
+  .hl--today {
+    padding: 28px 20px 20px;
+    background: var(--bg);
+    justify-content: flex-start;
+    gap: 22px;
+  }
+  .hl__today-head {
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--line-strong);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hl__eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .hl__today-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hl__today-list li {
+    min-height: 68px;
+    padding: 10px 14px 10px 10px;
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: 0 0 0 1px var(--line);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hl__today-text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .hl__today-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .hl__today-desc {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (min-width: 768px) {
+    .highlights {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .hl {
+      min-height: 520px;
+    }
+    .hl--today {
+      grid-column: 1 / -1;
+      min-height: 0;
+    }
+  }
+  @media (min-width: 1100px) {
+    .highlights {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .hl--today {
+      grid-column: auto;
+      min-height: 520px;
+    }
+  }
+
+  /* Where it works */
+  .where-head {
+    align-items: flex-start;
+  }
+  .tile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  .tile {
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .tile__text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .tile__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .tile__desc {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+  @media (min-width: 768px) {
+    .tile-grid {
+      gap: 16px;
+    }
+    .tile {
+      padding: 20px;
+      border-radius: var(--radius-card);
+    }
+  }
+</style>

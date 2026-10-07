@@ -1,0 +1,50 @@
+---
+import Button from './Button.astro';
+
+interface Props {
+  title: string;
+  text: string;
+  cta: string;
+  href: string;
+}
+const { title, text, cta, href } = Astro.props;
+---
+
+<div class="callout-box">
+  <div class="callout-box__text">
+    <h2>{title}</h2>
+    <p>{text}</p>
+  </div>
+  <Button href={href} variant="white" block>{cta}</Button>
+</div>
+
+<style>
+  .callout-box {
+    padding: 24px;
+    border-radius: var(--radius-card);
+    background: var(--lilac);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .callout-box__text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .callout-box h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .callout-box p {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  @media (min-width: 768px) {
+    .callout-box {
+      padding: 32px;
+    }
+  }
+</style>

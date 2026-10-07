@@ -2,7 +2,10 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
-import { routes, useDict, type Locale } from '../i18n';
+import IconTile from '../components/IconTile.astro';
+import Callout from '../components/Callout.astro';
+import { localePath, routes, useDict, type Locale } from '../i18n';
+import { rich } from '../lib/rich';
 
 interface Props {
   lang: Locale;
@@ -14,5 +17,118 @@ const c = t.safety;
 
 <Base lang={lang} title={c.title} description={c.description} route={routes.safety} current="safety">
   <PageHero title={c.hero.title} text={c.hero.text} />
+
+  <section aria-label={c.promisesLabel} class="container promises-wrap">
+    <ul class="plain promises">
+      {
+        c.promises.map((p) => (
+          <li class="promise">
+            <IconTile icon={p.icon} tone={p.tone} size={52} />
+            <h2>{p.title}</h2>
+            <p set:html={rich(p.text)} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section aria-label={c.behind.label} class="band">
+    <div class="container section">
+      <div class="section-head">
+        <h2 class="display h2" set:html={rich(c.behind.title)} />
+        <p class="lead">{c.behind.text}</p>
+      </div>
+      <ul class="plain behind">
+        {
+          c.behind.items.map((item) => (
+            <li>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section aria-label={c.details.label} class="container details">
+    <Callout
+      title={c.details.title}
+      text={c.details.text}
+      cta={c.details.cta}
+      href={localePath(lang, routes.privacy)}
+    />
+  </section>
+
   <CtaBand lang={lang} />
 </Base>
+
+<style>
+  .promises-wrap {
+    padding-bottom: var(--section-y);
+  }
+  .promises {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .promise {
+    padding: 24px;
+    border-radius: var(--radius-card);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .promise h2 {
+    margin-top: 6px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .promise p {
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+  @media (min-width: 768px) {
+    .promises {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .promise {
+      padding: 28px;
+    }
+  }
+  @media (min-width: 1100px) {
+    .promises {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .behind {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .behind li {
+    padding: 24px;
+    border-radius: var(--radius-card);
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .behind h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .behind p {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .details {
+    padding-top: var(--section-y);
+  }
+</style>
