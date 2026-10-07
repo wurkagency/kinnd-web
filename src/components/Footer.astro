@@ -1,0 +1,166 @@
+---
+import { locales, localePath, routes, useDict, type Locale } from '../i18n';
+import { isEmail, rich } from '../lib/rich';
+
+interface Props {
+  lang: Locale;
+  route: string;
+}
+const { lang, route } = Astro.props;
+const t = useDict(lang);
+const p = (r: string) => localePath(lang, r);
+const email = t.site.contactEmail;
+---
+
+<footer class="site-footer band">
+  <div class="container site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <span class="site-footer__word">{t.site.name}</span>
+        <p>{t.site.tagline}</p>
+        {
+          isEmail(email) ? (
+            <a class="site-footer__mail" href={`mailto:${email}`}>{email}</a>
+          ) : (
+            <span class="site-footer__mail" set:html={rich(email)} />
+          )
+        }
+      </div>
+      <nav aria-label={t.nav.pagesLabel} class="site-footer__nav">
+        <a href={p(routes.features)}>{t.nav.features}</a>
+        <a href={p(routes.pricing)}>{t.nav.pricing}</a>
+        <a href={p(routes.safety)}>{t.nav.safetyLong}</a>
+        <a href={p(routes.faq)}>{t.nav.faq}</a>
+        <a href={p(routes.about)}>{t.nav.about}</a>
+      </nav>
+      <nav aria-label={t.nav.legalLabel} class="site-footer__nav">
+        <a href={p(routes.privacy)}>{t.nav.privacy}</a>
+        <a href={p(routes.terms)}>{t.nav.terms}</a>
+        <a href={p(routes.cookies)}>{t.nav.cookies}</a>
+      </nav>
+      <nav aria-label={t.nav.language} class="site-footer__langs">
+        {
+          locales.map((l) => (
+            <a
+              href={localePath(l, route)}
+              hreflang={l}
+              lang={l}
+              aria-current={l === lang ? 'true' : undefined}
+              aria-label={t.nav.languageNames[l]}
+            >
+              {l.toUpperCase()}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <span>{t.site.company}</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer__inner {
+    padding-block: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .site-footer__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
+  }
+  .site-footer__brand,
+  .site-footer__langs {
+    grid-column: 1 / -1;
+  }
+  .site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .site-footer__word {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--forest);
+  }
+  .site-footer__brand p {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+  .site-footer__mail {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .site-footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 15px;
+  }
+  .site-footer__nav a {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .site-footer__nav a:hover {
+    color: var(--forest);
+    text-decoration: underline;
+  }
+  .site-footer__langs {
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  .site-footer__langs a {
+    height: 44px;
+    padding: 0 16px;
+    border-radius: var(--radius-control);
+    border: 1.5px solid var(--ink);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .site-footer__langs a:hover {
+    background: var(--surface);
+  }
+  .site-footer__langs a[aria-current] {
+    background: var(--ink);
+    color: #fff;
+  }
+  .site-footer__bottom {
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  @media (min-width: 768px) {
+    .site-footer__inner {
+      padding-block: 48px 36px;
+      gap: 32px;
+    }
+    .site-footer__brand {
+      max-width: 300px;
+    }
+    .site-footer__top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+    }
+  }
+</style>

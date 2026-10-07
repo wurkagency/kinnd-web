@@ -1,0 +1,88 @@
+---
+/**
+ * Flat button with a solid coloured bottom edge (never a blurred shadow).
+ * forest = forest + mint edge, lilac = lilac + lilac-edge, white = white + line-strong.
+ */
+interface Props {
+  href: string;
+  variant?: 'forest' | 'lilac' | 'white';
+  size?: 'md' | 'sm';
+  /** Full width below 768px, as on the mobile boards. */
+  block?: boolean;
+  /** Full width at every size (plan cards). */
+  fill?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+const { href, variant = 'forest', size = 'md', block = false, fill = false, class: className, ...rest } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={['btn', `btn--${variant}`, `btn--${size}`, { 'btn--block': block, 'btn--fill': fill }, className]}
+  {...rest}
+>
+  <slot />
+</a>
+
+<style>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-control);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+  }
+  .btn--md {
+    height: 56px;
+    padding: 0 28px;
+    font-size: 16px;
+    --edge-h: 4px;
+  }
+  .btn--sm {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 15px;
+    --edge-h: 3px;
+  }
+  .btn--forest {
+    background: var(--forest);
+    color: #fff;
+    --edge: var(--mint);
+  }
+  .btn--lilac {
+    background: var(--lilac);
+    color: var(--ink);
+    --edge: var(--lilac-edge);
+  }
+  .btn--white {
+    background: var(--surface);
+    color: var(--ink);
+    --edge: var(--line-strong);
+  }
+  .btn {
+    box-shadow: 0 var(--edge-h) 0 var(--edge);
+  }
+  .btn:hover {
+    color: inherit;
+    filter: brightness(1.06);
+  }
+  .btn--forest:hover {
+    color: #fff;
+  }
+  .btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 calc(var(--edge-h) - 2px) 0 var(--edge);
+  }
+  .btn--fill {
+    width: 100%;
+  }
+  @media (max-width: 767.98px) {
+    .btn--block {
+      width: 100%;
+    }
+  }
+</style>

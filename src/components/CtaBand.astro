@@ -1,0 +1,81 @@
+---
+import Button from './Button.astro';
+import { localePath, routes, useDict, APP_URL, type Locale } from '../i18n';
+import { rich } from '../lib/rich';
+
+interface Props {
+  lang: Locale;
+  /** The Pricing page leaves out its own "See pricing" link. */
+  pricingLink?: boolean;
+}
+const { lang, pricingLink = true } = Astro.props;
+const t = useDict(lang);
+---
+
+<section aria-label={t.ctaBand.label} class="container cta-band-wrap">
+  <div class="cta-band on-dark">
+    <h2 class="display cta-band__title" set:html={rich(t.ctaBand.title)} />
+    <p>{t.ctaBand.text}</p>
+    <div class="cta-band__actions">
+      <Button href={APP_URL} variant="lilac" block>{t.cta.startTrial}</Button>
+      {pricingLink && <a href={localePath(lang, routes.pricing)} class="text-link">{t.cta.seePricing}</a>}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-band-wrap {
+    padding-block: var(--section-y);
+  }
+  .cta-band {
+    padding: 48px 20px;
+    border-radius: var(--radius-card);
+    background: var(--forest);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+  .cta-band__title {
+    max-width: 760px;
+    font-size: var(--fs-cta);
+    line-height: 1.02;
+  }
+  .cta-band p {
+    max-width: 480px;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--on-forest);
+  }
+  .cta-band__actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .cta-band__actions .text-link {
+    justify-content: center;
+    color: #fff;
+  }
+  @media (min-width: 768px) {
+    .cta-band {
+      padding: 72px 40px;
+      border-radius: var(--radius-band);
+      gap: 24px;
+    }
+    .cta-band p {
+      font-size: 17px;
+    }
+    .cta-band__actions {
+      width: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px 24px;
+    }
+  }
+</style>

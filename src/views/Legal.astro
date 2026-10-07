@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { routes, useDict, type Locale } from '../i18n';
+
+interface Props {
+  lang: Locale;
+  doc: 'privacy' | 'terms' | 'cookies';
+}
+const { lang, doc } = Astro.props;
+const t = useDict(lang);
+const c = t.legal[doc];
+---
+
+<Base lang={lang} title={c.title} description={c.description} route={routes[doc]}>
+  <PageHero title={c.heading} text={c.text} />
+</Base>

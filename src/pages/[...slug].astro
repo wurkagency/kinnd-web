@@ -1,0 +1,36 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { locales, routes, defaultLocale, type Locale, type RouteKey } from '../i18n';
+import Home from '../views/Home.astro';
+import Features from '../views/Features.astro';
+import Pricing from '../views/Pricing.astro';
+import Safety from '../views/Safety.astro';
+import Faq from '../views/Faq.astro';
+import About from '../views/About.astro';
+import Legal from '../views/Legal.astro';
+
+export const getStaticPaths = (() => {
+  const keys = Object.keys(routes) as RouteKey[];
+  return locales.flatMap((lang) =>
+    keys.map((key) => {
+      const path = routes[key].replace(/^\/|\/$/g, '');
+      const parts = [lang === defaultLocale ? '' : lang, path].filter(Boolean);
+      return { params: { slug: parts.length ? parts.join('/') : undefined }, props: { lang, key } };
+    }),
+  );
+}) satisfies GetStaticPaths;
+
+interface Props {
+  lang: Locale;
+  key: RouteKey;
+}
+const { lang, key } = Astro.props;
+---
+
+{key === 'home' && <Home lang={lang} />}
+{key === 'features' && <Features lang={lang} />}
+{key === 'pricing' && <Pricing lang={lang} />}
+{key === 'safety' && <Safety lang={lang} />}
+{key === 'faq' && <Faq lang={lang} />}
+{key === 'about' && <About lang={lang} />}
+{(key === 'privacy' || key === 'terms' || key === 'cookies') && <Legal lang={lang} doc={key} />}

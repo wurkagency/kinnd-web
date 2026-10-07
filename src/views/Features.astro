@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { routes, useDict, type Locale } from '../i18n';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useDict(lang);
+const c = t.features;
+---
+
+<Base lang={lang} title={c.title} description={c.description} route={routes.features} current="features">
+  <PageHero title={c.hero.title} text={c.hero.text} />
+  <CtaBand lang={lang} />
+</Base>

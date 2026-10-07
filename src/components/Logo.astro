@@ -1,0 +1,49 @@
+---
+/**
+ * Placeholder logo from the boards: three dots and the word KINND.
+ * Swap the markup here when the final logo arrives; nothing else needs to change.
+ */
+interface Props {
+  tone?: 'ink' | 'light';
+}
+const { tone = 'ink' } = Astro.props;
+---
+
+<span class:list={['logo', `logo--${tone}`]}>
+  <span class="logo__mark" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </span>
+  <span class="logo__word">KINND</span>
+</span>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+  }
+  .logo--light {
+    color: #fff;
+  }
+  .logo__mark {
+    position: relative;
+    width: 28px;
+    height: 22px;
+  }
+  .logo__mark span {
+    position: absolute;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .logo__mark span:nth-child(1) { left: 0; top: 0; width: 13px; height: 13px; }
+  .logo__mark span:nth-child(2) { right: 0; top: 2px; width: 10px; height: 10px; }
+  .logo__mark span:nth-child(3) { left: 10px; bottom: 0; width: 7px; height: 7px; }
+  .logo__word {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+</style>

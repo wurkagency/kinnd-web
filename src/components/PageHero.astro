@@ -1,0 +1,45 @@
+---
+import { rich } from '../lib/rich';
+
+interface Props {
+  title: string;
+  text: string;
+  label?: string;
+}
+const { title, text, label = 'Introduction' } = Astro.props;
+---
+
+<section aria-label={label} class="container page-hero">
+  <h1 class="display page-hero__title" set:html={rich(title)} />
+  <p class="page-hero__text" set:html={rich(text)} />
+  <slot />
+</section>
+
+<style>
+  .page-hero {
+    padding-block: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .page-hero__title {
+    max-width: 860px;
+    font-size: var(--fs-h1);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+  }
+  .page-hero__text {
+    max-width: 560px;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+  @media (min-width: 768px) {
+    .page-hero {
+      padding-block: 64px;
+    }
+    .page-hero__text {
+      font-size: 18px;
+    }
+  }
+</style>

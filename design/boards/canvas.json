@@ -1,0 +1,145 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "About-mobile.dc.html": {
+      "expand": "fill",
+      "h": 3422,
+      "title": "About & contact · mobile 390",
+      "w": 390,
+      "x": 13040,
+      "y": 0
+    },
+    "About.dc.html": {
+      "expand": "fill",
+      "h": 2724,
+      "title": "About & contact",
+      "w": 1440,
+      "x": 11520,
+      "y": 0
+    },
+    "FAQ-mobile.dc.html": {
+      "expand": "fill",
+      "h": 3304,
+      "title": "FAQ · mobile 390",
+      "w": 390,
+      "x": 11040,
+      "y": 0
+    },
+    "FAQ.dc.html": {
+      "expand": "fill",
+      "h": 2248,
+      "title": "FAQ",
+      "w": 1440,
+      "x": 9520,
+      "y": 0
+    },
+    "Features-mobile.dc.html": {
+      "expand": "fill",
+      "h": 4376,
+      "title": "Features · mobile 390",
+      "w": 390,
+      "x": 5040,
+      "y": 0
+    },
+    "Features.dc.html": {
+      "expand": "fill",
+      "h": 3455,
+      "title": "Features",
+      "w": 1440,
+      "x": 3520,
+      "y": 0
+    },
+    "Home-mobile.dc.html": {
+      "expand": "fill",
+      "h": 4642,
+      "title": "Home · mobile 390",
+      "w": 390,
+      "x": 3040,
+      "y": 0
+    },
+    "Home-v2.dc.html": {
+      "expand": "fill",
+      "h": 3239,
+      "title": "Home",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Legal-mobile.dc.html": {
+      "expand": "fill",
+      "h": 2001,
+      "title": "Legal · privacy notice · mobile 390",
+      "w": 390,
+      "x": 15040,
+      "y": 0
+    },
+    "Legal.dc.html": {
+      "expand": "fill",
+      "h": 1530,
+      "title": "Legal · privacy notice",
+      "w": 1440,
+      "x": 13520,
+      "y": 0
+    },
+    "Pricing-mobile.dc.html": {
+      "expand": "fill",
+      "h": 4093,
+      "title": "Pricing · mobile 390",
+      "w": 390,
+      "x": 7040,
+      "y": 0
+    },
+    "Pricing.dc.html": {
+      "expand": "fill",
+      "h": 2952,
+      "title": "Pricing",
+      "w": 1440,
+      "x": 5520,
+      "y": 0
+    },
+    "Safety-mobile.dc.html": {
+      "expand": "fill",
+      "h": 3562,
+      "title": "Safety & privacy · mobile 390",
+      "w": 390,
+      "x": 9040,
+      "y": 0
+    },
+    "Safety.dc.html": {
+      "expand": "fill",
+      "h": 2559,
+      "title": "Safety & privacy",
+      "w": 1440,
+      "x": 7520,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-07T19:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {},
+  "order": [
+    "Home-v2.dc.html",
+    "Home-mobile.dc.html",
+    "Features.dc.html",
+    "Features-mobile.dc.html",
+    "Pricing.dc.html",
+    "Pricing-mobile.dc.html",
+    "Safety.dc.html",
+    "Safety-mobile.dc.html",
+    "FAQ.dc.html",
+    "FAQ-mobile.dc.html",
+    "About.dc.html",
+    "About-mobile.dc.html",
+    "Legal.dc.html",
+    "Legal-mobile.dc.html"
+  ],
+  "pages": [],
+  "title": "KINND Website"
+}

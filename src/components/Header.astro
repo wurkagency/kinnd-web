@@ -1,0 +1,143 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import Button from './Button.astro';
+import LanguageMenu from './LanguageMenu.astro';
+import MobileMenu from './MobileMenu.astro';
+import { localePath, routes, useDict, APP_URL, type Locale } from '../i18n';
+
+interface Props {
+  lang: Locale;
+  route: string;
+  /** Route key of the page, used to mark the current nav item. */
+  current?: string;
+}
+const { lang, route, current } = Astro.props;
+const t = useDict(lang);
+
+const main = [
+  { key: 'features', href: localePath(lang, routes.features), label: t.nav.features },
+  { key: 'pricing', href: localePath(lang, routes.pricing), label: t.nav.pricing },
+  { key: 'safety', href: localePath(lang, routes.safety), label: t.nav.safety },
+  { key: 'faq', href: localePath(lang, routes.faq), label: t.nav.faq },
+];
+const menu = [...main, { key: 'about', href: localePath(lang, routes.about), label: t.nav.about }];
+---
+
+<header class="site-header container">
+  <a href={localePath(lang, '/')} aria-label={t.nav.home} class="site-header__logo"><Logo /></a>
+  <nav aria-label={t.nav.mainLabel} class="site-header__nav">
+    {
+      main.map((item) => (
+        <a href={item.href} aria-current={item.key === current ? 'page' : undefined}>
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+  <div class="site-header__actions">
+    <LanguageMenu lang={lang} route={route} />
+    <Button href={APP_URL} size="sm" class="site-header__cta">{t.cta.tryFree}</Button>
+    <button
+      type="button"
+      class="menu-btn site-header__menu"
+      commandfor="mobile-menu"
+      command="show-modal"
+      aria-label={t.nav.openMenu}
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-open
+    >
+      <Icon name="menu" size={20} stroke={2} />
+    </button>
+  </div>
+</header>
+<MobileMenu lang={lang} items={menu} current={current} />
+
+<style>
+  .site-header {
+    padding-block: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 32px;
+  }
+  .site-header__logo {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .site-header__nav {
+    display: none;
+  }
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .site-header__actions :global(.site-header__cta) {
+    display: none;
+  }
+  :global(.menu-btn) {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: var(--radius-control);
+    background: var(--forest);
+    color: #fff;
+    box-shadow: 0 3px 0 var(--mint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 768px) {
+    .site-header {
+      padding-block: 24px;
+    }
+    .site-header__nav {
+      display: flex;
+      align-items: center;
+      gap: 4px 28px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .site-header__nav a {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 8px;
+    }
+    .site-header__nav a:hover {
+      color: var(--forest);
+      text-decoration: underline;
+      text-decoration-color: var(--line-strong);
+    }
+    .site-header__nav a[aria-current='page'] {
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+    }
+    .site-header__actions {
+      gap: 12px;
+    }
+    .site-header__actions :global(.site-header__cta) {
+      display: inline-flex;
+    }
+    .site-header__menu {
+      display: none;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 899.98px) {
+    /* Tight tablet widths: keep the header on one row. */
+    .site-header {
+      gap: 12px 16px;
+    }
+    .site-header__nav {
+      gap: 4px 18px;
+    }
+  }
+</style>

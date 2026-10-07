@@ -1,0 +1,49 @@
+/* Design tokens. Fluid values interpolate between the 390 and 1440 boards. */
+:root {
+  --bg: #f5f3ee;
+  --surface: #ffffff;
+  --ink: #142019;
+  --muted: #5d615b;
+  --line: #e2dfd7;
+  --line-strong: #bdb8ae;
+  --forest: #0f3d35;
+  --forest-muted: #9db3ac;
+  --mint: #a9e5a0;
+  --lilac: #d8c4f3;
+  --lilac-edge: #b79ce0;
+  --plum: #4a1d2b;
+  --orange: #f39a5c;
+  --yellow: #f6e2a3;
+  --sky: #aee4ea;
+
+  /* Used on the boards but not in the core palette. */
+  --on-forest: #d7e3df;
+  --sage: #e7ecea;
+  --sage-ink: #3f4a45;
+
+  --font-sans: 'Albert Sans', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+
+  --radius-card: 20px;
+  --radius-band: 28px;
+  --radius-control: 12px;
+  --radius-pill: 999px;
+
+  --page-max: 1240px;
+  --gutter: 16px;
+
+  /* Type scale: 390 -> 1440 */
+  --fs-h1: clamp(42px, calc(32.34px + 2.476vw), 68px);
+  --fs-h2: clamp(34px, calc(28.06px + 1.524vw), 50px);
+  --fs-cta: clamp(40px, calc(31.09px + 2.286vw), 64px);
+
+  /* Spacing: 390 -> 1440 */
+  --section-y: clamp(64px, calc(52.11px + 3.048vw), 96px);
+  --section-gap: clamp(28px, calc(22.06px + 1.524vw), 44px);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+  }
+}

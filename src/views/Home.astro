@@ -1,0 +1,811 @@
+---
+import { Picture } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+import CtaBand from '../components/CtaBand.astro';
+import IconTile from '../components/IconTile.astro';
+import Icon from '../components/Icon.astro';
+import PhoneMockup from '../components/PhoneMockup.astro';
+import orchard from '../assets/family-orchard-grey.jpg';
+import canal from '../assets/moment-canal-grey.webp';
+import { localePath, routes, useDict, APP_URL, type Locale } from '../i18n';
+import { rich } from '../lib/rich';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useDict(lang);
+const h = t.home;
+const s = h.share;
+const ages = [s.growth.firstAge, '8', '9', '10', '11'];
+const heights = ['130', '140', '150', '160', '170'];
+---
+
+<Base lang={lang} title={h.title} description={h.description} route={routes.home} current="home">
+  <!-- Hero -->
+  <section aria-label={h.hero.label} class="container hero-wrap">
+    <div class="hero on-dark">
+      <Picture
+        src={orchard}
+        alt=""
+        class="hero__bg"
+        formats={['avif', 'webp']}
+          fallbackFormat="jpg"
+        widths={[480, 768, 1176, 1600]}
+        sizes="(min-width: 1240px) 1176px, calc(100vw - 32px)"
+        quality={50}
+        priority
+      />
+      <span class="hero__tint" aria-hidden="true"></span>
+      <div class="hero__inner">
+        <div class="hero__text">
+          <div class="hero__copy">
+            <h1 class="display hero__title" set:html={rich(h.hero.title)} />
+            <p class="hero__lead">{h.hero.text}</p>
+            <Button href={APP_URL} variant="lilac" block class="hero__cta">{t.cta.startTrial}</Button>
+          </div>
+          <div class="handover">
+            <span class="handover__label">{h.hero.handover.label}</span>
+            <div class="handover__when">
+              <span class="handover__day">{h.hero.handover.day}</span>
+              <span class="handover__time">{h.hero.handover.time}</span>
+            </div>
+            <div class="handover__foot">
+              <span>{h.hero.handover.note}</span>
+              <span class="handover__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__phone">
+          <PhoneMockup label={h.hero.phoneLabel} callouts={h.hero.callouts} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is in KINND -->
+  <section aria-label={s.label} class="container share section">
+    <div class="share__head">
+      <h2 class="display share__title" set:html={rich(s.title)} />
+      <p class="share__text">{s.text}</p>
+    </div>
+
+    <div class="share__grid">
+      <div class="share__col">
+        <article class="card moment on-dark">
+          <Picture
+            src={canal}
+            alt={s.moment.alt}
+            class="moment__img"
+            formats={['avif', 'webp']}
+          fallbackFormat="jpg"
+            widths={[400, 600, 800]}
+            sizes="(min-width: 1100px) 380px, (min-width: 768px) 50vw, 100vw"
+            quality={60}
+          />
+          <span class="moment__tint" aria-hidden="true"></span>
+          <div class="moment__body">
+            <div class="moment__row moment__row--top">
+              <span class="moment__title">{s.moment.title}</span>
+              <span>{s.moment.tag}</span>
+            </div>
+            <div class="moment__row">
+              <span class="moment__shared"><Icon name="check" size={14} stroke={2.4} />{s.moment.shared}</span>
+              <span>{s.moment.date}</span>
+            </div>
+          </div>
+        </article>
+        <article class="card free">
+          <div class="free__text">
+            <h3>{s.free.title}</h3>
+            <span class="free__amount"><span>{s.free.amount}</span><span>{s.free.suffix}</span></span>
+          </div>
+          <span class="avatars" aria-hidden="true">
+            <span class="avatar avatar--forest">C</span>
+            <span class="avatar avatar--plum">A</span>
+            <span class="avatar avatar--orange">J</span>
+          </span>
+        </article>
+      </div>
+
+      <div class="share__col">
+        <article class="card calendar">
+          <div class="calendar__head">
+            <h3>{s.calendar.title}</h3>
+            <span>{s.calendar.plan}</span>
+          </div>
+          <dl class="calendar__stats">
+            {
+              s.calendar.stats.map((st) => (
+                <div>
+                  <dt>{st.label}</dt>
+                  <dd>{st.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
+          <div class="calendar__week">
+            <div class="calendar__bar" role="img" aria-label={s.calendar.weekLabel}>
+              <span></span><span></span><span></span>
+            </div>
+            <div class="calendar__ends" aria-hidden="true"><span>{s.calendar.start}</span><span>{s.calendar.end}</span></div>
+          </div>
+        </article>
+        <article class="card growth on-dark">
+          <div class="growth__head">
+            <h3>{s.growth.title}</h3>
+            <span class="growth__icon" aria-hidden="true"><Icon name="growth" size={16} stroke={2} /></span>
+          </div>
+          <div class="growth__value">
+            <span class="growth__num"><span>{s.growth.value}</span><span>{s.growth.unit}</span></span>
+            <span class="growth__badge">{s.growth.badge}</span>
+          </div>
+          <!-- Illustration only, not real WHO data. -->
+          <svg role="img" aria-label={s.growth.chartLabel} viewBox="0 0 350 228" class="growth__chart">
+            <g font-family="Albert Sans, sans-serif" font-size="11" fill="#9DB3AC">
+              {heights.map((v, i) => <text x="0" y={204 - i * 45}>{v}</text>)}
+              {ages.map((a, i) => <text x={34 + i * 75} y="224" text-anchor="middle">{a}</text>)}
+            </g>
+            <path d="M34 200H346M34 155H346M34 110H346M34 65H346M34 20H346" stroke="rgba(255,255,255,0.14)" stroke-width="1" />
+            <polygon points="34,150 109,128 184,104 259,80 334,56 334,128 259,150 184,170 109,186 34,196" fill="rgba(216,196,243,0.28)" />
+            <polyline points="34,174 109,158 184,138 259,116 334,94" fill="none" stroke="#D8C4F3" stroke-width="1.2" stroke-dasharray="3 4" />
+            <polyline points="34,150 109,124 184,96 259,64 296,52" fill="none" stroke="#A9E5A0" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />
+            <circle cx="296" cy="52" r="6" fill="#A9E5A0" stroke="#0F3D35" stroke-width="2" />
+          </svg>
+          <p class="growth__note">{s.growth.note}</p>
+        </article>
+      </div>
+
+      <article class="card storage">
+        <div class="storage__text">
+          <h3 class="display">{s.storage.title}</h3>
+          <p>{s.storage.text}</p>
+        </div>
+        <div class="storage__bars" role="img" aria-label={s.storage.chartLabel}>
+          <span class="storage__bar storage__bar--parents">
+            <span class="storage__size">{s.storage.parents.size}</span>
+            <span class="storage__plan">{s.storage.parents.label}</span>
+            <span class="storage__fill"></span>
+          </span>
+          <span class="storage__bar storage__bar--family">
+            <span class="storage__size">{s.storage.family.size}</span>
+            <span class="storage__plan">{s.storage.family.label}</span>
+            <span class="storage__fill"></span>
+          </span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Safety -->
+  <section aria-label={h.safety.label} class="band">
+    <div class="container section">
+      <div class="section-head section-head--row safety-head">
+        <h2 class="display safety-head__title" set:html={rich(h.safety.title)} />
+        <a href={localePath(lang, routes.safety)} class="text-link">{h.safety.link}</a>
+      </div>
+      <ul class="plain safety-grid">
+        {
+          h.safety.items.map((item) => (
+            <li class="safety-item">
+              <IconTile icon={item.icon} tone={item.tone} />
+              <span class="safety-item__text">
+                <span class="safety-item__title">{item.title}</span>
+                <span class="safety-item__desc" set:html={rich(item.text)} />
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} />
+</Base>
+
+<style>
+  /* ---------- Hero ---------- */
+  .hero-wrap {
+    padding-block: 8px 64px;
+  }
+  .hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-card);
+    background: var(--forest);
+    color: #fff;
+  }
+  .hero :global(.hero__bg) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 45%;
+  }
+  .hero__tint {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 38, 33, 0.96) 0%, rgba(15, 61, 53, 0.88) 55%, rgba(15, 61, 53, 0.74) 100%);
+  }
+  .hero__inner {
+    position: relative;
+    padding: 36px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .hero__title {
+    max-width: 560px;
+    font-size: var(--fs-h1);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+  }
+  .hero__lead {
+    max-width: 440px;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--forest-muted);
+  }
+  .hero__copy :global(.hero__cta) {
+    margin-top: 8px;
+  }
+  .handover {
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--plum);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .handover__label {
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .handover__when {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .handover__day {
+    font-family: var(--font-serif);
+    font-size: 64px;
+    line-height: 0.9;
+  }
+  .handover__time {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .handover__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .handover__dots {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .handover__dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .handover__dots span:first-child {
+    width: 24px;
+    background: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .hero-wrap {
+      padding-bottom: 96px;
+    }
+    .hero {
+      border-radius: 24px;
+    }
+    .hero__tint {
+      background: linear-gradient(90deg, rgba(10, 38, 33, 0.96) 0%, rgba(15, 61, 53, 0.86) 55%, rgba(15, 61, 53, 0.72) 100%);
+    }
+    .hero__inner {
+      padding: 56px 56px 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 40px 48px;
+    }
+    .hero__text {
+      flex: 1 1 440px;
+      min-width: 0;
+      padding-bottom: 56px;
+      justify-content: space-between;
+      gap: 48px;
+    }
+    .hero__copy {
+      gap: 20px;
+    }
+    .hero__title {
+      margin-top: 48px;
+    }
+    .hero__lead {
+      font-size: 18px;
+    }
+    .handover {
+      max-width: 310px;
+    }
+    .hero__phone {
+      flex: 1 1 380px;
+      min-width: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1099.98px) {
+    /* Stacked tablet layout: text above, phone below, as on mobile. */
+    .hero__text {
+      flex-basis: 100%;
+      padding-bottom: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 32px;
+    }
+    .hero__copy {
+      flex: 1 1 360px;
+    }
+    .hero__title {
+      margin-top: 0;
+    }
+  }
+
+  /* ---------- Share grid ---------- */
+  .share {
+    padding-top: 0;
+    padding-bottom: 72px;
+  }
+  .share__head {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .share__title {
+    max-width: 760px;
+    font-size: clamp(38px, calc(28.34px + 2.476vw), 64px);
+    line-height: 1.04;
+  }
+  .share__text {
+    max-width: 605px;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+  .share__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .share__col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card {
+    position: relative;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+  }
+  .card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.2;
+  }
+
+  .moment {
+    min-height: 300px;
+    background: var(--ink);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .moment :global(.moment__img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .moment__tint {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 32, 25, 0.5);
+  }
+  .moment__body {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .moment__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+  }
+  .moment__row--top {
+    align-items: baseline;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.45);
+  }
+  .moment__title {
+    font-size: 17px;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .moment__shared {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .free {
+    padding: 20px;
+    background: var(--lilac);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .free__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .free__text h3 {
+    max-width: 180px;
+  }
+  .free__amount {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    font-size: 13px;
+  }
+  .free__amount span:first-child {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 34px;
+    line-height: 1;
+  }
+  .avatars {
+    display: flex;
+  }
+  .avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--lilac);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .avatar + .avatar {
+    margin-left: -10px;
+  }
+  .avatar--forest { background: var(--forest); color: #fff; }
+  .avatar--plum { background: var(--plum); color: #fff; }
+  .avatar--orange { background: var(--orange); }
+
+  .calendar {
+    padding: 22px;
+    background: var(--surface);
+    box-shadow: 0 0 0 1px var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .calendar__head {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--line-strong);
+  }
+  .calendar__head span {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--muted);
+  }
+  .calendar__stats {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .calendar__stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .calendar__stats dt {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--muted);
+  }
+  .calendar__stats dd {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .calendar__week {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .calendar__bar {
+    display: flex;
+    gap: 4px;
+    height: 26px;
+  }
+  .calendar__bar span {
+    border-radius: 6px;
+  }
+  .calendar__bar span:nth-child(1) { flex: 1; background: var(--orange); }
+  .calendar__bar span:nth-child(2) { flex: 3; background: var(--lilac); }
+  .calendar__bar span:nth-child(3) { flex: 3; background: var(--bg); }
+  .calendar__ends {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .growth {
+    padding: 22px;
+    background: var(--forest);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .growth__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .growth__head h3 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .growth__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--lilac);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .growth__value {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .growth__num {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 16px;
+  }
+  .growth__num span:first-child {
+    font-family: var(--font-serif);
+    font-size: 52px;
+    line-height: 0.9;
+  }
+  .growth__badge {
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 16px;
+    background: var(--lilac);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .growth__chart {
+    width: 100%;
+    height: auto;
+  }
+  .growth__note {
+    font-size: 13px;
+    color: var(--forest-muted);
+  }
+
+  .storage {
+    padding: 28px 24px 24px;
+    background: var(--sage);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 28px;
+  }
+  .storage__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .storage__text h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.08;
+  }
+  .storage__text p {
+    max-width: 300px;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--sage-ink);
+  }
+  .storage__bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+  }
+  .storage__bar {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .storage__bar--parents { flex: 1; }
+  .storage__bar--family { flex: 1.2; }
+  .storage__size {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .storage__plan {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--sage-ink);
+  }
+  .storage__fill {
+    border-radius: 10px;
+  }
+  .storage__bar--parents .storage__fill { height: 64px; background: var(--lilac); }
+  .storage__bar--family .storage__fill { height: 160px; background: var(--forest); }
+
+  @media (min-width: 768px) {
+    .share {
+      padding-bottom: 104px;
+    }
+    .share__head {
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+    .share__grid,
+    .share__col {
+      gap: 16px;
+    }
+    .share__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .moment {
+      flex: 1;
+      min-height: 360px;
+    }
+    .growth {
+      flex: 1;
+    }
+    .storage {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1099.98px) {
+    /* Storage card spans both columns: text left, bars right. */
+    .storage {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+    .storage__bars {
+      flex: 0 1 360px;
+    }
+  }
+  @media (min-width: 1100px) {
+    .safety-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .share__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .storage {
+      grid-column: auto;
+      min-height: 560px;
+    }
+    .storage__bar--parents .storage__fill { height: 84px; }
+    .storage__bar--family .storage__fill { height: 200px; }
+  }
+
+  /* ---------- Safety band ---------- */
+  .safety-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .safety-head__title {
+    max-width: 700px;
+    font-size: clamp(36px, calc(29.31px + 1.714vw), 54px);
+  }
+  .safety-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .safety-item {
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .safety-item__text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .safety-item__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .safety-item__desc {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+  @media (min-width: 768px) {
+    .safety-head {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 24px;
+    }
+    .safety-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .safety-item {
+      padding: 20px;
+      border-radius: var(--radius-card);
+    }
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  icon: string;
+  tone?: string;
+  size?: 48 | 52;
+}
+const { icon, tone = 'lilac', size = 48 } = Astro.props;
+---
+
+<span class:list={['icon-tile', `tone-${tone}`]} style={`--tile:${size}px`} aria-hidden="true">
+  <Icon name={icon} />
+</span>
+
+<style>
+  .icon-tile {
+    width: var(--tile);
+    height: var(--tile);
+    flex-shrink: 0;
+    border-radius: var(--radius-control);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+  }
+  .tone-lilac { background: var(--lilac); }
+  .tone-mint { background: var(--mint); }
+  .tone-orange { background: var(--orange); }
+  .tone-sky { background: var(--sky); }
+  .tone-yellow { background: var(--yellow); }
+  .tone-forest { background: var(--forest); color: #fff; }
+</style>
