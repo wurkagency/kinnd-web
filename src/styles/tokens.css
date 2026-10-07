@@ -21,8 +21,8 @@
   --sage: #e7ecea;
   --sage-ink: #3f4a45;
 
-  --font-sans: 'Albert Sans', system-ui, sans-serif;
-  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Albert Sans', 'Albert Sans Fallback', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', 'Instrument Serif Fallback', Georgia, serif;
 
   --radius-card: 20px;
   --radius-band: 28px;

@@ -40,3 +40,18 @@
   font-display: swap;
   src: url('/fonts/instrument-serif-latin-400-italic.woff2') format('woff2');
 }
+
+/*
+ * Metric-matched fallbacks so the swap to the web fonts does not reflow the
+ * page (layout shift). size-adjust measured against the real fonts.
+ */
+@font-face {
+  font-family: 'Instrument Serif Fallback';
+  src: local('Times New Roman'), local('Tinos'), local('Liberation Serif');
+  size-adjust: 84%;
+}
+@font-face {
+  font-family: 'Albert Sans Fallback';
+  src: local('Arial'), local('Arimo'), local('Liberation Sans'), local('Helvetica');
+  size-adjust: 103%;
+}

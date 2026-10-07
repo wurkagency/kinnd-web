@@ -19,8 +19,9 @@ const { free, parents, family } = c.plans;
 
 <Base lang={lang} title={c.title} description={c.description} route={routes.pricing} current="pricing">
   <PageHero title={c.hero.title} text={c.hero.text}>
-    <!-- Hidden until the script runs: without JS the monthly prices and yearly notes still show. -->
-    <div class="period" role="group" aria-label={c.toggle.label} data-period-toggle hidden>
+    <!-- Needs JS. Without it the toggle is hidden; monthly prices and the yearly notes still show. -->
+    <noscript><style is:inline>.period { display: none !important; }</style></noscript>
+    <div class="period" role="group" aria-label={c.toggle.label} data-period-toggle>
       <button type="button" aria-pressed="true" data-set-period="monthly">{c.toggle.monthly}</button>
       <button type="button" aria-pressed="false" data-set-period="yearly">
         {c.toggle.yearly}<span class="period__badge">{c.toggle.badge}</span>
@@ -101,7 +102,6 @@ const { free, parents, family } = c.plans;
       });
     };
     buttons.forEach((b) => b.addEventListener('click', () => setPeriod(b.dataset.setPeriod!)));
-    toggle.hidden = false;
   }
 </script>
 
@@ -112,9 +112,6 @@ const { free, parents, family } = c.plans;
     padding: 4px;
     border-radius: 14px;
     background: var(--bg);
-  }
-  .period[hidden] {
-    display: none;
   }
   .period button {
     height: 44px;
