@@ -1,0 +1,656 @@
+{
+  "site": {
+    "tagline": "Safe collaboration and sharing in the trusted family.",
+    "ogImageAlt": "KINND"
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "home": "KINND, home",
+    "mainLabel": "Main",
+    "pagesLabel": "Pages",
+    "legalLabel": "Legal",
+    "features": "Features",
+    "pricing": "Pricing",
+    "safety": "Safety",
+    "safetyLong": "Safety & privacy",
+    "faq": "FAQ",
+    "about": "About & contact",
+    "privacy": "Privacy notice",
+    "terms": "Terms",
+    "cookies": "Cookies",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuTitle": "Menu",
+    "language": "Language"
+  },
+  "cta": {
+    "tryFree": "Try for free",
+    "startTrial": "Start free for 30 days",
+    "startFree": "Start with Free",
+    "seePricing": "See pricing"
+  },
+  "ctaBand": {
+    "label": "Get started",
+    "title": "*Free to start. Invited family never pay.*",
+    "text": "30 days with everything included. It runs on your phone, no app store needed."
+  },
+  "home": {
+    "title": "KINND · Safe collaboration and sharing in the trusted family",
+    "description": "Share children, appointments, Moments and media completely private in the family circle.",
+    "hero": {
+      "label": "Introduction",
+      "title": "Collaborate and share with the *trusted* family",
+      "text": "Share children, appointments, Moments and media completely private in the family circle.",
+      "handover": {
+        "label": "Always know the next handover",
+        "day": "Mon",
+        "time": "16:00",
+        "note": "August changes home"
+      },
+      "phoneLabel": "The KINND Today screen on a phone: today's date, today's plan with two appointments, and today's school.",
+      "callouts": [
+        "Custody calendar",
+        "Tasks",
+        "Appointments",
+        "The school day"
+      ]
+    },
+    "share": {
+      "label": "What is in KINND",
+      "title": "*Share with co-parents & family*",
+      "text": "Share custody calendar, appointments, Moments and media between parents and with the family. Create necessity lists and wishlists or assign tasks and notes.",
+      "moment": {
+        "alt": "A canal boat tour",
+        "title": "Canal tour",
+        "tag": "Moments",
+        "shared": "Shared with family",
+        "date": "Sun 27 Sep"
+      },
+      "free": {
+        "title": "Invited family never pay",
+        "amount": "0 DKK",
+        "suffix": "for them"
+      },
+      "calendar": {
+        "title": "Calendar and custody",
+        "plan": "Plan 7/7",
+        "stats": [
+          {
+            "label": "With you",
+            "value": "Mon–Thu"
+          },
+          {
+            "label": "Handover",
+            "value": "Fri 15:00"
+          },
+          {
+            "label": "Swaps",
+            "value": "Approved"
+          }
+        ],
+        "weekLabel": "This week: four days with you, then three days at the other home",
+        "start": "Monday",
+        "end": "Sunday"
+      },
+      "growth": {
+        "title": "Growth",
+        "value": "164",
+        "unit": "cm",
+        "badge": "Above 97th percentile",
+        "chartLabel": "Example growth chart: August’s height from age 7 to 11 against the typical WHO range for boys, now 164 cm",
+        "firstAge": "7 y",
+        "note": "WHO height-for-age, boys · shaded = typical range"
+      },
+      "storage": {
+        "title": "Room for every memory",
+        "text": "Every photo and video in one place, whichever home it was taken in.",
+        "chartLabel": "Storage per person: 2 GB on Parents, 100 GB on Family",
+        "parents": {
+          "size": "2 GB",
+          "label": "Parents plan"
+        },
+        "family": {
+          "size": "100 GB",
+          "label": "Family plan"
+        }
+      }
+    },
+    "safety": {
+      "label": "Safety",
+      "title": "Built for children’s data,\nso built to *protect* them",
+      "link": "How we keep it safe",
+      "items": [
+        {
+          "icon": "lock",
+          "tone": "lilac",
+          "title": "Photos are locked",
+          "text": "Each one encrypted with its own key"
+        },
+        {
+          "icon": "pinOff",
+          "tone": "mint",
+          "title": "Locations are stripped",
+          "text": "Location data is removed from the photos other people download."
+        },
+        {
+          "icon": "shield",
+          "tone": "orange",
+          "title": "Two-step sign-in",
+          "text": "Only the right people get in"
+        },
+        {
+          "icon": "globe",
+          "tone": "forest",
+          "title": "EU and GDPR",
+          "text": "We follow GDPR and store data in the EU."
+        }
+      ]
+    }
+  },
+  "features": {
+    "title": "Features · KINND",
+    "description": "Everything about your child, in one place. Shared by both homes and the family you invite.",
+    "hero": {
+      "title": "Everything about your child, in *one* place",
+      "text": "Shared by both homes and the family you invite."
+    },
+    "highlightsLabel": "Highlights",
+    "calendar": {
+      "name": "August",
+      "initial": "A",
+      "status": "With you · handover Friday",
+      "week": "Wk 41",
+      "digits": [
+        "7",
+        "7"
+      ],
+      "title": "Calendar and custody",
+      "text": "Know whose week it is. 7/7, 10/4 or your own plan."
+    },
+    "access": {
+      "role": "Grandma",
+      "name": "Jeanette",
+      "initial": "J",
+      "title": "Everyone gets *the right access*",
+      "text": "Invite the other parent, grandparents and caregivers. Each adult sees only what their role allows. Invited family never pay.",
+      "more": "Read more",
+      "moreLabel": "Read more about family and roles"
+    },
+    "today": {
+      "eyebrow": "Today",
+      "title": "Know what’s happening",
+      "items": [
+        {
+          "icon": "school",
+          "tone": "sky",
+          "title": "School, 08:15 to 13:45",
+          "text": "When the day starts and ends"
+        },
+        {
+          "icon": "calendar",
+          "tone": "lilac",
+          "title": "Training, 16:00",
+          "text": "Appointments with place and tasks"
+        },
+        {
+          "icon": "checklist",
+          "tone": "mint",
+          "title": "Pack the sports bag",
+          "text": "Tasks and lists for both homes"
+        },
+        {
+          "icon": "image",
+          "tone": "orange",
+          "title": "New moment from Dad",
+          "text": "Photos and video, shared privately"
+        }
+      ]
+    },
+    "explained": {
+      "label": "All features",
+      "title": "Main features, *explained*",
+      "text": "Tap a question to read more.",
+      "items": [
+        {
+          "q": "How does the custody calendar work?",
+          "a": "Pick a plan like 7/7 or 10/4, or make your own. Everyone sees whose week it is.",
+          "bullets": [
+            "Swaps are agreed in the app",
+            "Appointments with place, tasks and notes"
+          ]
+        },
+        {
+          "q": "How do we share photos and videos?",
+          "a": "Post a moment and choose who sees it. Everything is kept in one shared media library."
+        },
+        {
+          "q": "What are lists for?",
+          "a": "Necessities for each home, and wishlists the family can pick from. No double gifts."
+        },
+        {
+          "q": "Can we add tasks and reminders?",
+          "a": "Yes. Add tasks to appointments and school lessons, with a reminder before they are due."
+        },
+        {
+          "q": "Can I see the school day?",
+          "a": "Yes. See when each child starts and ends, and open the full week schedule."
+        },
+        {
+          "q": "Where do we keep health info and growth?",
+          "a": "On the child. Medical info like allergies and medicine, and height and weight on WHO growth charts."
+        },
+        {
+          "q": "Who can see what?",
+          "a": "Each adult sees only what their role allows. You decide who is invited."
+        },
+        {
+          "q": "Can we message each other in KINND?",
+          "a": "Yes. Messages stay inside KINND, next to everything else about your child."
+        }
+      ]
+    },
+    "where": {
+      "label": "Where it works",
+      "title": "It runs on your *phone*",
+      "text": "No app store needed. Open KINND in your browser and add it to your home screen.",
+      "items": [
+        {
+          "icon": "phone",
+          "tone": "lilac",
+          "title": "Phone, tablet and computer",
+          "text": "One account on every screen"
+        },
+        {
+          "icon": "globe",
+          "tone": "forest",
+          "title": "Three languages",
+          "text": "English, Danish and Swedish"
+        },
+        {
+          "icon": "lock",
+          "tone": "mint",
+          "title": "Private by default",
+          "text": "Only people you invite get in"
+        }
+      ]
+    }
+  },
+  "pricing": {
+    "title": "Pricing · KINND",
+    "description": "Simple pricing. One person pays. Invited family never pay.",
+    "hero": {
+      "title": "Simple *pricing*",
+      "text": "One person pays. Invited family never pay."
+    },
+    "toggle": {
+      "label": "Billing period",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "badge": "Save up to 30%"
+    },
+    "plansLabel": "Plans",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "text": "To get started.",
+        "price": "0",
+        "unit": "DKK",
+        "note": "Free forever",
+        "features": [
+          "Up to 2 children",
+          "200 MB storage per person"
+        ],
+        "excluded": "Not included: custody calendar, media library and family members."
+      },
+      "parents": {
+        "name": "Parents",
+        "text": "For your child’s two homes.",
+        "monthly": {
+          "price": "29",
+          "unit": "DKK / month",
+          "note": "or save 20% annually at 279 DKK / year"
+        },
+        "yearly": {
+          "price": "279",
+          "unit": "DKK / year",
+          "note": "Billed yearly. You save 20%."
+        },
+        "features": [
+          "Up to 3 children",
+          "2 GB storage per person",
+          "Your co-parent is included when you invite them",
+          "Custody calendar and media library"
+        ]
+      },
+      "family": {
+        "name": "Family",
+        "badge": "Most room",
+        "text": "For parents plus the wider family.",
+        "monthly": {
+          "price": "69",
+          "unit": "DKK / month",
+          "note": "or save 30% annually at 579 DKK / year"
+        },
+        "yearly": {
+          "price": "579",
+          "unit": "DKK / year",
+          "note": "Billed yearly. You save 30%."
+        },
+        "features": [
+          "Up to 6 children",
+          "100 GB storage per person",
+          "Everything in Parents",
+          "Invite grandparents and caregivers"
+        ]
+      }
+    },
+    "vatNote": "Prices include Danish VAT. [Confirm final prices]",
+    "good": {
+      "label": "Good to know",
+      "title": "Good to *know*",
+      "items": [
+        {
+          "icon": "calendar",
+          "tone": "lilac",
+          "title": "30 days free",
+          "text": "Every new account gets all Family features for 30 days. No card needed."
+        },
+        {
+          "icon": "people",
+          "tone": "mint",
+          "title": "One person pays",
+          "text": "The people you invite never pay. They use your plan."
+        },
+        {
+          "icon": "close",
+          "tone": "orange",
+          "title": "Cancel any time",
+          "text": "You keep your plan until the period ends. Nothing more is charged."
+        }
+      ]
+    },
+    "paying": {
+      "label": "Questions about paying",
+      "title": "Questions about *paying*",
+      "link": "All questions",
+      "items": [
+        {
+          "q": "What happens after the 30 days?",
+          "a": "You pick a plan. If you pick nothing, you move to Free."
+        },
+        {
+          "q": "Can I stay on Free?",
+          "a": "Yes. If your family fits Free, it is free forever."
+        },
+        {
+          "q": "How do I pay?",
+          "a": "By card in the app. KINND is not sold through an app store."
+        },
+        {
+          "q": "Can I change plan later?",
+          "a": "Yes, at any time. You only pay the difference for the rest of the period."
+        }
+      ]
+    }
+  },
+  "safety": {
+    "title": "Safety & privacy · KINND",
+    "description": "Built to protect children’s data. Six promises, in plain words.",
+    "hero": {
+      "title": "Built to *protect* children’s data",
+      "text": "Six promises, in plain words."
+    },
+    "promisesLabel": "Our promises",
+    "promises": [
+      {
+        "icon": "lock",
+        "tone": "lilac",
+        "title": "Photos are locked",
+        "text": "Every photo and video is encrypted with its own key."
+      },
+      {
+        "icon": "pinOff",
+        "tone": "mint",
+        "title": "Locations stay private",
+        "text": "Location data is removed from the photos other people download."
+      },
+      {
+        "icon": "shield",
+        "tone": "orange",
+        "title": "Two-step sign-in",
+        "text": "Always on, for everyone. Only the right people get in."
+      },
+      {
+        "icon": "people",
+        "tone": "sky",
+        "title": "The right access",
+        "text": "Each adult sees only what their relationship to the child allows."
+      },
+      {
+        "icon": "globe",
+        "tone": "forest",
+        "title": "EU and GDPR",
+        "text": "We follow GDPR and store data in the EU. [Confirm hosting wording with counsel]"
+      },
+      {
+        "icon": "download",
+        "tone": "yellow",
+        "title": "Your data is yours",
+        "text": "Download your photos and videos. Delete your account when you want."
+      }
+    ],
+    "behind": {
+      "label": "Behind the scenes",
+      "title": "How we protect you *behind* the scenes",
+      "text": "A small team looks after the service. Here is what we do.",
+      "items": [
+        {
+          "title": "We act on misuse",
+          "text": "We look into fraud and false access to a child’s space."
+        },
+        {
+          "title": "We work with the authorities",
+          "text": "Confirmed illegal cases are handed over to them."
+        },
+        {
+          "title": "We stay out of family conflicts",
+          "text": "KINND is a private space to share in. We do not take sides."
+        }
+      ]
+    },
+    "details": {
+      "label": "Privacy notice",
+      "title": "Want the details?",
+      "text": "Read exactly what we collect and why.",
+      "cta": "Read the privacy notice"
+    }
+  },
+  "faq": {
+    "title": "FAQ · KINND",
+    "description": "Questions and answers. Short answers to what parents ask most.",
+    "hero": {
+      "title": "Questions and *answers*",
+      "text": "Short answers to what parents ask most."
+    },
+    "questionsLabel": "Questions",
+    "groups": [
+      {
+        "title": "Getting started",
+        "items": [
+          {
+            "q": "What is KINND?",
+            "a": "A private place where parents and their family share everything about their children."
+          },
+          {
+            "q": "Is it an app?",
+            "a": "It runs in your browser and works like an app. Add it to your home screen. No app store needed."
+          },
+          {
+            "q": "Which languages?",
+            "a": "English, Danish and Swedish."
+          }
+        ]
+      },
+      {
+        "title": "Family and access",
+        "items": [
+          {
+            "q": "Does the other parent need to pay?",
+            "a": "No. Your co-parent is included in your plan when you invite them."
+          },
+          {
+            "q": "What can grandparents see?",
+            "a": "Only what you share with them. Each adult sees what their role allows."
+          },
+          {
+            "q": "Who can invite family?",
+            "a": "Parents. Grandparents and caregivers need the Family plan."
+          }
+        ]
+      },
+      {
+        "title": "Paying",
+        "items": [
+          {
+            "q": "What does it cost?",
+            "a": "Free is 0 DKK. Parents is 29 DKK a month. Family is 69 DKK a month."
+          },
+          {
+            "q": "What happens after the 30 free days?",
+            "a": "You pick a plan. If you pick nothing, you move to Free."
+          },
+          {
+            "q": "Can I cancel?",
+            "a": "Yes, at any time. You keep your plan until the period ends."
+          }
+        ]
+      },
+      {
+        "title": "Safety",
+        "items": [
+          {
+            "q": "Is our data safe?",
+            "a": "Media and sensitive information are encrypted. Sign-in requires two steps."
+          },
+          {
+            "q": "Can I delete everything?",
+            "a": "Yes. Your data, your choice. Download or delete your account on demand."
+          },
+          {
+            "q": "Does KINND help with conflicts?",
+            "a": "No. KINND is a place to share in. We do not take sides."
+          }
+        ]
+      }
+    ],
+    "more": {
+      "title": "Did not find your answer?",
+      "text": "Write to us. A person answers.",
+      "cta": "Contact us"
+    }
+  },
+  "about": {
+    "title": "About & contact · KINND",
+    "description": "One calm place for each child. KINND is made for separated parents and the family around their children.",
+    "hero": {
+      "title": "One calm place for *each* child",
+      "text": "KINND is made for separated parents and the family around their children."
+    },
+    "story": {
+      "label": "Our story",
+      "title": "Why we built *KINND*",
+      "lead": "Children with two homes have one life. Their photos, plans and small notes should not be split in two.",
+      "body": [
+        "KINND gives the family one calm place to share them.",
+        "We believe that privacy matters and take it seriously. You can share your child and media in a private encrypted space outside social media."
+      ]
+    },
+    "believe": {
+      "label": "What we believe",
+      "title": "What we *believe*",
+      "items": [
+        {
+          "title": "Collaboration",
+          "text": "Separated or together, collaboration is key, whether communication is present or not."
+        },
+        {
+          "title": "Privacy",
+          "text": "A closed space for the trusted ones. Only your invites can get access. As it should be!"
+        },
+        {
+          "title": "Sharing",
+          "text": "Share those precious moments with the family without concerns of sharing online."
+        }
+      ]
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Get in *touch*",
+      "write": {
+        "title": "Write to us",
+        "text": "A person answers within 1 working day."
+      },
+      "report": {
+        "title": "Report a problem",
+        "text": "Worried about an account or a child’s space? Tell us and we look into it."
+      },
+      "company": {
+        "title": "The company",
+        "lines": [
+          "WURK ApS",
+          "CVR 34378424",
+          "Skoleholdervej 91, 2400 Copenhagen"
+        ]
+      }
+    }
+  },
+  "legal": {
+    "tabsLabel": "Legal documents",
+    "onThisPage": "On this page",
+    "lastUpdated": "Last updated [DATE]",
+    "placeholder": "[Text from counsel. Plain words, short sentences.]",
+    "privacy": {
+      "tab": "Privacy notice",
+      "title": "Privacy notice · KINND",
+      "description": "What we collect, why, and what you can do about it.",
+      "heading": "Privacy *notice*",
+      "text": "What we collect, why, and what you can do about it.",
+      "sections": [
+        "Who we are",
+        "What we collect",
+        "Why we collect it",
+        "Who we share it with",
+        "How long we keep it",
+        "Your rights",
+        "How to contact us"
+      ]
+    },
+    "terms": {
+      "tab": "Terms",
+      "title": "Terms · KINND",
+      "description": "The terms for using KINND.",
+      "heading": "*Terms*",
+      "text": "[Intro line from counsel]",
+      "sections": [
+        "[Section headings from counsel]"
+      ]
+    },
+    "cookies": {
+      "tab": "Cookies",
+      "title": "Cookies · KINND",
+      "description": "How KINND uses cookies.",
+      "heading": "Cookie *policy*",
+      "text": "[Intro line from counsel]",
+      "sections": [
+        "[Section headings from counsel]"
+      ]
+    }
+  },
+  "notFound": {
+    "title": "Page not found · KINND",
+    "description": "This page does not exist.",
+    "heading": "Page *not found*",
+    "text": "The link may be old, or the page has moved.",
+    "cta": "Go to the home page"
+  }
+}

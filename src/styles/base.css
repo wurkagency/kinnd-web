@@ -74,7 +74,7 @@ button {
 
 .skip-link {
   position: absolute;
-  left: 16px;
+  inset-inline-start: 16px;
   top: -100px;
   z-index: 100;
   padding: 12px 18px;
@@ -200,4 +200,9 @@ main:focus {
   .br-wide {
     display: inline;
   }
+}
+
+/* Arabic has no italics; stop the browser faking a slant. */
+:lang(ar) {
+  font-synthesis: none;
 }

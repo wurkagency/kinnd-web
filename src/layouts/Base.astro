@@ -4,7 +4,7 @@ import '../styles/tokens.css';
 import '../styles/base.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { locales, localePath, useDict, defaultLocale, type Locale } from '../i18n';
+import { locales, localePath, useDict, defaultLocale, isUntranslated, localeInfo, type Locale } from '../i18n';
 
 interface Props {
   lang: Locale;
@@ -21,13 +21,13 @@ const t = useDict(lang);
 const site = Astro.site!;
 const abs = (path: string) => new URL(path, site).href;
 const canonical = route ? abs(localePath(lang, route)) : undefined;
-const robots = noindex || t.meta.untranslated ? 'noindex, follow' : undefined;
-const ogLocale = { en: 'en_GB', da: 'da_DK', sv: 'sv_SE' }[lang];
+const robots = noindex || isUntranslated(lang) ? 'noindex, follow' : undefined;
+const ogLocale = localeInfo[lang].og;
 const ogImage = abs('/og-default.png');
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} dir={localeInfo[lang].dir}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

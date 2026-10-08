@@ -13,7 +13,7 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - [x] Astro project, `@astrojs/sitemap` only runtime integration
 - [x] Tokens (`src/styles/tokens.css`), base styles, fluid type/spacing between 390 and 1440
 - [x] Self-hosted fonts (latin woff2, `font-display: swap`) + metric-matched fallbacks (no layout shift)
-- [x] i18n: `src/i18n/{en,da,sv}.ts`, all copy in locale files, `/`, `/da/`, `/sv/`
+- [x] i18n: all copy in `src/i18n/locales/*.json`; en, da, sv, no, fo, is, de, tr, ar (RTL)
 - [x] `Logo` (placeholder, one component), `Header`, `Footer`, `Button`, `CtaBand`, `PageHero`, `IconTile`
 
 ## Phase 2: Home
@@ -60,5 +60,6 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - [ ] Legal text: privacy, terms, cookies; "Last updated" date
 - [ ] Final logo, favicon, social share image (`public/og-default.png` is a placeholder)
 - [ ] Licence for `family-orchard.jpg`
-- [ ] Danish and Swedish translations (then set `untranslated: false` and drop the sitemap filter in `astro.config.mjs`)
+- [ ] Translations: da, sv, no, fo, is, de, tr, ar. Files and instructions in `src/i18n/locales/` (set `_meta.untranslated` to false when done)
+- [ ] Arabic uses system Arabic fonts (brand fonts have no Arabic). Consider self-hosting Noto Naskh/Sans Arabic
 - [ ] Hosting target (build output is plain static files in `dist/`)

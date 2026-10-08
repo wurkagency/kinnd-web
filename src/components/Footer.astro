@@ -1,5 +1,5 @@
 ---
-import { locales, localePath, routes, useDict, type Locale } from '../i18n';
+import { locales, localeInfo, localePath, routes, site, useDict, type Locale } from '../i18n';
 import { isEmail, rich } from '../lib/rich';
 
 interface Props {
@@ -9,14 +9,14 @@ interface Props {
 const { lang, route } = Astro.props;
 const t = useDict(lang);
 const p = (r: string) => localePath(lang, r);
-const email = t.site.contactEmail;
+const email = site.contactEmail;
 ---
 
 <footer class="site-footer band">
   <div class="container site-footer__inner">
     <div class="site-footer__top">
       <div class="site-footer__brand">
-        <span class="site-footer__word">{t.site.name}</span>
+        <span class="site-footer__word">{site.name}</span>
         <p>{t.site.tagline}</p>
         {
           isEmail(email) ? (
@@ -46,7 +46,7 @@ const email = t.site.contactEmail;
               hreflang={l}
               lang={l}
               aria-current={l === lang ? 'true' : undefined}
-              aria-label={t.nav.languageNames[l]}
+              aria-label={localeInfo[l].name}
             >
               {l.toUpperCase()}
             </a>
@@ -55,7 +55,7 @@ const email = t.site.contactEmail;
       </nav>
     </div>
     <div class="site-footer__bottom">
-      <span>{t.site.company}</span>
+      <span>{site.company}</span>
     </div>
   </div>
 </footer>
@@ -117,6 +117,7 @@ const email = t.site.contactEmail;
   }
   .site-footer__langs {
     display: flex;
+    flex-wrap: wrap;
     gap: 6px;
     align-items: flex-start;
   }

@@ -1,6 +1,6 @@
 ---
 import Icon from './Icon.astro';
-import { locales, localePath, useDict, type Locale } from '../i18n';
+import { locales, localeInfo, localePath, useDict, type Locale } from '../i18n';
 
 interface Props {
   lang: Locale;
@@ -12,7 +12,7 @@ const t = useDict(lang);
 ---
 
 <details class="lang-menu" data-lang-menu>
-  <summary aria-label={`${t.nav.language}: ${t.nav.languageNames[lang]}`}>
+  <summary aria-label={`${t.nav.language}: ${localeInfo[lang].name}`}>
     <span aria-hidden="true">{lang.toUpperCase()}</span>
     <Icon name="chevronDown" size={14} stroke={2} class="lang-menu__chevron" />
   </summary>
@@ -24,7 +24,7 @@ const t = useDict(lang);
             <span class="lang-menu__code" aria-hidden="true">
               {l.toUpperCase()}
             </span>
-            {t.nav.languageNames[l]}
+            {localeInfo[l].name}
           </a>
         </li>
       ))
@@ -82,7 +82,7 @@ const t = useDict(lang);
   }
   .lang-menu__list {
     position: absolute;
-    right: 0;
+    inset-inline-end: 0;
     top: calc(100% + 6px);
     z-index: 20;
     min-width: 168px;

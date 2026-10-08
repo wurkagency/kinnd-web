@@ -51,6 +51,8 @@ const { label, callouts } = Astro.props;
    * box itself, so they stay attached at every width.
    */
   .phone-host {
+    /* The phone is a picture of the app: keep its geometry left-to-right in every language. */
+    direction: ltr;
     container-type: inline-size;
     width: 100%;
   }
