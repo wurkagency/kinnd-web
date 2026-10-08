@@ -51,6 +51,8 @@ Expect `HTTP/2 200`, `404` and the sitemap XML.
 
 `public/.htaccess` is copied into `dist/` on build. It sets the 404 page, cache headers, security headers and compression, which covers Plesk's default Apache + nginx setup.
 
+It also redirects the short URLs used in the legal texts (`/privacy`, `/terms`, `/privatlivspolitik`, `/vilkaar`, `/priser`).
+
 If the domain runs nginx only (Apache off), `.htaccess` is ignored. Add this under **Domains > kinnd.eu > Apache & nginx Settings > Additional nginx directives** instead:
 
 ```nginx
@@ -58,4 +60,9 @@ error_page 404 /404.html;
 location ~* ^/(_astro|fonts)/ {
     add_header Cache-Control "public, max-age=31536000, immutable";
 }
+rewrite ^/privacy/?$ /legal/privacy/ permanent;
+rewrite ^/terms/?$ /legal/terms/ permanent;
+rewrite ^/privatlivspolitik/?$ /da/legal/privacy/ permanent;
+rewrite ^/vilkaar/?$ /da/legal/terms/ permanent;
+rewrite ^/priser/?$ /da/pricing/ permanent;
 ```

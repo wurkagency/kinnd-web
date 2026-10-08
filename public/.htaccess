@@ -19,3 +19,12 @@ ErrorDocument 404 /404.html
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml text/plain
 </IfModule>
+
+# Short URLs printed in the legal texts.
+<IfModule mod_alias.c>
+  RedirectMatch 301 ^/privacy/?$ /legal/privacy/
+  RedirectMatch 301 ^/terms/?$ /legal/terms/
+  RedirectMatch 301 ^/privatlivspolitik/?$ /da/legal/privacy/
+  RedirectMatch 301 ^/vilkaar/?$ /da/legal/terms/
+  RedirectMatch 301 ^/priser/?$ /da/pricing/
+</IfModule>

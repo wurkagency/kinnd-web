@@ -68,7 +68,10 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - [ ] Contact email and safety email
 - [ ] EU hosting / GDPR wording (counsel)
 - [ ] "A person answers within 1 working day": confirm the promise
-- [ ] Legal text: privacy, terms, cookies; "Last updated" date
+- [x] Privacy policy and terms live (2026-10-08): Danish on /da/, English on every other language
+- [ ] Cookie policy text (tab still shows placeholders)
+- [ ] Privacy policy §9 mentions a cookie banner; the site sets no non-essential cookies and has no banner
+- [ ] Contact/safety email on the site: use support@ and abuse@kinnd.eu from the legal texts?
 - [ ] Final logo, favicon, social share image (`public/og-default.png` is a placeholder)
 - [ ] Licence for `family-orchard.jpg`
 - [x] Translations live (2026-10-08): da, sv, no, fo, is, de, tr, ar

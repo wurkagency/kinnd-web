@@ -14,6 +14,30 @@ const t = useDict(lang);
 const l = t.legal;
 const c = l[doc];
 const docs: Doc[] = ['privacy', 'terms', 'cookies'];
+
+/**
+ * Final legal texts live in src/content/legal/<da|en>/<doc>.md (from counsel).
+ * Danish pages show the Danish text; every other language shows the English one.
+ * A document without a file (cookies, for now) keeps the placeholder layout.
+ */
+interface LegalMd {
+  frontmatter: { title: string; updated: string };
+  Content: import('astro').MarkdownInstance<Record<string, unknown>>['Content'];
+  getHeadings: () => { depth: number; slug: string; text: string }[];
+}
+const files = import.meta.glob<LegalMd>('../content/legal/*/*.md', { eager: true });
+const docLang = lang === 'da' ? 'da' : 'en';
+const md = files[`../content/legal/${docLang}/${doc}.md`];
+const toc = md
+  ?.getHeadings()
+  .filter((h) => h.depth === 2)
+  .map((h) => {
+    const m = h.text.match(/^(\d+)\.\s*(.*)$/);
+    return { slug: h.slug, num: m ? m[1] : '', text: m ? m[2] : h.text };
+  });
+// The English text on a non-English page: tell browsers and screen readers.
+const bodyLang = md && docLang !== lang ? docLang : undefined;
+const bodyDir = bodyLang ? 'ltr' : undefined;
 ---
 
 <Base lang={lang} title={c.title} description={c.description} route={routes[doc]}>
@@ -31,28 +55,46 @@ const docs: Doc[] = ['privacy', 'terms', 'cookies'];
   </PageHero>
 
   <section aria-label={l[doc].tab} class="container legal">
-    <nav class="toc" aria-label={l.onThisPage}>
-      <span class="toc__title">{l.onThisPage}</span>
-      {
-        c.sections.map((s, i) => (
-          <a href={`#section-${i + 1}`}>
-            <span class="toc__num">{i + 1}</span>
-            <span set:html={rich(s)} />
-          </a>
-        ))
-      }
-    </nav>
-    <div class="legal__body">
-      <p class="legal__updated" set:html={rich(l.lastUpdated)} />
-      {
-        c.sections.map((s, i) => (
-          <section id={`section-${i + 1}`}>
-            <h2 set:html={rich(`${i + 1}. ${s}`)} />
-            <p set:html={rich(l.placeholder)} />
-          </section>
-        ))
-      }
-    </div>
+    {
+      md && toc ? (
+        <>
+          <nav class="toc" aria-label={l.onThisPage} lang={bodyLang} dir={bodyDir}>
+            <span class="toc__title">{l.onThisPage}</span>
+            {toc.map((h) => (
+              <a href={`#${h.slug}`}>
+                <span class="toc__num">{h.num}</span>
+                <span>{h.text}</span>
+              </a>
+            ))}
+          </nav>
+          <div class="legal__body legal__prose" lang={bodyLang} dir={bodyDir}>
+            <p class="legal__updated">{md.frontmatter.updated}</p>
+            <md.Content />
+          </div>
+        </>
+      ) : (
+        <>
+          <nav class="toc" aria-label={l.onThisPage}>
+            <span class="toc__title">{l.onThisPage}</span>
+            {c.sections.map((s, i) => (
+              <a href={`#section-${i + 1}`}>
+                <span class="toc__num">{i + 1}</span>
+                <span set:html={rich(s)} />
+              </a>
+            ))}
+          </nav>
+          <div class="legal__body">
+            <p class="legal__updated" set:html={rich(l.lastUpdated)} />
+            {c.sections.map((s, i) => (
+              <section id={`section-${i + 1}`}>
+                <h2 set:html={rich(`${i + 1}. ${s}`)} />
+                <p set:html={rich(l.placeholder)} />
+              </section>
+            ))}
+          </div>
+        </>
+      )
+    }
   </section>
 </Base>
 
@@ -150,6 +192,73 @@ const docs: Doc[] = ['privacy', 'terms', 'cookies'];
     font-size: 16px;
     line-height: 1.6;
     color: var(--muted);
+  }
+  /* Rendered legal text (Markdown). Same rhythm as the placeholder sections. */
+  .legal__prose {
+    gap: 16px;
+  }
+  .legal__prose :global(h2) {
+    margin-top: 24px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.25;
+    scroll-margin-top: 16px;
+  }
+  .legal__prose :global(p),
+  .legal__prose :global(li) {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .legal__prose :global(strong) {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .legal__prose :global(ul) {
+    margin: 0;
+    padding-inline-start: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .legal__prose :global(a) {
+    color: var(--ink);
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+  .legal__prose :global(a:hover) {
+    color: var(--forest);
+  }
+  .legal__prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .legal__prose :global(th),
+  .legal__prose :global(td) {
+    padding: 10px 12px;
+    text-align: start;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+  .legal__prose :global(th) {
+    background: var(--bg);
+    font-weight: 600;
+  }
+  .legal__prose :global(td) {
+    color: var(--muted);
+  }
+  /* Tables scroll inside themselves on small screens, never the page. */
+  @media (max-width: 767.98px) {
+    .legal__prose :global(table) {
+      display: block;
+      overflow-x: auto;
+    }
+    .legal__prose :global(th),
+    .legal__prose :global(td) {
+      min-width: 140px;
+    }
   }
   @media (min-width: 768px) {
     .doc-tabs a {
