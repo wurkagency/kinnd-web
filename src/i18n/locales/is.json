@@ -1,608 +1,608 @@
 {
   "_meta": {
-    "untranslated": true
+    "untranslated": false
   },
   "site": {
-    "tagline": "Safe collaboration and sharing in the trusted family.",
+    "tagline": "Örugg samvinna og deiling með fjölskyldunni sem þú treystir.",
     "ogImageAlt": "KINND"
   },
   "nav": {
-    "skip": "Skip to content",
-    "home": "KINND, home",
-    "mainLabel": "Main",
-    "pagesLabel": "Pages",
-    "legalLabel": "Legal",
-    "features": "Features",
-    "pricing": "Pricing",
-    "safety": "Safety",
-    "safetyLong": "Safety & privacy",
-    "faq": "FAQ",
-    "about": "About & contact",
-    "privacy": "Privacy notice",
-    "terms": "Terms",
-    "cookies": "Cookies",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "menuTitle": "Menu",
-    "language": "Language"
+    "skip": "Fara beint í efni",
+    "home": "KINND, forsíða",
+    "mainLabel": "Aðalvalmynd",
+    "pagesLabel": "Síður",
+    "legalLabel": "Lagalegt",
+    "features": "Eiginleikar",
+    "pricing": "Verð",
+    "safety": "Öryggi",
+    "safetyLong": "Öryggi og persónuvernd",
+    "faq": "Spurt og svarað",
+    "about": "Um okkur og samband",
+    "privacy": "Persónuverndarstefna",
+    "terms": "Skilmálar",
+    "cookies": "Vafrakökur",
+    "openMenu": "Opna valmynd",
+    "closeMenu": "Loka valmynd",
+    "menuTitle": "Valmynd",
+    "language": "Tungumál"
   },
   "cta": {
-    "tryFree": "Try for free",
-    "startTrial": "Start free for 30 days",
-    "startFree": "Start with Free",
-    "seePricing": "See pricing"
+    "tryFree": "Prófaðu ókeypis",
+    "startTrial": "Byrjaðu ókeypis í 30 daga",
+    "startFree": "Byrjaðu með Frítt",
+    "seePricing": "Sjá verð"
   },
   "ctaBand": {
-    "label": "Get started",
-    "title": "*Free to start. Invited family never pay.*",
-    "text": "30 days with everything included. It runs on your phone, no app store needed."
+    "label": "Byrjaðu núna",
+    "title": "*Ókeypis að byrja. Fjölskyldan sem þú býður borgar aldrei.*",
+    "text": "30 dagar með öllu inniföldu. Það keyrir í símanum þínum, engin app-verslun nauðsynleg."
   },
   "home": {
-    "title": "KINND · Safe collaboration and sharing in the trusted family",
-    "description": "Share children, appointments, Moments and media completely private in the family circle.",
+    "title": "KINND · Örugg samvinna og deiling með fjölskyldunni sem þú treystir",
+    "description": "Deildu börnum, viðburðum, Moments og myndefni í algjöru næði innan fjölskyldunnar.",
     "hero": {
-      "label": "Introduction",
-      "title": "Collaborate and share with the *trusted* family",
-      "text": "Share children, appointments, Moments and media completely private in the family circle.",
+      "label": "Kynning",
+      "title": "Vinnið saman og deilið með fjölskyldunni sem þú *treystir*",
+      "text": "Deildu börnum, viðburðum, Moments og myndefni í algjöru næði innan fjölskyldunnar.",
       "handover": {
-        "label": "Always know the next handover",
-        "day": "Mon",
+        "label": "Vertu alltaf með næstu skipti á hreinu",
+        "day": "mán.",
         "time": "16:00",
-        "note": "August changes home"
+        "note": "August skiptir um heimili"
       },
-      "phoneLabel": "The KINND Today screen on a phone: today's date, today's plan with two appointments, and today's school.",
+      "phoneLabel": "Í dag-skjárinn í KINND í síma: dagsetning dagsins, dagskrá dagsins með tveimur viðburðum og skóli dagsins.",
       "callouts": [
-        "Custody calendar",
-        "Tasks",
-        "Appointments",
-        "The school day"
+        "Umgengnisdagatal",
+        "Verkefni",
+        "Viðburðir",
+        "Skóladagurinn"
       ]
     },
     "share": {
-      "label": "What is in KINND",
-      "title": "*Share with co-parents & family*",
-      "text": "Share custody calendar, appointments, Moments and media between parents and with the family. Create necessity lists and wishlists or assign tasks and notes.",
+      "label": "Þetta er í KINND",
+      "title": "*Deildu með hinu foreldrinu og fjölskyldunni*",
+      "text": "Deildu umgengnisdagatali, viðburðum, Moments og myndefni milli foreldra og með fjölskyldunni. Búðu til nauðsynjalista og óskalista eða úthlutaðu verkefnum og minnispunktum.",
       "moment": {
-        "alt": "A canal boat tour",
-        "title": "Canal tour",
+        "alt": "Bátsferð um síkin",
+        "title": "Síkjasigling",
         "tag": "Moments",
-        "shared": "Shared with family",
-        "date": "Sun 27 Sep"
+        "shared": "Deilt með fjölskyldunni",
+        "date": "sun. 27. sep."
       },
       "free": {
-        "title": "Invited family never pay",
+        "title": "Fjölskyldan sem þú býður borgar aldrei",
         "amount": "0 DKK",
-        "suffix": "for them"
+        "suffix": "fyrir þau"
       },
       "calendar": {
-        "title": "Calendar and custody",
-        "plan": "Plan 7/7",
+        "title": "Dagatal og umgengni",
+        "plan": "Fyrirkomulag 7/7",
         "stats": [
           {
-            "label": "With you",
-            "value": "Mon–Thu"
+            "label": "Hjá þér",
+            "value": "mán.–fim."
           },
           {
-            "label": "Handover",
-            "value": "Fri 15:00"
+            "label": "Skipti",
+            "value": "fös. 15:00"
           },
           {
-            "label": "Swaps",
-            "value": "Approved"
+            "label": "Dagaskipti",
+            "value": "Samþykkt"
           }
         ],
-        "weekLabel": "This week: four days with you, then three days at the other home",
-        "start": "Monday",
-        "end": "Sunday"
+        "weekLabel": "Þessa viku: fjórir dagar hjá þér, síðan þrír dagar á hinu heimilinu",
+        "start": "Mánudagur",
+        "end": "Sunnudagur"
       },
       "growth": {
-        "title": "Growth",
+        "title": "Vöxtur",
         "value": "164",
         "unit": "cm",
-        "badge": "Above 97th percentile",
-        "chartLabel": "Example growth chart: August’s height from age 7 to 11 against the typical WHO range for boys, now 164 cm",
-        "firstAge": "7 y",
-        "note": "WHO height-for-age, boys · shaded = typical range"
+        "badge": "Yfir 97. hundraðshlutamarki",
+        "chartLabel": "Dæmi um vaxtarrit: Hæð Augusts frá 7 til 11 ára aldurs borin saman við dæmigert bil WHO fyrir drengi, nú 164 cm",
+        "firstAge": "7 ára",
+        "note": "WHO hæð eftir aldri, drengir · skyggt = dæmigert bil"
       },
       "storage": {
-        "title": "Room for every memory",
-        "text": "Every photo and video in one place, whichever home it was taken in.",
-        "chartLabel": "Storage per person: 2 GB on Parents, 100 GB on Family",
+        "title": "Pláss fyrir allar minningar",
+        "text": "Allar myndir og myndbönd á einum stað, sama á hvoru heimilinu þau voru tekin.",
+        "chartLabel": "Geymslupláss á mann: 2 GB í Foreldrar, 100 GB í Fjölskylda",
         "parents": {
           "size": "2 GB",
-          "label": "Parents plan"
+          "label": "Áskriftin Foreldrar"
         },
         "family": {
           "size": "100 GB",
-          "label": "Family plan"
+          "label": "Áskriftin Fjölskylda"
         }
       }
     },
     "safety": {
-      "label": "Safety",
-      "title": "Built for children’s data,\nso built to *protect* them",
-      "link": "How we keep it safe",
+      "label": "Öryggi",
+      "title": "Hannað fyrir gögn barna,\nog þess vegna hannað til að *vernda* þau",
+      "link": "Svona höldum við því öruggu",
       "items": [
         {
-          "title": "Photos are locked",
-          "text": "Each one encrypted with its own key"
+          "title": "Myndir eru læstar",
+          "text": "Hver mynd er dulkóðuð með sínum eigin lykli"
         },
         {
-          "title": "Locations are stripped",
-          "text": "Location data is removed from the photos other people download."
+          "title": "Staðsetning er fjarlægð",
+          "text": "Staðsetningargögn eru fjarlægð úr myndum sem aðrir hlaða niður."
         },
         {
-          "title": "Two-step sign-in",
-          "text": "Only the right people get in"
+          "title": "Tveggja þrepa innskráning",
+          "text": "Aðeins rétta fólkið kemst inn"
         },
         {
-          "title": "EU and GDPR",
-          "text": "We follow GDPR and store data in the EU."
+          "title": "ESB og GDPR",
+          "text": "Við fylgjum GDPR og geymum gögn innan ESB."
         }
       ]
     }
   },
   "features": {
-    "title": "Features · KINND",
-    "description": "Everything about your child, in one place. Shared by both homes and the family you invite.",
+    "title": "Eiginleikar · KINND",
+    "description": "Allt um barnið þitt, á einum stað. Deilt milli beggja heimila og fjölskyldunnar sem þú býður.",
     "hero": {
-      "title": "Everything about your child, in *one* place",
-      "text": "Shared by both homes and the family you invite."
+      "title": "Allt um barnið þitt, á *einum* stað",
+      "text": "Deilt milli beggja heimila og fjölskyldunnar sem þú býður."
     },
-    "highlightsLabel": "Highlights",
+    "highlightsLabel": "Hápunktar",
     "calendar": {
       "name": "August",
       "initial": "A",
-      "status": "With you · handover Friday",
-      "week": "Wk 41",
+      "status": "Hjá þér · skipti á föstudag",
+      "week": "Vika 41",
       "digits": [
         "7",
         "7"
       ],
-      "title": "Calendar and custody",
-      "text": "Know whose week it is. 7/7, 10/4 or your own plan."
+      "title": "Dagatal og umgengni",
+      "text": "Sjáðu hver á vikuna. 7/7, 10/4 eða ykkar eigið fyrirkomulag."
     },
     "access": {
-      "role": "Grandma",
+      "role": "Amma",
       "name": "Jeanette",
       "initial": "J",
-      "title": "Everyone gets *the right access*",
-      "text": "Invite the other parent, grandparents and caregivers. Each adult sees only what their role allows. Invited family never pay.",
-      "more": "Read more",
-      "moreLabel": "Read more about family and roles"
+      "title": "Allir fá *réttan aðgang*",
+      "text": "Bjóddu hinu foreldrinu, öfum og ömmum og umönnunaraðilum. Hver fullorðinn sér aðeins það sem hlutverk hans leyfir. Fjölskyldan sem þú býður borgar aldrei.",
+      "more": "Lesa meira",
+      "moreLabel": "Lesa meira um fjölskyldu og hlutverk"
     },
     "today": {
-      "eyebrow": "Today",
-      "title": "Know what’s happening",
+      "eyebrow": "Í dag",
+      "title": "Vertu með á nótunum",
       "items": [
         {
-          "title": "School, 08:15 to 13:45",
-          "text": "When the day starts and ends"
+          "title": "Skóli, 08:15 til 13:45",
+          "text": "Hvenær dagurinn byrjar og endar"
         },
         {
-          "title": "Training, 16:00",
-          "text": "Appointments with place and tasks"
+          "title": "Æfing, 16:00",
+          "text": "Viðburðir með stað og verkefnum"
         },
         {
-          "title": "Pack the sports bag",
-          "text": "Tasks and lists for both homes"
+          "title": "Pakka í íþróttatöskuna",
+          "text": "Verkefni og listar fyrir bæði heimilin"
         },
         {
-          "title": "New moment from Dad",
-          "text": "Photos and video, shared privately"
+          "title": "Nýtt Moment frá pabba",
+          "text": "Myndir og myndbönd, deilt í næði"
         }
       ]
     },
     "explained": {
-      "label": "All features",
-      "title": "Main features, *explained*",
-      "text": "Tap a question to read more.",
+      "label": "Allir eiginleikar",
+      "title": "Helstu eiginleikar, *útskýrðir*",
+      "text": "Ýttu á spurningu til að lesa meira.",
       "items": [
         {
-          "q": "How does the custody calendar work?",
-          "a": "Pick a plan like 7/7 or 10/4, or make your own. Everyone sees whose week it is.",
+          "q": "Hvernig virkar umgengnisdagatalið?",
+          "a": "Veldu fyrirkomulag eins og 7/7 eða 10/4, eða búið til ykkar eigið. Allir sjá hver á vikuna.",
           "bullets": [
-            "Swaps are agreed in the app",
-            "Appointments with place, tasks and notes"
+            "Samið er um dagaskipti í appinu",
+            "Viðburðir með stað, verkefnum og minnispunktum"
           ]
         },
         {
-          "q": "How do we share photos and videos?",
-          "a": "Post a moment and choose who sees it. Everything is kept in one shared media library."
+          "q": "Hvernig deilum við myndum og myndböndum?",
+          "a": "Deildu Moment og veldu hver sér það. Allt er geymt í einu sameiginlegu myndasafni."
         },
         {
-          "q": "What are lists for?",
-          "a": "Necessities for each home, and wishlists the family can pick from. No double gifts."
+          "q": "Til hvers eru listar?",
+          "a": "Nauðsynjar fyrir hvort heimili og óskalistar sem fjölskyldan getur valið úr. Engar tvöfaldar gjafir."
         },
         {
-          "q": "Can we add tasks and reminders?",
-          "a": "Yes. Add tasks to appointments and school lessons, with a reminder before they are due."
+          "q": "Getum við bætt við verkefnum og áminningum?",
+          "a": "Já. Bættu verkefnum við viðburði og kennslustundir, með áminningu áður en þeim á að vera lokið."
         },
         {
-          "q": "Can I see the school day?",
-          "a": "Yes. See when each child starts and ends, and open the full week schedule."
+          "q": "Get ég séð skóladaginn?",
+          "a": "Já. Sjáðu hvenær hvert barn byrjar og hættir og opnaðu alla stundaskrá vikunnar."
         },
         {
-          "q": "Where do we keep health info and growth?",
-          "a": "On the child. Medical info like allergies and medicine, and height and weight on WHO growth charts."
+          "q": "Hvar geymum við heilsufarsupplýsingar og vöxt?",
+          "a": "Hjá barninu. Heilsufarsupplýsingar eins og ofnæmi og lyf, og hæð og þyngd á vaxtarritum WHO."
         },
         {
-          "q": "Who can see what?",
-          "a": "Each adult sees only what their role allows. You decide who is invited."
+          "q": "Hver sér hvað?",
+          "a": "Hver fullorðinn sér aðeins það sem hlutverk hans leyfir. Þú ræður hverjum er boðið."
         },
         {
-          "q": "Can we message each other in KINND?",
-          "a": "Yes. Messages stay inside KINND, next to everything else about your child."
+          "q": "Getum við sent hvort öðru skilaboð í KINND?",
+          "a": "Já. Skilaboð haldast innan KINND, við hliðina á öllu öðru um barnið þitt."
         }
       ]
     },
     "where": {
-      "label": "Where it works",
-      "title": "It runs on your *phone*",
-      "text": "No app store needed. Open KINND in your browser and add it to your home screen.",
+      "label": "Hér virkar það",
+      "title": "Það keyrir í *símanum* þínum",
+      "text": "Engin app-verslun nauðsynleg. Opnaðu KINND í vafranum og bættu því við heimaskjáinn.",
       "items": [
         {
-          "title": "Phone, tablet and computer",
-          "text": "One account on every screen"
+          "title": "Sími, spjaldtölva og tölva",
+          "text": "Einn reikningur á öllum skjám"
         },
         {
-          "title": "Three languages",
-          "text": "English, Danish and Swedish"
+          "title": "Þrjú tungumál",
+          "text": "Enska, danska og sænska"
         },
         {
-          "title": "Private by default",
-          "text": "Only people you invite get in"
+          "title": "Lokað sjálfgefið",
+          "text": "Aðeins þau sem þú býður komast inn"
         }
       ]
     }
   },
   "pricing": {
-    "title": "Pricing · KINND",
-    "description": "Simple pricing. One person pays. Invited family never pay.",
+    "title": "Verð · KINND",
+    "description": "Einfalt verð. Einn borgar. Fjölskyldan sem þú býður borgar aldrei.",
     "hero": {
-      "title": "Simple *pricing*",
-      "text": "One person pays. Invited family never pay."
+      "title": "Einfalt *verð*",
+      "text": "Einn borgar. Fjölskyldan sem þú býður borgar aldrei."
     },
     "toggle": {
-      "label": "Billing period",
-      "monthly": "Monthly",
-      "yearly": "Yearly",
-      "badge": "Save up to 30%"
+      "label": "Greiðslutímabil",
+      "monthly": "Mánaðarlega",
+      "yearly": "Árlega",
+      "badge": "Sparaðu allt að 30%"
     },
-    "plansLabel": "Plans",
+    "plansLabel": "Áskriftir",
     "plans": {
       "free": {
-        "name": "Free",
-        "text": "To get started.",
+        "name": "Frítt",
+        "text": "Til að byrja.",
         "price": "0",
         "unit": "DKK",
-        "note": "Free forever",
+        "note": "Ókeypis að eilífu",
         "features": [
-          "Up to 2 children",
-          "200 MB storage per person"
+          "Allt að 2 börn",
+          "200 MB geymslupláss á mann"
         ],
-        "excluded": "Not included: custody calendar, media library and family members."
+        "excluded": "Ekki innifalið: umgengnisdagatal, myndasafn og fjölskyldumeðlimir."
       },
       "parents": {
-        "name": "Parents",
-        "text": "For your child’s two homes.",
+        "name": "Foreldrar",
+        "text": "Fyrir tvö heimili barnsins þíns.",
         "monthly": {
           "price": "29",
-          "unit": "DKK / month",
-          "note": "or save 20% annually at 279 DKK / year"
+          "unit": "DKK / mánuði",
+          "note": "eða sparaðu 20% með ársgreiðslu: 279 DKK / ári"
         },
         "yearly": {
           "price": "279",
-          "unit": "DKK / year",
-          "note": "Billed yearly. You save 20%."
+          "unit": "DKK / ári",
+          "note": "Greitt árlega. Þú sparar 20%."
         },
         "features": [
-          "Up to 3 children",
-          "2 GB storage per person",
-          "Your co-parent is included when you invite them",
-          "Custody calendar and media library"
+          "Allt að 3 börn",
+          "2 GB geymslupláss á mann",
+          "Hitt foreldrið er innifalið þegar þú býður því",
+          "Umgengnisdagatal og myndasafn"
         ]
       },
       "family": {
-        "name": "Family",
-        "badge": "Most room",
-        "text": "For parents plus the wider family.",
+        "name": "Fjölskylda",
+        "badge": "Mest pláss",
+        "text": "Fyrir foreldra og stórfjölskylduna.",
         "monthly": {
           "price": "69",
-          "unit": "DKK / month",
-          "note": "or save 30% annually at 579 DKK / year"
+          "unit": "DKK / mánuði",
+          "note": "eða sparaðu 30% með ársgreiðslu: 579 DKK / ári"
         },
         "yearly": {
           "price": "579",
-          "unit": "DKK / year",
-          "note": "Billed yearly. You save 30%."
+          "unit": "DKK / ári",
+          "note": "Greitt árlega. Þú sparar 30%."
         },
         "features": [
-          "Up to 6 children",
-          "100 GB storage per person",
-          "Everything in Parents",
-          "Invite grandparents and caregivers"
+          "Allt að 6 börn",
+          "100 GB geymslupláss á mann",
+          "Allt í Foreldrar",
+          "Bjóddu öfum og ömmum og umönnunaraðilum"
         ]
       }
     },
-    "vatNote": "Prices include Danish VAT. [Confirm final prices]",
+    "vatNote": "Verð eru með dönskum virðisaukaskatti. [Confirm final prices]",
     "good": {
-      "label": "Good to know",
-      "title": "Good to *know*",
+      "label": "Gott að vita",
+      "title": "Gott að *vita*",
       "items": [
         {
-          "title": "30 days free",
-          "text": "Every new account gets all Family features for 30 days. No card needed."
+          "title": "30 dagar ókeypis",
+          "text": "Allir nýir reikningar fá alla eiginleika Fjölskyldu í 30 daga. Ekkert kort nauðsynlegt."
         },
         {
-          "title": "One person pays",
-          "text": "The people you invite never pay. They use your plan."
+          "title": "Einn borgar",
+          "text": "Þau sem þú býður borga aldrei. Þau nota þína áskrift."
         },
         {
-          "title": "Cancel any time",
-          "text": "You keep your plan until the period ends. Nothing more is charged."
+          "title": "Segðu upp hvenær sem er",
+          "text": "Þú heldur áskriftinni þar til tímabilinu lýkur. Ekkert meira er rukkað."
         }
       ]
     },
     "paying": {
-      "label": "Questions about paying",
-      "title": "Questions about *paying*",
-      "link": "All questions",
+      "label": "Spurningar um greiðslur",
+      "title": "Spurningar um *greiðslur*",
+      "link": "Allar spurningar",
       "items": [
         {
-          "q": "What happens after the 30 days?",
-          "a": "You pick a plan. If you pick nothing, you move to Free."
+          "q": "Hvað gerist eftir 30 dagana?",
+          "a": "Þú velur áskrift. Ef þú velur ekkert færistu yfir í Frítt."
         },
         {
-          "q": "Can I stay on Free?",
-          "a": "Yes. If your family fits Free, it is free forever."
+          "q": "Get ég verið áfram í Frítt?",
+          "a": "Já. Ef Frítt hentar fjölskyldunni þinni er það ókeypis að eilífu."
         },
         {
-          "q": "How do I pay?",
-          "a": "By card in the app. KINND is not sold through an app store."
+          "q": "Hvernig borga ég?",
+          "a": "Með korti í appinu. KINND er ekki selt í gegnum app-verslun."
         },
         {
-          "q": "Can I change plan later?",
-          "a": "Yes, at any time. You only pay the difference for the rest of the period."
+          "q": "Get ég skipt um áskrift seinna?",
+          "a": "Já, hvenær sem er. Þú borgar aðeins mismuninn fyrir það sem eftir er af tímabilinu."
         }
       ]
     }
   },
   "safety": {
-    "title": "Safety & privacy · KINND",
-    "description": "Built to protect children’s data. Six promises, in plain words.",
+    "title": "Öryggi og persónuvernd · KINND",
+    "description": "Hannað til að vernda gögn barna. Sex loforð, á mannamáli.",
     "hero": {
-      "title": "Built to *protect* children’s data",
-      "text": "Six promises, in plain words."
+      "title": "Hannað til að *vernda* gögn barna",
+      "text": "Sex loforð, á mannamáli."
     },
-    "promisesLabel": "Our promises",
+    "promisesLabel": "Loforð okkar",
     "promises": [
       {
-        "title": "Photos are locked",
-        "text": "Every photo and video is encrypted with its own key."
+        "title": "Myndir eru læstar",
+        "text": "Hver mynd og hvert myndband er dulkóðað með sínum eigin lykli."
       },
       {
-        "title": "Locations stay private",
-        "text": "Location data is removed from the photos other people download."
+        "title": "Staðsetning helst leynd",
+        "text": "Staðsetningargögn eru fjarlægð úr myndum sem aðrir hlaða niður."
       },
       {
-        "title": "Two-step sign-in",
-        "text": "Always on, for everyone. Only the right people get in."
+        "title": "Tveggja þrepa innskráning",
+        "text": "Alltaf virk, fyrir alla. Aðeins rétta fólkið kemst inn."
       },
       {
-        "title": "The right access",
-        "text": "Each adult sees only what their relationship to the child allows."
+        "title": "Réttur aðgangur",
+        "text": "Hver fullorðinn sér aðeins það sem tengsl hans við barnið leyfa."
       },
       {
-        "title": "EU and GDPR",
-        "text": "We follow GDPR and store data in the EU. [Confirm hosting wording with counsel]"
+        "title": "ESB og GDPR",
+        "text": "Við fylgjum GDPR og geymum gögn innan ESB. [Confirm hosting wording with counsel]"
       },
       {
-        "title": "Your data is yours",
-        "text": "Download your photos and videos. Delete your account when you want."
+        "title": "Gögnin þín eru þín",
+        "text": "Sæktu myndirnar þínar og myndböndin. Eyddu reikningnum þínum þegar þú vilt."
       }
     ],
     "behind": {
-      "label": "Behind the scenes",
-      "title": "How we protect you *behind* the scenes",
-      "text": "A small team looks after the service. Here is what we do.",
+      "label": "Bak við tjöldin",
+      "title": "Svona verndum við þig *bak við* tjöldin",
+      "text": "Lítið teymi sér um þjónustuna. Þetta gerum við.",
       "items": [
         {
-          "title": "We act on misuse",
-          "text": "We look into fraud and false access to a child’s space."
+          "title": "Við bregðumst við misnotkun",
+          "text": "Við rannsökum svik og óheimilan aðgang að svæði barns."
         },
         {
-          "title": "We work with the authorities",
-          "text": "Confirmed illegal cases are handed over to them."
+          "title": "Við vinnum með yfirvöldum",
+          "text": "Staðfest ólögleg mál eru afhent þeim."
         },
         {
-          "title": "We stay out of family conflicts",
-          "text": "KINND is a private space to share in. We do not take sides."
+          "title": "Við blöndum okkur ekki í fjölskyldudeilur",
+          "text": "KINND er lokað rými til að deila í. Við tökum ekki afstöðu."
         }
       ]
     },
     "details": {
-      "label": "Privacy notice",
-      "title": "Want the details?",
-      "text": "Read exactly what we collect and why.",
-      "cta": "Read the privacy notice"
+      "label": "Persónuverndarstefna",
+      "title": "Viltu smáatriðin?",
+      "text": "Lestu nákvæmlega hvað við söfnum og hvers vegna.",
+      "cta": "Lesa persónuverndarstefnuna"
     }
   },
   "faq": {
-    "title": "FAQ · KINND",
-    "description": "Questions and answers. Short answers to what parents ask most.",
+    "title": "Spurt og svarað · KINND",
+    "description": "Spurningar og svör. Stutt svör við því sem foreldrar spyrja oftast um.",
     "hero": {
-      "title": "Questions and *answers*",
-      "text": "Short answers to what parents ask most."
+      "title": "Spurningar og *svör*",
+      "text": "Stutt svör við því sem foreldrar spyrja oftast um."
     },
-    "questionsLabel": "Questions",
+    "questionsLabel": "Spurningar",
     "groups": [
       {
-        "title": "Getting started",
+        "title": "Fyrstu skrefin",
         "items": [
           {
-            "q": "What is KINND?",
-            "a": "A private place where parents and their family share everything about their children."
+            "q": "Hvað er KINND?",
+            "a": "Lokaður staður þar sem foreldrar og fjölskylda þeirra deila öllu um börnin sín."
           },
           {
-            "q": "Is it an app?",
-            "a": "It runs in your browser and works like an app. Add it to your home screen. No app store needed."
+            "q": "Er þetta app?",
+            "a": "Það keyrir í vafranum og virkar eins og app. Bættu því við heimaskjáinn. Engin app-verslun nauðsynleg."
           },
           {
-            "q": "Which languages?",
-            "a": "English, Danish and Swedish."
+            "q": "Hvaða tungumál?",
+            "a": "Enska, danska og sænska."
           }
         ]
       },
       {
-        "title": "Family and access",
+        "title": "Fjölskylda og aðgangur",
         "items": [
           {
-            "q": "Does the other parent need to pay?",
-            "a": "No. Your co-parent is included in your plan when you invite them."
+            "q": "Þarf hitt foreldrið að borga?",
+            "a": "Nei. Hitt foreldrið er innifalið í áskriftinni þinni þegar þú býður því."
           },
           {
-            "q": "What can grandparents see?",
-            "a": "Only what you share with them. Each adult sees what their role allows."
+            "q": "Hvað geta afar og ömmur séð?",
+            "a": "Aðeins það sem þú deilir með þeim. Hver fullorðinn sér það sem hlutverk hans leyfir."
           },
           {
-            "q": "Who can invite family?",
-            "a": "Parents. Grandparents and caregivers need the Family plan."
+            "q": "Hver getur boðið fjölskyldu?",
+            "a": "Foreldrar. Afar, ömmur og umönnunaraðilar þurfa áskriftina Fjölskylda."
           }
         ]
       },
       {
-        "title": "Paying",
+        "title": "Greiðslur",
         "items": [
           {
-            "q": "What does it cost?",
-            "a": "Free is 0 DKK. Parents is 29 DKK a month. Family is 69 DKK a month."
+            "q": "Hvað kostar það?",
+            "a": "Frítt kostar 0 DKK. Foreldrar kostar 29 DKK á mánuði. Fjölskylda kostar 69 DKK á mánuði."
           },
           {
-            "q": "What happens after the 30 free days?",
-            "a": "You pick a plan. If you pick nothing, you move to Free."
+            "q": "Hvað gerist eftir 30 ókeypis dagana?",
+            "a": "Þú velur áskrift. Ef þú velur ekkert færistu yfir í Frítt."
           },
           {
-            "q": "Can I cancel?",
-            "a": "Yes, at any time. You keep your plan until the period ends."
+            "q": "Get ég sagt upp?",
+            "a": "Já, hvenær sem er. Þú heldur áskriftinni þar til tímabilinu lýkur."
           }
         ]
       },
       {
-        "title": "Safety",
+        "title": "Öryggi",
         "items": [
           {
-            "q": "Is our data safe?",
-            "a": "Media and sensitive information are encrypted. Sign-in requires two steps."
+            "q": "Eru gögnin okkar örugg?",
+            "a": "Myndefni og viðkvæmar upplýsingar eru dulkóðaðar. Innskráning krefst tveggja þrepa."
           },
           {
-            "q": "Can I delete everything?",
-            "a": "Yes. Your data, your choice. Download or delete your account on demand."
+            "q": "Get ég eytt öllu?",
+            "a": "Já. Þín gögn, þitt val. Sæktu gögnin þín eða eyddu reikningnum þegar þú vilt."
           },
           {
-            "q": "Does KINND help with conflicts?",
-            "a": "No. KINND is a place to share in. We do not take sides."
+            "q": "Hjálpar KINND í deilum?",
+            "a": "Nei. KINND er staður til að deila í. Við tökum ekki afstöðu."
           }
         ]
       }
     ],
     "more": {
-      "title": "Did not find your answer?",
-      "text": "Write to us. A person answers.",
-      "cta": "Contact us"
+      "title": "Fannstu ekki svarið?",
+      "text": "Skrifaðu okkur. Manneskja svarar.",
+      "cta": "Hafa samband"
     }
   },
   "about": {
-    "title": "About & contact · KINND",
-    "description": "One calm place for each child. KINND is made for separated parents and the family around their children.",
+    "title": "Um okkur og samband · KINND",
+    "description": "Einn rólegur staður fyrir hvert barn. KINND er gert fyrir foreldra sem búa ekki saman og fjölskylduna í kringum börnin þeirra.",
     "hero": {
-      "title": "One calm place for *each* child",
-      "text": "KINND is made for separated parents and the family around their children."
+      "title": "Einn rólegur staður fyrir *hvert* barn",
+      "text": "KINND er gert fyrir foreldra sem búa ekki saman og fjölskylduna í kringum börnin þeirra."
     },
     "story": {
-      "label": "Our story",
-      "title": "Why we built *KINND*",
-      "lead": "Children with two homes have one life. Their photos, plans and small notes should not be split in two.",
+      "label": "Sagan okkar",
+      "title": "Þess vegna bjuggum við til *KINND*",
+      "lead": "Börn með tvö heimili eiga eitt líf. Myndirnar þeirra, áætlanir og litlir minnispunktar ættu ekki að skiptast í tvennt.",
       "body": [
-        "KINND gives the family one calm place to share them.",
-        "We believe that privacy matters and take it seriously. You can share your child and media in a private encrypted space outside social media."
+        "KINND gefur fjölskyldunni einn rólegan stað til að deila þeim.",
+        "Við teljum að persónuvernd skipti máli og tökum hana alvarlega. Þú getur deilt barninu þínu og myndefni í lokuðu, dulkóðuðu rými utan samfélagsmiðla."
       ]
     },
     "believe": {
-      "label": "What we believe",
-      "title": "What we *believe*",
+      "label": "Það sem við trúum á",
+      "title": "Það sem við *trúum* á",
       "items": [
         {
-          "title": "Collaboration",
-          "text": "Separated or together, collaboration is key, whether communication is present or not."
+          "title": "Samvinna",
+          "text": "Saman eða í sundur: samvinna er lykillinn, hvort sem þið talið saman eða ekki."
         },
         {
-          "title": "Privacy",
-          "text": "A closed space for the trusted ones. Only your invites can get access. As it should be!"
+          "title": "Persónuvernd",
+          "text": "Lokað rými fyrir þau sem þú treystir. Aðeins þau sem þú býður fá aðgang. Eins og það á að vera!"
         },
         {
-          "title": "Sharing",
-          "text": "Share those precious moments with the family without concerns of sharing online."
+          "title": "Deiling",
+          "text": "Deildu dýrmætu augnablikunum með fjölskyldunni án þess að hafa áhyggjur af því að deila á netinu."
         }
       ]
     },
     "contact": {
-      "label": "Contact",
-      "title": "Get in *touch*",
+      "label": "Samband",
+      "title": "Hafðu *samband*",
       "write": {
-        "title": "Write to us",
-        "text": "A person answers within 1 working day."
+        "title": "Skrifaðu okkur",
+        "text": "Manneskja svarar innan 1 virks dags."
       },
       "report": {
-        "title": "Report a problem",
-        "text": "Worried about an account or a child’s space? Tell us and we look into it."
+        "title": "Tilkynna vandamál",
+        "text": "Áhyggjur af reikningi eða svæði barns? Láttu okkur vita og við skoðum málið."
       },
       "company": {
-        "title": "The company",
+        "title": "Fyrirtækið",
         "lines": [
           "WURK ApS",
           "CVR 37547395",
-          "Skoleholdervej 91, 2400 Copenhagen"
+          "Skoleholdervej 91, 2400 Kaupmannahöfn"
         ]
       }
     }
   },
   "legal": {
-    "tabsLabel": "Legal documents",
-    "onThisPage": "On this page",
-    "lastUpdated": "Last updated [DATE]",
+    "tabsLabel": "Lagaleg skjöl",
+    "onThisPage": "Á þessari síðu",
+    "lastUpdated": "Síðast uppfært [DATE]",
     "placeholder": "[Text from counsel. Plain words, short sentences.]",
     "privacy": {
-      "tab": "Privacy notice",
-      "title": "Privacy notice · KINND",
-      "description": "What we collect, why, and what you can do about it.",
-      "heading": "Privacy *notice*",
-      "text": "What we collect, why, and what you can do about it.",
+      "tab": "Persónuverndarstefna",
+      "title": "Persónuverndarstefna · KINND",
+      "description": "Hvað við söfnum, hvers vegna, og hvað þú getur gert í því.",
+      "heading": "*Persónuverndarstefna*",
+      "text": "Hvað við söfnum, hvers vegna, og hvað þú getur gert í því.",
       "sections": [
-        "Who we are",
-        "What we collect",
-        "Why we collect it",
-        "Who we share it with",
-        "How long we keep it",
-        "Your rights",
-        "How to contact us"
+        "Hver við erum",
+        "Hvað við söfnum",
+        "Hvers vegna við söfnum því",
+        "Með hverjum við deilum því",
+        "Hversu lengi við geymum það",
+        "Réttindi þín",
+        "Hvernig þú hefur samband við okkur"
       ]
     },
     "terms": {
-      "tab": "Terms",
-      "title": "Terms · KINND",
-      "description": "The terms for using KINND.",
-      "heading": "*Terms*",
+      "tab": "Skilmálar",
+      "title": "Skilmálar · KINND",
+      "description": "Skilmálar fyrir notkun KINND.",
+      "heading": "*Skilmálar*",
       "text": "[Intro line from counsel]",
       "sections": [
         "[Section headings from counsel]"
       ]
     },
     "cookies": {
-      "tab": "Cookies",
-      "title": "Cookies · KINND",
-      "description": "How KINND uses cookies.",
-      "heading": "Cookie *policy*",
+      "tab": "Vafrakökur",
+      "title": "Vafrakökur · KINND",
+      "description": "Svona notar KINND vafrakökur.",
+      "heading": "*Vafrakökustefna*",
       "text": "[Intro line from counsel]",
       "sections": [
         "[Section headings from counsel]"
@@ -610,11 +610,11 @@
     }
   },
   "notFound": {
-    "title": "Page not found · KINND",
-    "description": "This page does not exist.",
-    "heading": "Page *not found*",
-    "text": "The link may be old, or the page has moved.",
-    "cta": "Go to the home page"
+    "title": "Síða fannst ekki · KINND",
+    "description": "Þessi síða er ekki til.",
+    "heading": "Síðan *fannst ekki*",
+    "text": "Tengillinn gæti verið gamall, eða síðan hefur verið færð.",
+    "cta": "Fara á forsíðu"
   },
   "language": {
     "title": "Language · KINND",

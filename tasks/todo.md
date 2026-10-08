@@ -71,7 +71,7 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - [ ] Legal text: privacy, terms, cookies; "Last updated" date
 - [ ] Final logo, favicon, social share image (`public/og-default.png` is a placeholder)
 - [ ] Licence for `family-orchard.jpg`
-- [x] Translations live (2026-10-08): da, sv, no, fo, de, tr, ar
-- [ ] Icelandic (`is.json`): file came back still in English; stays hidden from search until translated
+- [x] Translations live (2026-10-08): da, sv, no, fo, is, de, tr, ar
+- [x] Icelandic translation live (2026-10-08)
 - [ ] Language modal text (`language` section: heading, line, Close) is English in all translated files
 - [ ] Hosting target (build output is plain static files in `dist/`)
