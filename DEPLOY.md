@@ -1,36 +1,41 @@
 # Deploying www.kinnd.eu (Plesk)
 
-The site is fully static. `npm run build` writes plain files to `dist/`, and the release script copies them into the Plesk document root. No Node process runs in production.
+The site is fully static. `npm run build` writes plain files to `dist/`. No Node process runs in production.
 
-Assumed on the server: Node 22, npm, git and rsync installed; SSL and the non-www to www 301 already set up in Plesk.
-
-| | Path |
-|---|---|
-| Repository (build folder) | `/var/www/kinnd.eu/kinnd-web` |
-| Document root (served) | `/var/www/kinnd.eu/httpdocs` |
-
-The repository sits next to `httpdocs`, not inside it, so source files are never public.
+Server: Plesk, Node 22, SSL and the non-www to www 301 already in place. Plesk Git pulls the repository into `/var/www/vhosts/kinnd.eu/httpdocs`.
 
 ## First time
 
-SSH in as the vhost's system user, then:
+1. In Plesk, go to **Domains > kinnd.eu > Hosting & DNS > Hosting**, set **Document root** to `httpdocs/dist`, and save.
+   The source code in `httpdocs` is then never public; only the build is served.
+2. Pull the repository with Plesk Git (**Git > Pull updates**).
+3. SSH in as the domain's system user and build:
 
 ```bash
-cd /var/www/kinnd.eu
-git clone https://github.com/wurkagency/kinnd-web.git kinnd-web
-chmod +x kinnd-web/deploy/release.sh
-kinnd-web/deploy/release.sh
+cd /var/www/vhosts/kinnd.eu/httpdocs
+npm ci
+npm run build
 ```
-
-The first run replaces everything in `httpdocs` (the Plesk placeholder page included) with the site. `.well-known/` is kept.
 
 ## Every release
 
+1. Plesk: **Git > Pull updates**.
+2. SSH:
+
 ```bash
-/var/www/kinnd.eu/kinnd-web/deploy/release.sh
+cd /var/www/vhosts/kinnd.eu/httpdocs
+npm ci
+npm run build
 ```
 
-It pulls `main`, installs dependencies, builds and mirrors `dist/` into `httpdocs`. Nothing needs restarting.
+Nothing needs restarting.
+
+Optional: to build on every pull without SSH, paste the same commands into Plesk **Git > Repository settings > Enable additional deployment actions**:
+
+```bash
+npm ci
+npm run build
+```
 
 ## Check after a release
 
@@ -44,9 +49,9 @@ Expect `HTTP/2 200`, `404` and the sitemap XML.
 
 ## Server settings
 
-`public/.htaccess` ships with the build and sets the 404 page, cache headers, security headers and compression. That covers Plesk's default Apache + nginx setup.
+`public/.htaccess` is copied into `dist/` on build. It sets the 404 page, cache headers, security headers and compression, which covers Plesk's default Apache + nginx setup.
 
-If the domain runs in nginx-only mode (Apache off), `.htaccess` is ignored. Add this under Plesk > Domains > kinnd.eu > Apache & nginx Settings > Additional nginx directives instead:
+If the domain runs nginx only (Apache off), `.htaccess` is ignored. Add this under **Domains > kinnd.eu > Apache & nginx Settings > Additional nginx directives** instead:
 
 ```nginx
 error_page 404 /404.html;
