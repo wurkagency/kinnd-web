@@ -19,18 +19,28 @@ export const locales = ['en', 'da', 'sv', 'no', 'fo', 'is', 'de', 'tr', 'ar'] as
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
-/** Language names are shown in their own language, so they are not translated. */
-export const localeInfo: Record<Locale, { name: string; dir: 'ltr' | 'rtl'; og: string }> = {
-  en: { name: 'English', dir: 'ltr', og: 'en_GB' },
-  da: { name: 'Dansk', dir: 'ltr', og: 'da_DK' },
-  sv: { name: 'Svenska', dir: 'ltr', og: 'sv_SE' },
-  no: { name: 'Norsk', dir: 'ltr', og: 'nb_NO' },
-  fo: { name: 'Føroyskt', dir: 'ltr', og: 'fo_FO' },
-  is: { name: 'Íslenska', dir: 'ltr', og: 'is_IS' },
-  de: { name: 'Deutsch', dir: 'ltr', og: 'de_DE' },
-  tr: { name: 'Türkçe', dir: 'ltr', og: 'tr_TR' },
-  ar: { name: 'العربية', dir: 'rtl', og: 'ar_AR' },
+/**
+ * Language names are shown in their own language (and in English under them),
+ * so they are not translated. `flag` is a file in src/assets/flags; Arabic has
+ * no flag because it is not one country.
+ */
+export const localeInfo: Record<
+  Locale,
+  { name: string; english: string; dir: 'ltr' | 'rtl'; og: string; flag?: string }
+> = {
+  en: { name: 'English', english: 'English', dir: 'ltr', og: 'en_GB', flag: 'gb' },
+  da: { name: 'Dansk', english: 'Danish', dir: 'ltr', og: 'da_DK', flag: 'dk' },
+  sv: { name: 'Svenska', english: 'Swedish', dir: 'ltr', og: 'sv_SE', flag: 'se' },
+  no: { name: 'Norsk', english: 'Norwegian', dir: 'ltr', og: 'nb_NO', flag: 'no' },
+  fo: { name: 'Føroyskt', english: 'Faroese', dir: 'ltr', og: 'fo_FO', flag: 'fo' },
+  is: { name: 'Íslenska', english: 'Icelandic', dir: 'ltr', og: 'is_IS', flag: 'is' },
+  de: { name: 'Deutsch', english: 'German', dir: 'ltr', og: 'de_DE', flag: 'de' },
+  tr: { name: 'Türkçe', english: 'Turkish', dir: 'ltr', og: 'tr_TR', flag: 'tr' },
+  ar: { name: 'العربية', english: 'Arabic', dir: 'rtl', og: 'ar_AR' },
 };
+
+/** Locales with a finished translation. Only these are picked automatically for a visitor. */
+export const translatedLocales = (): Locale[] => locales.filter((l) => !isUntranslated(l));
 
 /** Company facts and contact details. Not translated. */
 export const site = {
@@ -84,6 +94,8 @@ export const routes = {
   privacy: '/legal/privacy/',
   terms: '/legal/terms/',
   cookies: '/legal/cookies/',
+  /** Plain language list; the header button falls back to it without JavaScript. */
+  language: '/language/',
 } as const;
 export type RouteKey = keyof typeof routes;
 

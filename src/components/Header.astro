@@ -8,11 +8,10 @@ import { localePath, routes, useDict, APP_URL, type Locale } from '../i18n';
 
 interface Props {
   lang: Locale;
-  route: string;
   /** Route key of the page, used to mark the current nav item. */
   current?: string;
 }
-const { lang, route, current } = Astro.props;
+const { lang, current } = Astro.props;
 const t = useDict(lang);
 
 const main = [
@@ -36,7 +35,7 @@ const menu = [...main, { key: 'about', href: localePath(lang, routes.about), lab
     }
   </nav>
   <div class="site-header__actions">
-    <LanguageMenu lang={lang} route={route} />
+    <LanguageMenu lang={lang} />
     <Button href={APP_URL} size="sm" class="site-header__cta">{t.cta.tryFree}</Button>
     <button
       type="button"

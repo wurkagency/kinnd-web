@@ -113,6 +113,22 @@
       "w": 1440,
       "x": 7520,
       "y": 0
+    },
+    "Language.dc.html": {
+      "expand": "fill",
+      "h": 900,
+      "title": "Language selector",
+      "w": 1440,
+      "x": 15520,
+      "y": 0
+    },
+    "Language-mobile.dc.html": {
+      "expand": "fill",
+      "h": 844,
+      "title": "Language selector · mobile 390",
+      "w": 390,
+      "x": 17040,
+      "y": 0
     }
   },
   "createdOnFiles": {
@@ -138,7 +154,9 @@
     "About.dc.html",
     "About-mobile.dc.html",
     "Legal.dc.html",
-    "Legal-mobile.dc.html"
+    "Legal-mobile.dc.html",
+    "Language.dc.html",
+    "Language-mobile.dc.html"
   ],
   "pages": [],
   "title": "KINND Website"

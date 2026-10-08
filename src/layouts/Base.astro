@@ -4,7 +4,17 @@ import '../styles/tokens.css';
 import '../styles/base.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { locales, localePath, useDict, defaultLocale, isUntranslated, localeInfo, type Locale } from '../i18n';
+import LanguageDialog from '../components/LanguageDialog.astro';
+import {
+  locales,
+  localePath,
+  useDict,
+  defaultLocale,
+  isUntranslated,
+  localeInfo,
+  translatedLocales,
+  type Locale,
+} from '../i18n';
 
 interface Props {
   lang: Locale;
@@ -31,6 +41,50 @@ const ogImage = abs('/og-default.png');
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      Language on entry (runs before the page paints). Only when the visitor
+      arrives from outside the site, never on internal navigation:
+      1. A language the visitor picked before (localStorage) wins.
+      2. Otherwise guess from location (time zone), then the browser language,
+         and only switch to a language that is translated.
+      The header language button is always there to change it back.
+    -->
+    <script is:inline define:vars={{ L: locales, T: translatedLocales() }}>
+      try {
+        var KEY = 'kinnd-lang';
+        var parts = location.pathname.split('/');
+        var cur = L.indexOf(parts[1]) > 0 ? parts[1] : 'en';
+        var rest = cur === 'en' ? location.pathname : location.pathname.slice(cur.length + 1);
+        var internal = document.referrer && new URL(document.referrer).host === location.host;
+        if (!internal && rest.indexOf('/language/') !== 0) {
+          var target = localStorage.getItem(KEY);
+          if (!target && !navigator.webdriver && !/bot|crawl|spider|slurp|lighthouse/i.test(navigator.userAgent)) {
+            var TZ = {
+              'Europe/Copenhagen': 'da', 'America/Nuuk': 'da', 'Atlantic/Faroe': 'fo', 'Atlantic/Reykjavik': 'is',
+              'Europe/Oslo': 'no', 'Arctic/Longyearbyen': 'no', 'Europe/Stockholm': 'sv',
+              'Europe/Berlin': 'de', 'Europe/Busingen': 'de', 'Europe/Vienna': 'de', 'Europe/Zurich': 'de', 'Europe/Vaduz': 'de',
+              'Europe/Istanbul': 'tr', 'Asia/Istanbul': 'tr',
+              'Europe/London': 'en', 'Europe/Dublin': 'en'
+            };
+            var AR = /^(Asia\/(Riyadh|Dubai|Qatar|Kuwait|Bahrain|Muscat|Baghdad|Amman|Beirut|Damascus|Aden|Gaza|Hebron)|Africa\/(Cairo|Algiers|Tunis|Tripoli|Casablanca|Khartoum))$/;
+            var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+            target = TZ[tz] || (AR.test(tz) ? 'ar' : '');
+            if (!target) {
+              var langs = navigator.languages || [navigator.language || ''];
+              for (var i = 0; i < langs.length && !target; i++) {
+                var c = String(langs[i]).toLowerCase().split('-')[0];
+                if (c === 'nb' || c === 'nn') c = 'no';
+                if (L.indexOf(c) >= 0) target = c;
+              }
+            }
+            if (T.indexOf(target) < 0 && target !== 'en') target = '';
+          }
+          if (target && target !== cur && L.indexOf(target) >= 0) {
+            location.replace((target === 'en' ? '' : '/' + target) + rest + location.search + location.hash);
+          }
+        }
+      } catch (e) {}
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     {robots && <meta name="robots" content={robots} />}
@@ -64,10 +118,21 @@ const ogImage = abs('/og-default.png');
   </head>
   <body>
     <a class="skip-link" href="#main">{t.nav.skip}</a>
-    <Header lang={lang} route={route ?? '/'} current={current} />
+    <Header lang={lang} current={current} />
     <main id="main" tabindex="-1">
       <slot />
     </main>
-    <Footer lang={lang} route={route ?? '/'} />
+    <Footer lang={lang} />
+    <LanguageDialog lang={lang} route={route ?? '/'} />
+    <script>
+      // Remember an explicit language choice for the next visit.
+      document.addEventListener('click', (e) => {
+        const option = (e.target as Element).closest<HTMLElement>('[data-lang-option]');
+        if (!option) return;
+        try {
+          localStorage.setItem('kinnd-lang', option.dataset.langOption!);
+        } catch {}
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,153 @@
+---
+import { locales, localeInfo, localePath, useDict, type Locale } from '../i18n';
+import Icon from './Icon.astro';
+
+/** Flag files (flag-icons, MIT). Loaded as small images, so ids inside the SVGs never clash. */
+const flags = import.meta.glob<string>('../assets/flags/*.svg', { eager: true, query: '?url', import: 'default' });
+const flagUrl = (code?: string) => (code ? flags[`../assets/flags/${code}.svg`] : undefined);
+
+interface Props {
+  lang: Locale;
+  /** Route (without locale prefix) each option links to. */
+  route: string;
+  /** Focus target when the dialog opens. */
+  autofocusCurrent?: boolean;
+}
+const { lang, route, autofocusCurrent = false } = Astro.props;
+const t = useDict(lang);
+---
+
+<ul class="plain lang-options" aria-label={t.language.listLabel}>
+  {
+    locales.map((l) => {
+      const info = localeInfo[l];
+      const current = l === lang;
+      const src = flagUrl(info.flag);
+      return (
+        <li>
+          <a
+            href={localePath(l, route)}
+            hreflang={l}
+            lang={l}
+            class="lang-option"
+            aria-current={current ? 'true' : undefined}
+            autofocus={current && autofocusCurrent ? true : undefined}
+            data-lang-option={l}
+          >
+            {src ? (
+              <img class="lang-option__flag" src={src} alt="" width="40" height="28" loading="lazy" decoding="async" />
+            ) : (
+              <span class="lang-option__flag lang-option__flag--glyph" aria-hidden="true">
+                ع
+              </span>
+            )}
+            <span class="lang-option__names">
+              <span class="lang-option__name" dir={info.dir}>
+                {info.name}
+              </span>
+              <span class="lang-option__english" lang="en">
+                {info.english}
+              </span>
+            </span>
+            {current && (
+              <span class="lang-option__check" aria-hidden="true">
+                <Icon name="check" size={14} stroke={3} />
+              </span>
+            )}
+          </a>
+        </li>
+      );
+    })
+  }
+</ul>
+
+<style>
+  .lang-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .lang-option {
+    min-height: 60px;
+    padding: 12px;
+    border-radius: 16px;
+    background: transparent;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+  .lang-option:hover {
+    background: var(--bg);
+  }
+  .lang-option[aria-current] {
+    background: var(--surface);
+    box-shadow: inset 0 0 0 2px var(--forest);
+  }
+  .lang-option__flag {
+    width: 40px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 0 0 1px rgba(20, 32, 25, 0.12);
+  }
+  .lang-option__flag--glyph {
+    background: var(--lilac);
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .lang-option__names {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .lang-option__name {
+    align-self: flex-start;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .lang-option__english {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .lang-option__check {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--forest);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 768px) {
+    .lang-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .lang-option {
+      min-height: 72px;
+      padding: 12px 16px;
+      background: var(--bg);
+    }
+    .lang-option:hover {
+      background: var(--line);
+    }
+  }
+  @media (min-width: 1024px) {
+    .lang-options {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

@@ -1,0 +1,224 @@
+---
+import Icon from './Icon.astro';
+import LanguageOptions from './LanguageOptions.astro';
+import { useDict, type Locale } from '../i18n';
+import { rich } from '../lib/rich';
+
+interface Props {
+  lang: Locale;
+  route: string;
+}
+const { lang, route } = Astro.props;
+const t = useDict(lang);
+---
+
+<dialog id="language-dialog" class="lang-dialog" aria-labelledby="language-dialog-title">
+  <div class="lang-dialog__panel" data-lang-panel>
+    <span class="lang-dialog__handle" aria-hidden="true" data-lang-handle></span>
+    <div class="lang-dialog__head">
+      <div class="lang-dialog__titles">
+        <h2 id="language-dialog-title" class="display" set:html={rich(t.language.heading)} />
+        <p>{t.language.text}</p>
+      </div>
+      <button type="button" class="lang-dialog__close" aria-label={t.language.close} data-lang-close>
+        <Icon name="close" size={18} stroke={2} />
+      </button>
+    </div>
+    <LanguageOptions lang={lang} route={route} autofocusCurrent />
+  </div>
+</dialog>
+
+<script>
+  const dialog = document.getElementById('language-dialog') as HTMLDialogElement | null;
+  if (dialog) {
+    const panel = dialog.querySelector<HTMLElement>('[data-lang-panel]')!;
+    const handle = dialog.querySelector<HTMLElement>('[data-lang-handle]')!;
+    let opener: HTMLElement | null = null;
+
+    // Buttons in header and footer are links to the language page; with JS they open the dialog.
+    document.querySelectorAll<HTMLElement>('[data-lang-open]').forEach((el) =>
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        opener = el;
+        (document.getElementById('mobile-menu') as HTMLDialogElement | null)?.close();
+        dialog.showModal();
+        el.setAttribute('aria-expanded', 'true');
+      }),
+    );
+
+    dialog.addEventListener('close', () => {
+      panel.style.transform = '';
+      opener?.setAttribute('aria-expanded', 'false');
+      opener?.focus();
+    });
+    dialog.querySelector('[data-lang-close]')?.addEventListener('click', () => dialog.close());
+    // A click on the dimmed area (the dialog box itself, outside the panel) closes it.
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+
+    // Bottom sheet: drag the handle down to close.
+    let startY = 0;
+    let dy = 0;
+    handle.addEventListener('pointerdown', (e) => {
+      startY = e.clientY;
+      dy = 0;
+      handle.setPointerCapture(e.pointerId);
+      panel.style.transition = 'none';
+    });
+    handle.addEventListener('pointermove', (e) => {
+      if (!handle.hasPointerCapture(e.pointerId)) return;
+      dy = Math.max(0, e.clientY - startY);
+      panel.style.transform = `translateY(${dy}px)`;
+    });
+    const release = (e: PointerEvent) => {
+      if (!handle.hasPointerCapture(e.pointerId)) return;
+      handle.releasePointerCapture(e.pointerId);
+      panel.style.transition = '';
+      if (dy > 80) dialog.close();
+      else panel.style.transform = '';
+    };
+    handle.addEventListener('pointerup', release);
+    handle.addEventListener('pointercancel', release);
+  }
+</script>
+
+<style>
+  .lang-dialog {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    /* Bottom sheet on mobile. */
+    width: 100%;
+    max-width: none;
+    max-height: calc(100dvh - 24px);
+    margin: auto 0 0;
+    overflow: visible;
+  }
+  .lang-dialog::backdrop {
+    background: rgba(20, 32, 25, 0.45);
+  }
+  .lang-dialog__panel {
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 10px 16px 28px;
+    border-radius: 24px 24px 0 0;
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 200ms ease;
+  }
+  .lang-dialog__handle {
+    align-self: center;
+    width: 40px;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--line-strong);
+    /* Bigger invisible hit area for the drag. */
+    box-shadow: 0 0 0 14px transparent;
+    touch-action: none;
+    cursor: grab;
+  }
+  .lang-dialog__head {
+    padding: 0 4px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .lang-dialog__titles {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .lang-dialog h2 {
+    font-size: 34px;
+    line-height: 1.05;
+  }
+  .lang-dialog p {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+  .lang-dialog__close {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lang-dialog__close:hover {
+    background: var(--line);
+  }
+
+  @media (min-width: 768px) {
+    .lang-dialog {
+      width: calc(100% - 64px);
+      max-width: 760px;
+      max-height: calc(100dvh - 64px);
+      margin: auto;
+    }
+    .lang-dialog__panel {
+      max-height: calc(100dvh - 64px);
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: 0 30px 80px rgba(20, 32, 25, 0.35);
+      gap: 24px;
+    }
+    .lang-dialog__handle {
+      display: none;
+    }
+    .lang-dialog__head {
+      padding: 0;
+      gap: 16px;
+    }
+    .lang-dialog__titles {
+      gap: 8px;
+    }
+    .lang-dialog h2 {
+      font-size: 44px;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .lang-dialog[open] .lang-dialog__panel {
+      animation: sheet-in 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .lang-dialog[open]::backdrop {
+      animation: fade-in 200ms ease-out;
+    }
+    @keyframes sheet-in {
+      from {
+        transform: translateY(100%);
+      }
+    }
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+    }
+    @media (min-width: 768px) {
+      .lang-dialog[open] .lang-dialog__panel {
+        animation: pop-in 200ms ease-out;
+      }
+      @keyframes pop-in {
+        from {
+          opacity: 0;
+          transform: translateY(8px) scale(0.98);
+        }
+      }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lang-dialog__panel {
+      transition: none;
+    }
+  }
+</style>

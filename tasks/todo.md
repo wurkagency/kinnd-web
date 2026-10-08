@@ -35,6 +35,13 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - [x] Lighthouse mobile (production build): every English page 99–100 / 100 / 100 / 100. `/da/` and `/sv/` SEO is 69 on purpose (noindex until translated)
 - [x] Keyboard: skip link, visible focus, menu/language menu/accordion/toggle tested
 
+## Language selector (2026-10-08)
+- [x] Modal: bottom sheet < 768px, centred dialog from 768px, flags from flag-icons, Arabic shown as ع tile
+- [x] Header and footer buttons open it; without JS they link to /language/
+- [x] Choice remembered in localStorage (`kinnd-lang`) and applied when a visitor arrives from outside the site
+- [x] First visit: language guessed from time zone, then browser language; only translated languages are picked
+- [x] axe: 0 violations with the modal open (390, 1440); Lighthouse Home 99/100/100/100
+
 ## Decided by Charlie
 - 2026-10-07: Footer on every page: "WURK ApS · CVR 34378424" only.
 - 2026-10-07: Yearly toggle badge "Save up to 30%"; cards keep 20% (Parents) and 30% (Family).
@@ -61,5 +68,6 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - [ ] Final logo, favicon, social share image (`public/og-default.png` is a placeholder)
 - [ ] Licence for `family-orchard.jpg`
 - [ ] Translations: da, sv, no, fo, is, de, tr, ar. Files and instructions in `src/i18n/locales/` (set `_meta.untranslated` to false when done)
-- [ ] Arabic uses system Arabic fonts (brand fonts have no Arabic). Consider self-hosting Noto Naskh/Sans Arabic
+- [ ] Approve Arabic font: self-hosted Noto Sans Arabic (brand fonts have no Arabic)
+- [ ] Should untranslated languages be hidden from the language modal until ready? (now: shown)
 - [ ] Hosting target (build output is plain static files in `dist/`)

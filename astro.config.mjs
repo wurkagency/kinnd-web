@@ -17,7 +17,10 @@ export default defineConfig({
   devToolbar: { enabled: false },
   integrations: [
     sitemap({
-      filter: (page) => !untranslated.some((p) => new URL(page).pathname.startsWith(p)),
+      filter: (page) => {
+        const path = new URL(page).pathname;
+        return !path.endsWith('/language/') && !untranslated.some((p) => path.startsWith(p));
+      },
     }),
   ],
 });

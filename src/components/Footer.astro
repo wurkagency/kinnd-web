@@ -1,12 +1,12 @@
 ---
-import { locales, localeInfo, localePath, routes, site, useDict, type Locale } from '../i18n';
+import LanguageMenu from './LanguageMenu.astro';
+import { localePath, routes, site, useDict, type Locale } from '../i18n';
 import { isEmail, rich } from '../lib/rich';
 
 interface Props {
   lang: Locale;
-  route: string;
 }
-const { lang, route } = Astro.props;
+const { lang } = Astro.props;
 const t = useDict(lang);
 const p = (r: string) => localePath(lang, r);
 const email = site.contactEmail;
@@ -38,21 +38,9 @@ const email = site.contactEmail;
         <a href={p(routes.terms)}>{t.nav.terms}</a>
         <a href={p(routes.cookies)}>{t.nav.cookies}</a>
       </nav>
-      <nav aria-label={t.nav.language} class="site-footer__langs">
-        {
-          locales.map((l) => (
-            <a
-              href={localePath(l, route)}
-              hreflang={l}
-              lang={l}
-              aria-current={l === lang ? 'true' : undefined}
-              aria-label={localeInfo[l].name}
-            >
-              {l.toUpperCase()}
-            </a>
-          ))
-        }
-      </nav>
+      <div class="site-footer__langs">
+        <LanguageMenu lang={lang} variant="footer" />
+      </div>
     </div>
     <div class="site-footer__bottom">
       <span>{site.company}</span>
@@ -120,24 +108,6 @@ const email = site.contactEmail;
     flex-wrap: wrap;
     gap: 6px;
     align-items: flex-start;
-  }
-  .site-footer__langs a {
-    height: 44px;
-    padding: 0 16px;
-    border-radius: var(--radius-control);
-    border: 1.5px solid var(--ink);
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .site-footer__langs a:hover {
-    background: var(--surface);
-  }
-  .site-footer__langs a[aria-current] {
-    background: var(--ink);
-    color: #fff;
   }
   .site-footer__bottom {
     padding-top: 20px;

@@ -652,5 +652,13 @@
     "heading": "Page *not found*",
     "text": "The link may be old, or the page has moved.",
     "cta": "Go to the home page"
+  },
+  "language": {
+    "title": "Language · KINND",
+    "description": "Choose the language for the KINND website.",
+    "heading": "Choose *language*",
+    "text": "The website changes to the language you pick.",
+    "close": "Close",
+    "listLabel": "Languages"
   }
 }

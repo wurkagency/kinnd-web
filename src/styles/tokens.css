@@ -21,8 +21,8 @@
   --sage: #e7ecea;
   --sage-ink: #3f4a45;
 
-  --font-sans: 'Albert Sans', 'Albert Sans Fallback', system-ui, sans-serif;
-  --font-serif: 'Instrument Serif', 'Instrument Serif Fallback', Georgia, serif;
+  --font-sans: 'Albert Sans', 'Noto Sans Arabic', 'Albert Sans Fallback', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', 'Noto Sans Arabic', 'Instrument Serif Fallback', Georgia, serif;
 
   --radius-card: 20px;
   --radius-band: 28px;
@@ -40,12 +40,6 @@
   /* Spacing: 390 -> 1440 */
   --section-y: clamp(64px, calc(52.11px + 3.048vw), 96px);
   --section-gap: clamp(28px, calc(22.06px + 1.524vw), 44px);
-}
-
-/* Arabic: the brand fonts have no Arabic glyphs, so use system Arabic fonts. */
-:root:lang(ar) {
-  --font-sans: 'Segoe UI', 'Noto Sans Arabic', Tahoma, system-ui, sans-serif;
-  --font-serif: 'Noto Naskh Arabic', 'Times New Roman', 'Segoe UI', serif;
 }
 
 @media (min-width: 768px) {
