@@ -1,598 +1,598 @@
 {
   "_meta": {
-    "untranslated": true
+    "untranslated": false
   },
   "site": {
-    "tagline": "Safe collaboration and sharing in the trusted family.",
+    "tagline": "Trygt samarbejde og deling med familien, du stoler på.",
     "ogImageAlt": "KINND"
   },
   "nav": {
-    "skip": "Skip to content",
-    "home": "KINND, home",
-    "mainLabel": "Main",
-    "pagesLabel": "Pages",
-    "legalLabel": "Legal",
-    "features": "Features",
-    "pricing": "Pricing",
-    "safety": "Safety",
-    "safetyLong": "Safety & privacy",
+    "skip": "Spring til indhold",
+    "home": "KINND, forside",
+    "mainLabel": "Hovedmenu",
+    "pagesLabel": "Sider",
+    "legalLabel": "Juridisk",
+    "features": "Funktioner",
+    "pricing": "Priser",
+    "safety": "Sikkerhed",
+    "safetyLong": "Sikkerhed og privatliv",
     "faq": "FAQ",
-    "about": "About & contact",
-    "privacy": "Privacy notice",
-    "terms": "Terms",
+    "about": "Om os og kontakt",
+    "privacy": "Privatlivspolitik",
+    "terms": "Vilkår",
     "cookies": "Cookies",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
+    "openMenu": "Åbn menu",
+    "closeMenu": "Luk menu",
     "menuTitle": "Menu",
-    "language": "Language"
+    "language": "Sprog"
   },
   "cta": {
-    "tryFree": "Try for free",
-    "startTrial": "Start free for 30 days",
-    "startFree": "Start with Free",
-    "seePricing": "See pricing"
+    "tryFree": "Prøv gratis",
+    "startTrial": "Start gratis i 30 dage",
+    "startFree": "Start med Gratis",
+    "seePricing": "Se priser"
   },
   "ctaBand": {
-    "label": "Get started",
-    "title": "*Free to start. Invited family never pay.*",
-    "text": "30 days with everything included. It runs on your phone, no app store needed."
+    "label": "Kom i gang",
+    "title": "*Gratis at starte. Inviteret familie betaler aldrig.*",
+    "text": "30 dage med alt inkluderet. Det kører på din telefon, uden app store."
   },
   "home": {
-    "title": "KINND · Safe collaboration and sharing in the trusted family",
-    "description": "Share children, appointments, Moments and media completely private in the family circle.",
+    "title": "KINND · Trygt samarbejde og deling med familien, du stoler på",
+    "description": "Del børn, aftaler, Moments og medier helt privat i familiekredsen.",
     "hero": {
-      "label": "Introduction",
-      "title": "Collaborate and share with the *trusted* family",
-      "text": "Share children, appointments, Moments and media completely private in the family circle.",
+      "label": "Introduktion",
+      "title": "Samarbejd og del med familien, du *stoler* på",
+      "text": "Del børn, aftaler, Moments og medier helt privat i familiekredsen.",
       "handover": {
-        "label": "Always know the next handover",
-        "day": "Mon",
+        "label": "Kend altid det næste skifte",
+        "day": "man",
         "time": "16:00",
-        "note": "August changes home"
+        "note": "August skifter hjem"
       },
-      "phoneLabel": "The KINND Today screen on a phone: today's date, today's plan with two appointments, and today's school.",
+      "phoneLabel": "KINNDs I dag-skærm på en telefon: dagens dato, dagens plan med to aftaler og dagens skole.",
       "callouts": [
-        "Custody calendar",
-        "Tasks",
-        "Appointments",
-        "The school day"
+        "Samværskalender",
+        "Opgaver",
+        "Aftaler",
+        "Skoledagen"
       ]
     },
     "share": {
-      "label": "What is in KINND",
-      "title": "*Share with co-parents & family*",
-      "text": "Share custody calendar, appointments, Moments and media between parents and with the family. Create necessity lists and wishlists or assign tasks and notes.",
+      "label": "Det finder du i KINND",
+      "title": "*Del med medforældre og familie*",
+      "text": "Del samværskalender, aftaler, Moments og medier mellem forældre og med familien. Lav lister med det nødvendige og ønskelister, eller tildel opgaver og noter.",
       "moment": {
-        "alt": "A canal boat tour",
-        "title": "Canal tour",
+        "alt": "En kanalrundfart",
+        "title": "Kanalrundfart",
         "tag": "Moments",
-        "shared": "Shared with family",
-        "date": "Sun 27 Sep"
+        "shared": "Delt med familien",
+        "date": "søn 27. sep."
       },
       "free": {
-        "title": "Invited family never pay",
-        "amount": "0 DKK",
-        "suffix": "for them"
+        "title": "Inviteret familie betaler aldrig",
+        "amount": "0 kr.",
+        "suffix": "for dem"
       },
       "calendar": {
-        "title": "Calendar and custody",
-        "plan": "Plan 7/7",
+        "title": "Kalender og samvær",
+        "plan": "Ordning 7/7",
         "stats": [
           {
-            "label": "With you",
-            "value": "Mon–Thu"
+            "label": "Hos dig",
+            "value": "man–tors"
           },
           {
-            "label": "Handover",
-            "value": "Fri 15:00"
+            "label": "Skifte",
+            "value": "fre 15:00"
           },
           {
-            "label": "Swaps",
-            "value": "Approved"
+            "label": "Bytte",
+            "value": "Godkendt"
           }
         ],
-        "weekLabel": "This week: four days with you, then three days at the other home",
-        "start": "Monday",
-        "end": "Sunday"
+        "weekLabel": "Denne uge: fire dage hos dig, derefter tre dage i det andet hjem",
+        "start": "Mandag",
+        "end": "Søndag"
       },
       "growth": {
-        "title": "Growth",
+        "title": "Vækst",
         "value": "164",
         "unit": "cm",
-        "badge": "Above 97th percentile",
-        "chartLabel": "Example growth chart: August’s height from age 7 to 11 against the typical WHO range for boys, now 164 cm",
-        "firstAge": "7 y",
-        "note": "WHO height-for-age, boys · shaded = typical range"
+        "badge": "Over 97-percentilen",
+        "chartLabel": "Eksempel på vækstkurve: Augusts højde fra 7 til 11 år sammenlignet med WHO’s typiske interval for drenge, nu 164 cm",
+        "firstAge": "7 år",
+        "note": "WHO højde-for-alder, drenge · skraveret = typisk interval"
       },
       "storage": {
-        "title": "Room for every memory",
-        "text": "Every photo and video in one place, whichever home it was taken in.",
-        "chartLabel": "Storage per person: 2 GB on Parents, 100 GB on Family",
+        "title": "Plads til alle minder",
+        "text": "Alle billeder og videoer samlet ét sted, uanset hvilket hjem de er taget i.",
+        "chartLabel": "Lagerplads pr. person: 2 GB på Forældre, 100 GB på Familie",
         "parents": {
           "size": "2 GB",
-          "label": "Parents plan"
+          "label": "Forældre-abonnement"
         },
         "family": {
           "size": "100 GB",
-          "label": "Family plan"
+          "label": "Familie-abonnement"
         }
       }
     },
     "safety": {
-      "label": "Safety",
-      "title": "Built for children’s data,\nso built to *protect* them",
-      "link": "How we keep it safe",
+      "label": "Sikkerhed",
+      "title": "Bygget til børns data,\nog derfor bygget til at *beskytte* dem",
+      "link": "Sådan passer vi på dem",
       "items": [
         {
-          "title": "Photos are locked",
-          "text": "Each one encrypted with its own key"
+          "title": "Billeder er låst",
+          "text": "Hvert billede er krypteret med sin egen nøgle"
         },
         {
-          "title": "Locations are stripped",
-          "text": "Location data is removed from the photos other people download."
+          "title": "Lokation fjernes",
+          "text": "Lokationsdata fjernes fra de billeder, andre downloader."
         },
         {
-          "title": "Two-step sign-in",
-          "text": "Only the right people get in"
+          "title": "Login i to trin",
+          "text": "Kun de rigtige kommer ind"
         },
         {
-          "title": "EU and GDPR",
-          "text": "We follow GDPR and store data in the EU."
+          "title": "EU og GDPR",
+          "text": "Vi følger GDPR og opbevarer data i EU."
         }
       ]
     }
   },
   "features": {
-    "title": "Features · KINND",
-    "description": "Everything about your child, in one place. Shared by both homes and the family you invite.",
+    "title": "Funktioner · KINND",
+    "description": "Alt om dit barn, samlet ét sted. Delt mellem begge hjem og den familie, du inviterer.",
     "hero": {
-      "title": "Everything about your child, in *one* place",
-      "text": "Shared by both homes and the family you invite."
+      "title": "Alt om dit barn, samlet *ét* sted",
+      "text": "Delt mellem begge hjem og den familie, du inviterer."
     },
-    "highlightsLabel": "Highlights",
+    "highlightsLabel": "Højdepunkter",
     "calendar": {
       "name": "August",
       "initial": "A",
-      "status": "With you · handover Friday",
-      "week": "Wk 41",
+      "status": "Hos dig · skifte fredag",
+      "week": "Uge 41",
       "digits": [
         "7",
         "7"
       ],
-      "title": "Calendar and custody",
-      "text": "Know whose week it is. 7/7, 10/4 or your own plan."
+      "title": "Kalender og samvær",
+      "text": "Se, hvem der har ugen. 7/7, 10/4 eller jeres egen ordning."
     },
     "access": {
-      "role": "Grandma",
+      "role": "Mormor",
       "name": "Jeanette",
       "initial": "J",
-      "title": "Everyone gets *the right access*",
-      "text": "Invite the other parent, grandparents and caregivers. Each adult sees only what their role allows. Invited family never pay.",
-      "more": "Read more",
-      "moreLabel": "Read more about family and roles"
+      "title": "Alle får *den rette adgang*",
+      "text": "Invitér den anden forælder, bedsteforældre og omsorgspersoner. Hver voksen ser kun det, deres rolle giver adgang til. Inviteret familie betaler aldrig.",
+      "more": "Læs mere",
+      "moreLabel": "Læs mere om familie og roller"
     },
     "today": {
-      "eyebrow": "Today",
-      "title": "Know what’s happening",
+      "eyebrow": "I dag",
+      "title": "Se, hvad der sker",
       "items": [
         {
-          "title": "School, 08:15 to 13:45",
-          "text": "When the day starts and ends"
+          "title": "Skole, 08:15 til 13:45",
+          "text": "Hvornår dagen starter og slutter"
         },
         {
-          "title": "Training, 16:00",
-          "text": "Appointments with place and tasks"
+          "title": "Træning, 16:00",
+          "text": "Aftaler med sted og opgaver"
         },
         {
-          "title": "Pack the sports bag",
-          "text": "Tasks and lists for both homes"
+          "title": "Pak sportstasken",
+          "text": "Opgaver og lister til begge hjem"
         },
         {
-          "title": "New moment from Dad",
-          "text": "Photos and video, shared privately"
+          "title": "Nyt Moment fra far",
+          "text": "Billeder og video, delt privat"
         }
       ]
     },
     "explained": {
-      "label": "All features",
-      "title": "Main features, *explained*",
-      "text": "Tap a question to read more.",
+      "label": "Alle funktioner",
+      "title": "De vigtigste funktioner, *forklaret*",
+      "text": "Tryk på et spørgsmål for at læse mere.",
       "items": [
         {
-          "q": "How does the custody calendar work?",
-          "a": "Pick a plan like 7/7 or 10/4, or make your own. Everyone sees whose week it is.",
+          "q": "Hvordan virker samværskalenderen?",
+          "a": "Vælg en ordning som 7/7 eller 10/4, eller lav jeres egen. Alle kan se, hvem der har ugen.",
           "bullets": [
-            "Swaps are agreed in the app",
-            "Appointments with place, tasks and notes"
+            "Bytte af dage aftales i appen",
+            "Aftaler med sted, opgaver og noter"
           ]
         },
         {
-          "q": "How do we share photos and videos?",
-          "a": "Post a moment and choose who sees it. Everything is kept in one shared media library."
+          "q": "Hvordan deler vi billeder og videoer?",
+          "a": "Del et Moment, og vælg, hvem der kan se det. Alt gemmes i ét fælles mediebibliotek."
         },
         {
-          "q": "What are lists for?",
-          "a": "Necessities for each home, and wishlists the family can pick from. No double gifts."
+          "q": "Hvad bruger man lister til?",
+          "a": "Det nødvendige til hvert hjem, og ønskelister, som familien kan vælge fra. Ingen dobbeltgaver."
         },
         {
-          "q": "Can we add tasks and reminders?",
-          "a": "Yes. Add tasks to appointments and school lessons, with a reminder before they are due."
+          "q": "Kan vi tilføje opgaver og påmindelser?",
+          "a": "Ja. Føj opgaver til aftaler og skoletimer, med en påmindelse inden fristen."
         },
         {
-          "q": "Can I see the school day?",
-          "a": "Yes. See when each child starts and ends, and open the full week schedule."
+          "q": "Kan jeg se skoledagen?",
+          "a": "Ja. Se, hvornår hvert barn møder og får fri, og åbn hele ugeskemaet."
         },
         {
-          "q": "Where do we keep health info and growth?",
-          "a": "On the child. Medical info like allergies and medicine, and height and weight on WHO growth charts."
+          "q": "Hvor gemmer vi helbredsoplysninger og vækst?",
+          "a": "På barnet. Helbredsoplysninger som allergier og medicin, og højde og vægt på WHO’s vækstkurver."
         },
         {
-          "q": "Who can see what?",
-          "a": "Each adult sees only what their role allows. You decide who is invited."
+          "q": "Hvem kan se hvad?",
+          "a": "Hver voksen ser kun det, deres rolle giver adgang til. Du bestemmer, hvem der inviteres."
         },
         {
-          "q": "Can we message each other in KINND?",
-          "a": "Yes. Messages stay inside KINND, next to everything else about your child."
+          "q": "Kan vi skrive til hinanden i KINND?",
+          "a": "Ja. Beskeder bliver i KINND, sammen med alt det andet om dit barn."
         }
       ]
     },
     "where": {
-      "label": "Where it works",
-      "title": "It runs on your *phone*",
-      "text": "No app store needed. Open KINND in your browser and add it to your home screen.",
+      "label": "Her virker det",
+      "title": "Det kører på din *telefon*",
+      "text": "Ingen app store nødvendig. Åbn KINND i din browser, og føj den til din hjemmeskærm.",
       "items": [
         {
-          "title": "Phone, tablet and computer",
-          "text": "One account on every screen"
+          "title": "Telefon, tablet og computer",
+          "text": "Én konto på alle skærme"
         },
         {
-          "title": "Three languages",
-          "text": "English, Danish and Swedish"
+          "title": "Tre sprog",
+          "text": "Engelsk, dansk og svensk"
         },
         {
-          "title": "Private by default",
-          "text": "Only people you invite get in"
+          "title": "Privat som standard",
+          "text": "Kun dem, du inviterer, kommer ind"
         }
       ]
     }
   },
   "pricing": {
-    "title": "Pricing · KINND",
-    "description": "Simple pricing. One person pays. Invited family never pay.",
+    "title": "Priser · KINND",
+    "description": "Enkle priser. Én person betaler. Inviteret familie betaler aldrig.",
     "hero": {
-      "title": "Simple *pricing*",
-      "text": "One person pays. Invited family never pay."
+      "title": "Enkle *priser*",
+      "text": "Én person betaler. Inviteret familie betaler aldrig."
     },
     "toggle": {
-      "label": "Billing period",
-      "monthly": "Monthly",
-      "yearly": "Yearly",
-      "badge": "Save up to 30%"
+      "label": "Betalingsperiode",
+      "monthly": "Månedligt",
+      "yearly": "Årligt",
+      "badge": "Spar op til 30 %"
     },
-    "plansLabel": "Plans",
+    "plansLabel": "Abonnementer",
     "plans": {
       "free": {
-        "name": "Free",
-        "text": "To get started.",
+        "name": "Gratis",
+        "text": "Til at komme i gang.",
         "price": "0",
-        "unit": "DKK",
-        "note": "Free forever",
+        "unit": "kr.",
+        "note": "Gratis for altid",
         "features": [
-          "Up to 2 children",
-          "200 MB storage per person"
+          "Op til 2 børn",
+          "200 MB lagerplads pr. person"
         ],
-        "excluded": "Not included: custody calendar, media library and family members."
+        "excluded": "Ikke inkluderet: samværskalender, mediebibliotek og familiemedlemmer."
       },
       "parents": {
-        "name": "Parents",
-        "text": "For your child’s two homes.",
+        "name": "Forældre",
+        "text": "Til dit barns to hjem.",
         "monthly": {
           "price": "29",
-          "unit": "DKK / month",
-          "note": "or save 20% annually at 279 DKK / year"
+          "unit": "kr. / måned",
+          "note": "eller spar 20 % med årlig betaling: 279 kr. / år"
         },
         "yearly": {
           "price": "279",
-          "unit": "DKK / year",
-          "note": "Billed yearly. You save 20%."
+          "unit": "kr. / år",
+          "note": "Betales årligt. Du sparer 20 %."
         },
         "features": [
-          "Up to 3 children",
-          "2 GB storage per person",
-          "Your co-parent is included when you invite them",
-          "Custody calendar and media library"
+          "Op til 3 børn",
+          "2 GB lagerplads pr. person",
+          "Din medforælder er med, når du inviterer dem",
+          "Samværskalender og mediebibliotek"
         ]
       },
       "family": {
-        "name": "Family",
-        "badge": "Most room",
-        "text": "For parents plus the wider family.",
+        "name": "Familie",
+        "badge": "Mest plads",
+        "text": "Til forældre og resten af familien.",
         "monthly": {
           "price": "69",
-          "unit": "DKK / month",
-          "note": "or save 30% annually at 579 DKK / year"
+          "unit": "kr. / måned",
+          "note": "eller spar 30 % med årlig betaling: 579 kr. / år"
         },
         "yearly": {
           "price": "579",
-          "unit": "DKK / year",
-          "note": "Billed yearly. You save 30%."
+          "unit": "kr. / år",
+          "note": "Betales årligt. Du sparer 30 %."
         },
         "features": [
-          "Up to 6 children",
-          "100 GB storage per person",
-          "Everything in Parents",
-          "Invite grandparents and caregivers"
+          "Op til 6 børn",
+          "100 GB lagerplads pr. person",
+          "Alt i Forældre",
+          "Invitér bedsteforældre og omsorgspersoner"
         ]
       }
     },
-    "vatNote": "Prices include Danish VAT. [Confirm final prices]",
+    "vatNote": "Priserne er inkl. dansk moms. [Confirm final prices]",
     "good": {
-      "label": "Good to know",
-      "title": "Good to *know*",
+      "label": "Godt at vide",
+      "title": "Godt at *vide*",
       "items": [
         {
-          "title": "30 days free",
-          "text": "Every new account gets all Family features for 30 days. No card needed."
+          "title": "30 dage gratis",
+          "text": "Alle nye konti får alle Familie-funktioner i 30 dage. Du skal ikke bruge et kort."
         },
         {
-          "title": "One person pays",
-          "text": "The people you invite never pay. They use your plan."
+          "title": "Én person betaler",
+          "text": "Dem, du inviterer, betaler aldrig. De bruger dit abonnement."
         },
         {
-          "title": "Cancel any time",
-          "text": "You keep your plan until the period ends. Nothing more is charged."
+          "title": "Opsig når som helst",
+          "text": "Du beholder dit abonnement, til perioden udløber. Der trækkes ikke mere."
         }
       ]
     },
     "paying": {
-      "label": "Questions about paying",
-      "title": "Questions about *paying*",
-      "link": "All questions",
+      "label": "Spørgsmål om betaling",
+      "title": "Spørgsmål om *betaling*",
+      "link": "Alle spørgsmål",
       "items": [
         {
-          "q": "What happens after the 30 days?",
-          "a": "You pick a plan. If you pick nothing, you move to Free."
+          "q": "Hvad sker der efter de 30 dage?",
+          "a": "Du vælger et abonnement. Vælger du ikke noget, flytter du til Gratis."
         },
         {
-          "q": "Can I stay on Free?",
-          "a": "Yes. If your family fits Free, it is free forever."
+          "q": "Kan jeg blive på Gratis?",
+          "a": "Ja. Hvis Gratis passer til jeres familie, er det gratis for altid."
         },
         {
-          "q": "How do I pay?",
-          "a": "By card in the app. KINND is not sold through an app store."
+          "q": "Hvordan betaler jeg?",
+          "a": "Med kort i appen. KINND sælges ikke gennem en app store."
         },
         {
-          "q": "Can I change plan later?",
-          "a": "Yes, at any time. You only pay the difference for the rest of the period."
+          "q": "Kan jeg skifte abonnement senere?",
+          "a": "Ja, når som helst. Du betaler kun forskellen for resten af perioden."
         }
       ]
     }
   },
   "safety": {
-    "title": "Safety & privacy · KINND",
-    "description": "Built to protect children’s data. Six promises, in plain words.",
+    "title": "Sikkerhed og privatliv · KINND",
+    "description": "Bygget til at beskytte børns data. Seks løfter, sagt lige ud.",
     "hero": {
-      "title": "Built to *protect* children’s data",
-      "text": "Six promises, in plain words."
+      "title": "Bygget til at *beskytte* børns data",
+      "text": "Seks løfter, sagt lige ud."
     },
-    "promisesLabel": "Our promises",
+    "promisesLabel": "Vores løfter",
     "promises": [
       {
-        "title": "Photos are locked",
-        "text": "Every photo and video is encrypted with its own key."
+        "title": "Billeder er låst",
+        "text": "Hvert billede og hver video er krypteret med sin egen nøgle."
       },
       {
-        "title": "Locations stay private",
-        "text": "Location data is removed from the photos other people download."
+        "title": "Lokation forbliver privat",
+        "text": "Lokationsdata fjernes fra de billeder, andre downloader."
       },
       {
-        "title": "Two-step sign-in",
-        "text": "Always on, for everyone. Only the right people get in."
+        "title": "Login i to trin",
+        "text": "Altid slået til, for alle. Kun de rigtige kommer ind."
       },
       {
-        "title": "The right access",
-        "text": "Each adult sees only what their relationship to the child allows."
+        "title": "Den rette adgang",
+        "text": "Hver voksen ser kun det, deres relation til barnet giver adgang til."
       },
       {
-        "title": "EU and GDPR",
-        "text": "We follow GDPR and store data in the EU. [Confirm hosting wording with counsel]"
+        "title": "EU og GDPR",
+        "text": "Vi følger GDPR og opbevarer data i EU. [Confirm hosting wording with counsel]"
       },
       {
-        "title": "Your data is yours",
-        "text": "Download your photos and videos. Delete your account when you want."
+        "title": "Dine data er dine",
+        "text": "Download dine billeder og videoer. Slet din konto, når du vil."
       }
     ],
     "behind": {
-      "label": "Behind the scenes",
-      "title": "How we protect you *behind* the scenes",
-      "text": "A small team looks after the service. Here is what we do.",
+      "label": "Bag kulisserne",
+      "title": "Sådan beskytter vi dig *bag* kulisserne",
+      "text": "Et lille team passer på tjenesten. Her er, hvad vi gør.",
       "items": [
         {
-          "title": "We act on misuse",
-          "text": "We look into fraud and false access to a child’s space."
+          "title": "Vi reagerer på misbrug",
+          "text": "Vi undersøger svindel og uberettiget adgang til et barns område."
         },
         {
-          "title": "We work with the authorities",
-          "text": "Confirmed illegal cases are handed over to them."
+          "title": "Vi samarbejder med myndighederne",
+          "text": "Bekræftede ulovlige sager overdrages til dem."
         },
         {
-          "title": "We stay out of family conflicts",
-          "text": "KINND is a private space to share in. We do not take sides."
+          "title": "Vi blander os ikke i familiekonflikter",
+          "text": "KINND er et privat sted at dele i. Vi tager ikke parti."
         }
       ]
     },
     "details": {
-      "label": "Privacy notice",
-      "title": "Want the details?",
-      "text": "Read exactly what we collect and why.",
-      "cta": "Read the privacy notice"
+      "label": "Privatlivspolitik",
+      "title": "Vil du have detaljerne?",
+      "text": "Læs præcis, hvad vi indsamler og hvorfor.",
+      "cta": "Læs privatlivspolitikken"
     }
   },
   "faq": {
     "title": "FAQ · KINND",
-    "description": "Questions and answers. Short answers to what parents ask most.",
+    "description": "Spørgsmål og svar. Korte svar på det, forældre oftest spørger om.",
     "hero": {
-      "title": "Questions and *answers*",
-      "text": "Short answers to what parents ask most."
+      "title": "Spørgsmål og *svar*",
+      "text": "Korte svar på det, forældre oftest spørger om."
     },
-    "questionsLabel": "Questions",
+    "questionsLabel": "Spørgsmål",
     "groups": [
       {
-        "title": "Getting started",
+        "title": "Kom i gang",
         "items": [
           {
-            "q": "What is KINND?",
-            "a": "A private place where parents and their family share everything about their children."
+            "q": "Hvad er KINND?",
+            "a": "Et privat sted, hvor forældre og deres familie deler alt om deres børn."
           },
           {
-            "q": "Is it an app?",
-            "a": "It runs in your browser and works like an app. Add it to your home screen. No app store needed."
+            "q": "Er det en app?",
+            "a": "Det kører i din browser og fungerer som en app. Føj det til din hjemmeskærm. Ingen app store nødvendig."
           },
           {
-            "q": "Which languages?",
-            "a": "English, Danish and Swedish."
+            "q": "Hvilke sprog?",
+            "a": "Engelsk, dansk og svensk."
           }
         ]
       },
       {
-        "title": "Family and access",
+        "title": "Familie og adgang",
         "items": [
           {
-            "q": "Does the other parent need to pay?",
-            "a": "No. Your co-parent is included in your plan when you invite them."
+            "q": "Skal den anden forælder betale?",
+            "a": "Nej. Din medforælder er med i dit abonnement, når du inviterer dem."
           },
           {
-            "q": "What can grandparents see?",
-            "a": "Only what you share with them. Each adult sees what their role allows."
+            "q": "Hvad kan bedsteforældre se?",
+            "a": "Kun det, du deler med dem. Hver voksen ser det, deres rolle giver adgang til."
           },
           {
-            "q": "Who can invite family?",
-            "a": "Parents. Grandparents and caregivers need the Family plan."
+            "q": "Hvem kan invitere familie?",
+            "a": "Forældre. Bedsteforældre og omsorgspersoner kræver Familie-abonnementet."
           }
         ]
       },
       {
-        "title": "Paying",
+        "title": "Betaling",
         "items": [
           {
-            "q": "What does it cost?",
-            "a": "Free is 0 DKK. Parents is 29 DKK a month. Family is 69 DKK a month."
+            "q": "Hvad koster det?",
+            "a": "Gratis koster 0 kr. Forældre koster 29 kr. om måneden. Familie koster 69 kr. om måneden."
           },
           {
-            "q": "What happens after the 30 free days?",
-            "a": "You pick a plan. If you pick nothing, you move to Free."
+            "q": "Hvad sker der efter de 30 gratis dage?",
+            "a": "Du vælger et abonnement. Vælger du ikke noget, flytter du til Gratis."
           },
           {
-            "q": "Can I cancel?",
-            "a": "Yes, at any time. You keep your plan until the period ends."
+            "q": "Kan jeg opsige?",
+            "a": "Ja, når som helst. Du beholder dit abonnement, til perioden udløber."
           }
         ]
       },
       {
-        "title": "Safety",
+        "title": "Sikkerhed",
         "items": [
           {
-            "q": "Is our data safe?",
-            "a": "Media and sensitive information are encrypted. Sign-in requires two steps."
+            "q": "Er vores data sikre?",
+            "a": "Medier og følsomme oplysninger er krypteret. Login kræver to trin."
           },
           {
-            "q": "Can I delete everything?",
-            "a": "Yes. Your data, your choice. Download or delete your account on demand."
+            "q": "Kan jeg slette det hele?",
+            "a": "Ja. Dine data, dit valg. Download dine data eller slet din konto, når du vil."
           },
           {
-            "q": "Does KINND help with conflicts?",
-            "a": "No. KINND is a place to share in. We do not take sides."
+            "q": "Hjælper KINND med konflikter?",
+            "a": "Nej. KINND er et sted at dele i. Vi tager ikke parti."
           }
         ]
       }
     ],
     "more": {
-      "title": "Did not find your answer?",
-      "text": "Write to us. A person answers.",
-      "cta": "Contact us"
+      "title": "Fandt du ikke dit svar?",
+      "text": "Skriv til os. Et menneske svarer.",
+      "cta": "Kontakt os"
     }
   },
   "about": {
-    "title": "About & contact · KINND",
-    "description": "One calm place for each child. KINND is made for separated parents and the family around their children.",
+    "title": "Om os og kontakt · KINND",
+    "description": "Ét roligt sted til hvert barn. KINND er lavet til forældre, der er gået fra hinanden, og familien omkring deres børn.",
     "hero": {
-      "title": "One calm place for *each* child",
-      "text": "KINND is made for separated parents and the family around their children."
+      "title": "Ét roligt sted til *hvert* barn",
+      "text": "KINND er lavet til forældre, der er gået fra hinanden, og familien omkring deres børn."
     },
     "story": {
-      "label": "Our story",
-      "title": "Why we built *KINND*",
-      "lead": "Children with two homes have one life. Their photos, plans and small notes should not be split in two.",
+      "label": "Vores historie",
+      "title": "Derfor byggede vi *KINND*",
+      "lead": "Børn med to hjem har ét liv. Deres billeder, planer og små beskeder skal ikke deles i to.",
       "body": [
-        "KINND gives the family one calm place to share them.",
-        "We believe that privacy matters and take it seriously. You can share your child and media in a private encrypted space outside social media."
+        "KINND giver familien ét roligt sted at dele dem.",
+        "Vi mener, at privatliv er vigtigt, og vi tager det alvorligt. Du kan dele dit barn og jeres medier i et privat, krypteret rum uden for sociale medier."
       ]
     },
     "believe": {
-      "label": "What we believe",
-      "title": "What we *believe*",
+      "label": "Det tror vi på",
+      "title": "Det tror vi *på*",
       "items": [
         {
-          "title": "Collaboration",
-          "text": "Separated or together, collaboration is key, whether communication is present or not."
+          "title": "Samarbejde",
+          "text": "Sammen eller hver for sig: samarbejde er nøglen, uanset om I taler sammen eller ej."
         },
         {
-          "title": "Privacy",
-          "text": "A closed space for the trusted ones. Only your invites can get access. As it should be!"
+          "title": "Privatliv",
+          "text": "Et lukket rum for dem, du stoler på. Kun dem, du inviterer, kan få adgang. Som det skal være!"
         },
         {
-          "title": "Sharing",
-          "text": "Share those precious moments with the family without concerns of sharing online."
+          "title": "Deling",
+          "text": "Del de dyrebare øjeblikke med familien uden at bekymre dig om at dele online."
         }
       ]
     },
     "contact": {
-      "label": "Contact",
-      "title": "Get in *touch*",
+      "label": "Kontakt",
+      "title": "Kontakt *os*",
       "write": {
-        "title": "Write to us",
-        "text": "A person answers within 1 working day."
+        "title": "Skriv til os",
+        "text": "Et menneske svarer inden for 1 hverdag."
       },
       "report": {
-        "title": "Report a problem",
-        "text": "Worried about an account or a child’s space? Tell us and we look into it."
+        "title": "Anmeld et problem",
+        "text": "Bekymret for en konto eller et barns område? Sig det til os, så undersøger vi det."
       },
       "company": {
-        "title": "The company",
+        "title": "Virksomheden",
         "lines": [
           "WURK ApS",
-          "CVR 34378424",
-          "Skoleholdervej 91, 2400 Copenhagen"
+          "CVR 37547395",
+          "Skoleholdervej 91, 2400 København"
         ]
       }
     }
   },
   "legal": {
-    "tabsLabel": "Legal documents",
-    "onThisPage": "On this page",
-    "lastUpdated": "Last updated [DATE]",
+    "tabsLabel": "Juridiske dokumenter",
+    "onThisPage": "På denne side",
+    "lastUpdated": "Sidst opdateret [DATE]",
     "placeholder": "[Text from counsel. Plain words, short sentences.]",
     "privacy": {
-      "tab": "Privacy notice",
-      "title": "Privacy notice · KINND",
-      "description": "What we collect, why, and what you can do about it.",
-      "heading": "Privacy *notice*",
-      "text": "What we collect, why, and what you can do about it.",
+      "tab": "Privatlivspolitik",
+      "title": "Privatlivspolitik · KINND",
+      "description": "Hvad vi indsamler, hvorfor, og hvad du kan gøre ved det.",
+      "heading": "*Privatlivspolitik*",
+      "text": "Hvad vi indsamler, hvorfor, og hvad du kan gøre ved det.",
       "sections": [
-        "Who we are",
-        "What we collect",
-        "Why we collect it",
-        "Who we share it with",
-        "How long we keep it",
-        "Your rights",
-        "How to contact us"
+        "Hvem vi er",
+        "Hvad vi indsamler",
+        "Hvorfor vi indsamler det",
+        "Hvem vi deler det med",
+        "Hvor længe vi gemmer det",
+        "Dine rettigheder",
+        "Sådan kontakter du os"
       ]
     },
     "terms": {
-      "tab": "Terms",
-      "title": "Terms · KINND",
-      "description": "The terms for using KINND.",
-      "heading": "*Terms*",
+      "tab": "Vilkår",
+      "title": "Vilkår · KINND",
+      "description": "Vilkårene for brug af KINND.",
+      "heading": "*Vilkår*",
       "text": "[Intro line from counsel]",
       "sections": [
         "[Section headings from counsel]"
@@ -601,8 +601,8 @@
     "cookies": {
       "tab": "Cookies",
       "title": "Cookies · KINND",
-      "description": "How KINND uses cookies.",
-      "heading": "Cookie *policy*",
+      "description": "Sådan bruger KINND cookies.",
+      "heading": "*Cookiepolitik*",
       "text": "[Intro line from counsel]",
       "sections": [
         "[Section headings from counsel]"
@@ -610,11 +610,11 @@
     }
   },
   "notFound": {
-    "title": "Page not found · KINND",
-    "description": "This page does not exist.",
-    "heading": "Page *not found*",
-    "text": "The link may be old, or the page has moved.",
-    "cta": "Go to the home page"
+    "title": "Siden blev ikke fundet · KINND",
+    "description": "Denne side findes ikke.",
+    "heading": "Siden *findes ikke*",
+    "text": "Linket er måske gammelt, eller siden er flyttet.",
+    "cta": "Gå til forsiden"
   },
   "language": {
     "title": "Language · KINND",

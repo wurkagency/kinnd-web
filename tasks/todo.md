@@ -43,7 +43,8 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - [x] axe: 0 violations with the modal open (390, 1440); Lighthouse Home 99/100/100/100
 
 ## Decided by Charlie
-- 2026-10-07: Footer on every page: "WURK ApS · CVR 34378424" only.
+- 2026-10-07: Footer on every page: "WURK ApS · CVR <number>" only.
+- 2026-10-08: CVR is 37547395 (corrected in the translation delivery).
 - 2026-10-07: Yearly toggle badge "Save up to 30%"; cards keep 20% (Parents) and 30% (Family).
 - 2026-10-07: Location wording on Home and Safety: "Location data is removed from the photos other people download."
 - 2026-10-07: EU/GDPR wording on Home and Safety: "We follow GDPR and store data in the EU." Safety keeps `[Confirm hosting wording with counsel]`.
@@ -70,5 +71,7 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - [ ] Legal text: privacy, terms, cookies; "Last updated" date
 - [ ] Final logo, favicon, social share image (`public/og-default.png` is a placeholder)
 - [ ] Licence for `family-orchard.jpg`
-- [ ] Translations: da, sv, no, fo, is, de, tr, ar. Files and instructions in `src/i18n/locales/` (set `_meta.untranslated` to false when done)
+- [x] Translations live (2026-10-08): da, sv, no, fo, de, tr, ar
+- [ ] Icelandic (`is.json`): file came back still in English; stays hidden from search until translated
+- [ ] Language modal text (`language` section: heading, line, Close) is English in all translated files
 - [ ] Hosting target (build output is plain static files in `dist/`)

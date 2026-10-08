@@ -45,7 +45,7 @@ export const translatedLocales = (): Locale[] => locales.filter((l) => !isUntran
 /** Company facts and contact details. Not translated. */
 export const site = {
   name: 'KINND',
-  company: 'WURK ApS · CVR 34378424',
+  company: 'WURK ApS · CVR 37547395',
   contactEmail: '[CONTACT EMAIL]',
   safetyEmail: '[SAFETY EMAIL]',
 };
