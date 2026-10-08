@@ -49,6 +49,9 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - 2026-10-07: EU/GDPR wording on Home and Safety: "We follow GDPR and store data in the EU." Safety keeps `[Confirm hosting wording with counsel]`.
 - 2026-10-07: Domain `https://www.kinnd.eu`. Typos fixed. Terms/Cookies use the privacy template; content comes later.
 
+- 2026-10-08: Arabic font Noto Sans Arabic (self-hosted) approved.
+- 2026-10-08: All languages stay visible in the language modal, translated or not.
+
 ## Choices I made (please check)
 - "Prices include Danish VAT. [Confirm final prices]" sits under the plan cards on Pricing at all widths, since it left the footer.
 - Yearly view sub-line (not drawn): "Billed yearly. You save 20%." / "… 30%."
@@ -68,6 +71,4 @@ Repo: https://github.com/wurkagency/kinnd-web · Site: https://www.kinnd.eu
 - [ ] Final logo, favicon, social share image (`public/og-default.png` is a placeholder)
 - [ ] Licence for `family-orchard.jpg`
 - [ ] Translations: da, sv, no, fo, is, de, tr, ar. Files and instructions in `src/i18n/locales/` (set `_meta.untranslated` to false when done)
-- [ ] Approve Arabic font: self-hosted Noto Sans Arabic (brand fonts have no Arabic)
-- [ ] Should untranslated languages be hidden from the language modal until ready? (now: shown)
 - [ ] Hosting target (build output is plain static files in `dist/`)
