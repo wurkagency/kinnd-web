@@ -1,55 +1,56 @@
-# Deploying kinnd.eu
+# Deploying www.kinnd.eu (Plesk)
 
-The site is fully static. `npm run build` writes plain files to `dist/`; any web server can serve them. No Node process runs in production.
+The site is fully static. `npm run build` writes plain files to `dist/`, and the release script copies them into the Plesk document root. No Node process runs in production.
 
-Requirements on the build machine: Node 22.12+ and npm 9.6+.
+Assumed on the server: Node 22, npm, git and rsync installed; SSL and the non-www to www 301 already set up in Plesk.
 
-## First time, on the server (Ubuntu/Debian + nginx)
+| | Path |
+|---|---|
+| Repository (build folder) | `/var/www/kinnd.eu/kinnd-web` |
+| Document root (served) | `/var/www/kinnd.eu/httpdocs` |
+
+The repository sits next to `httpdocs`, not inside it, so source files are never public.
+
+## First time
+
+SSH in as the vhost's system user, then:
 
 ```bash
-# Node 22 (skip if already installed)
-curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-sudo apt-get install -y nodejs nginx
-
-# Code
-sudo mkdir -p /var/www/kinnd-web && sudo chown "$USER" /var/www/kinnd-web
-git clone https://github.com/wurkagency/kinnd-web.git /var/www/kinnd-web
-cd /var/www/kinnd-web
-npm ci
-npm run build
-
-# nginx
-sudo cp deploy/nginx.conf /etc/nginx/sites-available/kinnd.eu
-sudo ln -s /etc/nginx/sites-available/kinnd.eu /etc/nginx/sites-enabled/kinnd.eu
-sudo nginx -t && sudo systemctl reload nginx
-
-# HTTPS (Let's Encrypt)
-sudo apt-get install -y certbot python3-certbot-nginx
-sudo certbot --nginx -d www.kinnd.eu -d kinnd.eu
+cd /var/www/kinnd.eu
+git clone https://github.com/wurkagency/kinnd-web.git kinnd-web
+chmod +x kinnd-web/deploy/release.sh
+kinnd-web/deploy/release.sh
 ```
+
+The first run replaces everything in `httpdocs` (the Plesk placeholder page included) with the site. `.well-known/` is kept.
 
 ## Every release
 
 ```bash
-cd /var/www/kinnd-web
-git pull --ff-only
-npm ci
-npm run build
+/var/www/kinnd.eu/kinnd-web/deploy/release.sh
 ```
 
-nginx serves `dist/` directly, so there is nothing to restart.
+It pulls `main`, installs dependencies, builds and mirrors `dist/` into `httpdocs`. Nothing needs restarting.
 
 ## Check after a release
 
 ```bash
 curl -sI https://www.kinnd.eu/ | head -1
-curl -sI https://kinnd.eu/ | grep -i location
 curl -s -o /dev/null -w "%{http_code}\n" https://www.kinnd.eu/does-not-exist/
 curl -s https://www.kinnd.eu/sitemap-index.xml | head -3
 ```
 
-Expect `200`, a redirect to `https://www.kinnd.eu/`, `404`, and the sitemap XML.
+Expect `HTTP/2 200`, `404` and the sitemap XML.
 
-## Other hosts
+## Server settings
 
-Netlify, Vercel or Cloudflare Pages: build command `npm run build`, output directory `dist`, Node 22. `dist/404.html` is picked up as the not-found page automatically.
+`public/.htaccess` ships with the build and sets the 404 page, cache headers, security headers and compression. That covers Plesk's default Apache + nginx setup.
+
+If the domain runs in nginx-only mode (Apache off), `.htaccess` is ignored. Add this under Plesk > Domains > kinnd.eu > Apache & nginx Settings > Additional nginx directives instead:
+
+```nginx
+error_page 404 /404.html;
+location ~* ^/(_astro|fonts)/ {
+    add_header Cache-Control "public, max-age=31536000, immutable";
+}
+```
