@@ -8,3 +8,10 @@ proof/
 .claude/
 .playwright-mcp/
 kinnd-translations.zip
+
+# Local only: Claude prompts and internal notes
+CLAUDE.md
+CLAUDE.local.md
+tasks/
+*PROMPT*.md
+\# KINND website brief.md

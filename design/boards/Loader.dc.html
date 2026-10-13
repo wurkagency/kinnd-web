@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KINND · Loader</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<style>
+body{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:#142019}a:hover{color:#0F3D35}
+</style>
+</helmet>
+<div role="status" aria-live="polite" aria-label="Loading KINND" style="position: relative; box-sizing: border-box; width: 100%; height: 900px; background: #0F3D35; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<div data-loader-logo style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; transform: scale(3); transform-origin: center"><span aria-hidden="true" style="position: relative; width: 28px; height: 22px; color: #FFFFFF"><span style="position: absolute; left: 0; top: 0; width: 13px; height: 13px; border-radius: 7px; color: #FFFFFF; background-color: #FFFFFF"></span><span style="position: absolute; right: 0; top: 2px; width: 10px; height: 10px; border-radius: 5px; color: #FFFFFF; background-color: #FFFFFF"></span><span style="position: absolute; left: 10px; bottom: 0; width: 7px; height: 7px; border-radius: 4px; background-color: #FFFFFF"></span></span><span style="font-size: 22px; font-weight: 700; letter-spacing: 0.04em; font-family: Helvetica, sans-serif; color: #FFFFFF">KINND</span></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
