@@ -402,30 +402,139 @@
         "text": "Tak tínar myndir og video niður. Strika tína kontu, tá ið tú vilt."
       }
     ],
-    "behind": {
-      "label": "Aftan fyri leiktjøldini",
-      "title": "Soleiðis verja vit teg *aftan fyri* leiktjøldini",
-      "text": "Eitt lítið toymi ansar eftir tænastuni. Hetta gera vit.",
-      "items": [
-        {
-          "title": "Vit taka misnýtslu í álvara",
-          "text": "Vit kanna svik og óheimilaða atgongd til økið hjá einum barni."
-        },
-        {
-          "title": "Vit samstarva við myndugleikarnar",
-          "text": "Váttað ólóglig mál verða latin teimum."
-        },
-        {
-          "title": "Vit blanda okkum ikki í familjuósemjur",
-          "text": "KINND er eitt privat stað at deila í. Vit taka ikki støðu."
-        }
-      ]
-    },
     "details": {
       "label": "Privatlívspolitikkur",
       "title": "Vilt tú hava smálutirnar?",
       "text": "Les júst, hvat vit savna og hví.",
       "cta": "Les privatlívspolitikkin"
+    },
+    "moreLink": "Technical details",
+    "encryption": {
+      "label": "Encryption",
+      "title": "Locked, *every* step of the way",
+      "text": "Your photos, videos, messages and medical information are encrypted when they are stored. Everything travels over an encrypted connection.",
+      "items": [
+        {
+          "title": "When it is stored",
+          "text": "Photos, videos, messages and medical information are encrypted with AES-256-GCM, the standard banks and governments use. Each photo and video gets its own key."
+        },
+        {
+          "title": "When it travels",
+          "text": "Everything between your phone and KINND is sent over an encrypted connection (TLS 1.3). Nobody on the network can read it."
+        },
+        {
+          "title": "Keys kept apart",
+          "text": "The keys that unlock your data are stored apart from the data itself, in a separate, secured key vault. A copy of the data alone is unreadable."
+        }
+      ],
+      "moreLabel": "Technical details about encryption"
+    },
+    "protected": {
+      "label": "What is protected",
+      "title": "What is *protected*",
+      "colWhat": "What",
+      "colHow": "How it is protected",
+      "rows": [
+        {
+          "what": "Photos and videos",
+          "how": "Encrypted with AES-256-GCM, own key per file. Location removed from copies others download."
+        },
+        {
+          "what": "Messages",
+          "how": "Encrypted at rest with AES-256-GCM. Only the people in the conversation can open them in the app."
+        },
+        {
+          "what": "Medical information",
+          "how": "Encrypted at rest with AES-256-GCM. Only adults the child's parents have invited, by role."
+        },
+        {
+          "what": "Child profile and growth",
+          "how": "Only adults the child's parents have invited, by role."
+        },
+        {
+          "what": "Calendar, tasks, lists",
+          "how": "Only adults with access to that child."
+        },
+        {
+          "what": "Sign-in",
+          "how": "Two-step sign-in with a one-time code (TOTP), always on."
+        },
+        {
+          "what": "Payment",
+          "how": "Handled by Quickpay. KINND never stores card numbers."
+        },
+        {
+          "what": "Backups",
+          "how": "Encrypted, kept for 90 days, in the EU."
+        }
+      ],
+      "note": "Everything above travels over an encrypted connection (TLS 1.3)."
+    },
+    "oversight": {
+      "label": "What we can see",
+      "title": "Built to keep *children* safe",
+      "text": "Our management system watches for misuse around the clock. Every alarm is checked by a person on our team.",
+      "items": [
+        {
+          "title": "Family life stays private",
+          "text": "In normal use, nobody at KINND sees your photos, messages or your child's information. Our system works on technical signals only."
+        },
+        {
+          "title": "When an alarm goes off",
+          "text": "If activity sets off an alarm, our team first sees masked technical details of that case: sign-ins, devices, IP addresses and the warnings that fired. If there are grounds to look further, we follow the protocols of the Danish police's cyber crime centre (NC3), and a second senior reviewer checks the case before it is escalated."
+        },
+        {
+          "title": "Every look is logged",
+          "text": "Every time an employee views details in a case, it is logged and audited. That audit log goes into the report we hand to the authorities."
+        }
+      ],
+      "moreLabel": "Technical details about access"
+    },
+    "abuse": {
+      "label": "Abuse and fraud",
+      "title": "How we catch *abuse* and fraud",
+      "text": "Abuse Central, our warning engine, works on technical signals only. When something looks wrong, a person on our team looks into it.",
+      "items": [
+        {
+          "title": "Warnings that catch misuse early",
+          "text": "Abuse Central uses a wide set of triggers and patterns to spot signs of misuse: unusual sign-ins, accounts created to reach a child, and attempts to get access someone should not have."
+        },
+        {
+          "title": "Reports from you",
+          "text": "Worried about an account? Write to abuse@kinnd.eu. Every report gets a case that a person follows to the end. In the app, parents can remove a family member at any time."
+        },
+        {
+          "title": "We work with the authorities",
+          "text": "Confirmed illegal cases are handed to the police with the information they need, including the audit log of who viewed what. We follow each case until it is closed."
+        },
+        {
+          "title": "We stay out of family conflicts",
+          "text": "KINND is a private space to share in. We do not take sides or settle disagreements."
+        }
+      ],
+      "moreLabel": "Technical details about abuse and fraud"
+    },
+    "docs": {
+      "back": "Safety & privacy",
+      "onThisPage": "On this page",
+      "encryption": {
+        "title": "Encryption in detail · KINND",
+        "description": "How KINND encrypts photos, videos, messages and medical information, and where the keys are kept.",
+        "heading": "Encryption, *in detail*",
+        "text": "For those who want the technical picture."
+      },
+      "access": {
+        "title": "Access and oversight in detail · KINND",
+        "description": "Who can see what in KINND, how sign-in works, and what our team can see and when.",
+        "heading": "Who can see *what*",
+        "text": "Access, sign-in and our own team, in detail."
+      },
+      "abuse": {
+        "title": "Abuse and fraud in detail · KINND",
+        "description": "How Abuse Central spots misuse, how cases are handled, and when we involve the police.",
+        "heading": "Abuse and fraud, *in detail*",
+        "text": "How we spot misuse and what happens next."
+      }
     }
   },
   "faq": {
@@ -502,6 +611,14 @@
           {
             "q": "Hjálpir KINND við ósemjum?",
             "a": "Nei. KINND er eitt stað at deila í. Vit taka ikki støðu."
+          },
+          {
+            "q": "Can I delete everything?",
+            "a": "Yes. Your data, your choice. Download or delete your account on demand."
+          },
+          {
+            "q": "Does KINND help with conflicts?",
+            "a": "No. KINND is a place to share in. We do not take sides."
           }
         ]
       }

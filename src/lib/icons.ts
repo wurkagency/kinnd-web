@@ -22,6 +22,10 @@ export const icons = {
   arrowUpRight: '<path d="M7 17L17 7M9 7h8v8"/>',
   menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
   growth: '<path d="M4 19l5-6 4 3 7-9"/><path d="M15 7h5v5"/>',
+  key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l8.5-8.5M16 7l2.5 2.5M14 9l2 2"/>',
+  alert: '<path d="M12 3.5l9 16H3z"/><path d="M12 10v4M12 17h.01"/>',
+  arrowRight: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  arrowLeft: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
 } as const;
 
 export type IconName = keyof typeof icons;

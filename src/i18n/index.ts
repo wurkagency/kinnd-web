@@ -89,6 +89,10 @@ export const routes = {
   features: '/features/',
   pricing: '/pricing/',
   safety: '/safety/',
+  /** Technical deep dives linked from the Safety page. */
+  safetyEncryption: '/safety/encryption/',
+  safetyAccess: '/safety/access/',
+  safetyAbuse: '/safety/abuse/',
   faq: '/faq/',
   about: '/about/',
   privacy: '/legal/privacy/',

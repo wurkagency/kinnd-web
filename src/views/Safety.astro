@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CtaBand from '../components/CtaBand.astro';
 import IconTile from '../components/IconTile.astro';
+import Icon from '../components/Icon.astro';
 import Callout from '../components/Callout.astro';
 import { localePath, routes, useDict, type Locale } from '../i18n';
 import { rich } from '../lib/rich';
@@ -13,6 +14,7 @@ interface Props {
 const { lang } = Astro.props;
 const t = useDict(lang);
 const c = t.safety;
+const p = (r: string) => localePath(lang, r);
 ---
 
 <Base lang={lang} title={c.title} description={c.description} route={routes.safety} current="safety">
@@ -21,27 +23,109 @@ const c = t.safety;
   <section aria-label={c.promisesLabel} class="container promises-wrap">
     <ul class="plain promises">
       {
-        c.promises.map((p) => (
+        c.promises.map((item) => (
           <li class="promise">
-            <IconTile icon={p.icon} tone={p.tone} size={52} />
-            <h2>{p.title}</h2>
-            <p set:html={rich(p.text)} />
+            <IconTile icon={item.icon} tone={item.tone} size={52} />
+            <h2>{item.title}</h2>
+            <p set:html={rich(item.text)} />
           </li>
         ))
       }
     </ul>
   </section>
 
-  <section aria-label={c.behind.label} class="band">
+  <!-- A. Encryption -->
+  <section aria-label={c.encryption.label} class="band" id="encryption">
     <div class="container section">
-      <div class="section-head">
-        <h2 class="display h2" set:html={rich(c.behind.title)} />
-        <p class="lead">{c.behind.text}</p>
+      <div class="section-head section-head--row">
+        <div class="section-head">
+          <h2 class="display h2" set:html={rich(c.encryption.title)} />
+          <p class="lead">{c.encryption.text}</p>
+        </div>
+        <a href={p(routes.safetyEncryption)} class="more-link" aria-label={c.encryption.moreLabel}>
+          {c.moreLink}<Icon name="arrowRight" size={16} stroke={2} class="more-link__icon" />
+        </a>
       </div>
-      <ul class="plain behind">
+      <ul class="plain card-grid card-grid--3">
         {
-          c.behind.items.map((item) => (
-            <li>
+          c.encryption.items.map((item) => (
+            <li class="card card--white">
+              <IconTile icon={item.icon} tone={item.tone} />
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- B. What is protected -->
+  <section aria-label={c.protected.label} class="container section" id="protected">
+    <h2 class="display h2" set:html={rich(c.protected.title)} />
+    <div class="protected">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">{c.protected.colWhat}</th>
+            <th scope="col">{c.protected.colHow}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            c.protected.rows.map((r) => (
+              <tr>
+                <th scope="row">{r.what}</th>
+                <td>{r.how}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+      <p class="protected__note">{c.protected.note}</p>
+    </div>
+  </section>
+
+  <!-- C. What we can see, and when -->
+  <section aria-label={c.oversight.label} class="container section oversight" id="oversight">
+    <div class="section-head section-head--row">
+      <div class="section-head">
+        <h2 class="display h2" set:html={rich(c.oversight.title)} />
+        <p class="lead">{c.oversight.text}</p>
+      </div>
+      <a href={p(routes.safetyAccess)} class="more-link" aria-label={c.oversight.moreLabel}>
+        {c.moreLink}<Icon name="arrowRight" size={16} stroke={2} class="more-link__icon" />
+      </a>
+    </div>
+    <ul class="plain card-grid card-grid--3">
+      {
+        c.oversight.items.map((item) => (
+          <li class="card card--grey">
+            <IconTile icon={item.icon} tone={item.tone} />
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <!-- D. Abuse and fraud (replaces "Behind the scenes") -->
+  <section aria-label={c.abuse.label} class="band" id="abuse">
+    <div class="container section">
+      <div class="section-head section-head--row">
+        <div class="section-head">
+          <h2 class="display h2" set:html={rich(c.abuse.title)} />
+          <p class="lead">{c.abuse.text}</p>
+        </div>
+        <a href={p(routes.safetyAbuse)} class="more-link" aria-label={c.abuse.moreLabel}>
+          {c.moreLink}<Icon name="arrowRight" size={16} stroke={2} class="more-link__icon" />
+        </a>
+      </div>
+      <ul class="plain card-grid card-grid--2">
+        {
+          c.abuse.items.map((item) => (
+            <li class="card card--white card--text">
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </li>
@@ -52,12 +136,7 @@ const c = t.safety;
   </section>
 
   <section aria-label={c.details.label} class="container details">
-    <Callout
-      title={c.details.title}
-      text={c.details.text}
-      cta={c.details.cta}
-      href={localePath(lang, routes.privacy)}
-    />
+    <Callout title={c.details.title} text={c.details.text} cta={c.details.cta} href={p(routes.privacy)} />
   </section>
 
   <CtaBand lang={lang} />
@@ -91,44 +170,166 @@ const c = t.safety;
     line-height: 1.45;
     color: var(--muted);
   }
-  @media (min-width: 768px) {
-    .promises {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .promise {
-      padding: 28px;
-    }
+
+  /* "Technical details" link next to each section heading. */
+  .more-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-underline-offset: 4px;
+    white-space: nowrap;
   }
-  @media (min-width: 1100px) {
-    .promises {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+  .more-link:hover {
+    color: var(--forest);
+  }
+  :global([dir='rtl']) .more-link :global(.more-link__icon) {
+    transform: scaleX(-1);
   }
 
-  .behind {
+  .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr;
     gap: 16px;
   }
-  .behind li {
+  .card {
     padding: 24px;
     border-radius: var(--radius-card);
-    background: var(--surface);
     display: flex;
     flex-direction: column;
+    gap: 12px;
+  }
+  .card--white {
+    background: var(--surface);
+  }
+  .card--grey {
+    background: var(--bg);
+  }
+  .card--text {
     gap: 8px;
   }
-  .behind h3 {
-    font-size: 18px;
+  .card h3 {
+    margin-top: 4px;
+    font-size: 20px;
     font-weight: 600;
+    line-height: 1.25;
   }
-  .behind p {
+  .card--text h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  .card p {
     font-size: 15px;
-    line-height: 1.45;
+    line-height: 1.5;
     color: var(--muted);
   }
 
+  /* B. Table: rows stack into cards on phones. */
+  .protected {
+    max-width: 920px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .protected table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .protected thead {
+    display: none;
+  }
+  .protected tr {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .protected tbody tr:first-child {
+    border-top: 1px solid var(--line);
+  }
+  .protected th,
+  .protected td {
+    padding: 0;
+    text-align: start;
+    vertical-align: top;
+  }
+  .protected tbody th {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .protected td {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .protected__note {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .oversight {
+    padding-top: 0;
+  }
   .details {
     padding-top: var(--section-y);
+  }
+
+  @media (min-width: 768px) {
+    .promises,
+    .card-grid--2,
+    .card-grid--3 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .promise,
+    .card {
+      padding: 28px;
+    }
+    .card-grid--3 > :last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+    .protected thead {
+      display: table-header-group;
+    }
+    .protected tr {
+      display: table-row;
+      padding: 0;
+    }
+    .protected thead th {
+      padding: 12px 16px;
+      background: var(--bg);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .protected thead th:first-child {
+      border-start-start-radius: 12px;
+      border-end-start-radius: 12px;
+    }
+    .protected thead th:last-child {
+      border-start-end-radius: 12px;
+      border-end-end-radius: 12px;
+    }
+    .protected tbody th,
+    .protected tbody td {
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .protected tbody th {
+      width: 34%;
+    }
+    .protected tbody tr:first-child {
+      border-top: 0;
+    }
+  }
+  @media (min-width: 1100px) {
+    .promises,
+    .card-grid--3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .card-grid--3 > :last-child:nth-child(odd) {
+      grid-column: auto;
+    }
   }
 </style>

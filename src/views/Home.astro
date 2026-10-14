@@ -183,7 +183,7 @@ const heights = ['130', '140', '150', '160', '170'];
     <div class="container section">
       <div class="section-head section-head--row safety-head">
         <h2 class="display safety-head__title" set:html={rich(h.safety.title)} />
-        <a href={localePath(lang, routes.safety)} class="text-link">{h.safety.link}</a>
+        <a href={`${localePath(lang, routes.safety)}#encryption`} class="text-link">{h.safety.link}</a>
       </div>
       <ul class="plain safety-grid">
         {
