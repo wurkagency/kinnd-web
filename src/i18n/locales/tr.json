@@ -246,8 +246,8 @@
           "text": "Her ekranda tek hesap"
         },
         {
-          "title": "Üç dil",
-          "text": "İngilizce, Danca ve İsveççe"
+          "title": "Dokuz dil",
+          "text": "İskandinav dilleri, İngilizce, Almanca, Türkçe ve Arapça"
         },
         {
           "title": "Varsayılan olarak özel",
@@ -325,7 +325,7 @@
         ]
       }
     },
-    "vatNote": "Fiyatlara Danimarka KDV'si dahildir. [Confirm final prices]",
+    "vatNote": "Fiyatlara Danimarka KDV'si dahildir.",
     "good": {
       "label": "Bilmekte fayda var",
       "title": "Bilmekte *fayda* var",
@@ -369,11 +369,11 @@
     }
   },
   "safety": {
-    "title": "Güvenlik ve gizlilik · KINND",
-    "description": "Çocukların verilerini korumak için yapıldı. Altı söz, sade bir dille.",
+    "title": "Güvenlik ve gizlilik: şifreli ve AB'de saklanır · KINND",
+    "description": "Fotoğraflar, videolar, mesajlar ve sağlık bilgileri AES-256-GCM ile şifrelenir. İki adımlı giriş zorunludur ve tüm veriler AB'de saklanır. Sözlerimiz, sade bir dille.",
     "hero": {
       "title": "Çocukların verilerini *korumak* için yapıldı",
-      "text": "Altı söz, sade bir dille."
+      "text": "Ne söz verdiğimiz ve bunun tam olarak nasıl işlediği."
     },
     "promisesLabel": "Sözlerimiz",
     "promises": [
@@ -387,7 +387,7 @@
       },
       {
         "title": "İki adımlı giriş",
-        "text": "Her zaman açık, herkes için. Yalnızca doğru kişiler girer."
+        "text": "Her zaman açık. Parolayla girişte, e-posta ya da SMS ile gönderilen tek kullanımlık bir kod gerekir."
       },
       {
         "title": "Doğru erişim",
@@ -395,7 +395,7 @@
       },
       {
         "title": "AB ve GDPR",
-        "text": "GDPR'a uyuyor ve verileri AB'de saklıyoruz. [Confirm hosting wording with counsel]"
+        "text": "Tüm veriler ve yedekler AB'de saklanır. GDPR'a uyuyoruz."
       },
       {
         "title": "Verilerin senindir",
@@ -408,133 +408,135 @@
       "text": "Tam olarak neyi, neden topladığımızı oku.",
       "cta": "Gizlilik bildirimini oku"
     },
-    "moreLink": "Technical details",
+    "moreLink": "Tüm teknik ayrıntılar",
     "encryption": {
-      "label": "Encryption",
-      "title": "Locked, *every* step of the way",
-      "text": "Your photos, videos, messages and medical information are encrypted when they are stored. Everything travels over an encrypted connection.",
+      "label": "Şifreleme",
+      "title": "*Her* adımda kilitli",
+      "text": "En hassas bilgilerin hem saklanırken hem de iletilirken şifrelenir.",
       "items": [
         {
-          "title": "When it is stored",
-          "text": "Photos, videos, messages and medical information are encrypted with AES-256-GCM, the standard banks and governments use. Each photo and video gets its own key."
+          "title": "Saklanırken",
+          "text": "Fotoğraflar, videolar, mesajlar ve sağlık bilgileri AES-256-GCM ile şifrelenir. Bankaların ve devletlerin kullandığı standart budur. Her fotoğraf ve video kendi anahtarını alır."
         },
         {
-          "title": "When it travels",
-          "text": "Everything between your phone and KINND is sent over an encrypted connection (TLS 1.3). Nobody on the network can read it."
+          "title": "İletilirken",
+          "text": "Telefonunla KINND arasındaki her şey şifreli bir bağlantı (TLS 1.3) üzerinden gönderilir. Ağdaki hiç kimse onu okuyamaz."
         },
         {
-          "title": "Keys kept apart",
-          "text": "The keys that unlock your data are stored apart from the data itself, in a separate, secured key vault. A copy of the data alone is unreadable."
+          "title": "Anahtarlar ayrı tutulur",
+          "text": "Verilerini açan anahtarlar, verilerin kendisinden ayrı saklanır. Verilerin tek başına bir kopyası okunamaz."
         }
-      ],
-      "moreLabel": "Technical details about encryption"
+      ]
     },
     "protected": {
-      "label": "What is protected",
-      "title": "What is *protected*",
-      "colWhat": "What",
-      "colHow": "How it is protected",
+      "label": "Neler korunuyor",
+      "title": "Neler *korunuyor*",
+      "text": "Senin için önemli olanı bul ve nasıl güvende tutulduğunu gör.",
+      "colWhat": "Ne",
+      "colHow": "Nasıl korunuyor",
       "rows": [
         {
-          "what": "Photos and videos",
-          "how": "Encrypted with AES-256-GCM, own key per file. Location removed from copies others download."
+          "what": "Fotoğraflar ve videolar",
+          "how": "AES-256-GCM ile şifrelenir, her dosyanın kendi anahtarı vardır. Başkalarının indirdiği kopyalardan konum kaldırılır."
         },
         {
-          "what": "Messages",
-          "how": "Encrypted at rest with AES-256-GCM. Only the people in the conversation can open them in the app."
+          "what": "Mesajlar",
+          "how": "AES-256-GCM ile şifrelenir. Yalnızca konuşmadaki kişiler açabilir."
         },
         {
-          "what": "Medical information",
-          "how": "Encrypted at rest with AES-256-GCM. Only adults the child's parents have invited, by role."
+          "what": "Sağlık bilgileri",
+          "how": "AES-256-GCM ile şifrelenir. Ebeveynler ve bir ebeveynin erişim verdiği yetişkinler."
         },
         {
-          "what": "Child profile and growth",
-          "how": "Only adults the child's parents have invited, by role."
+          "what": "Takvim, görevler ve listeler",
+          "how": "AES-256-GCM ile şifrelenir. Yalnızca o çocuğa erişimi olan yetişkinler, rollerine göre."
         },
         {
-          "what": "Calendar, tasks, lists",
-          "how": "Only adults with access to that child."
+          "what": "Giriş",
+          "how": "İki adımlı giriş, her zaman açık. Parolayla girişte, e-posta ya da SMS ile gönderilen tek kullanımlık bir kod gerekir."
         },
         {
-          "what": "Sign-in",
-          "how": "Two-step sign-in with a one-time code (TOTP), always on."
+          "what": "Ödeme",
+          "how": "QuickPay tarafından yürütülür. KINND tam kart numaralarını asla saklamaz."
         },
         {
-          "what": "Payment",
-          "how": "Handled by Quickpay. KINND never stores card numbers."
+          "what": "Yedekler",
+          "how": "Canlı verilerle aynı şekilde şifrelenir, AB'de 90 gün saklanır."
         },
         {
-          "what": "Backups",
-          "how": "Encrypted, kept for 90 days, in the EU."
+          "what": "Teknik veriler",
+          "how": "IP adresleri, cihaz bilgileri ve giriş geçmişi 1 yıl saklanır, yalnızca kötüye kullanımı tespit etmek ve bildirmek için."
         }
-      ],
-      "note": "Everything above travels over an encrypted connection (TLS 1.3)."
+      ]
     },
     "oversight": {
-      "label": "What we can see",
-      "title": "Built to keep *children* safe",
-      "text": "Our management system watches for misuse around the clock. Every alarm is checked by a person on our team.",
+      "label": "Neleri görebiliyoruz",
+      "title": "*Çocukları* korumak için yapıldı",
+      "text": "Yönetim sistemimiz, karmaşık bir tetikleyici ve örüntü sistemi olan Abuse Central ile kötüye kullanıma karşı günün her saati tetikte. Her alarmı ekibimizden bir kişi kontrol eder.",
       "items": [
         {
-          "title": "Family life stays private",
-          "text": "In normal use, nobody at KINND sees your photos, messages or your child's information. Our system works on technical signals only."
+          "title": "Aile hayatı özel kalır",
+          "text": "Normal kullanımda KINND'de hiç kimse fotoğraflarını, mesajlarını ya da çocuğunun bilgilerini görmez. Sistemimiz yalnızca teknik sinyallerle çalışır."
         },
         {
-          "title": "When an alarm goes off",
-          "text": "If activity sets off an alarm, our team first sees masked technical details of that case: sign-ins, devices, IP addresses and the warnings that fired. If there are grounds to look further, we follow the protocols of the Danish police's cyber crime centre (NC3), and a second senior reviewer checks the case before it is escalated."
+          "title": "Bir alarm çaldığında",
+          "text": "Ekibimiz önce vakanın teknik ayrıntılarını inceler: girişler, cihazlar, IP adresleri ve tetiklenen uyarılar. Her görüntüleme denetlenir. Daha fazla bakmak için gerekçe varsa Danimarka makamlarıyla aynı protokolleri izleriz. Vaka ilerlemeden önce ikinci, kıdemli bir inceleyici onay verir."
         },
         {
-          "title": "Every look is logged",
-          "text": "Every time an employee views details in a case, it is logged and audited. That audit log goes into the report we hand to the authorities."
+          "title": "Her bakış denetlenir",
+          "text": "Bir çalışan bir vakadaki ayrıntıları her görüntülediğinde bu; kimin, neyi, ne zaman gördüğüyle birlikte kaydedilir ve denetlenir."
         }
-      ],
-      "moreLabel": "Technical details about access"
+      ]
     },
     "abuse": {
-      "label": "Abuse and fraud",
-      "title": "How we catch *abuse* and fraud",
-      "text": "Abuse Central, our warning engine, works on technical signals only. When something looks wrong, a person on our team looks into it.",
+      "label": "Kötüye kullanım ve dolandırıcılık",
+      "title": "*Kötüye kullanımı* ve dolandırıcılığı nasıl yakalıyoruz",
+      "text": "Kötüye kullanıma hızla, yalnızca teknik sinyallerle müdahale ederiz.",
       "items": [
         {
-          "title": "Warnings that catch misuse early",
-          "text": "Abuse Central uses a wide set of triggers and patterns to spot signs of misuse: unusual sign-ins, accounts created to reach a child, and attempts to get access someone should not have."
+          "title": "Kötüye kullanımı erken yakalayan uyarılar",
+          "text": "Abuse Central kötüye kullanım belirtilerini arar: olağandışı girişler, bir çocuğa ulaşmak için açılan hesaplar ve birinin sahip olmaması gereken erişimi elde etme girişimleri."
         },
         {
-          "title": "Reports from you",
-          "text": "Worried about an account? Write to abuse@kinnd.eu. Every report gets a case that a person follows to the end. In the app, parents can remove a family member at any time."
+          "title": "Kimin içeride olacağına sen karar verirsin",
+          "text": "Ebeveynler bir aile üyesini istedikleri zaman çıkarabilir. Bir şey seni endişelendiriyor mu? Bize yaz."
         },
         {
-          "title": "We work with the authorities",
-          "text": "Confirmed illegal cases are handed to the police with the information they need, including the audit log of who viewed what. We follow each case until it is closed."
+          "title": "Yetkililerle birlikte çalışırız",
+          "text": "Doğrulanmış yasa dışı vakalar, gereken bilgilerle birlikte polise iletilir. Her vakayı kapanana kadar takip ederiz."
         },
         {
-          "title": "We stay out of family conflicts",
-          "text": "KINND is a private space to share in. We do not take sides or settle disagreements."
+          "title": "Aile anlaşmazlıklarına karışmayız",
+          "text": "KINND paylaşım için özel bir alandır. Taraf tutmayız ve anlaşmazlıkları çözmeyiz."
         }
-      ],
-      "moreLabel": "Technical details about abuse and fraud"
+      ]
     },
-    "docs": {
-      "back": "Safety & privacy",
-      "onThisPage": "On this page",
-      "encryption": {
-        "title": "Encryption in detail · KINND",
-        "description": "How KINND encrypts photos, videos, messages and medical information, and where the keys are kept.",
-        "heading": "Encryption, *in detail*",
-        "text": "For those who want the technical picture."
-      },
-      "access": {
-        "title": "Access and oversight in detail · KINND",
-        "description": "Who can see what in KINND, how sign-in works, and what our team can see and when.",
-        "heading": "Who can see *what*",
-        "text": "Access, sign-in and our own team, in detail."
-      },
-      "abuse": {
-        "title": "Abuse and fraud in detail · KINND",
-        "description": "How Abuse Central spots misuse, how cases are handled, and when we involve the police.",
-        "heading": "Abuse and fraud, *in detail*",
-        "text": "How we spot misuse and what happens next."
-      }
+    "technical": {
+      "title": "Teknik ayrıntılar: KINND aile verilerini nasıl korur · KINND",
+      "description": "KINND fotoğrafları, mesajları ve sağlık bilgilerini nasıl şifreler, girişi ve erişimi nasıl yönetir, verileri AB'de nasıl saklar ve kötüye kullanımı nasıl yakalar. Teknik ayrıntılarıyla.",
+      "heading": "Tüm teknik *ayrıntılar*",
+      "text": "KINND aile verilerini uygulamada ve perde arkasında nasıl korur.",
+      "back": "Güvenlik ve gizlilik",
+      "onThisPage": "Bu sayfada",
+      "factsLabel": "Temel bilgiler",
+      "facts": [
+        {
+          "value": "AES-256-GCM",
+          "label": "Medya, mesajlar ve sağlık bilgileri"
+        },
+        {
+          "value": "TLS 1.3",
+          "label": "Her bağlantı"
+        },
+        {
+          "value": "2 adımlı",
+          "label": "E-posta ya da SMS ile tek kullanımlık kod"
+        },
+        {
+          "value": "Yalnızca AB",
+          "label": "Tüm veriler ve yedekler"
+        }
+      ]
     }
   },
   "faq": {
@@ -559,7 +561,7 @@
           },
           {
             "q": "Hangi diller?",
-            "a": "İngilizce, Danca ve İsveççe."
+            "a": "Uygulama ve bu web sitesi dokuz dilde: İngilizce, Danca, İsveççe, Norveççe, Faroe dili, İzlandaca, Almanca, Türkçe ve Arapça."
           }
         ]
       },
@@ -613,12 +615,12 @@
             "a": "Hayır. KINND paylaşım için bir yerdir. Taraf tutmayız."
           },
           {
-            "q": "Can I delete everything?",
-            "a": "Yes. Your data, your choice. Download or delete your account on demand."
+            "q": "Her şeyi silebilir miyim?",
+            "a": "Evet. Verilerin, senin kararın. İstediğin zaman verilerini indir ya da hesabını sil."
           },
           {
-            "q": "Does KINND help with conflicts?",
-            "a": "No. KINND is a place to share in. We do not take sides."
+            "q": "KINND anlaşmazlıklarda yardımcı olur mu?",
+            "a": "Hayır. KINND paylaşım için bir yerdir. Taraf tutmayız."
           }
         ]
       }
@@ -687,43 +689,26 @@
   "legal": {
     "tabsLabel": "Yasal belgeler",
     "onThisPage": "Bu sayfada",
-    "lastUpdated": "Son güncelleme [DATE]",
-    "placeholder": "[Text from counsel. Plain words, short sentences.]",
     "privacy": {
       "tab": "Gizlilik bildirimi",
       "title": "Gizlilik bildirimi · KINND",
       "description": "Neyi, neden topladığımız ve bu konuda neler yapabileceğin.",
       "heading": "Gizlilik *bildirimi*",
-      "text": "Neyi, neden topladığımız ve bu konuda neler yapabileceğin.",
-      "sections": [
-        "Biz kimiz",
-        "Neleri topluyoruz",
-        "Neden topluyoruz",
-        "Kimlerle paylaşıyoruz",
-        "Ne kadar süre saklıyoruz",
-        "Hakların",
-        "Bize nasıl ulaşırsın"
-      ]
+      "text": "Neyi, neden topladığımız ve bu konuda neler yapabileceğin."
     },
     "terms": {
       "tab": "Koşullar",
       "title": "Koşullar · KINND",
       "description": "KINND kullanım koşulları.",
       "heading": "*Koşullar*",
-      "text": "Our terms and conditions",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "Kullanım koşullarımız"
     },
     "cookies": {
       "tab": "Çerezler",
       "title": "Çerezler · KINND",
-      "description": "KINND çerezleri nasıl kullanır.",
+      "description": "KINND yalnızca çalışması için gereken çerezleri ve yerel depolamayı kullanır. İzleme yok, reklam yok, üçüncü taraf çerezi yok.",
       "heading": "Çerez *politikası*",
-      "text": "[Intro line from counsel]",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "KINND hangi çerezleri ve yerel depolamayı neden kullanıyor."
     }
   },
   "notFound": {
@@ -734,11 +719,11 @@
     "cta": "Ana sayfaya git"
   },
   "language": {
-    "title": "Language · KINND",
-    "description": "Choose the language for the KINND website.",
-    "heading": "Choose *language*",
-    "text": "The website changes to the language you pick.",
-    "close": "Close",
-    "listLabel": "Languages"
+    "title": "Dil · KINND",
+    "description": "KINND web sitesinin dilini seç.",
+    "heading": "*Dil* seç",
+    "text": "Web sitesi seçtiğin dile geçer.",
+    "close": "Kapat",
+    "listLabel": "Diller"
   }
 }

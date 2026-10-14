@@ -46,8 +46,8 @@ export const translatedLocales = (): Locale[] => locales.filter((l) => !isUntran
 export const site = {
   name: 'KINND',
   company: 'WURK ApS · CVR 37547395',
-  contactEmail: '[CONTACT EMAIL]',
-  safetyEmail: '[SAFETY EMAIL]',
+  contactEmail: 'hello@kinnd.eu',
+  safetyEmail: 'support@kinnd.eu',
 };
 
 type Json = Record<string, unknown> & { _meta?: { untranslated?: boolean } };
@@ -89,10 +89,8 @@ export const routes = {
   features: '/features/',
   pricing: '/pricing/',
   safety: '/safety/',
-  /** Technical deep dives linked from the Safety page. */
-  safetyEncryption: '/safety/encryption/',
-  safetyAccess: '/safety/access/',
-  safetyAbuse: '/safety/abuse/',
+  /** Full technical details, linked from the Safety page. */
+  safetyTechnical: '/safety/technical/',
   faq: '/faq/',
   about: '/about/',
   privacy: '/legal/privacy/',

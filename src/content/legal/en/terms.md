@@ -1,6 +1,6 @@
 ---
 title: "KINND Terms and Conditions"
-updated: "Last updated: 8 October 2026"
+updated: "Last updated: 14 October 2026"
 ---
 
 These terms apply when you create an account and use KINND at kinnd.eu and app.kinnd.eu. By creating an account you accept the terms.
@@ -22,7 +22,7 @@ KINND is only a tool for collaboration and sharing. We do not mediate, resolve f
 - You must be 18 or older to create an account. Children cannot have their own login.
 - You must give correct information and keep it up to date.
 - The account is personal. You may not share your login with others.
-- Two-step login is mandatory and cannot be switched off.
+- Logging in with a password always requires a one-time code sent by email or SMS. This cannot be switched off. If you log in with Google or Microsoft, their login protects your account.
 - Tell us immediately if you suspect that someone else has gained access to your account.
 
 ## 4. Child profiles and invitations
@@ -68,9 +68,9 @@ Regardless of the above, as a consumer you can always cancel with one month's no
 ## 9. When a subscription ends
 
 - When the subscription ends, both you and your co-parent move to the Free plan.
-- If your usage exceeds the Free plan or a smaller plan, the account is frozen until you choose a subscription that fits the usage. You are told the reason.
+- If your usage exceeds the Free plan or a smaller plan, the child's space is hidden until you choose a subscription that fits the usage. You are told the reason.
 - The co-parent can request to take over the subscription. The original subscriber must confirm. If the subscriber does not answer within 7 days, the subscription passes to the co-parent. The request can be withdrawn.
-- A frozen account and its data are deleted 90 days after the subscription expires. We give notice 90, 30 and 15 days before and state the exact date.
+- A hidden child's space and its data are deleted 90 days after the subscription expires. Your account is not deleted. We give notice 90, 60 and 7 days before and state the exact date.
 - Until deletion you can get your original media by contacting us.
 
 ## 10. Your content

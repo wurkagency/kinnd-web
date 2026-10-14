@@ -57,8 +57,13 @@ If the domain runs nginx only (Apache off), `.htaccess` is ignored. Add this und
 
 ```nginx
 error_page 404 /404.html;
+add_header Strict-Transport-Security "max-age=31536000" always;
+add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" always;
+add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()" always;
 location ~* ^/(_astro|fonts)/ {
+    # add_header inside a location replaces the ones above, so repeat HSTS here.
     add_header Cache-Control "public, max-age=31536000, immutable";
+    add_header Strict-Transport-Security "max-age=31536000" always;
 }
 rewrite ^/privacy/?$ /legal/privacy/ permanent;
 rewrite ^/terms/?$ /legal/terms/ permanent;

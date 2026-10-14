@@ -35,8 +35,8 @@
     "text": "30 days with everything included. It runs on your phone, no app store needed."
   },
   "home": {
-    "title": "KINND · Safe collaboration and sharing in the trusted family",
-    "description": "Share children, appointments, Moments and media completely private in the family circle.",
+    "title": "KINND · Private family app for co-parents and the whole family",
+    "description": "Share the custody calendar, appointments, photos, Moments and health information privately between both homes and the family you invite. Data stays in the EU.",
     "hero": {
       "label": "Introduction",
       "title": "Collaborate and share with the *trusted* family",
@@ -148,8 +148,8 @@
     }
   },
   "features": {
-    "title": "Features · KINND",
-    "description": "Everything about your child, in one place. Shared by both homes and the family you invite.",
+    "title": "Features: custody calendar, photos and lists · KINND",
+    "description": "Custody calendar (7/7, 10/4 or your own), appointments, school days, health and growth, lists and private photo sharing. Everything about your child, in one place.",
     "hero": {
       "title": "Everything about your child, in *one* place",
       "text": "Shared by both homes and the family you invite."
@@ -263,8 +263,8 @@
         {
           "icon": "globe",
           "tone": "forest",
-          "title": "Three languages",
-          "text": "English, Danish and Swedish"
+          "title": "Nine languages",
+          "text": "Nordic languages, English, German, Turkish and Arabic"
         },
         {
           "icon": "lock",
@@ -276,8 +276,8 @@
     }
   },
   "pricing": {
-    "title": "Pricing · KINND",
-    "description": "Simple pricing. One person pays. Invited family never pay.",
+    "title": "Pricing: free to start, invited family never pay · KINND",
+    "description": "Free is 0 DKK. Parents is 29 DKK and Family 69 DKK a month, and one person pays for everyone. Try all Family features free for 30 days. No card needed.",
     "hero": {
       "title": "Simple *pricing*",
       "text": "One person pays. Invited family never pay."
@@ -344,7 +344,7 @@
         ]
       }
     },
-    "vatNote": "Prices include Danish VAT. [Confirm final prices]",
+    "vatNote": "Prices include Danish VAT.",
     "good": {
       "label": "Good to know",
       "title": "Good to *know*",
@@ -394,11 +394,11 @@
     }
   },
   "safety": {
-    "title": "Safety & privacy · KINND",
-    "description": "Built to protect children’s data. Six promises, in plain words.",
+    "title": "Safety & privacy: encrypted and stored in the EU · KINND",
+    "description": "Photos, videos, messages and medical information encrypted with AES-256-GCM, mandatory two-step sign-in and all data stored in the EU. Our promises, in plain words.",
     "hero": {
       "title": "Built to *protect* children’s data",
-      "text": "Six promises, in plain words."
+      "text": "What we promise, and exactly how it works."
     },
     "promisesLabel": "Our promises",
     "promises": [
@@ -418,7 +418,7 @@
         "icon": "shield",
         "tone": "orange",
         "title": "Two-step sign-in",
-        "text": "Always on, for everyone, with a one-time code (TOTP). Only the right people get in."
+        "text": "Always on. Signing in with a password needs a one-time code, sent by email or SMS."
       },
       {
         "icon": "people",
@@ -430,7 +430,7 @@
         "icon": "globe",
         "tone": "forest",
         "title": "EU and GDPR",
-        "text": "We follow GDPR. All our data, live and backups, is stored in the EU."
+        "text": "All data and backups are stored in the EU. We follow GDPR."
       },
       {
         "icon": "download",
@@ -445,11 +445,11 @@
       "text": "Read exactly what we collect and why.",
       "cta": "Read the privacy notice"
     },
-    "moreLink": "Technical details",
+    "moreLink": "Full technical details",
     "encryption": {
       "label": "Encryption",
       "title": "Locked, *every* step of the way",
-      "text": "Your photos, videos, messages and medical information are encrypted when they are stored. Everything travels over an encrypted connection.",
+      "text": "Your most sensitive information is encrypted when it is stored and when it travels.",
       "items": [
         {
           "icon": "lock",
@@ -467,14 +467,14 @@
           "icon": "key",
           "tone": "orange",
           "title": "Keys kept apart",
-          "text": "The keys that unlock your data are stored apart from the data itself, in a separate, secured key vault. A copy of the data alone is unreadable."
+          "text": "The keys that unlock your data are stored separately from the data itself. A copy of the data alone is unreadable."
         }
-      ],
-      "moreLabel": "Technical details about encryption"
+      ]
     },
     "protected": {
       "label": "What is protected",
       "title": "What is *protected*",
+      "text": "Find what matters to you, and see how it is kept safe.",
       "colWhat": "What",
       "colHow": "How it is protected",
       "rows": [
@@ -484,39 +484,38 @@
         },
         {
           "what": "Messages",
-          "how": "Encrypted at rest with AES-256-GCM. Only the people in the conversation can open them in the app."
+          "how": "Encrypted with AES-256-GCM. Only the people in the conversation can open them."
         },
         {
           "what": "Medical information",
-          "how": "Encrypted at rest with AES-256-GCM. Only adults the child's parents have invited, by role."
+          "how": "Encrypted with AES-256-GCM. Parents, and adults a parent gives access."
         },
         {
-          "what": "Child profile and growth",
-          "how": "Only adults the child's parents have invited, by role."
-        },
-        {
-          "what": "Calendar, tasks, lists",
-          "how": "Only adults with access to that child."
+          "what": "Calendar, tasks and lists",
+          "how": "Encrypted with AES-256-GCM. Only adults with access to that child, by role."
         },
         {
           "what": "Sign-in",
-          "how": "Two-step sign-in with a one-time code (TOTP), always on."
+          "how": "Two-step sign-in, always on. Signing in with a password needs a one-time code, sent by email or SMS."
         },
         {
           "what": "Payment",
-          "how": "Handled by Quickpay. KINND never stores card numbers."
+          "how": "Handled by QuickPay. KINND never stores full card numbers."
         },
         {
           "what": "Backups",
-          "how": "Encrypted, kept for 90 days, in the EU."
+          "how": "Encrypted the same way as live data, kept for 90 days in the EU."
+        },
+        {
+          "what": "Technical data",
+          "how": "IP addresses, device information and sign-in history are kept for 1 year, only to detect and report misuse."
         }
-      ],
-      "note": "Everything above travels over an encrypted connection (TLS 1.3)."
+      ]
     },
     "oversight": {
       "label": "What we can see",
       "title": "Built to keep *children* safe",
-      "text": "Our management system watches for misuse around the clock. Every alarm is checked by a person on our team.",
+      "text": "Our management system watches for misuse around the clock with Abuse Central, a complex system of triggers and patterns. Every alarm is checked by a person on our team.",
       "items": [
         {
           "icon": "people",
@@ -528,67 +527,70 @@
           "icon": "alert",
           "tone": "orange",
           "title": "When an alarm goes off",
-          "text": "If activity sets off an alarm, our team first sees masked technical details of that case: sign-ins, devices, IP addresses and the warnings that fired. If there are grounds to look further, we follow the protocols of the Danish police's cyber crime centre (NC3), and a second senior reviewer checks the case before it is escalated."
+          "text": "Our team first reviews the technical details of the case: sign-ins, devices, IP addresses and the warnings that fired. Every view is audited. If there are grounds to look further, we follow the same protocols as the Danish authorities, and a second, senior reviewer approves before the case goes further."
         },
         {
           "icon": "checklist",
           "tone": "mint",
-          "title": "Every look is logged",
-          "text": "Every time an employee views details in a case, it is logged and audited. That audit log goes into the report we hand to the authorities."
+          "title": "Every look is audited",
+          "text": "Every time an employee views details in a case, it is logged with who, what and when, and audited."
         }
-      ],
-      "moreLabel": "Technical details about access"
+      ]
     },
     "abuse": {
       "label": "Abuse and fraud",
       "title": "How we catch *abuse* and fraud",
-      "text": "Abuse Central, our warning engine, works on technical signals only. When something looks wrong, a person on our team looks into it.",
+      "text": "We act on misuse quickly, with technical signals only.",
       "items": [
         {
           "title": "Warnings that catch misuse early",
-          "text": "Abuse Central uses a wide set of triggers and patterns to spot signs of misuse: unusual sign-ins, accounts created to reach a child, and attempts to get access someone should not have."
+          "text": "Abuse Central looks for signs of misuse: unusual sign-ins, accounts created to reach a child, and attempts to get access someone should not have."
         },
         {
-          "title": "Reports from you",
-          "text": "Worried about an account? Write to abuse@kinnd.eu. Every report gets a case that a person follows to the end. In the app, parents can remove a family member at any time."
+          "title": "You decide who is in",
+          "text": "Parents can remove a family member at any time. Worried about something? Write to us."
         },
         {
           "title": "We work with the authorities",
-          "text": "Confirmed illegal cases are handed to the police with the information they need, including the audit log of who viewed what. We follow each case until it is closed."
+          "text": "Confirmed illegal cases are handed to the police with the information they need. We follow each case until it is closed."
         },
         {
           "title": "We stay out of family conflicts",
           "text": "KINND is a private space to share in. We do not take sides or settle disagreements."
         }
-      ],
-      "moreLabel": "Technical details about abuse and fraud"
+      ]
     },
-    "docs": {
+    "technical": {
+      "title": "Technical details: how KINND protects family data · KINND",
+      "description": "How KINND encrypts photos, messages and medical information, handles sign-in and access, stores data in the EU and catches abuse. In technical detail.",
+      "heading": "Full technical *details*",
+      "text": "How KINND protects family data, in the app and behind the scenes.",
       "back": "Safety & privacy",
       "onThisPage": "On this page",
-      "encryption": {
-        "title": "Encryption in detail · KINND",
-        "description": "How KINND encrypts photos, videos, messages and medical information, and where the keys are kept.",
-        "heading": "Encryption, *in detail*",
-        "text": "For those who want the technical picture."
-      },
-      "access": {
-        "title": "Access and oversight in detail · KINND",
-        "description": "Who can see what in KINND, how sign-in works, and what our team can see and when.",
-        "heading": "Who can see *what*",
-        "text": "Access, sign-in and our own team, in detail."
-      },
-      "abuse": {
-        "title": "Abuse and fraud in detail · KINND",
-        "description": "How Abuse Central spots misuse, how cases are handled, and when we involve the police.",
-        "heading": "Abuse and fraud, *in detail*",
-        "text": "How we spot misuse and what happens next."
-      }
+      "factsLabel": "Key facts",
+      "facts": [
+        {
+          "value": "AES-256-GCM",
+          "label": "Media, messages and medical information"
+        },
+        {
+          "value": "TLS 1.3",
+          "label": "Every connection"
+        },
+        {
+          "value": "2-step",
+          "label": "One-time code by email or SMS"
+        },
+        {
+          "value": "EU only",
+          "label": "All data and backups"
+        }
+      ]
     }
   },
   "faq": {
-    "title": "FAQ · KINND",
-    "description": "Questions and answers. Short answers to what parents ask most.",
+    "title": "FAQ: what parents ask about KINND",
+    "description": "Short answers to what parents ask most: what KINND is, what it costs, who can see your child’s information and how the custody calendar works.",
     "hero": {
       "title": "Questions and *answers*",
       "text": "Short answers to what parents ask most."
@@ -600,7 +602,7 @@
         "items": [
           {
             "q": "What is KINND?",
-            "a": "A private place where parents and their family share everything about their children."
+            "a": "KINND is a private family app for parents who live apart and the family around their children. Both homes share the custody calendar, appointments, school days, health information, lists, photos and Moments in one place, and invite grandparents and others they trust. KINND is made by WURK ApS in Copenhagen, Denmark, and all data is stored in the EU."
           },
           {
             "q": "Is it an app?",
@@ -608,7 +610,7 @@
           },
           {
             "q": "Which languages?",
-            "a": "English, Danish and Swedish."
+            "a": "The app and this website are in nine languages: English, Danish, Swedish, Norwegian, Faroese, Icelandic, German, Turkish and Arabic."
           }
         ]
       },
@@ -736,43 +738,26 @@
   "legal": {
     "tabsLabel": "Legal documents",
     "onThisPage": "On this page",
-    "lastUpdated": "Last updated [DATE]",
-    "placeholder": "[Text from counsel. Plain words, short sentences.]",
     "privacy": {
       "tab": "Privacy notice",
       "title": "Privacy notice · KINND",
-      "description": "What we collect, why, and what you can do about it.",
+      "description": "What personal data KINND collects, why, how long we keep it, who we share it with and your rights under GDPR.",
       "heading": "Privacy *notice*",
-      "text": "What we collect, why, and what you can do about it.",
-      "sections": [
-        "Who we are",
-        "What we collect",
-        "Why we collect it",
-        "Who we share it with",
-        "How long we keep it",
-        "Your rights",
-        "How to contact us"
-      ]
+      "text": "What we collect, why, and what you can do about it."
     },
     "terms": {
       "tab": "Terms",
       "title": "Terms · KINND",
-      "description": "The terms for using KINND.",
+      "description": "The terms for using KINND: your account, plans and payment, cancelling, your content and our responsibility.",
       "heading": "*Terms*",
-      "text": "Our terms and conditions",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "Our terms and conditions"
     },
     "cookies": {
       "tab": "Cookies",
       "title": "Cookies · KINND",
-      "description": "How KINND uses cookies.",
+      "description": "KINND uses only the cookies and local storage it needs to work. No tracking, no advertising and no third-party cookies.",
       "heading": "Cookie *policy*",
-      "text": "[Intro line from counsel]",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "Which cookies and local storage KINND uses, and why."
     }
   },
   "notFound": {

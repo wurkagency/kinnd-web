@@ -246,8 +246,8 @@
           "text": "Ein konta á øllum skermum"
         },
         {
-          "title": "Trý mál",
-          "text": "Enskt, danskt og svenskt"
+          "title": "Níggju mál",
+          "text": "Norðurlendsk mál, enskt, týskt, turkiskt og arabiskt"
         },
         {
           "title": "Privat sum standard",
@@ -325,7 +325,7 @@
         ]
       }
     },
-    "vatNote": "Prísirnir eru við donskum MVG. [Confirm final prices]",
+    "vatNote": "Prísirnir eru við donskum MVG.",
     "good": {
       "label": "Gott at vita",
       "title": "Gott at *vita*",
@@ -369,11 +369,11 @@
     }
   },
   "safety": {
-    "title": "Trygd og privatlív · KINND",
-    "description": "Gjørt at verja dátur hjá børnum. Seks lyfti, við einføldum orðum.",
+    "title": "Trygd og privatlív: bronglað og goymt í ES · KINND",
+    "description": "Myndir, video, boð og heilsuupplýsingar bronglað við AES-256-GCM, kravd innritan í tveimum stigum og allar dátur goymdar í ES. Okkara lyfti, við einføldum orðum.",
     "hero": {
       "title": "Gjørt at *verja* dátur hjá børnum",
-      "text": "Seks lyfti, við einføldum orðum."
+      "text": "Hvat vit lova, og júst hvussu tað virkar."
     },
     "promisesLabel": "Okkara lyfti",
     "promises": [
@@ -387,7 +387,7 @@
       },
       {
         "title": "Innritan í tveimum stigum",
-        "text": "Altíð tendrað, fyri øll. Bert tey røttu sleppa inn."
+        "text": "Altíð tendrað. Innritan við loyniorði krevur eina eingangskodu, senda við telduposti ella SMS."
       },
       {
         "title": "Rætta atgongdin",
@@ -395,7 +395,7 @@
       },
       {
         "title": "ES og GDPR",
-        "text": "Vit fylgja GDPR og goyma dátur í ES. [Confirm hosting wording with counsel]"
+        "text": "Allar dátur og trygdaravrit verða goymd í ES. Vit fylgja GDPR."
       },
       {
         "title": "Tínar dátur eru tínar",
@@ -408,137 +408,139 @@
       "text": "Les júst, hvat vit savna og hví.",
       "cta": "Les privatlívspolitikkin"
     },
-    "moreLink": "Technical details",
+    "moreLink": "Allar tøkniligu upplýsingarnar",
     "encryption": {
-      "label": "Encryption",
-      "title": "Locked, *every* step of the way",
-      "text": "Your photos, videos, messages and medical information are encrypted when they are stored. Everything travels over an encrypted connection.",
+      "label": "Bronglan",
+      "title": "Læst, *hvørt* stig á leiðini",
+      "text": "Tínar viðkvæmastu upplýsingar eru bronglaðar, tá ið tær verða goymdar, og tá ið tær verða sendar.",
       "items": [
         {
-          "title": "When it is stored",
-          "text": "Photos, videos, messages and medical information are encrypted with AES-256-GCM, the standard banks and governments use. Each photo and video gets its own key."
+          "title": "Tá ið tað verður goymt",
+          "text": "Myndir, video, boð og heilsuupplýsingar verða bronglað við AES-256-GCM, standardinum sum bankar og stjórnir brúka. Hvør mynd og hvørt video fær sín egna lykil."
         },
         {
-          "title": "When it travels",
-          "text": "Everything between your phone and KINND is sent over an encrypted connection (TLS 1.3). Nobody on the network can read it."
+          "title": "Tá ið tað verður sent",
+          "text": "Alt millum telefonina hjá tær og KINND verður sent gjøgnum eitt bronglað samband (TLS 1.3). Eingin á netinum kann lesa tað."
         },
         {
-          "title": "Keys kept apart",
-          "text": "The keys that unlock your data are stored apart from the data itself, in a separate, secured key vault. A copy of the data alone is unreadable."
+          "title": "Lyklarnir verða goymdir sær",
+          "text": "Lyklarnir, sum lata dáturnar hjá tær upp, verða goymdir burtur frá sjálvum dátunum. Eitt avrit av dátunum einsamalt kann ikki lesast."
         }
-      ],
-      "moreLabel": "Technical details about encryption"
+      ]
     },
     "protected": {
-      "label": "What is protected",
-      "title": "What is *protected*",
-      "colWhat": "What",
-      "colHow": "How it is protected",
+      "label": "Hvat er vart",
+      "title": "Hvat er *vart*",
+      "text": "Finn tað, sum hevur týdning fyri teg, og sí, hvussu tað verður vart.",
+      "colWhat": "Hvat",
+      "colHow": "Hvussu tað er vart",
       "rows": [
         {
-          "what": "Photos and videos",
-          "how": "Encrypted with AES-256-GCM, own key per file. Location removed from copies others download."
+          "what": "Myndir og video",
+          "how": "Bronglað við AES-256-GCM, egin lykil til hvørja fílu. Staðseting verður strikað úr avritum, sum onnur taka niður."
         },
         {
-          "what": "Messages",
-          "how": "Encrypted at rest with AES-256-GCM. Only the people in the conversation can open them in the app."
+          "what": "Boð",
+          "how": "Bronglað við AES-256-GCM. Bert tey, sum eru við í samrøðuni, kunnu lata tey upp."
         },
         {
-          "what": "Medical information",
-          "how": "Encrypted at rest with AES-256-GCM. Only adults the child's parents have invited, by role."
+          "what": "Heilsuupplýsingar",
+          "how": "Bronglaðar við AES-256-GCM. Foreldur, og vaksin, sum eitt foreldur gevur atgongd."
         },
         {
-          "what": "Child profile and growth",
-          "how": "Only adults the child's parents have invited, by role."
+          "what": "Kalendari, uppgávur og listar",
+          "how": "Bronglað við AES-256-GCM. Bert vaksin við atgongd til hatta barnið, eftir leikluti."
         },
         {
-          "what": "Calendar, tasks, lists",
-          "how": "Only adults with access to that child."
+          "what": "Innritan",
+          "how": "Innritan í tveimum stigum, altíð tendrað. Innritan við loyniorði krevur eina eingangskodu, senda við telduposti ella SMS."
         },
         {
-          "what": "Sign-in",
-          "how": "Two-step sign-in with a one-time code (TOTP), always on."
+          "what": "Gjald",
+          "how": "QuickPay tekur sær av tí. KINND goymir ongantíð full kortnummur."
         },
         {
-          "what": "Payment",
-          "how": "Handled by Quickpay. KINND never stores card numbers."
+          "what": "Trygdaravrit",
+          "how": "Bronglað á sama hátt sum virknar dátur, goymd í 90 dagar í ES."
         },
         {
-          "what": "Backups",
-          "how": "Encrypted, kept for 90 days, in the EU."
+          "what": "Tøkniligar dátur",
+          "how": "IP-adressur, upplýsingar um eindir og innritanarsøga verða goymd í 1 ár, bert fyri at finna og boða frá misnýtslu."
         }
-      ],
-      "note": "Everything above travels over an encrypted connection (TLS 1.3)."
+      ]
     },
     "oversight": {
-      "label": "What we can see",
-      "title": "Built to keep *children* safe",
-      "text": "Our management system watches for misuse around the clock. Every alarm is checked by a person on our team.",
+      "label": "Hvat vit kunnu síggja",
+      "title": "Gjørt at halda *børnum* tryggum",
+      "text": "Okkara stýrisskipan ansar eftir misnýtslu alt samdøgrið við Abuse Central, eini samansettari skipan av útloysarum og mynstrum. Hvør ávaring verður eftirkannað av einum persóni í toyminum hjá okkum.",
       "items": [
         {
-          "title": "Family life stays private",
-          "text": "In normal use, nobody at KINND sees your photos, messages or your child's information. Our system works on technical signals only."
+          "title": "Familjulívið verður verandi privat",
+          "text": "Í vanligari nýtslu sær eingin hjá KINND myndirnar, boðini ella upplýsingarnar um barnið hjá tær. Skipanin hjá okkum arbeiðir bert við tøkniligum signalum."
         },
         {
-          "title": "When an alarm goes off",
-          "text": "If activity sets off an alarm, our team first sees masked technical details of that case: sign-ins, devices, IP addresses and the warnings that fired. If there are grounds to look further, we follow the protocols of the Danish police's cyber crime centre (NC3), and a second senior reviewer checks the case before it is escalated."
+          "title": "Tá ið ein ávaring fer í gongd",
+          "text": "Toymið hjá okkum kannar fyrst tøkniligu upplýsingarnar í málinum: innritanir, eindir, IP-adressur og ávaringarnar, sum fóru í gongd. Hvørt innlit verður eftirkannað. Er grundarlag fyri at kanna víðari, fylgja vit somu mannagongdum sum donsku myndugleikarnir, og ein annar kannari á hægri stigi góðkennir, áðrenn málið fer víðari."
         },
         {
-          "title": "Every look is logged",
-          "text": "Every time an employee views details in a case, it is logged and audited. That audit log goes into the report we hand to the authorities."
+          "title": "Hvørt innlit verður eftirkannað",
+          "text": "Hvørja ferð eitt starvsfólk hyggur at upplýsingum í einum máli, verður tað skrásett, hvør, hvat og nær, og eftirkannað."
         }
-      ],
-      "moreLabel": "Technical details about access"
+      ]
     },
     "abuse": {
-      "label": "Abuse and fraud",
-      "title": "How we catch *abuse* and fraud",
-      "text": "Abuse Central, our warning engine, works on technical signals only. When something looks wrong, a person on our team looks into it.",
+      "label": "Misnýtsla og svik",
+      "title": "Soleiðis fanga vit *misnýtslu* og svik",
+      "text": "Vit taka skjótt hond um misnýtslu, bert við tøkniligum signalum.",
       "items": [
         {
-          "title": "Warnings that catch misuse early",
-          "text": "Abuse Central uses a wide set of triggers and patterns to spot signs of misuse: unusual sign-ins, accounts created to reach a child, and attempts to get access someone should not have."
+          "title": "Ávaringar, sum fanga misnýtslu tíðliga",
+          "text": "Abuse Central leitar eftir tekni um misnýtslu: óvanligar innritanir, kontur stovnaðar fyri at náa einum barni, og royndir at fáa atgongd, sum onkur ikki skal hava."
         },
         {
-          "title": "Reports from you",
-          "text": "Worried about an account? Write to abuse@kinnd.eu. Every report gets a case that a person follows to the end. In the app, parents can remove a family member at any time."
+          "title": "Tú avgert, hvør er við",
+          "text": "Foreldur kunnu taka ein familjulim burtur nær sum helst. Stúrir tú fyri okkurt? Skriva til okkara."
         },
         {
-          "title": "We work with the authorities",
-          "text": "Confirmed illegal cases are handed to the police with the information they need, including the audit log of who viewed what. We follow each case until it is closed."
+          "title": "Vit samstarva við myndugleikarnar",
+          "text": "Váttað ólóglig mál verða latin løgregluni við teimum upplýsingum, hon hevur brúk fyri. Vit fylgja hvørjum máli, til tað er avgreitt."
         },
         {
-          "title": "We stay out of family conflicts",
-          "text": "KINND is a private space to share in. We do not take sides or settle disagreements."
+          "title": "Vit blanda okkum ikki í familjuósemjur",
+          "text": "KINND er eitt privat stað at deila í. Vit taka ikki støðu og loysa ikki ósemjur."
         }
-      ],
-      "moreLabel": "Technical details about abuse and fraud"
+      ]
     },
-    "docs": {
-      "back": "Safety & privacy",
-      "onThisPage": "On this page",
-      "encryption": {
-        "title": "Encryption in detail · KINND",
-        "description": "How KINND encrypts photos, videos, messages and medical information, and where the keys are kept.",
-        "heading": "Encryption, *in detail*",
-        "text": "For those who want the technical picture."
-      },
-      "access": {
-        "title": "Access and oversight in detail · KINND",
-        "description": "Who can see what in KINND, how sign-in works, and what our team can see and when.",
-        "heading": "Who can see *what*",
-        "text": "Access, sign-in and our own team, in detail."
-      },
-      "abuse": {
-        "title": "Abuse and fraud in detail · KINND",
-        "description": "How Abuse Central spots misuse, how cases are handled, and when we involve the police.",
-        "heading": "Abuse and fraud, *in detail*",
-        "text": "How we spot misuse and what happens next."
-      }
+    "technical": {
+      "title": "Tøkniligar upplýsingar: hvussu KINND verjir familjudátur · KINND",
+      "description": "Hvussu KINND bronglar myndir, boð og heilsuupplýsingar, handfer innritan og atgongd, goymir dátur í ES og fangar misnýtslu. Í tøkniligum smálutum.",
+      "heading": "Allar tøkniligu *upplýsingarnar*",
+      "text": "Hvussu KINND verjir familjudátur, í appini og aftanfyri.",
+      "back": "Trygd og privatlív",
+      "onThisPage": "Á hesi síðuni",
+      "factsLabel": "Høvuðsupplýsingar",
+      "facts": [
+        {
+          "value": "AES-256-GCM",
+          "label": "Miðlar, boð og heilsuupplýsingar"
+        },
+        {
+          "value": "TLS 1.3",
+          "label": "Hvørt samband"
+        },
+        {
+          "value": "2 stig",
+          "label": "Eingangskoda við telduposti ella SMS"
+        },
+        {
+          "value": "Bert ES",
+          "label": "Allar dátur og trygdaravrit"
+        }
+      ]
     }
   },
   "faq": {
-    "title": "FAQ · KINND",
+    "title": "Ofta spurdir spurningar · KINND",
     "description": "Spurningar og svar. Stutt svar uppá tað, foreldur oftast spyrja um.",
     "hero": {
       "title": "Spurningar og *svar*",
@@ -559,7 +561,7 @@
           },
           {
             "q": "Hvørji mál?",
-            "a": "Enskt, danskt og svenskt."
+            "a": "Appin og heimasíðan eru á níggju málum: enskt, danskt, svenskt, norskt, føroyskt, íslendskt, týskt, turkiskt og arabiskt."
           }
         ]
       },
@@ -613,12 +615,12 @@
             "a": "Nei. KINND er eitt stað at deila í. Vit taka ikki støðu."
           },
           {
-            "q": "Can I delete everything?",
-            "a": "Yes. Your data, your choice. Download or delete your account on demand."
+            "q": "Kann eg strika alt?",
+            "a": "Ja. Tínar dátur, títt val. Tak dáturnar niður ella strika kontuna, tá ið tú vilt."
           },
           {
-            "q": "Does KINND help with conflicts?",
-            "a": "No. KINND is a place to share in. We do not take sides."
+            "q": "Hjálpir KINND við ósemjum?",
+            "a": "Nei. KINND er eitt stað at deila í. Vit taka ikki støðu."
           }
         ]
       }
@@ -687,43 +689,26 @@
   "legal": {
     "tabsLabel": "Løgfrøðilig skjøl",
     "onThisPage": "Á hesi síðuni",
-    "lastUpdated": "Seinast dagført [DATE]",
-    "placeholder": "[Text from counsel. Plain words, short sentences.]",
     "privacy": {
       "tab": "Privatlívspolitikkur",
       "title": "Privatlívspolitikkur · KINND",
       "description": "Hvat vit savna, hví, og hvat tú kanst gera við tað.",
       "heading": "*Privatlívspolitikkur*",
-      "text": "Hvat vit savna, hví, og hvat tú kanst gera við tað.",
-      "sections": [
-        "Hvørji vit eru",
-        "Hvat vit savna",
-        "Hví vit savna tað",
-        "Hvørjum vit deila tað við",
-        "Hvussu leingi vit goyma tað",
-        "Tíni rættindi",
-        "Soleiðis fært tú samband við okkum"
-      ]
+      "text": "Hvat vit savna, hví, og hvat tú kanst gera við tað."
     },
     "terms": {
       "tab": "Treytir",
       "title": "Treytir · KINND",
       "description": "Treytirnar fyri at brúka KINND.",
       "heading": "*Treytir*",
-      "text": "Our terms and conditions",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "Okkara treytir"
     },
     "cookies": {
       "tab": "Farspor",
       "title": "Farspor · KINND",
-      "description": "Soleiðis brúkar KINND farspor.",
+      "description": "KINND brúkar bara tær cookies og ta lokalu goymslu, sum skal til fyri at virka. Eingin sporing, eingar lýsingar og eingi cookies frá triðjapørtum.",
       "heading": "*Farsporapolitikkur*",
-      "text": "[Intro line from counsel]",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "Hvørjar cookies og hvørja lokalu goymslu KINND brúkar, og hví."
     }
   },
   "notFound": {
@@ -734,11 +719,11 @@
     "cta": "Far til forsíðuna"
   },
   "language": {
-    "title": "Language · KINND",
-    "description": "Choose the language for the KINND website.",
-    "heading": "Choose *language*",
-    "text": "The website changes to the language you pick.",
-    "close": "Close",
-    "listLabel": "Languages"
+    "title": "Mál · KINND",
+    "description": "Vel mál á heimasíðuni hjá KINND.",
+    "heading": "Vel *mál*",
+    "text": "Heimasíðan skiftir til málið, tú velur.",
+    "close": "Lat aftur",
+    "listLabel": "Mál"
   }
 }

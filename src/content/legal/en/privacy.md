@@ -1,6 +1,6 @@
 ---
 title: "KINND Privacy Policy"
-updated: "Last updated: 8 October 2026"
+updated: "Last updated: 14 October 2026"
 ---
 
 This policy explains how WURK ApS processes personal data when you visit kinnd.eu or use the KINND app at app.kinnd.eu. KINND is a private space where parents and family coordinate daily life around their children and share information, messages and media.
@@ -39,7 +39,7 @@ Send questions about personal data to <privacy@kinnd.eu>.
 | Process sensitive data you choose to add | Explicit consent, Art. 9(2)(a). For children, consent is given by the holder of parental responsibility |
 | Send service messages by email and text, such as login codes and notices about subscription and deletion | The contract, Art. 6(1)(b) |
 | Payment, invoicing and bookkeeping | The contract and legal obligation under the Danish Bookkeeping Act, Art. 6(1)(b) and (c) |
-| Security, mandatory two-step login, and preventing fraud and unauthorised access to children's data | Legitimate interest, Art. 6(1)(f) |
+| Security, two-step login, and preventing fraud and unauthorised access to children's data | Legitimate interest, Art. 6(1)(f) |
 | Investigate reports of illegal content and misuse and pass confirmed cases to authorities | Legitimate interest and legal obligation, Art. 6(1)(c) and (f), Art. 9(2)(f), and section 8 of the Danish Data Protection Act |
 | Newsletters and marketing | Your consent, Art. 6(1)(a), and section 10 of the Danish Marketing Practices Act |
 | Statistics and non-essential cookies | Your consent under the Danish Cookie Order |
@@ -76,8 +76,8 @@ We store the data in the EU/EEA. If a supplier exceptionally processes data outs
 | Data | Retention |
 | --- | --- |
 | Account, child profiles and content | As long as the account is active |
-| Account after an expired subscription where usage exceeds the Free plan | Deleted 90 days after the subscription expires. You are notified 90, 30 and 15 days before, with the exact date |
-| Account you delete yourself | Deleted without undue delay and no later than 30 days after. Backups are overwritten within 7 days |
+| A child's space after an expired subscription where usage exceeds the Free plan | Hidden, then deleted 90 days after the subscription expires. Your account is not deleted. You are notified 90, 60 and 7 days before, with the exact date |
+| Account you delete yourself | Deleted without undue delay and no later than 30 days after. Backups are overwritten within 90 days |
 | Bookkeeping records, such as invoices | 5 years from the end of the financial year |
 | Security logs | 12 months |
 | Cases of misuse or unlawful matters | As long as the case is pending and claims can be made |
@@ -87,7 +87,7 @@ If you are the only parent on a child profile and delete your account, we also d
 
 ## 8. Security
 
-We protect the data with, among other things, encrypted connections, mandatory two-step login, access control and logging. If a security breach creates a high risk for you, we tell you without undue delay.
+We protect the data with, among other things, encrypted connections, two-step login, access control and logging. If a security breach creates a high risk for you, we tell you without undue delay.
 
 ## 9. Cookies
 

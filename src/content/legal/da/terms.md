@@ -1,6 +1,6 @@
 ---
 title: "Vilkår og betingelser for KINND"
-updated: "Senest opdateret: 8. oktober 2026"
+updated: "Senest opdateret: 14. oktober 2026"
 ---
 
 Disse vilkår gælder, når du opretter en konto og bruger KINND på kinnd.eu og app.kinnd.eu. Ved at oprette en konto accepterer du vilkårene.
@@ -20,7 +20,7 @@ KINND er alene et værktøj til samarbejde og deling. Vi mægler ikke, løser ik
 - Du skal være fyldt 18 år for at oprette en konto. Børn kan ikke have eget login.
 - Du skal give korrekte oplysninger og holde dem opdaterede.
 - Kontoen er personlig. Du må ikke dele dit login med andre.
-- Totrinslogin er obligatorisk og kan ikke slås fra.
+- Login med adgangskode kræver altid en engangskode, der sendes på e-mail eller sms. Det kan ikke slås fra. Logger du ind med Google eller Microsoft, beskytter deres login din konto.
 - Du skal straks give os besked, hvis du har mistanke om, at andre har fået adgang til din konto.
 
 ## 4. Børneprofiler og invitationer
@@ -66,9 +66,9 @@ Uanset ovenstående kan du som forbruger altid opsige med en måneds varsel til 
 ## 9. Når et abonnement ophører
 
 - Når abonnementet ophører, overgår både du og din medforælder til Gratis-planen.
-- Overstiger jeres forbrug Gratis-planen eller en mindre plan, bliver kontoen frosset, indtil I vælger et abonnement, der passer til forbruget. I får besked om årsagen.
+- Overstiger jeres forbrug Gratis-planen eller en mindre plan, bliver barnets område skjult, indtil I vælger et abonnement, der passer til forbruget. I får besked om årsagen.
 - Medforælderen kan anmode om at overtage abonnementet. Den oprindelige abonnent skal bekræfte. Svarer abonnenten ikke inden 7 dage, overgår abonnementet til medforælderen. Anmodningen kan trækkes tilbage.
-- En frosset konto og dens data slettes 90 dage efter abonnementets udløb. Vi varsler 90, 30 og 15 dage før og oplyser den præcise dato.
+- Et skjult barns område og dets data slettes 90 dage efter abonnementets udløb. Jeres konti slettes ikke. Vi varsler 90, 60 og 7 dage før og oplyser den præcise dato.
 - Indtil sletningen kan du hente dine originale medier ved at kontakte os.
 
 ## 10. Dit indhold

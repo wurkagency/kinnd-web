@@ -13,6 +13,9 @@ import {
   isUntranslated,
   localeInfo,
   translatedLocales,
+  routes,
+  site as company,
+  APP_URL,
   type Locale,
 } from '../i18n';
 
@@ -25,13 +28,106 @@ interface Props {
   /** Route key used to mark the current header link. */
   current?: string;
   noindex?: boolean;
+  /**
+   * Languages that have this page in their own language. Defaults to every
+   * translated language. A page shown in a language outside this list (English
+   * text on a German page, say) is noindex and left out of the hreflang set.
+   */
+  alternates?: Locale[];
 }
-const { lang, title, description, route, current, noindex = false } = Astro.props;
+const { lang, title, description, route, current, noindex = false, alternates = translatedLocales() } = Astro.props;
 const t = useDict(lang);
 const site = Astro.site!;
 const abs = (path: string) => new URL(path, site).href;
 const canonical = route ? abs(localePath(lang, route)) : undefined;
-const robots = noindex || isUntranslated(lang) ? 'noindex, follow' : undefined;
+const indexable = !noindex && !isUntranslated(lang) && alternates.includes(lang);
+const robots = indexable ? undefined : 'noindex, follow';
+const hreflangs = route && indexable ? locales.filter((l) => alternates.includes(l)) : [];
+
+/**
+ * Structured data (schema.org JSON-LD): who runs KINND, the site, this page and
+ * where it sits. The app and its plans are described on the pages that sell it.
+ */
+const orgId = abs('/#organization');
+const pageName = title.replace(/\s*·\s*KINND$/, '').replace(/^KINND\s*·\s*/, '');
+const plans = t.pricing.plans;
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'Organization',
+    '@id': orgId,
+    name: company.name,
+    legalName: 'WURK ApS',
+    url: abs('/'),
+    logo: { '@type': 'ImageObject', url: abs('/apple-touch-icon.png'), width: 180, height: 180 },
+    email: company.contactEmail,
+    identifier: { '@type': 'PropertyValue', propertyID: 'CVR', value: '37547395' },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Skoleholdervej 91',
+      postalCode: '2400',
+      addressLocality: 'København NV',
+      addressCountry: 'DK',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: company.safetyEmail,
+      availableLanguage: ['da', 'en'],
+    },
+  },
+  {
+    '@type': 'WebSite',
+    '@id': abs('/#website'),
+    url: abs('/'),
+    name: company.name,
+    publisher: { '@id': orgId },
+    inLanguage: translatedLocales(),
+  },
+];
+if (canonical && indexable) {
+  graph.push({
+    '@type': 'WebPage',
+    '@id': `${canonical}#webpage`,
+    url: canonical,
+    name: pageName,
+    description,
+    inLanguage: lang,
+    isPartOf: { '@id': abs('/#website') },
+    about: { '@id': orgId },
+  });
+  if (route !== routes.home) {
+    const crumbs: { name: string; path: string }[] = [{ name: company.name, path: routes.home }];
+    if (route!.startsWith(routes.safety) && route !== routes.safety) crumbs.push({ name: t.nav.safetyLong, path: routes.safety });
+    crumbs.push({ name: pageName, path: route! });
+    graph.push({
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: abs(localePath(lang, c.path)),
+      })),
+    });
+  }
+  if (route === routes.home || route === routes.features || route === routes.pricing) {
+    const offer = (name: string, price: string) => ({ '@type': 'Offer', name, price, priceCurrency: 'DKK' });
+    graph.push({
+      '@type': 'WebApplication',
+      name: company.name,
+      url: APP_URL,
+      applicationCategory: 'LifestyleApplication',
+      operatingSystem: 'Any (runs in the browser)',
+      inLanguage: translatedLocales(),
+      publisher: { '@id': orgId },
+      offers: [
+        offer(plans.free.name, plans.free.price),
+        offer(plans.parents.name, plans.parents.monthly.price),
+        offer(plans.family.name, plans.family.monthly.price),
+      ],
+    });
+  }
+}
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
 const ogLocale = localeInfo[lang].og;
 const ogImage = abs('/og-default.png');
 // Fonts the first screen needs, so text does not reflow (layout shift) when they arrive.
@@ -99,11 +195,8 @@ const preloadFonts =
     <meta name="description" content={description} />
     {robots && <meta name="robots" content={robots} />}
     {canonical && <link rel="canonical" href={canonical} />}
-    {
-      route &&
-        locales.map((l) => <link rel="alternate" hreflang={l} href={abs(localePath(l, route))} />)
-    }
-    {route && <link rel="alternate" hreflang="x-default" href={abs(localePath(defaultLocale, route))} />}
+    {hreflangs.map((l) => <link rel="alternate" hreflang={l} href={abs(localePath(l, route!))} />)}
+    {hreflangs.length > 0 && <link rel="alternate" hreflang="x-default" href={abs(localePath(defaultLocale, route!))} />}
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
@@ -123,6 +216,7 @@ const preloadFonts =
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={t.site.ogImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" is:inline set:html={jsonLd} />
     <slot name="head" />
   </head>
   <body>

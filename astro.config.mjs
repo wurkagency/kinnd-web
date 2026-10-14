@@ -1,5 +1,5 @@
 // @ts-check
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
@@ -11,6 +11,21 @@ const untranslated = readdirSync(localesDir)
   .filter((f) => JSON.parse(readFileSync(new URL(f, localesDir), 'utf8'))._meta?.untranslated !== false)
   .map((f) => `/${f.replace('.json', '')}/`);
 
+// Long documents (legal texts, Safety deep dives) are Markdown files per language.
+// A language without its own file shows the English text, so that page is noindex
+// and stays out of the sitemap too (see src/views/Legal.astro and Technical.astro).
+const docs = { legal: ['privacy', 'terms', 'cookies'], safety: ['technical'] };
+const otherLocales = readdirSync(localesDir)
+  .filter((f) => f.endsWith('.json') && f !== 'en.json')
+  .map((f) => f.replace('.json', ''));
+const englishOnly = Object.entries(docs).flatMap(([dir, names]) =>
+  names.flatMap((doc) =>
+    otherLocales
+      .filter((l) => !existsSync(new URL(`./src/content/${dir}/${l}/${doc}.md`, import.meta.url)))
+      .map((l) => `/${l}/${dir}/${doc}/`),
+  ),
+);
+
 export default defineConfig({
   site: 'https://www.kinnd.eu',
   trailingSlash: 'always',
@@ -19,7 +34,11 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         const path = new URL(page).pathname;
-        return !path.endsWith('/language/') && !untranslated.some((p) => path.startsWith(p));
+        return (
+          !path.endsWith('/language/') &&
+          !untranslated.some((p) => path.startsWith(p)) &&
+          !englishOnly.includes(path)
+        );
       },
     }),
   ],

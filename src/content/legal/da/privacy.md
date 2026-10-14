@@ -1,6 +1,6 @@
 ---
 title: "Privatlivspolitik for KINND"
-updated: "Senest opdateret: 8. oktober 2026"
+updated: "Senest opdateret: 14. oktober 2026"
 ---
 
 Denne politik beskriver, hvordan WURK ApS behandler personoplysninger, når du besøger kinnd.eu eller bruger KINND-appen på app.kinnd.eu. KINND er et privat rum, hvor forældre og familie koordinerer hverdagen omkring deres børn og deler oplysninger, beskeder og medier.
@@ -37,7 +37,7 @@ Henvendelser om personoplysninger sendes til <privacy@kinnd.eu>.
 | Behandle følsomme oplysninger, du selv vælger at tilføje | Udtrykkeligt samtykke, art. 9, stk. 2, litra a. For børn gives samtykket af forældremyndighedens indehaver |
 | Sende servicebeskeder på e-mail og sms, fx loginkoder og varsler om abonnement og sletning | Aftalen, art. 6, stk. 1, litra b |
 | Betaling, fakturering og bogføring | Aftalen og retlig forpligtelse efter bogføringsloven, art. 6, stk. 1, litra b og c |
-| Sikkerhed, obligatorisk totrinslogin, forebyggelse af svindel og uberettiget adgang til børns oplysninger | Legitim interesse, art. 6, stk. 1, litra f |
+| Sikkerhed, totrinslogin, forebyggelse af svindel og uberettiget adgang til børns oplysninger | Legitim interesse, art. 6, stk. 1, litra f |
 | Undersøge anmeldelser af ulovligt indhold og misbrug og videregive bekræftede sager til myndigheder | Legitim interesse og retlig forpligtelse, art. 6, stk. 1, litra c og f, art. 9, stk. 2, litra f, og databeskyttelseslovens § 8 |
 | Nyhedsbreve og markedsføring | Dit samtykke, art. 6, stk. 1, litra a, og markedsføringslovens § 10 |
 | Statistik og cookies, der ikke er nødvendige | Dit samtykke efter cookiebekendtgørelsen |
@@ -74,8 +74,8 @@ Vi opbevarer oplysningerne i EU/EØS. Hvis en leverandør undtagelsesvis behandl
 | Oplysninger | Opbevaring |
 | --- | --- |
 | Konto, børneprofiler og indhold | Så længe kontoen er aktiv |
-| Konto efter udløbet abonnement, hvor forbruget overstiger Gratis-planen | Slettes 90 dage efter abonnementets udløb. Du får besked 90, 30 og 15 dage før med den præcise dato |
-| Konto, du selv sletter | Slettes uden unødig forsinkelse og senest 30 dage efter. Sikkerhedskopier overskrives inden for 7 dage |
+| Et barns område efter udløbet abonnement, hvor forbruget overstiger Gratis-planen | Skjules og slettes 90 dage efter abonnementets udløb. Din konto slettes ikke. Du får besked 90, 60 og 7 dage før med den præcise dato |
+| Konto, du selv sletter | Slettes uden unødig forsinkelse og senest 30 dage efter. Sikkerhedskopier overskrives inden for 90 dage |
 | Bogføringsmateriale, fx fakturaer | 5 år fra udgangen af regnskabsåret |
 | Sikkerhedslogs | 12 måneder |
 | Sager om misbrug eller ulovlige forhold | Så længe sagen verserer, og krav kan gøres gældende |
@@ -85,7 +85,7 @@ Hvis du er eneste forælder på en børneprofil og sletter din konto, sletter vi
 
 ## 8. Sikkerhed
 
-Vi beskytter oplysningerne med blandt andet krypteret forbindelse, obligatorisk totrinslogin, adgangsstyring og logning. Sker der et sikkerhedsbrud med høj risiko for dig, giver vi dig besked uden unødig forsinkelse.
+Vi beskytter oplysningerne med blandt andet krypteret forbindelse, totrinslogin, adgangsstyring og logning. Sker der et sikkerhedsbrud med høj risiko for dig, giver vi dig besked uden unødig forsinkelse.
 
 ## 9. Cookies
 

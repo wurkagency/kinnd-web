@@ -1,0 +1,167 @@
+---
+import type { MarkdownInstance } from 'astro';
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import MarkdownDoc from '../components/MarkdownDoc.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Icon from '../components/Icon.astro';
+import { localePath, routes, translatedLocales, useDict, type Locale } from '../i18n';
+import { rich } from '../lib/rich';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const t = useDict(lang);
+const c = t.safety.technical;
+
+/**
+ * Full technical details. Text lives in src/content/safety/<lang>/technical.md.
+ * Until a translation exists, a language shows the English text. That page is
+ * noindex and left out of hreflang and the sitemap (see astro.config.mjs).
+ */
+const files = import.meta.glob<MarkdownInstance<{ updated: string }>>('../content/safety/*/technical.md', {
+  eager: true,
+});
+const file = (l: Locale) => files[`../content/safety/${l}/technical.md`];
+const own = file(lang);
+const md = own ?? file('en');
+const bodyLang = own || lang === 'en' ? undefined : 'en';
+const alternates = translatedLocales().filter((l) => file(l));
+const tones = ['forest', 'lilac', 'mint', 'sky'];
+---
+
+<Base
+  lang={lang}
+  title={c.title}
+  description={c.description}
+  route={routes.safetyTechnical}
+  current="safety"
+  alternates={alternates}
+>
+  <PageHero title={c.heading} text={c.text}>
+    <a href={localePath(lang, routes.safety)} class="back-link">
+      <Icon name="arrowLeft" size={16} stroke={2} class="back-link__icon" />
+      {c.back}
+    </a>
+    <ul class="plain facts" aria-label={c.factsLabel}>
+      {
+        c.facts.map((f, i) => (
+          <li class={`fact fact--${tones[i % tones.length]}`}>
+            <span class="fact__value" set:html={rich(f.value)} />
+            <span class="fact__label">{f.label}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </PageHero>
+  <div class="technical">
+    <MarkdownDoc md={md} label={c.heading.replace(/\*/g, '')} tocLabel={c.onThisPage} lang={bodyLang} intro={md.frontmatter.updated} />
+  </div>
+  <CtaBand lang={lang} />
+</Base>
+
+<style>
+  .back-link {
+    order: -1;
+    align-self: flex-start;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--muted);
+  }
+  .back-link:hover {
+    color: var(--forest);
+    text-decoration: underline;
+  }
+  /* The arrow points the way back in right-to-left languages too. */
+  :global([dir='rtl']) .back-link :global(.back-link__icon) {
+    transform: scaleX(-1);
+  }
+
+  /* Key figures under the heading. */
+  .facts {
+    width: 100%;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .fact {
+    padding: 18px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--ink);
+  }
+  .fact--forest {
+    background: var(--forest);
+    color: #fff;
+  }
+  .fact--lilac {
+    background: var(--lilac);
+  }
+  .fact--mint {
+    background: var(--mint);
+  }
+  .fact--sky {
+    background: var(--sky);
+  }
+  .fact__value {
+    font-family: var(--font-serif);
+    font-size: clamp(24px, calc(18px + 1.2vw), 32px);
+    line-height: 1;
+    overflow-wrap: anywhere;
+  }
+  .fact__label {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  @media (min-width: 960px) {
+    .facts {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  /* The Abuse Central steps: the only numbered list on the page. */
+  .technical :global(ol) {
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+    gap: 14px;
+  }
+  .technical :global(ol > li) {
+    position: relative;
+    min-height: 32px;
+    padding-inline-start: 46px;
+    padding-top: 5px;
+    counter-increment: step;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .technical :global(ol > li)::before {
+    content: counter(step);
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: var(--forest);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .technical :global(ol > li strong) {
+    display: block;
+    font-size: 16px;
+  }
+</style>

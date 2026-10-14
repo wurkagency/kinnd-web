@@ -246,8 +246,8 @@
           "text": "Ein Konto auf jedem Bildschirm"
         },
         {
-          "title": "Drei Sprachen",
-          "text": "Englisch, Dänisch und Schwedisch"
+          "title": "Neun Sprachen",
+          "text": "Nordische Sprachen, Englisch, Deutsch, Türkisch und Arabisch"
         },
         {
           "title": "Standardmäßig privat",
@@ -325,7 +325,7 @@
         ]
       }
     },
-    "vatNote": "Preise inklusive dänischer Mehrwertsteuer. [Confirm final prices]",
+    "vatNote": "Preise inklusive dänischer Mehrwertsteuer.",
     "good": {
       "label": "Gut zu wissen",
       "title": "Gut zu *wissen*",
@@ -369,11 +369,11 @@
     }
   },
   "safety": {
-    "title": "Sicherheit und Datenschutz · KINND",
-    "description": "Gebaut, um die Daten von Kindern zu schützen. Sechs Versprechen, in klaren Worten.",
+    "title": "Sicherheit und Datenschutz: verschlüsselt und in der EU gespeichert · KINND",
+    "description": "Fotos, Videos, Nachrichten und Gesundheitsinfos mit AES-256-GCM verschlüsselt, Anmeldung in zwei Schritten ist Pflicht, und alle Daten werden in der EU gespeichert. Unsere Versprechen, in klaren Worten.",
     "hero": {
       "title": "Gebaut, um die Daten von Kindern zu *schützen*",
-      "text": "Sechs Versprechen, in klaren Worten."
+      "text": "Was wir versprechen, und genau wie es funktioniert."
     },
     "promisesLabel": "Unsere Versprechen",
     "promises": [
@@ -387,7 +387,7 @@
       },
       {
         "title": "Anmeldung in zwei Schritten",
-        "text": "Immer aktiv, für alle. Nur die Richtigen kommen rein."
+        "text": "Immer aktiv. Wer sich mit Passwort anmeldet, braucht einen Einmalcode, per E-Mail oder SMS."
       },
       {
         "title": "Der richtige Zugang",
@@ -395,7 +395,7 @@
       },
       {
         "title": "EU und DSGVO",
-        "text": "Wir halten die DSGVO ein und speichern Daten in der EU. [Confirm hosting wording with counsel]"
+        "text": "Alle Daten und Backups werden in der EU gespeichert. Wir halten die DSGVO ein."
       },
       {
         "title": "Deine Daten gehören dir",
@@ -408,137 +408,139 @@
       "text": "Lies genau, was wir erheben und warum.",
       "cta": "Datenschutzerklärung lesen"
     },
-    "moreLink": "Technical details",
+    "moreLink": "Alle technischen Details",
     "encryption": {
-      "label": "Encryption",
-      "title": "Locked, *every* step of the way",
-      "text": "Your photos, videos, messages and medical information are encrypted when they are stored. Everything travels over an encrypted connection.",
+      "label": "Verschlüsselung",
+      "title": "Verschlossen, bei *jedem* Schritt",
+      "text": "Deine sensibelsten Informationen sind verschlüsselt, wenn sie gespeichert und wenn sie übertragen werden.",
       "items": [
         {
-          "title": "When it is stored",
-          "text": "Photos, videos, messages and medical information are encrypted with AES-256-GCM, the standard banks and governments use. Each photo and video gets its own key."
+          "title": "Beim Speichern",
+          "text": "Fotos, Videos, Nachrichten und Gesundheitsinfos werden mit AES-256-GCM verschlüsselt, dem Standard, den Banken und Behörden nutzen. Jedes Foto und Video bekommt einen eigenen Schlüssel."
         },
         {
-          "title": "When it travels",
-          "text": "Everything between your phone and KINND is sent over an encrypted connection (TLS 1.3). Nobody on the network can read it."
+          "title": "Bei der Übertragung",
+          "text": "Alles zwischen deinem Handy und KINND wird über eine verschlüsselte Verbindung (TLS 1.3) gesendet. Niemand im Netzwerk kann es lesen."
         },
         {
-          "title": "Keys kept apart",
-          "text": "The keys that unlock your data are stored apart from the data itself, in a separate, secured key vault. A copy of the data alone is unreadable."
+          "title": "Schlüssel getrennt aufbewahrt",
+          "text": "Die Schlüssel zu deinen Daten liegen getrennt von den Daten selbst. Eine Kopie der Daten allein ist nicht lesbar."
         }
-      ],
-      "moreLabel": "Technical details about encryption"
+      ]
     },
     "protected": {
-      "label": "What is protected",
-      "title": "What is *protected*",
-      "colWhat": "What",
-      "colHow": "How it is protected",
+      "label": "Was geschützt ist",
+      "title": "Was *geschützt* ist",
+      "text": "Finde, was dir wichtig ist, und sieh, wie es geschützt wird.",
+      "colWhat": "Was",
+      "colHow": "Wie es geschützt ist",
       "rows": [
         {
-          "what": "Photos and videos",
-          "how": "Encrypted with AES-256-GCM, own key per file. Location removed from copies others download."
+          "what": "Fotos und Videos",
+          "how": "Mit AES-256-GCM verschlüsselt, eigener Schlüssel pro Datei. Standort wird aus Kopien entfernt, die andere herunterladen."
         },
         {
-          "what": "Messages",
-          "how": "Encrypted at rest with AES-256-GCM. Only the people in the conversation can open them in the app."
+          "what": "Nachrichten",
+          "how": "Mit AES-256-GCM verschlüsselt. Nur die Personen im Gespräch können sie öffnen."
         },
         {
-          "what": "Medical information",
-          "how": "Encrypted at rest with AES-256-GCM. Only adults the child's parents have invited, by role."
+          "what": "Gesundheitsinfos",
+          "how": "Mit AES-256-GCM verschlüsselt. Eltern und Erwachsene, denen ein Elternteil Zugang gibt."
         },
         {
-          "what": "Child profile and growth",
-          "how": "Only adults the child's parents have invited, by role."
+          "what": "Kalender, Aufgaben und Listen",
+          "how": "Mit AES-256-GCM verschlüsselt. Nur Erwachsene mit Zugang zu diesem Kind, je nach Rolle."
         },
         {
-          "what": "Calendar, tasks, lists",
-          "how": "Only adults with access to that child."
+          "what": "Anmeldung",
+          "how": "Anmeldung in zwei Schritten, immer aktiv. Wer sich mit Passwort anmeldet, braucht einen Einmalcode, per E-Mail oder SMS."
         },
         {
-          "what": "Sign-in",
-          "how": "Two-step sign-in with a one-time code (TOTP), always on."
-        },
-        {
-          "what": "Payment",
-          "how": "Handled by Quickpay. KINND never stores card numbers."
+          "what": "Zahlung",
+          "how": "Abgewickelt über QuickPay. KINND speichert nie vollständige Kartennummern."
         },
         {
           "what": "Backups",
-          "how": "Encrypted, kept for 90 days, in the EU."
+          "how": "Genauso verschlüsselt wie die laufenden Daten, 90 Tage in der EU aufbewahrt."
+        },
+        {
+          "what": "Technische Daten",
+          "how": "IP-Adressen, Geräteinformationen und Anmeldeverlauf werden 1 Jahr aufbewahrt, nur um Missbrauch zu erkennen und zu melden."
         }
-      ],
-      "note": "Everything above travels over an encrypted connection (TLS 1.3)."
+      ]
     },
     "oversight": {
-      "label": "What we can see",
-      "title": "Built to keep *children* safe",
-      "text": "Our management system watches for misuse around the clock. Every alarm is checked by a person on our team.",
+      "label": "Was wir sehen können",
+      "title": "Gebaut, um *Kinder* zu schützen",
+      "text": "Unser Verwaltungssystem achtet rund um die Uhr auf Missbrauch, mit Abuse Central, einem komplexen System aus Auslösern und Mustern. Jeder Alarm wird von einem Menschen in unserem Team geprüft.",
       "items": [
         {
-          "title": "Family life stays private",
-          "text": "In normal use, nobody at KINND sees your photos, messages or your child's information. Our system works on technical signals only."
+          "title": "Familienleben bleibt privat",
+          "text": "Bei normaler Nutzung sieht niemand bei KINND deine Fotos, Nachrichten oder die Informationen deines Kindes. Unser System arbeitet nur mit technischen Signalen."
         },
         {
-          "title": "When an alarm goes off",
-          "text": "If activity sets off an alarm, our team first sees masked technical details of that case: sign-ins, devices, IP addresses and the warnings that fired. If there are grounds to look further, we follow the protocols of the Danish police's cyber crime centre (NC3), and a second senior reviewer checks the case before it is escalated."
+          "title": "Wenn ein Alarm ausgelöst wird",
+          "text": "Unser Team prüft zuerst die technischen Details des Falls: Anmeldungen, Geräte, IP-Adressen und die ausgelösten Warnungen. Jeder Blick wird protokolliert und geprüft. Gibt es Gründe, genauer hinzusehen, folgen wir denselben Vorgaben wie die dänischen Behörden, und eine zweite, erfahrene Prüfperson muss zustimmen, bevor der Fall weitergeht."
         },
         {
-          "title": "Every look is logged",
-          "text": "Every time an employee views details in a case, it is logged and audited. That audit log goes into the report we hand to the authorities."
+          "title": "Jeder Blick wird protokolliert",
+          "text": "Jedes Mal, wenn eine Person aus dem Team Details in einem Fall ansieht, wird festgehalten, wer was wann angesehen hat, und das wird geprüft."
         }
-      ],
-      "moreLabel": "Technical details about access"
+      ]
     },
     "abuse": {
-      "label": "Abuse and fraud",
-      "title": "How we catch *abuse* and fraud",
-      "text": "Abuse Central, our warning engine, works on technical signals only. When something looks wrong, a person on our team looks into it.",
+      "label": "Missbrauch und Betrug",
+      "title": "So erkennen wir *Missbrauch* und Betrug",
+      "text": "Wir reagieren schnell auf Missbrauch, nur mit technischen Signalen.",
       "items": [
         {
-          "title": "Warnings that catch misuse early",
-          "text": "Abuse Central uses a wide set of triggers and patterns to spot signs of misuse: unusual sign-ins, accounts created to reach a child, and attempts to get access someone should not have."
+          "title": "Warnungen, die Missbrauch früh erkennen",
+          "text": "Abuse Central sucht nach Anzeichen von Missbrauch: ungewöhnliche Anmeldungen, Konten, die angelegt werden, um an ein Kind heranzukommen, und Versuche, sich Zugang zu verschaffen, der einem nicht zusteht."
         },
         {
-          "title": "Reports from you",
-          "text": "Worried about an account? Write to abuse@kinnd.eu. Every report gets a case that a person follows to the end. In the app, parents can remove a family member at any time."
+          "title": "Du entscheidest, wer dabei ist",
+          "text": "Eltern können ein Familienmitglied jederzeit entfernen. Machst du dir Sorgen? Schreib uns."
         },
         {
-          "title": "We work with the authorities",
-          "text": "Confirmed illegal cases are handed to the police with the information they need, including the audit log of who viewed what. We follow each case until it is closed."
+          "title": "Wir arbeiten mit den Behörden zusammen",
+          "text": "Bestätigte illegale Fälle übergeben wir der Polizei mit den nötigen Informationen. Wir verfolgen jeden Fall, bis er abgeschlossen ist."
         },
         {
-          "title": "We stay out of family conflicts",
-          "text": "KINND is a private space to share in. We do not take sides or settle disagreements."
+          "title": "Wir halten uns aus Familienkonflikten heraus",
+          "text": "KINND ist ein privater Ort zum Teilen. Wir ergreifen keine Partei und schlichten keine Streitigkeiten."
         }
-      ],
-      "moreLabel": "Technical details about abuse and fraud"
+      ]
     },
-    "docs": {
-      "back": "Safety & privacy",
-      "onThisPage": "On this page",
-      "encryption": {
-        "title": "Encryption in detail · KINND",
-        "description": "How KINND encrypts photos, videos, messages and medical information, and where the keys are kept.",
-        "heading": "Encryption, *in detail*",
-        "text": "For those who want the technical picture."
-      },
-      "access": {
-        "title": "Access and oversight in detail · KINND",
-        "description": "Who can see what in KINND, how sign-in works, and what our team can see and when.",
-        "heading": "Who can see *what*",
-        "text": "Access, sign-in and our own team, in detail."
-      },
-      "abuse": {
-        "title": "Abuse and fraud in detail · KINND",
-        "description": "How Abuse Central spots misuse, how cases are handled, and when we involve the police.",
-        "heading": "Abuse and fraud, *in detail*",
-        "text": "How we spot misuse and what happens next."
-      }
+    "technical": {
+      "title": "Technische Details: wie KINND Familiendaten schützt · KINND",
+      "description": "Wie KINND Fotos, Nachrichten und Gesundheitsinfos verschlüsselt, Anmeldung und Zugang regelt, Daten in der EU speichert und Missbrauch erkennt. Im technischen Detail.",
+      "heading": "Alle technischen *Details*",
+      "text": "Wie KINND Familiendaten schützt, in der App und im Hintergrund.",
+      "back": "Sicherheit und Datenschutz",
+      "onThisPage": "Auf dieser Seite",
+      "factsLabel": "Die wichtigsten Fakten",
+      "facts": [
+        {
+          "value": "AES-256-GCM",
+          "label": "Medien, Nachrichten und Gesundheitsinfos"
+        },
+        {
+          "value": "TLS 1.3",
+          "label": "Jede Verbindung"
+        },
+        {
+          "value": "2 Schritte",
+          "label": "Einmalcode per E-Mail oder SMS"
+        },
+        {
+          "value": "Nur EU",
+          "label": "Alle Daten und Backups"
+        }
+      ]
     }
   },
   "faq": {
-    "title": "FAQ · KINND",
+    "title": "Häufige Fragen · KINND",
     "description": "Fragen und Antworten. Kurze Antworten auf das, was Eltern am häufigsten fragen.",
     "hero": {
       "title": "Fragen und *Antworten*",
@@ -559,7 +561,7 @@
           },
           {
             "q": "Welche Sprachen?",
-            "a": "Englisch, Dänisch und Schwedisch."
+            "a": "Die App und diese Website gibt es in neun Sprachen: Englisch, Dänisch, Schwedisch, Norwegisch, Färöisch, Isländisch, Deutsch, Türkisch und Arabisch."
           }
         ]
       },
@@ -613,12 +615,12 @@
             "a": "Nein. KINND ist ein Ort zum Teilen. Wir ergreifen keine Partei."
           },
           {
-            "q": "Can I delete everything?",
-            "a": "Yes. Your data, your choice. Download or delete your account on demand."
+            "q": "Kann ich alles löschen?",
+            "a": "Ja. Deine Daten, deine Entscheidung. Lade deine Daten herunter oder lösche dein Konto, wann du willst."
           },
           {
-            "q": "Does KINND help with conflicts?",
-            "a": "No. KINND is a place to share in. We do not take sides."
+            "q": "Hilft KINND bei Konflikten?",
+            "a": "Nein. KINND ist ein Ort zum Teilen. Wir ergreifen keine Partei."
           }
         ]
       }
@@ -687,43 +689,26 @@
   "legal": {
     "tabsLabel": "Rechtliche Dokumente",
     "onThisPage": "Auf dieser Seite",
-    "lastUpdated": "Zuletzt aktualisiert [DATE]",
-    "placeholder": "[Text from counsel. Plain words, short sentences.]",
     "privacy": {
       "tab": "Datenschutzerklärung",
       "title": "Datenschutzerklärung · KINND",
       "description": "Was wir erheben, warum, und was du dagegen tun kannst.",
       "heading": "*Datenschutzerklärung*",
-      "text": "Was wir erheben, warum, und was du dagegen tun kannst.",
-      "sections": [
-        "Wer wir sind",
-        "Was wir erheben",
-        "Warum wir es erheben",
-        "Mit wem wir es teilen",
-        "Wie lange wir es aufbewahren",
-        "Deine Rechte",
-        "So erreichst du uns"
-      ]
+      "text": "Was wir erheben, warum, und was du dagegen tun kannst."
     },
     "terms": {
       "tab": "Nutzungsbedingungen",
       "title": "Nutzungsbedingungen · KINND",
       "description": "Die Bedingungen für die Nutzung von KINND.",
       "heading": "*Nutzungsbedingungen*",
-      "text": "Our terms and conditions",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "Unsere Nutzungsbedingungen"
     },
     "cookies": {
       "tab": "Cookies",
       "title": "Cookies · KINND",
-      "description": "So verwendet KINND Cookies.",
+      "description": "KINND nutzt nur die Cookies und den lokalen Speicher, die für den Betrieb nötig sind. Kein Tracking, keine Werbung und keine Cookies von Drittanbietern.",
       "heading": "Cookie-*Richtlinie*",
-      "text": "[Intro line from counsel]",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "Welche Cookies und welchen lokalen Speicher KINND nutzt und warum."
     }
   },
   "notFound": {
@@ -734,11 +719,11 @@
     "cta": "Zur Startseite"
   },
   "language": {
-    "title": "Language · KINND",
-    "description": "Choose the language for the KINND website.",
-    "heading": "Choose *language*",
-    "text": "The website changes to the language you pick.",
-    "close": "Close",
-    "listLabel": "Languages"
+    "title": "Sprache · KINND",
+    "description": "Wähle die Sprache für die KINND-Website.",
+    "heading": "*Sprache* wählen",
+    "text": "Die Website wechselt in die Sprache, die du wählst.",
+    "close": "Schließen",
+    "listLabel": "Sprachen"
   }
 }

@@ -38,8 +38,8 @@
     "text": "30 dage med alt inkluderet. Det kører på din telefon, uden app store."
   },
   "home": {
-    "title": "KINND · Trygt samarbejde og deling med familien, du stoler på",
-    "description": "Del børn, aftaler, Moments og medier helt privat i familiekredsen.",
+    "title": "KINND · Privat familieapp til deleforældre og hele familien",
+    "description": "Del samværskalender, aftaler, billeder, Moments og helbredsoplysninger privat mellem begge hjem og den familie, du inviterer. Data bliver i EU.",
     "hero": {
       "label": "Introduktion",
       "title": "Samarbejd og del med familien, du *stoler* på",
@@ -143,8 +143,8 @@
     }
   },
   "features": {
-    "title": "Funktioner · KINND",
-    "description": "Alt om dit barn, samlet ét sted. Delt mellem begge hjem og den familie, du inviterer.",
+    "title": "Funktioner: samværskalender, billeder og lister · KINND",
+    "description": "Samværskalender (7/7, 10/4 eller jeres egen), aftaler, skoledage, helbred og vækst, lister og privat deling af billeder. Alt om dit barn, samlet ét sted.",
     "hero": {
       "title": "Alt om dit barn, samlet *ét* sted",
       "text": "Delt mellem begge hjem og den familie, du inviterer."
@@ -246,8 +246,8 @@
           "text": "Én konto på alle skærme"
         },
         {
-          "title": "Tre sprog",
-          "text": "Engelsk, dansk og svensk"
+          "title": "Ni sprog",
+          "text": "Nordiske sprog, engelsk, tysk, tyrkisk og arabisk"
         },
         {
           "title": "Privat som standard",
@@ -257,8 +257,8 @@
     }
   },
   "pricing": {
-    "title": "Priser · KINND",
-    "description": "Enkle priser. Én person betaler. Inviteret familie betaler aldrig.",
+    "title": "Priser: gratis at starte, inviteret familie betaler aldrig · KINND",
+    "description": "Gratis koster 0 kr. Forældre koster 29 kr. og Familie 69 kr. om måneden, og én person betaler for alle. Prøv alle Familie-funktioner gratis i 30 dage. Intet kort.",
     "hero": {
       "title": "Enkle *priser*",
       "text": "Én person betaler. Inviteret familie betaler aldrig."
@@ -325,7 +325,7 @@
         ]
       }
     },
-    "vatNote": "Priserne er inkl. dansk moms. [Confirm final prices]",
+    "vatNote": "Priserne er inkl. dansk moms.",
     "good": {
       "label": "Godt at vide",
       "title": "Godt at *vide*",
@@ -369,11 +369,11 @@
     }
   },
   "safety": {
-    "title": "Sikkerhed og privatliv · KINND",
-    "description": "Bygget til at beskytte børns data. Seks løfter, sagt lige ud.",
+    "title": "Sikkerhed og privatliv: krypteret og opbevaret i EU · KINND",
+    "description": "Billeder, videoer, beskeder og helbredsoplysninger krypteret med AES-256-GCM, obligatorisk login i to trin og alle data opbevaret i EU. Vores løfter, sagt lige ud.",
     "hero": {
       "title": "Bygget til at *beskytte* børns data",
-      "text": "Seks løfter, sagt lige ud."
+      "text": "Det lover vi, og præcis sådan virker det."
     },
     "promisesLabel": "Vores løfter",
     "promises": [
@@ -387,7 +387,7 @@
       },
       {
         "title": "Login i to trin",
-        "text": "Altid slået til, for alle. Kun de rigtige kommer ind."
+        "text": "Altid slået til. Login med adgangskode kræver en engangskode, sendt på e-mail eller sms."
       },
       {
         "title": "Den rette adgang",
@@ -395,7 +395,7 @@
       },
       {
         "title": "EU og GDPR",
-        "text": "Vi følger GDPR og opbevarer data i EU. [Confirm hosting wording with counsel]"
+        "text": "Alle data og sikkerhedskopier opbevares i EU. Vi følger GDPR."
       },
       {
         "title": "Dine data er dine",
@@ -408,138 +408,140 @@
       "text": "Læs præcis, hvad vi indsamler og hvorfor.",
       "cta": "Læs privatlivspolitikken"
     },
-    "moreLink": "Technical details",
+    "moreLink": "Alle tekniske detaljer",
     "encryption": {
-      "label": "Encryption",
-      "title": "Locked, *every* step of the way",
-      "text": "Your photos, videos, messages and medical information are encrypted when they are stored. Everything travels over an encrypted connection.",
+      "label": "Kryptering",
+      "title": "Låst *hele* vejen",
+      "text": "Dine mest følsomme oplysninger er krypteret, når de gemmes, og når de sendes.",
       "items": [
         {
-          "title": "When it is stored",
-          "text": "Photos, videos, messages and medical information are encrypted with AES-256-GCM, the standard banks and governments use. Each photo and video gets its own key."
+          "title": "Når det gemmes",
+          "text": "Billeder, videoer, beskeder og helbredsoplysninger krypteres med AES-256-GCM, den standard som banker og myndigheder bruger. Hvert billede og hver video får sin egen nøgle."
         },
         {
-          "title": "When it travels",
-          "text": "Everything between your phone and KINND is sent over an encrypted connection (TLS 1.3). Nobody on the network can read it."
+          "title": "Når det sendes",
+          "text": "Alt mellem din telefon og KINND sendes over en krypteret forbindelse (TLS 1.3). Ingen på netværket kan læse det."
         },
         {
-          "title": "Keys kept apart",
-          "text": "The keys that unlock your data are stored apart from the data itself, in a separate, secured key vault. A copy of the data alone is unreadable."
+          "title": "Nøgler holdes adskilt",
+          "text": "Nøglerne, der låser dine data op, opbevares adskilt fra selve dataene. En kopi af dataene alene kan ikke læses."
         }
-      ],
-      "moreLabel": "Technical details about encryption"
+      ]
     },
     "protected": {
-      "label": "What is protected",
-      "title": "What is *protected*",
-      "colWhat": "What",
-      "colHow": "How it is protected",
+      "label": "Det er beskyttet",
+      "title": "Det er *beskyttet*",
+      "text": "Find det, der betyder noget for dig, og se, hvordan det holdes sikkert.",
+      "colWhat": "Hvad",
+      "colHow": "Sådan er det beskyttet",
       "rows": [
         {
-          "what": "Photos and videos",
-          "how": "Encrypted with AES-256-GCM, own key per file. Location removed from copies others download."
+          "what": "Billeder og videoer",
+          "how": "Krypteret med AES-256-GCM, egen nøgle til hver fil. Lokation fjernes fra de kopier, andre downloader."
         },
         {
-          "what": "Messages",
-          "how": "Encrypted at rest with AES-256-GCM. Only the people in the conversation can open them in the app."
+          "what": "Beskeder",
+          "how": "Krypteret med AES-256-GCM. Kun personerne i samtalen kan åbne dem."
         },
         {
-          "what": "Medical information",
-          "how": "Encrypted at rest with AES-256-GCM. Only adults the child's parents have invited, by role."
+          "what": "Helbredsoplysninger",
+          "how": "Krypteret med AES-256-GCM. Forældre og de voksne, en forælder giver adgang."
         },
         {
-          "what": "Child profile and growth",
-          "how": "Only adults the child's parents have invited, by role."
+          "what": "Kalender, opgaver og lister",
+          "how": "Krypteret med AES-256-GCM. Kun voksne med adgang til det barn, efter rolle."
         },
         {
-          "what": "Calendar, tasks, lists",
-          "how": "Only adults with access to that child."
+          "what": "Login",
+          "how": "Login i to trin, altid slået til. Login med adgangskode kræver en engangskode, sendt på e-mail eller sms."
         },
         {
-          "what": "Sign-in",
-          "how": "Two-step sign-in with a one-time code (TOTP), always on."
+          "what": "Betaling",
+          "how": "Håndteres af QuickPay. KINND gemmer aldrig fulde kortnumre."
         },
         {
-          "what": "Payment",
-          "how": "Handled by Quickpay. KINND never stores card numbers."
+          "what": "Sikkerhedskopier",
+          "how": "Krypteret på samme måde som de aktive data og gemt i 90 dage i EU."
         },
         {
-          "what": "Backups",
-          "how": "Encrypted, kept for 90 days, in the EU."
+          "what": "Tekniske data",
+          "how": "IP-adresser, enhedsoplysninger og loginhistorik gemmes i 1 år, kun for at opdage og anmelde misbrug."
         }
-      ],
-      "note": "Everything above travels over an encrypted connection (TLS 1.3)."
+      ]
     },
     "oversight": {
-      "label": "What we can see",
-      "title": "Built to keep *children* safe",
-      "text": "Our management system watches for misuse around the clock. Every alarm is checked by a person on our team.",
+      "label": "Det kan vi se",
+      "title": "Bygget til at passe på *børn*",
+      "text": "Vores administrationssystem holder øje med misbrug døgnet rundt med Abuse Central, et komplekst system af udløsere og mønstre. Hver alarm tjekkes af en person i vores team.",
       "items": [
         {
-          "title": "Family life stays private",
-          "text": "In normal use, nobody at KINND sees your photos, messages or your child's information. Our system works on technical signals only."
+          "title": "Familielivet forbliver privat",
+          "text": "Ved normal brug ser ingen hos KINND dine billeder, beskeder eller dit barns oplysninger. Vores system arbejder kun med tekniske signaler."
         },
         {
-          "title": "When an alarm goes off",
-          "text": "If activity sets off an alarm, our team first sees masked technical details of that case: sign-ins, devices, IP addresses and the warnings that fired. If there are grounds to look further, we follow the protocols of the Danish police's cyber crime centre (NC3), and a second senior reviewer checks the case before it is escalated."
+          "title": "Når en alarm går",
+          "text": "Vores team gennemgår først de tekniske detaljer i sagen: logins, enheder, IP-adresser og de advarsler, der blev udløst. Hvert opslag bliver kontrolleret. Er der grund til at se nærmere på sagen, følger vi de samme protokoller som de danske myndigheder, og en anden, erfaren medarbejder godkender, før sagen går videre."
         },
         {
-          "title": "Every look is logged",
-          "text": "Every time an employee views details in a case, it is logged and audited. That audit log goes into the report we hand to the authorities."
+          "title": "Hvert opslag kontrolleres",
+          "text": "Hver gang en medarbejder ser detaljer i en sag, bliver det logget med hvem, hvad og hvornår, og kontrolleret."
         }
-      ],
-      "moreLabel": "Technical details about access"
+      ]
     },
     "abuse": {
-      "label": "Abuse and fraud",
-      "title": "How we catch *abuse* and fraud",
-      "text": "Abuse Central, our warning engine, works on technical signals only. When something looks wrong, a person on our team looks into it.",
+      "label": "Misbrug og svindel",
+      "title": "Sådan opdager vi *misbrug* og svindel",
+      "text": "Vi reagerer hurtigt på misbrug og bruger kun tekniske signaler.",
       "items": [
         {
-          "title": "Warnings that catch misuse early",
-          "text": "Abuse Central uses a wide set of triggers and patterns to spot signs of misuse: unusual sign-ins, accounts created to reach a child, and attempts to get access someone should not have."
+          "title": "Advarsler, der fanger misbrug tidligt",
+          "text": "Abuse Central leder efter tegn på misbrug: usædvanlige logins, konti oprettet for at komme i kontakt med et barn og forsøg på at få adgang, man ikke skal have."
         },
         {
-          "title": "Reports from you",
-          "text": "Worried about an account? Write to abuse@kinnd.eu. Every report gets a case that a person follows to the end. In the app, parents can remove a family member at any time."
+          "title": "Du bestemmer, hvem der er med",
+          "text": "Forældre kan fjerne et familiemedlem når som helst. Er du bekymret for noget? Skriv til os."
         },
         {
-          "title": "We work with the authorities",
-          "text": "Confirmed illegal cases are handed to the police with the information they need, including the audit log of who viewed what. We follow each case until it is closed."
+          "title": "Vi samarbejder med myndighederne",
+          "text": "Bekræftede ulovlige sager overdrages til politiet med de oplysninger, de har brug for. Vi følger hver sag, til den er lukket."
         },
         {
-          "title": "We stay out of family conflicts",
-          "text": "KINND is a private space to share in. We do not take sides or settle disagreements."
+          "title": "Vi blander os ikke i familiekonflikter",
+          "text": "KINND er et privat sted at dele. Vi tager ikke parti og løser ikke uenigheder."
         }
-      ],
-      "moreLabel": "Technical details about abuse and fraud"
+      ]
     },
-    "docs": {
-      "back": "Safety & privacy",
-      "onThisPage": "On this page",
-      "encryption": {
-        "title": "Encryption in detail · KINND",
-        "description": "How KINND encrypts photos, videos, messages and medical information, and where the keys are kept.",
-        "heading": "Encryption, *in detail*",
-        "text": "For those who want the technical picture."
-      },
-      "access": {
-        "title": "Access and oversight in detail · KINND",
-        "description": "Who can see what in KINND, how sign-in works, and what our team can see and when.",
-        "heading": "Who can see *what*",
-        "text": "Access, sign-in and our own team, in detail."
-      },
-      "abuse": {
-        "title": "Abuse and fraud in detail · KINND",
-        "description": "How Abuse Central spots misuse, how cases are handled, and when we involve the police.",
-        "heading": "Abuse and fraud, *in detail*",
-        "text": "How we spot misuse and what happens next."
-      }
+    "technical": {
+      "title": "Tekniske detaljer: sådan beskytter KINND familiens data · KINND",
+      "description": "Sådan krypterer KINND billeder, beskeder og helbredsoplysninger, håndterer login og adgang, opbevarer data i EU og opdager misbrug. Med tekniske detaljer.",
+      "heading": "Alle tekniske *detaljer*",
+      "text": "Sådan beskytter KINND familiens data, i appen og bag kulisserne.",
+      "back": "Sikkerhed og privatliv",
+      "onThisPage": "På denne side",
+      "factsLabel": "Nøglefakta",
+      "facts": [
+        {
+          "value": "AES-256-GCM",
+          "label": "Medier, beskeder og helbredsoplysninger"
+        },
+        {
+          "value": "TLS 1.3",
+          "label": "Hver forbindelse"
+        },
+        {
+          "value": "2 trin",
+          "label": "Engangskode på e-mail eller sms"
+        },
+        {
+          "value": "Kun EU",
+          "label": "Alle data og sikkerhedskopier"
+        }
+      ]
     }
   },
   "faq": {
-    "title": "FAQ · KINND",
-    "description": "Spørgsmål og svar. Korte svar på det, forældre oftest spørger om.",
+    "title": "Ofte stillede spørgsmål om KINND",
+    "description": "Korte svar på det, forældre oftest spørger om: hvad KINND er, hvad det koster, hvem der kan se dit barns oplysninger, og hvordan samværskalenderen virker.",
     "hero": {
       "title": "Spørgsmål og *svar*",
       "text": "Korte svar på det, forældre oftest spørger om."
@@ -551,7 +553,7 @@
         "items": [
           {
             "q": "Hvad er KINND?",
-            "a": "Et privat sted, hvor forældre og deres familie deler alt om deres børn."
+            "a": "KINND er en privat familieapp til forældre, der bor hver for sig, og familien omkring deres børn. Begge hjem deler samværskalender, aftaler, skoledage, helbredsoplysninger, lister, billeder og Moments ét sted og inviterer bedsteforældre og andre, de stoler på. KINND er lavet af WURK ApS i København, og alle data opbevares i EU."
           },
           {
             "q": "Er det en app?",
@@ -559,7 +561,7 @@
           },
           {
             "q": "Hvilke sprog?",
-            "a": "Engelsk, dansk og svensk."
+            "a": "Appen og hjemmesiden findes på ni sprog: engelsk, dansk, svensk, norsk, færøsk, islandsk, tysk, tyrkisk og arabisk."
           }
         ]
       },
@@ -613,12 +615,12 @@
             "a": "Nej. KINND er et sted at dele i. Vi tager ikke parti."
           },
           {
-            "q": "Can I delete everything?",
-            "a": "Yes. Your data, your choice. Download or delete your account on demand."
+            "q": "Kan jeg slette alt?",
+            "a": "Ja. Dine data, dit valg. Download eller slet din konto, når du vil."
           },
           {
-            "q": "Does KINND help with conflicts?",
-            "a": "No. KINND is a place to share in. We do not take sides."
+            "q": "Hjælper KINND med konflikter?",
+            "a": "Nej. KINND er et sted at dele. Vi tager ikke parti."
           }
         ]
       }
@@ -687,43 +689,26 @@
   "legal": {
     "tabsLabel": "Juridiske dokumenter",
     "onThisPage": "På denne side",
-    "lastUpdated": "Sidst opdateret [DATE]",
-    "placeholder": "[Text from counsel. Plain words, short sentences.]",
     "privacy": {
       "tab": "Privatlivspolitik",
       "title": "Privatlivspolitik · KINND",
-      "description": "Hvad vi indsamler, hvorfor, og hvad du kan gøre ved det.",
+      "description": "Hvilke personoplysninger KINND indsamler, hvorfor, hvor længe vi gemmer dem, hvem vi deler dem med, og dine rettigheder efter GDPR.",
       "heading": "*Privatlivspolitik*",
-      "text": "Hvad vi indsamler, hvorfor, og hvad du kan gøre ved det.",
-      "sections": [
-        "Hvem vi er",
-        "Hvad vi indsamler",
-        "Hvorfor vi indsamler det",
-        "Hvem vi deler det med",
-        "Hvor længe vi gemmer det",
-        "Dine rettigheder",
-        "Sådan kontakter du os"
-      ]
+      "text": "Hvad vi indsamler, hvorfor, og hvad du kan gøre ved det."
     },
     "terms": {
       "tab": "Vilkår",
       "title": "Vilkår · KINND",
-      "description": "Vilkårene for brug af KINND.",
+      "description": "Vilkårene for at bruge KINND: din konto, abonnementer og betaling, opsigelse, dit indhold og vores ansvar.",
       "heading": "*Vilkår*",
-      "text": "Vores handelsvilkår",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "Vores handelsvilkår"
     },
     "cookies": {
       "tab": "Cookies",
       "title": "Cookies · KINND",
-      "description": "Sådan bruger KINND cookies.",
+      "description": "KINND bruger kun de cookies og den lokale lagring, der skal til for at virke. Ingen sporing, ingen annoncer og ingen tredjepartscookies.",
       "heading": "*Cookiepolitik*",
-      "text": "[Intro line from counsel]",
-      "sections": [
-        "[Section headings from counsel]"
-      ]
+      "text": "Hvilke cookies og hvilken lokal lagring KINND bruger, og hvorfor."
     }
   },
   "notFound": {
@@ -734,11 +719,11 @@
     "cta": "Gå til forsiden"
   },
   "language": {
-    "title": "Language · KINND",
-    "description": "Choose the language for the KINND website.",
-    "heading": "Choose *language*",
-    "text": "The website changes to the language you pick.",
-    "close": "Close",
-    "listLabel": "Languages"
+    "title": "Sprog · KINND",
+    "description": "Vælg sprog til KINND-websitet.",
+    "heading": "Vælg *sprog*",
+    "text": "Websitet skifter til det sprog, du vælger.",
+    "close": "Luk",
+    "listLabel": "Sprog"
   }
 }

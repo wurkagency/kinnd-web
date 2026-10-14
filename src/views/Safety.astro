@@ -42,9 +42,6 @@ const p = (r: string) => localePath(lang, r);
           <h2 class="display h2" set:html={rich(c.encryption.title)} />
           <p class="lead">{c.encryption.text}</p>
         </div>
-        <a href={p(routes.safetyEncryption)} class="more-link" aria-label={c.encryption.moreLabel}>
-          {c.moreLink}<Icon name="arrowRight" size={16} stroke={2} class="more-link__icon" />
-        </a>
       </div>
       <ul class="plain card-grid card-grid--3">
         {
@@ -62,7 +59,10 @@ const p = (r: string) => localePath(lang, r);
 
   <!-- B. What is protected -->
   <section aria-label={c.protected.label} class="container section" id="protected">
-    <h2 class="display h2" set:html={rich(c.protected.title)} />
+    <div class="section-head">
+      <h2 class="display h2" set:html={rich(c.protected.title)} />
+      <p class="lead">{c.protected.text}</p>
+    </div>
     <div class="protected">
       <table>
         <thead>
@@ -82,7 +82,9 @@ const p = (r: string) => localePath(lang, r);
           }
         </tbody>
       </table>
-      <p class="protected__note">{c.protected.note}</p>
+      <a href={p(routes.safetyTechnical)} class="more-link">
+        {c.moreLink}<Icon name="arrowRight" size={16} stroke={2} class="more-link__icon" />
+      </a>
     </div>
   </section>
 
@@ -93,9 +95,6 @@ const p = (r: string) => localePath(lang, r);
         <h2 class="display h2" set:html={rich(c.oversight.title)} />
         <p class="lead">{c.oversight.text}</p>
       </div>
-      <a href={p(routes.safetyAccess)} class="more-link" aria-label={c.oversight.moreLabel}>
-        {c.moreLink}<Icon name="arrowRight" size={16} stroke={2} class="more-link__icon" />
-      </a>
     </div>
     <ul class="plain card-grid card-grid--3">
       {
@@ -118,9 +117,6 @@ const p = (r: string) => localePath(lang, r);
           <h2 class="display h2" set:html={rich(c.abuse.title)} />
           <p class="lead">{c.abuse.text}</p>
         </div>
-        <a href={p(routes.safetyAbuse)} class="more-link" aria-label={c.abuse.moreLabel}>
-          {c.moreLink}<Icon name="arrowRight" size={16} stroke={2} class="more-link__icon" />
-        </a>
       </div>
       <ul class="plain card-grid card-grid--2">
         {
@@ -233,6 +229,9 @@ const p = (r: string) => localePath(lang, r);
     flex-direction: column;
     gap: 12px;
   }
+  .protected .more-link {
+    align-self: flex-start;
+  }
   .protected table {
     width: 100%;
     border-collapse: collapse;
@@ -263,10 +262,6 @@ const p = (r: string) => localePath(lang, r);
   .protected td {
     font-size: 15px;
     line-height: 1.5;
-    color: var(--muted);
-  }
-  .protected__note {
-    font-size: 13px;
     color: var(--muted);
   }
 

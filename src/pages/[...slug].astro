@@ -9,7 +9,7 @@ import Faq from '../views/Faq.astro';
 import About from '../views/About.astro';
 import Legal from '../views/Legal.astro';
 import Language from '../views/Language.astro';
-import SafetyDoc from '../views/SafetyDoc.astro';
+import Technical from '../views/Technical.astro';
 
 export const getStaticPaths = (() => {
   const keys = Object.keys(routes) as RouteKey[];
@@ -36,7 +36,5 @@ const { lang, key } = Astro.props;
 {key === 'faq' && <Faq lang={lang} />}
 {key === 'about' && <About lang={lang} />}
 {key === 'language' && <Language lang={lang} />}
-{key === 'safetyEncryption' && <SafetyDoc lang={lang} doc="encryption" />}
-{key === 'safetyAccess' && <SafetyDoc lang={lang} doc="access" />}
-{key === 'safetyAbuse' && <SafetyDoc lang={lang} doc="abuse" />}
+{key === 'safetyTechnical' && <Technical lang={lang} />}
 {(key === 'privacy' || key === 'terms' || key === 'cookies') && <Legal lang={lang} doc={key} />}
