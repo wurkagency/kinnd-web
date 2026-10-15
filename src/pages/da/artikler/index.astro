@@ -1,0 +1,103 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHero from '../../../components/PageHero.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import ArticleSidebar from '../../../components/ArticleSidebar.astro';
+import { articles, categories, inCategory } from '../../../lib/articles';
+import { useDict } from '../../../i18n';
+
+const lang = 'da';
+const t = useDict(lang);
+const c = t.articles;
+const [featured] = articles;
+---
+
+<Base
+  lang={lang}
+  title={c.title}
+  description={c.description}
+  route="/artikler/"
+  current="articles"
+  alternates={['da']}
+  languageRoute="/"
+>
+  <PageHero title={c.heading} text={c.text} label={c.label} />
+
+  <section aria-label={c.label} class="container articles-layout">
+    <ArticleSidebar current="all" />
+    <div class="articles-main">
+      <ArticleCard article={featured} variant="feature" level={2} eager />
+      {
+        categories.map((cat) => (
+          <section class="cat-section" id={cat.id} aria-labelledby={`${cat.id}-title`}>
+            <h2 class="display cat-section__title" id={`${cat.id}-title`}>
+              <em>{cat.name}</em>
+            </h2>
+            <div class="card-grid">
+              {inCategory(cat.id)
+                .filter((a) => a !== featured)
+                .map((a) => (
+                  <ArticleCard article={a} />
+                ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+
+  <CtaBand lang={lang} />
+</Base>
+
+<style>
+  .articles-layout {
+    padding-bottom: var(--section-y);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .articles-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  .cat-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    scroll-margin-top: 24px;
+  }
+  .cat-section__title {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+    font-size: clamp(30px, calc(24.4px + 1.143vw), 40px);
+    line-height: 1.1;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px 28px;
+  }
+  @media (min-width: 640px) {
+    .card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 960px) {
+    .articles-layout {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .articles-layout :global(.article-sidebar) {
+      width: 280px;
+      flex-shrink: 0;
+    }
+    .articles-main {
+      gap: 64px;
+    }
+  }
+</style>

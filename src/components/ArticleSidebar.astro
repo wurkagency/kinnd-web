@@ -1,0 +1,206 @@
+---
+import Button from './Button.astro';
+import { articles, categories, categoryAnchor, inCategory } from '../lib/articles';
+import { APP_URL, useDict } from '../i18n';
+import { rich } from '../lib/rich';
+
+interface Props {
+  /** Category id to mark as current, or "all". */
+  current?: string;
+}
+const { current = 'all' } = Astro.props;
+const t = useDict('da').articles;
+const items = [
+  { id: 'all', name: t.all, href: '/da/artikler/', count: articles.length, tone: 'forest' },
+  ...categories.map((c) => ({ id: c.id, name: c.name, href: categoryAnchor(c.id), count: inCategory(c.id).length, tone: c.tone })),
+];
+---
+
+<div class="article-sidebar">
+  <nav class="cats" aria-label={t.categories}>
+    <span class="cats__title" aria-hidden="true">{t.categories}</span>
+    <ul class="plain cats__list">
+      {
+        items.map((c) => (
+          <li>
+            <a href={c.href} class="cat" aria-current={c.id === current ? 'true' : undefined}>
+              <span class="cat__name">
+                <span class:list={['cat__dot', `cat__dot--${c.tone}`]} aria-hidden="true" />
+                {c.name}
+              </span>
+              <span class="cat__count">{c.count}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <aside class="promo on-dark" aria-label="KINND">
+    <span class="promo__glow" aria-hidden="true"></span>
+    <span class="promo__badge">{t.promoBadge}</span>
+    <span class="promo__title" set:html={rich(t.promoTitle)} />
+    <span class="promo__text">{t.promoText}</span>
+    <Button href={APP_URL} variant="lilac" size="sm" fill>{t.promoCta}</Button>
+  </aside>
+</div>
+
+<style>
+  .article-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  /* Phones: categories as a row of chips that scrolls sideways inside itself. */
+  .cats__title {
+    display: none;
+  }
+  .cats__list {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .cat {
+    flex-shrink: 0;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: var(--radius-pill);
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .cat[aria-current] {
+    background: var(--ink);
+    color: #fff;
+  }
+  .cat__name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .cat__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .cat__dot--forest { background: var(--forest); }
+  .cat__dot--yellow { background: var(--yellow); }
+  .cat__dot--lilac { background: var(--lilac); }
+  .cat__dot--mint { background: var(--mint); }
+  .cat__dot--sky { background: var(--sky); }
+  .cat[aria-current] .cat__dot--forest {
+    background: var(--mint);
+  }
+  .cat__count {
+    display: none;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--muted);
+  }
+  .promo {
+    display: none;
+  }
+
+  @media (min-width: 960px) {
+    .article-sidebar {
+      position: sticky;
+      top: 24px;
+    }
+    .cats {
+      padding: 20px 12px 12px;
+      border-radius: var(--radius-card);
+      background: var(--bg);
+    }
+    .cats__title {
+      display: block;
+      padding: 0 12px 10px;
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-style: italic;
+    }
+    .cats__list {
+      flex-direction: column;
+      gap: 2px;
+      overflow: visible;
+      padding: 0;
+    }
+    .cat {
+      height: auto;
+      min-height: 42px;
+      padding: 0 12px;
+      border-radius: 12px;
+      background: transparent;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      white-space: normal;
+    }
+    .cat:hover {
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .cat[aria-current] {
+      background: var(--surface);
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .cat[aria-current] .cat__dot--forest {
+      background: var(--forest);
+    }
+    .cat__count {
+      display: inline;
+    }
+    .promo {
+      position: relative;
+      overflow: hidden;
+      padding: 24px;
+      border-radius: var(--radius-card);
+      background: var(--forest);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+  .promo__glow {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(169, 229, 160, 0.18);
+  }
+  .promo__badge {
+    position: relative;
+    align-self: flex-start;
+    height: 24px;
+    padding: 0 10px;
+    border-radius: 12px;
+    background: var(--mint);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .promo__title {
+    position: relative;
+    font-family: var(--font-serif);
+    font-size: 30px;
+    line-height: 1.08;
+  }
+  .promo__text {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--on-forest);
+  }
+</style>

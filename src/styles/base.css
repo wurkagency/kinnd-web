@@ -214,3 +214,21 @@ main:focus {
 :lang(ar) {
   font-synthesis: none;
 }
+
+/* Category tag (articles). */
+.tag {
+  align-self: flex-start;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 13px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--bg);
+}
+.tag--yellow { background: var(--yellow); }
+.tag--lilac { background: var(--lilac); }
+.tag--mint { background: var(--mint); }
+.tag--sky { background: var(--sky); }

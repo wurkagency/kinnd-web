@@ -32,6 +32,7 @@ const email = site.contactEmail;
         <a href={p(routes.safety)}>{t.nav.safetyLong}</a>
         <a href={p(routes.faq)}>{t.nav.faq}</a>
         <a href={p(routes.about)}>{t.nav.about}</a>
+        {lang === 'da' && <a href="/da/artikler/">{t.nav.articles}</a>}
       </nav>
       <nav aria-label={t.nav.legalLabel} class="site-footer__nav">
         <a href={p(routes.privacy)}>{t.nav.privacy}</a>

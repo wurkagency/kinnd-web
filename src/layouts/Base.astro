@@ -34,8 +34,22 @@ interface Props {
    * text on a German page, say) is noindex and left out of the hreflang set.
    */
   alternates?: Locale[];
+  /**
+   * Route the language dialog links to. Defaults to `route`. Pages that only
+   * exist in one language (the Danish articles) send the other languages home.
+   */
+  languageRoute?: string;
 }
-const { lang, title, description, route, current, noindex = false, alternates = translatedLocales() } = Astro.props;
+const {
+  lang,
+  title,
+  description,
+  route,
+  current,
+  noindex = false,
+  alternates = translatedLocales(),
+  languageRoute,
+} = Astro.props;
 const t = useDict(lang);
 const site = Astro.site!;
 const abs = (path: string) => new URL(path, site).href;
@@ -98,6 +112,7 @@ if (canonical && indexable) {
   if (route !== routes.home) {
     const crumbs: { name: string; path: string }[] = [{ name: company.name, path: routes.home }];
     if (route!.startsWith(routes.safety) && route !== routes.safety) crumbs.push({ name: t.nav.safetyLong, path: routes.safety });
+    if (route!.startsWith('/artikler/') && route !== '/artikler/') crumbs.push({ name: t.nav.articles, path: '/artikler/' });
     crumbs.push({ name: pageName, path: route! });
     graph.push({
       '@type': 'BreadcrumbList',
@@ -196,7 +211,11 @@ const preloadFonts =
     {robots && <meta name="robots" content={robots} />}
     {canonical && <link rel="canonical" href={canonical} />}
     {hreflangs.map((l) => <link rel="alternate" hreflang={l} href={abs(localePath(l, route!))} />)}
-    {hreflangs.length > 0 && <link rel="alternate" hreflang="x-default" href={abs(localePath(defaultLocale, route!))} />}
+    {
+      hreflangs.includes(defaultLocale) && (
+        <link rel="alternate" hreflang="x-default" href={abs(localePath(defaultLocale, route!))} />
+      )
+    }
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
@@ -226,7 +245,7 @@ const preloadFonts =
       <slot />
     </main>
     <Footer lang={lang} />
-    <LanguageDialog lang={lang} route={route ?? '/'} />
+    <LanguageDialog lang={lang} route={languageRoute ?? route ?? '/'} />
     <script>
       // Remember an explicit language choice for the next visit.
       document.addEventListener('click', (e) => {

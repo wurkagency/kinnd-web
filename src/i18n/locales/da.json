@@ -24,7 +24,8 @@
     "openMenu": "Åbn menu",
     "closeMenu": "Luk menu",
     "menuTitle": "Menu",
-    "language": "Sprog"
+    "language": "Sprog",
+    "articles": "Artikler"
   },
   "cta": {
     "tryFree": "Prøv gratis",
@@ -725,5 +726,30 @@
     "text": "Websitet skifter til det sprog, du vælger.",
     "close": "Luk",
     "listLabel": "Sprog"
+  },
+  "articles": {
+    "title": "Artikler · KINND",
+    "description": "Idéer og gode råd om familieliv, to hjem og børns privatliv. Korte artikler til travle forældre.",
+    "heading": "KINND *artikler*",
+    "text": "Idéer og gode råd til familielivet, også på tværs af to hjem. Korte artikler, skrevet til travle forældre.",
+    "label": "Artikler",
+    "categories": "Kategorier",
+    "all": "Alle artikler",
+    "readArticle": "Læs artiklen",
+    "minRead": "min. læsning",
+    "back": "Alle artikler",
+    "author": "KINND",
+    "photoCredit": "Illustrationsfoto",
+    "keepReading": "Læs *videre*",
+    "share": "Del",
+    "copyLink": "Kopiér link",
+    "copied": "Linket er kopieret",
+    "shareEmail": "Del via e-mail",
+    "promoBadge": "30 dage gratis",
+    "promoTitle": "Ét roligt sted til *hvert* barn",
+    "promoText": "Kalender, øjeblikke, lister og skole, delt af begge hjem. Inviteret familie betaler aldrig.",
+    "promoCta": "Prøv KINND gratis",
+    "calloutTitle": "Gør det i KINND",
+    "inCategory": "Mere fra"
   }
 }

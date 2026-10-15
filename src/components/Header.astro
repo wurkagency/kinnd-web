@@ -19,6 +19,8 @@ const main = [
   { key: 'pricing', href: localePath(lang, routes.pricing), label: t.nav.pricing },
   { key: 'safety', href: localePath(lang, routes.safety), label: t.nav.safety },
   { key: 'faq', href: localePath(lang, routes.faq), label: t.nav.faq },
+  // Articles exist in Danish only for now.
+  ...(lang === 'da' ? [{ key: 'articles', href: '/da/artikler/', label: t.nav.articles }] : []),
 ];
 const menu = [...main, { key: 'about', href: localePath(lang, routes.about), label: t.nav.about }];
 ---

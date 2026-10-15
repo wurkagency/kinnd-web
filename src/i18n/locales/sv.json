@@ -24,7 +24,8 @@
     "openMenu": "Öppna menyn",
     "closeMenu": "Stäng menyn",
     "menuTitle": "Meny",
-    "language": "Språk"
+    "language": "Språk",
+    "articles": "Articles"
   },
   "cta": {
     "tryFree": "Prova gratis",
@@ -725,5 +726,30 @@
     "text": "Webbplatsen byter till det språk du väljer.",
     "close": "Stäng",
     "listLabel": "Språk"
+  },
+  "articles": {
+    "title": "Articles · KINND",
+    "description": "Ideas and advice for family life, two homes and children's privacy. Short reads for busy parents.",
+    "heading": "The KINND *journal*",
+    "text": "Ideas and advice for family life across two homes. Short reads, written for busy parents.",
+    "label": "Articles",
+    "categories": "Categories",
+    "all": "All articles",
+    "readArticle": "Read article",
+    "minRead": "min read",
+    "back": "All articles",
+    "author": "KINND",
+    "photoCredit": "Illustration photo",
+    "keepReading": "Keep *reading*",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "copied": "Link copied",
+    "shareEmail": "Share by email",
+    "promoBadge": "30 days free",
+    "promoTitle": "One calm place for *each* child",
+    "promoText": "Calendar, moments, lists and school, shared by both homes. Invited family never pay.",
+    "promoCta": "Try KINND for free",
+    "calloutTitle": "Do it in KINND",
+    "inCategory": "More in"
   }
 }

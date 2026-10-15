@@ -1,0 +1,530 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { Picture } from 'astro:assets';
+import Base from '../../../layouts/Base.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import Icon from '../../../components/Icon.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import ArticleSidebar from '../../../components/ArticleSidebar.astro';
+import { articles, articlePath, formatDate, type Article } from '../../../lib/articles';
+import { useDict } from '../../../i18n';
+import { rich } from '../../../lib/rich';
+import { shapeArticle } from '../../../lib/article-html';
+
+export const getStaticPaths = (() =>
+  articles.map((article) => ({ params: { slug: article.slug }, props: { article } }))) satisfies GetStaticPaths;
+
+interface Props {
+  article: Article;
+}
+const { article: a } = Astro.props;
+const lang = 'da';
+const t = useDict(lang);
+const c = t.articles;
+const url = new URL(articlePath(a.slug), Astro.site).href;
+
+// One italic phrase in the display heading: the part after the colon, when there is one.
+const [main, ...restParts] = a.title.split(': ');
+const heading = restParts.length ? `${main}: *${restParts.join(': ')}*` : a.title;
+
+// The Markdown body, shaped like the article design and split where the second image goes.
+const { before, after } = shapeArticle(await a.md.compiledContent());
+
+const related = [
+  ...articles.filter((x) => x !== a && x.categoryInfo === a.categoryInfo),
+  ...articles.filter((x) => x.categoryInfo !== a.categoryInfo),
+].slice(0, 3);
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: a.title,
+  description: a.description,
+  inLanguage: 'da',
+  datePublished: new Date(a.date).toISOString().slice(0, 10),
+  articleSection: a.category,
+  keywords: a.tags.join(', '),
+  url,
+  mainEntityOfPage: url,
+  author: { '@id': new URL('/#organization', Astro.site).href },
+  publisher: { '@id': new URL('/#organization', Astro.site).href },
+});
+const mailto = `mailto:?subject=${encodeURIComponent(a.title)}&body=${encodeURIComponent(url)}`;
+---
+
+<Base
+  lang={lang}
+  title={`${a.title} · KINND`}
+  description={a.description}
+  route={`/artikler/${a.slug}/`}
+  current="articles"
+  alternates={['da']}
+  languageRoute="/"
+>
+  <script type="application/ld+json" is:inline slot="head" set:html={jsonLd} />
+
+  <section aria-label={c.label} class="container article-head">
+    <a href="/da/artikler/" class="back-link">
+      <Icon name="arrowLeft" size={16} stroke={2} />
+      {c.back}
+    </a>
+    <div class="article-head__meta">
+      <span class:list={['tag', `tag--${a.categoryInfo.tone}`]}>{a.category}</span>
+      <span>{formatDate(a.date)} · {a.reading_time} {c.minRead}</span>
+    </div>
+    <h1 class="display article-head__title" set:html={rich(heading)} />
+    <div class="byline">
+      <span class="byline__avatar" aria-hidden="true">K</span>
+      <span class="byline__name">{c.author}</span>
+    </div>
+  </section>
+
+  <figure class="container article-hero">
+    <span class="article-hero__frame">
+      <Picture
+        src={a.hero}
+        alt=""
+        formats={['avif', 'webp']}
+        fallbackFormat="jpg"
+        widths={[480, 768, 1176, 1600, 2000]}
+        sizes="(min-width: 1240px) 1176px, calc(100vw - 32px)"
+        quality={60}
+        priority
+      />
+    </span>
+    <figcaption>{c.photoCredit}</figcaption>
+  </figure>
+
+  <section aria-label={a.title} class="container article-layout">
+    <ArticleSidebar current={a.categoryInfo.id} />
+    <article class="article-body">
+      <Fragment set:html={before} />
+      {
+        after && (
+          <figure class="article-figure">
+            <Picture
+              src={a.inline}
+              alt=""
+              formats={['avif', 'webp']}
+              fallbackFormat="jpg"
+              widths={[480, 760, 1200, 1520]}
+              sizes="(min-width: 960px) 760px, calc(100vw - 32px)"
+              quality={60}
+            />
+          </figure>
+        )
+      }
+      <Fragment set:html={after} />
+
+      <footer class="article-foot">
+        <ul class="plain article-foot__tags" aria-label="Tags">
+          <li><span class:list={['tag', `tag--${a.categoryInfo.tone}`]}>{a.category}</span></li>
+          {a.tags.map((tag) => <li><span class="tag">{tag}</span></li>)}
+        </ul>
+        <div class="share">
+          <span>{c.share}</span>
+          <a href={url} class="share__btn" aria-label={c.copyLink} data-copy-link data-copied={c.copied}>
+            <Icon name="link" size={18} />
+          </a>
+          <a href={mailto} class="share__btn" aria-label={c.shareEmail}>
+            <Icon name="mail" size={18} />
+          </a>
+          <span class="share__status" role="status" aria-live="polite"></span>
+        </div>
+      </footer>
+    </article>
+  </section>
+
+  <section aria-label={c.keepReading.replace(/\*/g, '')} class="band">
+    <div class="container section">
+      <div class="section-head section-head--row">
+        <h2 class="display h2" set:html={rich(c.keepReading)} />
+        <a href="/da/artikler/" class="text-link">{c.all}</a>
+      </div>
+      <div class="related">
+        {related.map((r) => <ArticleCard article={r} />)}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} />
+</Base>
+
+<script>
+  // "Copy link": copy the article URL. Without JavaScript the button is a plain link to the article.
+  document.querySelectorAll<HTMLAnchorElement>('[data-copy-link]').forEach((btn) =>
+    btn.addEventListener('click', async (e) => {
+      if (!navigator.clipboard) return;
+      e.preventDefault();
+      await navigator.clipboard.writeText(btn.href);
+      const status = btn.parentElement?.querySelector('.share__status');
+      if (status) status.textContent = btn.dataset.copied ?? '';
+    }),
+  );
+</script>
+
+<style>
+  .article-head {
+    padding-block: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .back-link {
+    align-self: flex-start;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .back-link:hover {
+    color: var(--forest);
+    text-decoration: underline;
+  }
+  :global([dir='rtl']) .back-link :global(svg) {
+    transform: scaleX(-1);
+  }
+  .article-head__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .article-head__title {
+    max-width: 940px;
+    font-size: clamp(38px, calc(26.11px + 3.048vw), 70px);
+    line-height: 1.03;
+    letter-spacing: -0.01em;
+  }
+  .byline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .byline__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .byline__name {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .article-hero {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .article-hero__frame {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    background: var(--bg);
+  }
+  .article-hero__frame :global(img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .article-hero figcaption {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .article-layout {
+    padding-block: 40px var(--section-y);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .article-body {
+    flex: 1;
+    min-width: 0;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* Article typography (Markdown, shaped by src/lib/rehype-article.mjs). */
+  .article-body :global(p) {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #2b3530;
+  }
+  .article-body :global(p.lead) {
+    font-family: var(--font-serif);
+    font-size: clamp(24px, calc(21.77px + 0.571vw), 30px);
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .article-body :global(strong) {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .article-body :global(p.label) {
+    margin-bottom: -10px;
+    font-size: 16px;
+  }
+  .article-body :global(h2) {
+    margin-top: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    font-size: clamp(24px, calc(22.51px + 0.381vw), 28px);
+    font-weight: 600;
+    line-height: 1.2;
+    scroll-margin-top: 16px;
+  }
+  .article-body :global(h3) {
+    margin-top: 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .article-body :global(.num) {
+    flex-shrink: 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.45em;
+    line-height: 1;
+    color: var(--forest);
+  }
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .article-body :global(li) {
+    position: relative;
+    padding-inline-start: 30px;
+    font-size: 17px;
+    line-height: 1.55;
+    color: #2b3530;
+  }
+  .article-body :global(ul > li)::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 2px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: var(--forest);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  .article-body :global(ol) {
+    counter-reset: step;
+  }
+  .article-body :global(ol > li) {
+    counter-increment: step;
+    padding-inline-start: 38px;
+  }
+  .article-body :global(ol > li)::before {
+    content: counter(step);
+    position: absolute;
+    inset-inline-start: 0;
+    top: 1px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .article-body :global(a) {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .article-body :global(blockquote.quote) {
+    margin: 6px 0;
+    padding: 24px 28px;
+    border-radius: var(--radius-card);
+    background: var(--lilac);
+  }
+  .article-body :global(blockquote.quote p) {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(20px, calc(18.51px + 0.381vw), 24px);
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .article-body :global(.start-box) {
+    margin-top: 16px;
+    padding: 28px;
+    border-radius: 24px;
+    background: var(--mint);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .article-body :global(.start-box h2) {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(28px, calc(25.03px + 0.762vw), 34px);
+    line-height: 1.1;
+  }
+  .article-body :global(.start-box p),
+  .article-body :global(.start-box li) {
+    color: var(--ink);
+  }
+  .article-body :global(.kinnd-callout) {
+    padding: 22px 24px;
+    border-radius: var(--radius-card);
+    background: var(--bg);
+    box-shadow: inset 4px 0 0 var(--forest);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  :global([dir='rtl']) .article-body :global(.kinnd-callout) {
+    box-shadow: inset -4px 0 0 var(--forest);
+  }
+  .article-body :global(.kinnd-callout p) {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .article-body :global(.cta-button) {
+    height: 44px;
+    padding: 0 18px;
+    border-radius: var(--radius-control);
+    background: var(--forest);
+    color: #fff;
+    box-shadow: 0 3px 0 var(--mint);
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .article-body :global(.cta-button:hover) {
+    color: #fff;
+    filter: brightness(1.08);
+  }
+  .article-figure {
+    margin: 8px 0;
+  }
+  .article-figure :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-card);
+  }
+
+  .article-foot {
+    margin-top: 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .article-body .article-foot__tags {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .article-foot__tags :global(li) {
+    padding: 0;
+  }
+  .article-foot__tags :global(li)::before {
+    display: none;
+  }
+  .share {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .share__btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .share__btn:hover {
+    background: var(--line);
+  }
+  .share__status:empty {
+    display: none;
+  }
+
+  .related {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px 28px;
+  }
+  @media (min-width: 640px) {
+    .related {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 768px) {
+    .article-head {
+      padding-block: 40px;
+    }
+    .article-hero__frame {
+      aspect-ratio: auto;
+      height: clamp(380px, 42vw, 600px);
+      border-radius: var(--radius-band);
+    }
+    .article-body :global(.start-box) {
+      padding: 32px;
+    }
+  }
+  @media (min-width: 960px) {
+    .article-layout {
+      padding-top: 56px;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 64px;
+    }
+    .article-layout :global(.article-sidebar) {
+      width: 280px;
+      flex-shrink: 0;
+    }
+  }
+  @media (min-width: 1100px) {
+    .related {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>
