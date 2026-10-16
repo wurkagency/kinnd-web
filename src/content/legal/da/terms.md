@@ -1,6 +1,6 @@
 ---
 title: "Vilkår og betingelser for KINND"
-updated: "Senest opdateret: 14. oktober 2026"
+updated: "Senest opdateret: 16. oktober 2026"
 ---
 
 Disse vilkår gælder, når du opretter en konto og bruger KINND på kinnd.eu og app.kinnd.eu. Ved at oprette en konto accepterer du vilkårene.
@@ -106,11 +106,20 @@ Vi kan udvikle og ændre funktioner. Forringer en ændring din brug væsentligt,
 
 Har tjenesten en mangel, har du rettighederne efter købelovens regler om digitale tjenester. Kontakt os, så afhjælper vi manglen, giver et forholdsmæssigt afslag eller tilbagebetaler efter reglerne.
 
-## 14. Vores rettigheder
+## 14. Synkronisering af kalender og opgaver (Google og Microsoft)
+
+- Du kan vælge at vise aftaler og opgaver fra KINND på din Google- eller Microsoft-konto. Synkronisering er frivillig og starter først, når du forbinder din konto i appen.
+- KINND opretter og administrerer kun sin egen kalender og opgaveliste med navnet "KINND" på din konto. KINND læser aldrig dine andre kalendere.
+- Hvad der sendes, afhænger af det detaljeniveau, du vælger. Det er beskrevet i afsnit 5 i [privatlivspolitikken](/da/legal/privacy/).
+- Når elementerne ligger på din Google- eller Microsoft-konto, gælder Googles eller Microsofts vilkår også. Deler du KINND-kalenderen eller -opgavelisten med andre, kan de se elementerne. Du bestemmer selv, hvem du deler med.
+- KINND er altid den gældende version. Vi er ikke ansvarlige for Googles eller Microsofts tjenester eller for forsinkelser i deres synkronisering.
+- Du kan til enhver tid afbryde forbindelsen under indstillinger i appen eller fjerne KINND's adgang på din Google- eller Microsoft-konto.
+
+## 15. Vores rettigheder
 
 KINND, herunder software, design, navn og logo, tilhører WURK ApS. Du får en personlig, ikke-overdragelig ret til at bruge tjenesten, så længe aftalen løber.
 
-## 15. Ansvar
+## 16. Ansvar
 
 Vi er ansvarlige efter dansk rets almindelige regler. Vi er ikke ansvarlige for:
 
@@ -121,27 +130,27 @@ Vi er ansvarlige efter dansk rets almindelige regler. Vi er ikke ansvarlige for:
 
 Begrænsningerne gælder ikke ved fortsæt eller grov uagtsomhed og indskrænker ikke dine ufravigelige rettigheder som forbruger.
 
-## 16. Vores opsigelse og ophævelse
+## 17. Vores opsigelse og ophævelse
 
 Vi kan opsige aftalen med 30 dages varsel og tilbagebetaler i så fald forudbetalt beløb for den resterende periode. Ved væsentlig misligholdelse, fx alvorlig overtrædelse af punkt 4 eller 11, kan vi ophæve aftalen straks.
 
-## 17. Sletning af konto
+## 18. Sletning af konto
 
 Du kan til enhver tid slette din konto i appen. Er du eneste forælder på en børneprofil, slettes barnets data også. Du bekræfter sletningen via et link på e-mail, som udløber efter 24 timer.
 
-## 18. Personoplysninger
+## 19. Personoplysninger
 
 Vi behandler personoplysninger som beskrevet i vores privatlivspolitik på [kinnd.eu/privatlivspolitik](/da/legal/privacy/).
 
-## 19. Ændring af vilkårene
+## 20. Ændring af vilkårene
 
 Vi kan ændre vilkårene. Væsentlige ændringer varsles på e-mail eller i appen mindst 30 dage før. Accepterer du ikke ændringen, kan du opsige inden ikrafttrædelsen.
 
-## 20. Klage
+## 21. Klage
 
 Skriv først til <support@kinnd.eu>. Finder vi ikke en løsning, kan du klage til Center for Klageløsning, Nævnenes Hus, Toldboden 2, 8800 Viborg, via [naevneneshus.dk](https://naevneneshus.dk). Bor du i et andet EU-land, kan du få hjælp hos Det Europæiske Forbrugercenter i dit land.
 
-## 21. Lovvalg og værneting
+## 22. Lovvalg og værneting
 
 Aftalen er underlagt dansk ret, og tvister afgøres ved de danske domstole. Bor du som forbruger i et andet EU-land, beholder du den beskyttelse, som de ufravigelige regler i dit bopælsland giver dig, og du kan anlægge sag dér.
 

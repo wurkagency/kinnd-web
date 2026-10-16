@@ -1,6 +1,6 @@
 ---
 title: "KINND Terms and Conditions"
-updated: "Last updated: 14 October 2026"
+updated: "Last updated: 16 October 2026"
 ---
 
 These terms apply when you create an account and use KINND at kinnd.eu and app.kinnd.eu. By creating an account you accept the terms.
@@ -108,11 +108,20 @@ We may develop and change features. If a change materially worsens your use, you
 
 If the service is defective, you have the rights under the Danish Sale of Goods Act rules on digital services. Contact us and we will remedy the defect, give a proportionate price reduction or refund under those rules.
 
-## 14. Our rights
+## 14. Calendar and task sync (Google and Microsoft)
+
+- You can choose to show KINND appointments and tasks in your Google or Microsoft account. Sync is optional and starts only when you connect your account in the app.
+- KINND only creates and manages its own "KINND" calendar and task list in your account. KINND never reads your other calendars.
+- What is sent depends on the detail level you choose. Section 5 of the [privacy policy](/legal/privacy/) describes it.
+- When items are in your Google or Microsoft account, Google's or Microsoft's terms also apply. If you share the KINND calendar or task list with others, they can see the items. You decide who you share it with.
+- KINND is always the correct version. We are not responsible for Google's or Microsoft's services or for delays in their sync.
+- You can disconnect at any time in the app settings, or remove KINND's access in your Google or Microsoft account.
+
+## 15. Our rights
 
 KINND, including software, design, name and logo, belongs to WURK ApS. You get a personal, non-transferable right to use the service for as long as the agreement runs.
 
-## 15. Liability
+## 16. Liability
 
 We are liable under the general rules of Danish law. We are not liable for:
 
@@ -123,27 +132,27 @@ We are liable under the general rules of Danish law. We are not liable for:
 
 These limits do not apply in cases of intent or gross negligence and do not restrict your mandatory rights as a consumer.
 
-## 16. Termination by us
+## 17. Termination by us
 
 We may terminate the agreement with 30 days' notice and will then refund prepaid amounts for the remaining period. In case of material breach, such as a serious breach of section 4 or 11, we may terminate the agreement immediately.
 
-## 17. Deleting your account
+## 18. Deleting your account
 
 You can delete your account in the app at any time. If you are the only parent on a child profile, the child's data is deleted too. You confirm the deletion through an emailed link that expires after 24 hours.
 
-## 18. Personal data
+## 19. Personal data
 
 We process personal data as described in our privacy policy at [kinnd.eu/privacy](/legal/privacy/).
 
-## 19. Changes to the terms
+## 20. Changes to the terms
 
 We may change the terms. Material changes are notified by email or in the app at least 30 days in advance. If you do not accept the change, you can cancel before it takes effect.
 
-## 20. Complaints
+## 21. Complaints
 
 Write to <support@kinnd.eu> first. If we cannot find a solution, you can complain to the Danish Centre for Complaint Resolution (Center for Klageløsning), Nævnenes Hus, Toldboden 2, 8800 Viborg, Denmark, through [naevneneshus.dk](https://naevneneshus.dk). If you live in another EU country, the European Consumer Centre in your country can help.
 
-## 21. Governing law and venue
+## 22. Governing law and venue
 
 The agreement is governed by Danish law, and disputes are settled by the Danish courts. If you are a consumer living in another EU country, you keep the protection given by the mandatory rules of your country of residence and can bring proceedings there.
 
