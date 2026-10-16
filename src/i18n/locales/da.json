@@ -20,6 +20,7 @@
     "about": "Om os og kontakt",
     "privacy": "Privatlivspolitik",
     "terms": "Vilkår",
+    "subscription": "Abonnementsbetingelser",
     "cookies": "Cookies",
     "openMenu": "Åbn menu",
     "closeMenu": "Luk menu",
@@ -703,6 +704,13 @@
       "description": "Vilkårene for at bruge KINND: din konto, abonnementer og betaling, opsigelse, dit indhold og vores ansvar.",
       "heading": "*Vilkår*",
       "text": "Vores handelsvilkår"
+    },
+    "subscription": {
+      "tab": "Abonnementsbetingelser",
+      "title": "Abonnementsbetingelser · KINND",
+      "description": "Betingelserne for abonnementer på KINND: planer, priser, prøveperiode, betaling, skift af plan, fortrydelsesret, opsigelse, og hvad der sker, når et abonnement ophører.",
+      "heading": "*Abonnementsbetingelser*",
+      "text": "Det gælder, når du starter en prøveperiode eller køber et abonnement."
     },
     "cookies": {
       "tab": "Cookies",

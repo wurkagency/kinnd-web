@@ -37,4 +37,4 @@ const { lang, key } = Astro.props;
 {key === 'about' && <About lang={lang} />}
 {key === 'language' && <Language lang={lang} />}
 {key === 'safetyTechnical' && <Technical lang={lang} />}
-{(key === 'privacy' || key === 'terms' || key === 'cookies') && <Legal lang={lang} doc={key} />}
+{(key === 'privacy' || key === 'terms' || key === 'subscription' || key === 'cookies') && <Legal lang={lang} doc={key} />}

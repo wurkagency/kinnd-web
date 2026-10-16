@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import MarkdownDoc from '../components/MarkdownDoc.astro';
 import { localePath, routes, translatedLocales, useDict, type Locale } from '../i18n';
 
-type Doc = 'privacy' | 'terms' | 'cookies';
+type Doc = 'privacy' | 'terms' | 'subscription' | 'cookies';
 interface Props {
   lang: Locale;
   doc: Doc;
@@ -13,7 +13,7 @@ const { lang, doc } = Astro.props;
 const t = useDict(lang);
 const l = t.legal;
 const c = l[doc];
-const docs: Doc[] = ['privacy', 'terms', 'cookies'];
+const docs: Doc[] = ['privacy', 'terms', 'subscription', 'cookies'];
 
 /**
  * Final legal texts live in src/content/legal/<lang>/<doc>.md (from counsel).

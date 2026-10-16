@@ -20,6 +20,7 @@
     "about": "Um okkum og samband",
     "privacy": "Privatlívspolitikkur",
     "terms": "Treytir",
+    "subscription": "Haldstreytir",
     "cookies": "Farspor",
     "openMenu": "Lat valmynd upp",
     "closeMenu": "Lat valmynd aftur",
@@ -703,6 +704,13 @@
       "description": "Treytirnar fyri at brúka KINND.",
       "heading": "*Treytir*",
       "text": "Okkara treytir"
+    },
+    "subscription": {
+      "tab": "Haldstreytir",
+      "title": "Haldstreytir · KINND",
+      "description": "Treytirnar fyri hald á KINND: hald, prísir, royndartíð, gjald, skifti av haldi, angurrættur, uppsøgn og hvat hendir, tá ið eitt hald endar.",
+      "heading": "*Haldstreytir*",
+      "text": "Hvat er galdandi, tá ið tú byrjar eina royndartíð ella keypir eitt hald."
     },
     "cookies": {
       "tab": "Farspor",

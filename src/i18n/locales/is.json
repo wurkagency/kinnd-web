@@ -20,6 +20,7 @@
     "about": "Um okkur og samband",
     "privacy": "Persónuverndarstefna",
     "terms": "Skilmálar",
+    "subscription": "Áskriftarskilmálar",
     "cookies": "Vafrakökur",
     "openMenu": "Opna valmynd",
     "closeMenu": "Loka valmynd",
@@ -703,6 +704,13 @@
       "description": "Skilmálar fyrir notkun KINND.",
       "heading": "*Skilmálar*",
       "text": "Skilmálar okkar"
+    },
+    "subscription": {
+      "tab": "Áskriftarskilmálar",
+      "title": "Áskriftarskilmálar · KINND",
+      "description": "Skilmálar fyrir KINND-áskriftir: áskriftir, verð, prufutímabil, greiðsla, breytingar á áskrift, réttur til að falla frá samningi, uppsögn og hvað gerist þegar áskrift lýkur.",
+      "heading": "*Áskriftarskilmálar*",
+      "text": "Það sem gildir þegar þú hefur prufutímabil eða kaupir áskrift."
     },
     "cookies": {
       "tab": "Vafrakökur",

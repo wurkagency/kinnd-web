@@ -20,6 +20,7 @@
     "about": "Om oss och kontakt",
     "privacy": "Integritetspolicy",
     "terms": "Villkor",
+    "subscription": "Abonnemangsvillkor",
     "cookies": "Cookies",
     "openMenu": "Öppna menyn",
     "closeMenu": "Stäng menyn",
@@ -703,6 +704,13 @@
       "description": "Villkoren för att använda KINND.",
       "heading": "*Villkor*",
       "text": "Våra villkor"
+    },
+    "subscription": {
+      "tab": "Abonnemangsvillkor",
+      "title": "Abonnemangsvillkor · KINND",
+      "description": "Villkoren för abonnemang på KINND: abonnemang, priser, provperiod, betalning, byte av abonnemang, ångerrätt, uppsägning och vad som händer när ett abonnemang upphör.",
+      "heading": "Abonnemangs*villkor*",
+      "text": "Det här gäller när du startar en provperiod eller köper ett abonnemang."
     },
     "cookies": {
       "tab": "Cookies",

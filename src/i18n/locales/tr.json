@@ -20,6 +20,7 @@
     "about": "Hakkımızda ve iletişim",
     "privacy": "Gizlilik bildirimi",
     "terms": "Koşullar",
+    "subscription": "Abonelik koşulları",
     "cookies": "Çerezler",
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
@@ -703,6 +704,13 @@
       "description": "KINND kullanım koşulları.",
       "heading": "*Koşullar*",
       "text": "Kullanım koşullarımız"
+    },
+    "subscription": {
+      "tab": "Abonelik koşulları",
+      "title": "Abonelik koşulları · KINND",
+      "description": "KINND abonelik koşulları: planlar, fiyatlar, deneme süresi, ödeme, plan değişikliği, cayma hakkı, fesih ve bir abonelik sona erdiğinde ne olacağı.",
+      "heading": "Abonelik *koşulları*",
+      "text": "Bir deneme süresi başlattığınızda veya bir abonelik satın aldığınızda geçerli olanlar."
     },
     "cookies": {
       "tab": "Çerezler",

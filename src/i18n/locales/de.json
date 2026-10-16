@@ -20,6 +20,7 @@
     "about": "Über uns und Kontakt",
     "privacy": "Datenschutzerklärung",
     "terms": "Nutzungsbedingungen",
+    "subscription": "Abonnementbedingungen",
     "cookies": "Cookies",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
@@ -703,6 +704,13 @@
       "description": "Die Bedingungen für die Nutzung von KINND.",
       "heading": "*Nutzungsbedingungen*",
       "text": "Unsere Nutzungsbedingungen"
+    },
+    "subscription": {
+      "tab": "Abonnementbedingungen",
+      "title": "Abonnementbedingungen · KINND",
+      "description": "Die Bedingungen für KINND-Abonnements: Tarife, Preise, Testzeitraum, Zahlung, Tarifwechsel, Widerrufsrecht, Kündigung und was geschieht, wenn ein Abonnement endet.",
+      "heading": "*Abonnementbedingungen*",
+      "text": "Was gilt, wenn du einen Testzeitraum startest oder ein Abonnement kaufst."
     },
     "cookies": {
       "tab": "Cookies",

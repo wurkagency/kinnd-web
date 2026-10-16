@@ -14,7 +14,7 @@ const untranslated = readdirSync(localesDir)
 // Long documents (legal texts, Safety deep dives) are Markdown files per language.
 // A language without its own file shows the English text, so that page is noindex
 // and stays out of the sitemap too (see src/views/Legal.astro and Technical.astro).
-const docs = { legal: ['privacy', 'terms', 'cookies'], safety: ['technical'] };
+const docs = { legal: ['privacy', 'terms', 'subscription', 'cookies'], safety: ['technical'] };
 const otherLocales = readdirSync(localesDir)
   .filter((f) => f.endsWith('.json') && f !== 'en.json')
   .map((f) => f.replace('.json', ''));

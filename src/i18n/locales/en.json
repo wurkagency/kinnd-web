@@ -17,6 +17,7 @@
     "about": "About & contact",
     "privacy": "Privacy notice",
     "terms": "Terms",
+    "subscription": "Subscription terms",
     "cookies": "Cookies",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
@@ -752,6 +753,13 @@
       "description": "The terms for using KINND: your account, plans and payment, cancelling, your content and our responsibility.",
       "heading": "*Terms*",
       "text": "Our terms and conditions"
+    },
+    "subscription": {
+      "tab": "Subscription terms",
+      "title": "Subscription terms · KINND",
+      "description": "The terms for KINND subscriptions: plans, prices, trial, payment, plan changes, right of withdrawal, cancellation and what happens when a subscription ends.",
+      "heading": "Subscription *terms*",
+      "text": "What applies when you start a trial or buy a subscription."
     },
     "cookies": {
       "tab": "Cookies",

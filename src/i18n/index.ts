@@ -95,6 +95,7 @@ export const routes = {
   about: '/about/',
   privacy: '/legal/privacy/',
   terms: '/legal/terms/',
+  subscription: '/legal/subscription/',
   cookies: '/legal/cookies/',
   /** Plain language list; the header button falls back to it without JavaScript. */
   language: '/language/',

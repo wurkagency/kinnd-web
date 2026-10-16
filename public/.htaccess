@@ -33,5 +33,7 @@ ErrorDocument 404 /404.html
   RedirectMatch 301 ^/terms/?$ /legal/terms/
   RedirectMatch 301 ^/privatlivspolitik/?$ /da/legal/privacy/
   RedirectMatch 301 ^/vilkaar/?$ /da/legal/terms/
+  RedirectMatch 301 ^/abonnementsbetingelser/?$ /da/legal/subscription/
+  RedirectMatch 301 ^/subscription-terms/?$ /legal/subscription/
   RedirectMatch 301 ^/priser/?$ /da/pricing/
 </IfModule>
