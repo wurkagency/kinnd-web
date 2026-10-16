@@ -54,7 +54,10 @@ Abonnementet selges av WURK ApS, CVR-nr. 37547395, Skoleholdervej 91, 2400 Købe
 ## 7. Bytte av abonnement
 
 - Du kan bytte mellom Foreldre og Familie i appen. Byttet gjelder med en gang.
-- Den nye prisen gjelder fra neste betaling. Ingenting ekstra trekkes, og ingenting tilbakebetales for perioden du allerede har betalt for.
+- Bytter du til et dyrere abonnement, betaler du bare differansen for resten av perioden du har betalt for. Beløpet trekkes fra kortet ditt med en gang, og du får en faktura.
+- Bytter du til et billigere abonnement, får du differansen for resten av perioden tilbakebetalt til kortet ditt med en gang, og du får en kreditnota.
+- Fra neste betaling gjelder det nye abonnementets ordinære pris.
+- I en prøveperiode bytter du abonnement uten betaling.
 - Du kan bare bytte til et mindre abonnement hvis bruken din passer til det, for eksempel antall barn, inviterte personer og lagringsplass.
 - For å bytte mellom månedlig og årlig betaling skriver du til support@kinnd.eu. Byttet gjelder fra neste betaling.
 
@@ -63,14 +66,16 @@ Abonnementet selges av WURK ApS, CVR-nr. 37547395, Skoleholdervej 91, 2400 Købe
 Du har 14 dagers angrerett etter den danske loven om forbrukeravtaler (forbrugeraftaleloven) når du kjøper et abonnement. Fristen løper fra dagen avtalen inngås. Du trenger ikke å oppgi noen grunn.
 
 - Hvis du starter med en prøveperiode, kan du i tillegg si opp gratis til prøveperioden slutter, se punkt 4.
-- Du bruker angreretten ved å bruke angrefunksjonen i appen under Innstillinger – Abonnement – Angre kjøp, ved å skrive til support@kinnd.eu eller ved å bruke standardskjemaet for angrerett nederst i disse vilkårene.
+- Du bruker angreretten ved å bruke angrefunksjonen i appen under Abonnement – Angre kjøp, ved å skrive til support@kinnd.eu eller ved å bruke standardskjemaet for angrerett nederst i disse vilkårene.
 - Vi bekrefter mottaket på e-post uten unødig opphold.
-- Vi tilbakebetaler senest 14 dager etter at vi har mottatt meldingen din, med samme betalingsmiddel som du brukte.
+- Vi tilbakebetaler senest 14 dager etter at vi har mottatt meldingen din, med samme betalingsmiddel som du brukte. Du får en kreditnota.
+- Angreretten gjelder alltid, også når bruken din overstiger Gratis-abonnementet. Abonnementet opphører da med en gang, se punkt 10.
 - Når du kjøper, ber du oss om å starte abonnementet med en gang. Hvis du angrer, kan vi derfor beholde en forholdsmessig del av prisen for de dagene du har hatt tilgang.
 
 ## 9. Oppsigelse
 
-- Du kan når som helst si opp abonnementet ditt i appen under Abonnement eller ved å skrive til support@kinnd.eu.
+- Du kan si opp abonnementet ditt i appen under Abonnement eller ved å skrive til support@kinnd.eu.
+- Hvis bruken din overstiger Gratis-abonnementet, for eksempel fordi du deler barn med andre, bruker samværsplan eller har invitert familie, kan du først si opp når en annen forelder eller verge har overtatt barna som ellers ville blitt skjult (punkt 11), eller når du har tilpasset bruken til Gratis-abonnementet. Det sikrer at barnets data ikke går tapt. Du kan be en annen forelder eller verge om å overta direkte i appen.
 - Oppsigelsen får virkning ved utgangen av perioden du har betalt for. Du beholder abonnementet frem til da, og ingenting mer trekkes.
 - Ingenting tilbakebetales for resten av perioden, utover det som følger av angreretten i punkt 8 og regelen nedenfor.
 - Som forbruker kan du alltid si opp med én måneds varsel til utgangen av en måned når det har gått fem måneder siden avtalen ble inngått, jf. § 28 i den danske loven om forbrukeravtaler. I så fall tilbakebetaler vi det forskuddsbetalte beløpet for tiden etter at oppsigelsen har fått virkning.

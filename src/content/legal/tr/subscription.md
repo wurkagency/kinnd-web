@@ -54,7 +54,10 @@ Abonelik, WURK ApS, CVR no. 37547395, Skoleholdervej 91, 2400 Copenhagen NV, Den
 ## 7. Plan değişikliği
 
 - Uygulamada Ebeveynler ve Aile planları arasında geçiş yapabilirsiniz. Değişiklik hemen geçerli olur.
-- Yeni fiyat bir sonraki ödemenizden itibaren geçerli olur. Ek bir tahsilat yapılmaz ve zaten ödediğiniz dönem için hiçbir iade yapılmaz.
+- Daha pahalı bir plana geçerseniz, yalnızca ödediğiniz dönemin kalanı için aradaki farkı ödersiniz. Tutar hemen kartınızdan tahsil edilir ve bir fatura alırsınız.
+- Daha ucuz bir plana geçerseniz, dönemin kalanı için aradaki fark hemen kartınıza iade edilir ve bir iade faturası alırsınız.
+- Bir sonraki ödemenizden itibaren yeni planın normal fiyatı geçerli olur.
+- Deneme süresi içinde planınızı ödeme yapmadan değiştirirsiniz.
 - Daha küçük bir plana yalnızca çocuk sayısı, davet edilen kişiler ve depolama alanı gibi kullanımınız o plana uyuyorsa geçebilirsiniz.
 - Aylık ve yıllık ödeme arasında geçiş yapmak için support@kinnd.eu adresine yazın. Değişiklik bir sonraki ödemenizden itibaren geçerli olur.
 
@@ -63,14 +66,16 @@ Abonelik, WURK ApS, CVR no. 37547395, Skoleholdervej 91, 2400 Copenhagen NV, Den
 Bir abonelik satın aldığınızda Danimarka Tüketici Sözleşmeleri Kanunu (forbrugeraftaleloven) kapsamında 14 günlük cayma hakkınız vardır. Süre, sözleşmenin yapıldığı gün başlar. Herhangi bir gerekçe göstermeniz gerekmez.
 
 - Bir deneme süresiyle başlarsanız, 4. bölüm uyarınca deneme süresi bitene kadar ayrıca ücretsiz olarak feshedebilirsiniz.
-- Cayma hakkınızı uygulamada Ayarlar – Abonelik – Satın almadan cayma bölümündeki cayma işlevini kullanarak, support@kinnd.eu adresine yazarak veya bu koşulların sonundaki örnek cayma formunu kullanarak kullanırsınız.
+- Cayma hakkınızı uygulamada Abonelik – Satın almadan cayma bölümündeki cayma işlevini kullanarak, support@kinnd.eu adresine yazarak veya bu koşulların sonundaki örnek cayma formunu kullanarak kullanırsınız.
 - Bildiriminizin alındığını gecikmeksizin e-postayla onaylarız.
-- Tutarı, bildiriminizi aldıktan sonra en geç 14 gün içinde, kullandığınız ödeme aracıyla iade ederiz.
+- Tutarı, bildiriminizi aldıktan sonra en geç 14 gün içinde, kullandığınız ödeme aracıyla iade ederiz. Bir iade faturası alırsınız.
+- Cayma hakkı, kullanımınız Ücretsiz planı aştığında da her zaman geçerlidir. Bu durumda abonelik, 10. bölüm uyarınca hemen sona erer.
 - Satın aldığınızda aboneliği hemen başlatmamızı talep etmiş olursunuz. Bu nedenle cayarsanız, erişiminizin olduğu günler için fiyatın orantılı bir kısmını alıkoyabiliriz.
 
 ## 9. Fesih
 
-- Aboneliğinizi istediğiniz zaman uygulamada Abonelik bölümünden veya support@kinnd.eu adresine yazarak feshedebilirsiniz.
+- Aboneliğinizi uygulamada Abonelik bölümünden veya support@kinnd.eu adresine yazarak feshedebilirsiniz.
+- Kullanımınız Ücretsiz planı aşıyorsa, örneğin çocukları başkalarıyla paylaştığınız, velayet takvimini kullandığınız veya aile üyelerini davet ettiğiniz için, aboneliğinizi ancak başka bir ebeveyn veya vasi aksi halde gizlenecek çocukları devraldığında (11. bölüm) ya da kullanımınızı Ücretsiz plana uygun hale getirdiğinizde feshedebilirsiniz. Bu, çocuğun verilerinin kaybolmamasını sağlar. Başka bir ebeveyn veya vasiden çocukları doğrudan uygulamada devralmasını isteyebilirsiniz.
 - Fesih, ödediğiniz dönemin sonunda geçerli olur. O zamana kadar plan sizde kalır ve başka bir tahsilat yapılmaz.
 - 8. bölümdeki cayma hakkından ve aşağıdaki kuraldan doğanlar dışında, dönemin kalan kısmı için iade yapılmaz.
 - Tüketici olarak, sözleşmenin yapılmasından beş ay geçtikten sonra Danimarka Tüketici Sözleşmeleri Kanunu'nun (forbrugeraftaleloven) 28. maddesi uyarınca bir ay önceden bildirimle ay sonu itibarıyla her zaman feshedebilirsiniz. Bu durumda feshin geçerli olduğu tarihten sonraki süre için peşin ödenen tutarı iade ederiz.

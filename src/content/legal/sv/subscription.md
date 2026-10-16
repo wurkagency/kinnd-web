@@ -54,7 +54,10 @@ Abonnemanget säljs av WURK ApS, CVR-nr 37547395, Skoleholdervej 91, 2400 Køben
 ## 7. Byte av abonnemang
 
 - Du kan byta mellan Föräldrar och Familj i appen. Bytet gäller omedelbart.
-- Det nya priset gäller från din nästa betalning. Inget extra dras, och ingenting betalas tillbaka för den period du redan har betalat för.
+- Om du byter till ett dyrare abonnemang betalar du bara mellanskillnaden för resten av den period du har betalat för. Beloppet dras från ditt kort omedelbart, och du får en faktura.
+- Om du byter till ett billigare abonnemang betalas mellanskillnaden för resten av perioden tillbaka till ditt kort omedelbart, och du får en kreditnota.
+- Från din nästa betalning gäller det nya abonnemangets ordinarie pris.
+- Under en provperiod byter du abonnemang utan betalning.
 - Du kan bara byta till ett mindre abonnemang om din användning ryms i det, till exempel antal barn, inbjudna personer och lagringsutrymme.
 - Om du vill byta mellan månadsbetalning och årsbetalning skriver du till support@kinnd.eu. Bytet gäller från din nästa betalning.
 
@@ -63,14 +66,16 @@ Abonnemanget säljs av WURK ApS, CVR-nr 37547395, Skoleholdervej 91, 2400 Køben
 Du har 14 dagars ångerrätt enligt den danska konsumentavtalslagen (forbrugeraftaleloven) när du köper ett abonnemang. Fristen räknas från den dag avtalet ingås. Du behöver inte ange något skäl.
 
 - Om du börjar med en provperiod kan du dessutom säga upp kostnadsfritt tills provperioden slutar, se avsnitt 4.
-- Du utövar ångerrätten genom att använda ångerfunktionen i appen under Inställningar – Abonnemang – Ångra köp, genom att skriva till support@kinnd.eu eller genom att använda standardblanketten för utövande av ångerrätt i slutet av dessa villkor.
+- Du utövar ångerrätten genom att använda ångerfunktionen i appen under Abonnemang – Ångra köp, genom att skriva till support@kinnd.eu eller genom att använda standardblanketten för utövande av ångerrätt i slutet av dessa villkor.
 - Vi bekräftar mottagandet via e-post utan onödigt dröjsmål.
-- Vi betalar tillbaka senast 14 dagar efter att vi har tagit emot ditt meddelande, med samma betalningsmedel som du använde.
+- Vi betalar tillbaka senast 14 dagar efter att vi har tagit emot ditt meddelande, med samma betalningsmedel som du använde. Du får en kreditnota.
+- Ångerrätten gäller alltid, även när din användning överstiger abonnemanget Gratis. Abonnemanget upphör då omedelbart, se avsnitt 10.
 - När du köper ber du oss att starta abonnemanget omedelbart. Om du ångrar dig kan vi därför behålla en proportionell del av priset för de dagar du har haft tillgång.
 
 ## 9. Uppsägning
 
-- Du kan när som helst säga upp ditt abonnemang i appen under Abonnemang eller genom att skriva till support@kinnd.eu.
+- Du kan säga upp ditt abonnemang i appen under Abonnemang eller genom att skriva till support@kinnd.eu.
+- Om din användning överstiger abonnemanget Gratis, till exempel för att du delar barn med andra, använder umgängesschema eller har bjudit in familj, kan du först säga upp när en annan förälder eller förmyndare har tagit över de barn som annars skulle döljas (avsnitt 11), eller när du har anpassat din användning till abonnemanget Gratis. Det säkerställer att barnets data inte går förlorade. Du kan be en annan förälder eller förmyndare att ta över direkt i appen.
 - Uppsägningen gäller från utgången av den period du har betalat för. Du behåller abonnemanget fram till dess, och inget mer dras.
 - Ingenting betalas tillbaka för resten av perioden, utöver vad som följer av ångerrätten i avsnitt 8 och regeln nedan.
 - Som konsument kan du alltid säga upp med en månads uppsägningstid till utgången av en månad när fem månader har gått sedan avtalet ingicks, enligt 28 § i den danska konsumentavtalslagen (forbrugeraftaleloven). I så fall betalar vi tillbaka det förskottsbetalda beloppet för tiden efter att uppsägningen har trätt i kraft.

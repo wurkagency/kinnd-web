@@ -54,7 +54,10 @@ updated: "Síðast uppfært: 16. október 2026"
 ## 7. Skipt um áskrift
 
 - Þú getur skipt á milli Foreldrar og Fjölskylda í appinu. Breytingin gildir strax.
-- Nýja verðið gildir frá næstu greiðslu þinni. Ekkert aukalega er innheimt og ekkert er endurgreitt fyrir það tímabil sem þú hefur þegar greitt fyrir.
+- Ef þú skiptir yfir í dýrari áskrift greiðir þú aðeins mismuninn fyrir það sem eftir er af tímabilinu sem þú hefur greitt fyrir. Upphæðin er skuldfærð á kortið þitt strax og þú færð reikning.
+- Ef þú skiptir yfir í ódýrari áskrift er mismunurinn fyrir það sem eftir er af tímabilinu endurgreiddur á kortið þitt strax og þú færð kreditreikning.
+- Frá næstu greiðslu þinni gildir venjulegt verð nýju áskriftarinnar.
+- Á prufutímabili skiptir þú um áskrift án greiðslu.
 - Þú getur aðeins skipt yfir í minni áskrift ef notkun þín rúmast innan hennar, til dæmis fjöldi barna, boðinna einstaklinga og geymslurými.
 - Til að skipta á milli mánaðarlegrar og árlegrar greiðslu skaltu skrifa á support@kinnd.eu. Breytingin gildir frá næstu greiðslu þinni.
 
@@ -63,14 +66,16 @@ updated: "Síðast uppfært: 16. október 2026"
 Þú hefur 14 daga rétt til að falla frá samningi samkvæmt dönsku lögunum um neytendasamninga (forbrugeraftaleloven) þegar þú kaupir áskrift. Fresturinn reiknast frá þeim degi sem samningurinn er gerður. Þú þarft ekki að tilgreina ástæðu.
 
 - Ef þú byrjar á prufutímabili getur þú auk þess sagt upp án kostnaðar þar til prufutímabilinu lýkur, sjá 4. kafla.
-- Þú fellur frá samningi með því að nota aðgerðina til að falla frá kaupum í appinu undir Stillingar – Áskrift – Falla frá kaupum, með því að skrifa á support@kinnd.eu eða með því að nota staðlaða eyðublaðið til að falla frá samningi aftast í þessum skilmálum.
+- Þú fellur frá samningi með því að nota aðgerðina til að falla frá kaupum í appinu undir Áskrift – Falla frá kaupum, með því að skrifa á support@kinnd.eu eða með því að nota staðlaða eyðublaðið til að falla frá samningi aftast í þessum skilmálum.
 - Við staðfestum móttöku með tölvupósti án ástæðulausrar tafar.
-- Við endurgreiðum eigi síðar en 14 dögum eftir að við fáum tilkynningu þína, með sama greiðslumáta og þú notaðir.
+- Við endurgreiðum eigi síðar en 14 dögum eftir að við fáum tilkynningu þína, með sama greiðslumáta og þú notaðir. Þú færð kreditreikning.
+- Rétturinn til að falla frá samningi gildir alltaf, einnig þegar notkun þín er umfram áskriftina Frítt. Áskriftinni lýkur þá strax, sjá 10. kafla.
 - Þegar þú kaupir biður þú okkur að hefja áskriftina strax. Ef þú fellur frá samningi getum við því haldið eftir hlutfallslegum hluta verðsins fyrir þá daga sem þú hefur haft aðgang.
 
 ## 9. Uppsögn
 
-- Þú getur sagt upp áskriftinni hvenær sem er í appinu undir Áskrift eða með því að skrifa á support@kinnd.eu.
+- Þú getur sagt upp áskriftinni í appinu undir Áskrift eða með því að skrifa á support@kinnd.eu.
+- Ef notkun þín er umfram áskriftina Frítt, til dæmis vegna þess að þú deilir börnum með öðrum, notar umgengnisáætlun eða hefur boðið fjölskyldu, getur þú fyrst sagt upp þegar annað foreldri eða lögráðamaður hefur tekið yfir þau börn sem annars yrðu falin (11. kafli), eða þegar þú hefur aðlagað notkun þína að áskriftinni Frítt. Þannig er tryggt að gögn barnsins glatist ekki. Þú getur beðið annað foreldri eða lögráðamann að taka yfir beint í appinu.
 - Uppsögnin tekur gildi við lok tímabilsins sem þú hefur greitt fyrir. Þú heldur áskriftinni þangað til og ekkert meira er innheimt.
 - Ekkert er endurgreitt fyrir það sem eftir er af tímabilinu, nema það leiði af réttinum til að falla frá samningi í 8. kafla og reglunni hér að neðan.
 - Sem neytandi getur þú alltaf sagt upp með eins mánaðar fyrirvara miðað við mánaðamót þegar fimm mánuðir eru liðnir frá gerð samningsins, samkvæmt 28. gr. dönsku laganna um neytendasamninga. Í því tilviki endurgreiðum við fyrirframgreiddu upphæðina fyrir tímann eftir að uppsögnin tekur gildi.

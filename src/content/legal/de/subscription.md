@@ -54,7 +54,10 @@ Das Abonnement wird von WURK ApS, CVR-Nr. 37547395, Skoleholdervej 91, 2400 Køb
 ## 7. Tarifwechsel
 
 - Du kannst in der App zwischen Eltern und Familie wechseln. Der Wechsel gilt sofort.
-- Der neue Preis gilt ab deiner nächsten Zahlung. Es wird nichts zusätzlich abgebucht, und für den bereits bezahlten Zeitraum wird nichts erstattet.
+- Wenn du in einen teureren Tarif wechselst, zahlst du nur die Differenz für den Rest des bezahlten Zeitraums. Der Betrag wird sofort von deiner Karte abgebucht, und du erhältst eine Rechnung.
+- Wenn du in einen günstigeren Tarif wechselst, wird dir die Differenz für den Rest des Zeitraums sofort auf deine Karte erstattet, und du erhältst eine Gutschrift.
+- Ab deiner nächsten Zahlung gilt der reguläre Preis des neuen Tarifs.
+- Während eines Testzeitraums wechselst du den Tarif ohne Zahlung.
 - Du kannst nur in einen kleineren Tarif wechseln, wenn deine Nutzung dazu passt, zum Beispiel die Anzahl der Kinder, eingeladenen Personen und der Speicherplatz.
 - Um zwischen monatlicher und jährlicher Zahlung zu wechseln, schreib an support@kinnd.eu. Der Wechsel gilt ab deiner nächsten Zahlung.
 
@@ -63,14 +66,16 @@ Das Abonnement wird von WURK ApS, CVR-Nr. 37547395, Skoleholdervej 91, 2400 Køb
 Du hast nach dem dänischen Verbrauchervertragsgesetz (forbrugeraftaleloven) ein Widerrufsrecht von 14 Tagen, wenn du ein Abonnement kaufst. Die Frist beginnt an dem Tag, an dem der Vertrag geschlossen wird. Du musst keinen Grund angeben.
 
 - Wenn du mit einem Testzeitraum beginnst, kannst du außerdem bis zum Ende des Testzeitraums kostenlos kündigen, siehe Abschnitt 4.
-- Du widerrufst, indem du die Widerrufsfunktion in der App unter Einstellungen – Abonnement – Kauf widerrufen nutzt, an support@kinnd.eu schreibst oder das Muster-Widerrufsformular am Ende dieser Bedingungen verwendest.
+- Du widerrufst, indem du die Widerrufsfunktion in der App unter Abonnement – Kauf widerrufen nutzt, an support@kinnd.eu schreibst oder das Muster-Widerrufsformular am Ende dieser Bedingungen verwendest.
 - Wir bestätigen den Eingang ohne unangemessene Verzögerung per E-Mail.
-- Wir erstatten den Betrag spätestens 14 Tage nach Eingang deiner Mitteilung, mit demselben Zahlungsmittel, das du verwendet hast.
+- Wir erstatten den Betrag spätestens 14 Tage nach Eingang deiner Mitteilung, mit demselben Zahlungsmittel, das du verwendet hast. Du erhältst eine Gutschrift.
+- Das Widerrufsrecht gilt immer, auch wenn deine Nutzung den Gratis-Tarif übersteigt. Das Abonnement endet dann sofort, siehe Abschnitt 10.
 - Mit deinem Kauf bittest du uns, das Abonnement sofort zu beginnen. Wenn du widerrufst, können wir daher einen anteiligen Teil des Preises für die Tage einbehalten, an denen du Zugang hattest.
 
 ## 9. Kündigung
 
-- Du kannst dein Abonnement jederzeit in der App unter Abonnement oder durch eine Nachricht an support@kinnd.eu kündigen.
+- Du kannst dein Abonnement in der App unter Abonnement oder durch eine Nachricht an support@kinnd.eu kündigen.
+- Wenn deine Nutzung den Gratis-Tarif übersteigt, zum Beispiel weil du Kinder mit anderen teilst, den Betreuungsplan nutzt oder Familie eingeladen hast, kannst du erst kündigen, wenn ein anderer Elternteil oder Vormund die Kinder übernommen hat, die sonst ausgeblendet würden (Abschnitt 11), oder wenn du deine Nutzung an den Gratis-Tarif angepasst hast. So gehen die Daten des Kindes nicht verloren. Du kannst einen anderen Elternteil oder Vormund direkt in der App bitten, die Kinder zu übernehmen.
 - Die Kündigung wird zum Ende des bezahlten Zeitraums wirksam. Du behältst den Tarif bis dahin, und es wird nichts mehr abgebucht.
 - Für den Rest des Zeitraums wird nichts erstattet, außer soweit sich dies aus dem Widerrufsrecht in Abschnitt 8 und der folgenden Regel ergibt.
 - Als Verbraucher kannst du nach § 28 des dänischen Verbrauchervertragsgesetzes immer mit einer Frist von einem Monat zum Monatsende kündigen, sobald fünf Monate seit Vertragsschluss vergangen sind. In diesem Fall erstatten wir den im Voraus gezahlten Betrag für die Zeit nach dem Wirksamwerden der Kündigung.

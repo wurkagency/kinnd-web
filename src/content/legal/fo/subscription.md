@@ -54,7 +54,10 @@ Haldið verður selt av WURK ApS, CVR-nr. 37547395, Skoleholdervej 91, 2400 Køb
 ## 7. Skifta hald
 
 - Tú kanst skifta millum Foreldur og Familja í appini. Skiftið er galdandi beinanvegin.
-- Nýggi prísurin er galdandi frá næsta gjaldi tínum. Einki eyka verður tikið, og einki verður goldið aftur fyri tað tíðarskeiðið, tú longu hevur goldið fyri.
+- Skiftir tú til eitt dýrari hald, gjaldar tú bert munin fyri restina av tí tíðarskeiðinum, tú hevur goldið fyri. Upphæddin verður tikin av kortinum hjá tær beinanvegin, og tú fært eina rokning.
+- Skiftir tú til eitt bíligari hald, fært tú munin fyri restina av tíðarskeiðinum goldnan aftur á kortið hjá tær beinanvegin, og tú fært eina kreditnotu.
+- Frá næsta gjaldi tínum er vanligi prísurin á nýggja haldinum galdandi.
+- Í eini royndartíð skiftir tú hald uttan gjald.
 - Tú kanst bert skifta til eitt minni hald, um nýtslan hjá tær hóskar til tað, t.d. tal av børnum, bjóðaðum persónum og goymslu.
 - Fyri at skifta millum mánaðarligt og árligt gjald skalt tú skriva til support@kinnd.eu. Skiftið er galdandi frá næsta gjaldi tínum.
 
@@ -63,14 +66,16 @@ Haldið verður selt av WURK ApS, CVR-nr. 37547395, Skoleholdervej 91, 2400 Køb
 Tú hevur 14 daga angurrætt sambært donsku lógini um brúkarasáttmálar (forbrugeraftaleloven), tá ið tú keypir eitt hald. Freistin verður roknað frá tí degi, sáttmálin verður gjørdur. Tú tarvt ikki at geva nakra orsøk.
 
 - Um tú byrjar við eini royndartíð, kanst tú harumframt siga upp ókeypis, til royndartíðin endar, sí part 4.
-- Tú angrar við at brúka angurfunktiónina í appini undir Stillingar – Hald – Angra keyp, við at skriva til support@kinnd.eu, ella við at brúka standardangurformin aftast í hesum treytum.
+- Tú angrar við at brúka angurfunktiónina í appini undir Hald – Angra keyp, við at skriva til support@kinnd.eu, ella við at brúka standardangurformin aftast í hesum treytum.
 - Vit vátta móttøkuna við telduposti uttan óneyðuga seinking.
-- Vit gjalda aftur í seinasta lagi 14 dagar eftir, at vit hava fingið fráboðan tína, við sama gjaldsamboði, sum tú brúkti.
+- Vit gjalda aftur í seinasta lagi 14 dagar eftir, at vit hava fingið fráboðan tína, við sama gjaldsamboði, sum tú brúkti. Tú fært eina kreditnotu.
+- Angurrætturin er altíð galdandi, eisini tá ið nýtslan hjá tær fer út um haldið Ókeypis. Haldið endar tá beinanvegin, sí part 10.
 - Tá ið tú keypir, biður tú okkum byrja haldið beinanvegin. Um tú angrar, kunnu vit tí halda eftir einum lutfalsligum parti av prísinum fyri teir dagarnar, tú hevur havt atgongd.
 
 ## 9. Uppsøgn
 
-- Tú kanst nær sum helst siga haldið upp í appini undir Hald, ella við at skriva til support@kinnd.eu.
+- Tú kanst siga haldið upp í appini undir Hald, ella við at skriva til support@kinnd.eu.
+- Fer nýtslan hjá tær út um haldið Ókeypis, t.d. tí at tú deilir børn við onnur, brúkar samveruskipan ella hevur bjóðað familju, kanst tú fyrst siga upp, tá ið eitt annað foreldur ella ein verji hevur yvirtikið tey børnini, sum annars vórðu fjald (sí part 11), ella tá ið tú hevur tillagað nýtsluna til haldið Ókeypis. Hetta tryggjar, at dátur barnsins ikki fara fyri skeyti. Tú kanst biðja eitt annað foreldur ella ein verja um at yvirtaka beinleiðis í appini.
 - Uppsøgnin fær gildi við enda á tí tíðarskeiðinum, tú hevur goldið fyri. Tú varðveitir haldið til tá, og einki meira verður tikið.
 - Einki verður goldið aftur fyri restina av tíðarskeiðinum, uttan tað, sum fylgir av angurrættinum í parti 8 og regluni niðanfyri.
 - Sum brúkari kanst tú altíð siga upp við eins mánaða freist til enda á einum mánaði, tá ið fimm mánaðir eru farnir, síðan sáttmálin varð gjørdur, sambært § 28 í donsku lógini um brúkarasáttmálar (forbrugeraftaleloven). Í tí føri gjalda vit frammanundan goldnu upphæddina aftur fyri tíðina, eftir at uppsøgnin hevur fingið gildi.

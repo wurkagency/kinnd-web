@@ -54,7 +54,10 @@ The subscription is sold by WURK ApS, CVR no. 37547395, Skoleholdervej 91, 2400 
 ## 7. Changing plan
 
 - You can switch between Parents and Family in the app. The change applies immediately.
-- The new price applies from your next payment. Nothing extra is charged, and nothing is refunded for the period you have already paid for.
+- If you switch to a more expensive plan, you only pay the difference for the rest of the period you have paid for. The amount is charged to your card immediately, and you receive an invoice.
+- If you switch to a cheaper plan, the difference for the rest of the period is refunded to your card immediately, and you receive a credit note.
+- From your next payment, the new plan's normal price applies.
+- During a trial you change plan without payment.
 - You can only switch to a smaller plan if your usage fits it, such as the number of children, invited people and storage.
 - To switch between monthly and yearly payment, write to support@kinnd.eu. The change applies from your next payment.
 
@@ -63,14 +66,16 @@ The subscription is sold by WURK ApS, CVR no. 37547395, Skoleholdervej 91, 2400 
 You have a 14-day right of withdrawal under the Danish Consumer Contracts Act when you buy a subscription. The period runs from the day the agreement is made. You do not need to give a reason.
 
 - If you start with a trial, you can also cancel for free until the trial ends, see section 4.
-- You withdraw by using the withdrawal function in the app under Settings – Subscription – Withdraw from purchase, by writing to support@kinnd.eu, or by using the model withdrawal form at the end of these terms.
+- You withdraw by using the withdrawal function in the app under Subscription – Withdraw from purchase, by writing to support@kinnd.eu, or by using the model withdrawal form at the end of these terms.
 - We confirm receipt by email without undue delay.
-- We refund no later than 14 days after receiving your notice, using the same means of payment you used.
+- We refund no later than 14 days after receiving your notice, using the same means of payment you used. You receive a credit note.
+- The right of withdrawal always applies, also when your usage exceeds the Free plan. The subscription then ends immediately, see section 10.
 - When you buy, you ask us to start the subscription immediately. If you withdraw, we may therefore keep a proportionate part of the price for the days you have had access.
 
 ## 9. Cancellation
 
-- You can cancel your subscription at any time in the app under Subscription, or by writing to support@kinnd.eu.
+- You can cancel your subscription in the app under Subscription, or by writing to support@kinnd.eu.
+- If your usage exceeds the Free plan, for example because you share children with others, use custody planning or have invited family, you can only cancel once another parent or guardian has taken over the children who would otherwise be hidden (section 11), or once you have reduced your usage to fit the Free plan. This makes sure the child's data is not lost. You can ask another parent or guardian to take over directly in the app.
 - Cancellation takes effect at the end of the period you have paid for. You keep the plan until then, and nothing more is charged.
 - Nothing is refunded for the rest of the period, except as follows from the right of withdrawal in section 8 and the rule below.
 - As a consumer you can always cancel with one month's notice to the end of a month once five months have passed since the agreement was made, under section 28 of the Danish Consumer Contracts Act. In that case we refund the prepaid amount for the time after the cancellation takes effect.

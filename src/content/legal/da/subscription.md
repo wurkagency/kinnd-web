@@ -52,7 +52,10 @@ Abonnementet sælges af WURK ApS, CVR-nr. 37547395, Skoleholdervej 91, 2400 Køb
 ## 7. Skift af plan
 
 - Du kan skifte mellem Parents og Family i appen. Skiftet gælder med det samme.
-- Den nye pris gælder fra din næste betaling. Der trækkes ikke ekstra, og der tilbagebetales ikke noget for den periode, du allerede har betalt for.
+- Skifter du til en dyrere plan, betaler du kun forskellen for resten af den periode, du har betalt for. Beløbet trækkes på dit kort med det samme, og du får en faktura.
+- Skifter du til en billigere plan, får du forskellen for resten af perioden tilbagebetalt til dit kort med det samme, og du får en kreditnota.
+- Fra din næste betaling gælder den nye plans almindelige pris.
+- Under en prøveperiode skifter du plan uden betaling.
 - Du kan kun skifte til en mindre plan, hvis dit forbrug passer til den, fx antal børn, inviterede personer og lagerplads.
 - Vil du skifte mellem månedlig og årlig betaling, skal du skrive til support@kinnd.eu. Skiftet gælder fra din næste betaling.
 
@@ -61,14 +64,16 @@ Abonnementet sælges af WURK ApS, CVR-nr. 37547395, Skoleholdervej 91, 2400 Køb
 Du har 14 dages fortrydelsesret efter forbrugeraftaleloven, når du køber et abonnement. Fristen regnes fra den dag, aftalen indgås. Du behøver ikke at give en grund.
 
 - Starter du med en prøveperiode, kan du desuden opsige gratis, indtil prøveperioden slutter, jf. punkt 4.
-- Du fortryder ved at bruge fortrydelsesfunktionen i appen under Indstillinger – Abonnement – Fortryd køb, ved at skrive til support@kinnd.eu eller ved at bruge standardfortrydelsesformularen nederst i disse betingelser.
+- Du fortryder ved at bruge fortrydelsesfunktionen i appen under Abonnement – Fortryd køb, ved at skrive til support@kinnd.eu eller ved at bruge standardfortrydelsesformularen nederst i disse betingelser.
 - Vi bekræfter modtagelsen på e-mail uden unødig forsinkelse.
-- Vi tilbagebetaler senest 14 dage efter, at vi har modtaget din besked, med samme betalingsmiddel, som du brugte.
+- Vi tilbagebetaler senest 14 dage efter, at vi har modtaget din besked, med samme betalingsmiddel, som du brugte. Du får en kreditnota.
+- Fortrydelsesretten gælder altid, også når dit forbrug overstiger Gratis-planen. Abonnementet ophører så med det samme, jf. punkt 10.
 - Når du køber, beder du os om at starte abonnementet med det samme. Fortryder du, kan vi derfor beholde en forholdsmæssig del af prisen for de dage, du har haft adgang.
 
 ## 9. Opsigelse
 
-- Du kan til enhver tid opsige dit abonnement i appen under Abonnement eller ved at skrive til support@kinnd.eu.
+- Du kan opsige dit abonnement i appen under Abonnement eller ved at skrive til support@kinnd.eu.
+- Overstiger dit forbrug Gratis-planen, fx fordi du deler børn med andre, bruger samværsplan eller har inviteret familie, kan du først opsige, når en anden forælder eller værge har overtaget de børn, der ellers ville blive skjult (punkt 11), eller når du har tilpasset forbruget til Gratis-planen. Det sikrer, at barnets data ikke går tabt. Du kan bede en anden forælder eller værge om at overtage direkte i appen.
 - Opsigelsen får virkning ved udløbet af den periode, du har betalt for. Du beholder adgangen til planen indtil da, og der trækkes ikke mere.
 - Der tilbagebetales ikke for den del af perioden, der er tilbage, ud over hvad der følger af fortrydelsesretten i punkt 8 og reglen nedenfor.
 - Som forbruger kan du altid opsige med en måneds varsel til udgangen af en måned, når der er gået fem måneder fra aftalens indgåelse, jf. forbrugeraftalelovens § 28. I det tilfælde tilbagebetaler vi det forudbetalte beløb for tiden efter opsigelsens virkning.
