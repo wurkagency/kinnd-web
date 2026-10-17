@@ -74,8 +74,8 @@ Du hast nach dem dänischen Verbrauchervertragsgesetz (forbrugeraftaleloven) ein
 
 ## 9. Kündigung
 
-- Du kannst dein Abonnement in der App unter Abonnement oder durch eine Nachricht an support@kinnd.eu kündigen.
-- Wenn deine Nutzung den Gratis-Tarif übersteigt, zum Beispiel weil du Kinder mit anderen teilst, den Betreuungsplan nutzt oder Familie eingeladen hast, kannst du erst kündigen, wenn ein anderer Elternteil oder Vormund die Kinder übernommen hat, die sonst ausgeblendet würden (Abschnitt 11), oder wenn du deine Nutzung an den Gratis-Tarif angepasst hast. So gehen die Daten des Kindes nicht verloren. Du kannst einen anderen Elternteil oder Vormund direkt in der App bitten, die Kinder zu übernehmen.
+- Du kannst dein Abonnement jederzeit in der App unter Abonnement oder durch eine Nachricht an support@kinnd.eu kündigen.
+- Wenn deine Nutzung den Gratis-Tarif übersteigt, zum Beispiel weil du Kinder mit anderen teilst, den Betreuungsplan nutzt oder Familie eingeladen hast, gelten bei Ende des Abonnements die Regeln in den Abschnitten 10 und 11: Die Kinder werden ausgeblendet, ein anderer Elternteil oder Vormund kann sie übernehmen, und andernfalls werden sie nach 90 Tagen gelöscht. Bevor du kündigst, zeigt dir die App, was betroffen ist, und du kannst einen anderen Elternteil oder Vormund bitten, die Kinder zu übernehmen.
 - Die Kündigung wird zum Ende des bezahlten Zeitraums wirksam. Du behältst den Tarif bis dahin, und es wird nichts mehr abgebucht.
 - Für den Rest des Zeitraums wird nichts erstattet, außer soweit sich dies aus dem Widerrufsrecht in Abschnitt 8 und der folgenden Regel ergibt.
 - Als Verbraucher kannst du nach § 28 des dänischen Verbrauchervertragsgesetzes immer mit einer Frist von einem Monat zum Monatsende kündigen, sobald fünf Monate seit Vertragsschluss vergangen sind. In diesem Fall erstatten wir den im Voraus gezahlten Betrag für die Zeit nach dem Wirksamwerden der Kündigung.

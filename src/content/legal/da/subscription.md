@@ -72,8 +72,8 @@ Du har 14 dages fortrydelsesret efter forbrugeraftaleloven, når du køber et ab
 
 ## 9. Opsigelse
 
-- Du kan opsige dit abonnement i appen under Abonnement eller ved at skrive til support@kinnd.eu.
-- Overstiger dit forbrug Gratis-planen, fx fordi du deler børn med andre, bruger samværsplan eller har inviteret familie, kan du først opsige, når en anden forælder eller værge har overtaget de børn, der ellers ville blive skjult (punkt 11), eller når du har tilpasset forbruget til Gratis-planen. Det sikrer, at barnets data ikke går tabt. Du kan bede en anden forælder eller værge om at overtage direkte i appen.
+- Du kan til enhver tid opsige dit abonnement i appen under Abonnement eller ved at skrive til support@kinnd.eu.
+- Overstiger dit forbrug Gratis-planen, fx fordi du deler børn med andre, bruger samværsplan eller har inviteret familie, gælder reglerne i punkt 10 og 11, når abonnementet ophører: børnene skjules, en anden forælder eller værge kan overtage dem, og ellers slettes de efter 90 dage. Inden du opsiger, viser appen, hvad der bliver berørt, og du kan bede en anden forælder eller værge om at overtage.
 - Opsigelsen får virkning ved udløbet af den periode, du har betalt for. Du beholder adgangen til planen indtil da, og der trækkes ikke mere.
 - Der tilbagebetales ikke for den del af perioden, der er tilbage, ud over hvad der følger af fortrydelsesretten i punkt 8 og reglen nedenfor.
 - Som forbruger kan du altid opsige med en måneds varsel til udgangen af en måned, når der er gået fem måneder fra aftalens indgåelse, jf. forbrugeraftalelovens § 28. I det tilfælde tilbagebetaler vi det forudbetalte beløb for tiden efter opsigelsens virkning.

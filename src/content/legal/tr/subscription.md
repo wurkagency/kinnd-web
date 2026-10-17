@@ -74,8 +74,8 @@ Bir abonelik satın aldığınızda Danimarka Tüketici Sözleşmeleri Kanunu (f
 
 ## 9. Fesih
 
-- Aboneliğinizi uygulamada Abonelik bölümünden veya support@kinnd.eu adresine yazarak feshedebilirsiniz.
-- Kullanımınız Ücretsiz planı aşıyorsa, örneğin çocukları başkalarıyla paylaştığınız, velayet takvimini kullandığınız veya aile üyelerini davet ettiğiniz için, aboneliğinizi ancak başka bir ebeveyn veya vasi aksi halde gizlenecek çocukları devraldığında (11. bölüm) ya da kullanımınızı Ücretsiz plana uygun hale getirdiğinizde feshedebilirsiniz. Bu, çocuğun verilerinin kaybolmamasını sağlar. Başka bir ebeveyn veya vasiden çocukları doğrudan uygulamada devralmasını isteyebilirsiniz.
+- Aboneliğinizi istediğiniz zaman uygulamada Abonelik bölümünden veya support@kinnd.eu adresine yazarak feshedebilirsiniz.
+- Kullanımınız Ücretsiz planı aşıyorsa, örneğin çocukları başkalarıyla paylaştığınız, velayet takvimini kullandığınız veya aile üyelerini davet ettiğiniz için, abonelik sona erdiğinde 10. ve 11. bölümlerdeki kurallar geçerli olur: çocuklar gizlenir, başka bir ebeveyn veya vasi onları devralabilir, aksi halde 90 gün sonra silinirler. Feshetmeden önce uygulama nelerin etkileneceğini gösterir ve başka bir ebeveyn veya vasiden çocukları devralmasını isteyebilirsiniz.
 - Fesih, ödediğiniz dönemin sonunda geçerli olur. O zamana kadar plan sizde kalır ve başka bir tahsilat yapılmaz.
 - 8. bölümdeki cayma hakkından ve aşağıdaki kuraldan doğanlar dışında, dönemin kalan kısmı için iade yapılmaz.
 - Tüketici olarak, sözleşmenin yapılmasından beş ay geçtikten sonra Danimarka Tüketici Sözleşmeleri Kanunu'nun (forbrugeraftaleloven) 28. maddesi uyarınca bir ay önceden bildirimle ay sonu itibarıyla her zaman feshedebilirsiniz. Bu durumda feshin geçerli olduğu tarihten sonraki süre için peşin ödenen tutarı iade ederiz.

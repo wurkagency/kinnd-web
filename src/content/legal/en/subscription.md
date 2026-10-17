@@ -74,8 +74,8 @@ You have a 14-day right of withdrawal under the Danish Consumer Contracts Act wh
 
 ## 9. Cancellation
 
-- You can cancel your subscription in the app under Subscription, or by writing to support@kinnd.eu.
-- If your usage exceeds the Free plan, for example because you share children with others, use custody planning or have invited family, you can only cancel once another parent or guardian has taken over the children who would otherwise be hidden (section 11), or once you have reduced your usage to fit the Free plan. This makes sure the child's data is not lost. You can ask another parent or guardian to take over directly in the app.
+- You can cancel your subscription at any time in the app under Subscription, or by writing to support@kinnd.eu.
+- If your usage exceeds the Free plan, for example because you share children with others, use custody planning or have invited family, the rules in sections 10 and 11 apply when the subscription ends: the children are hidden, another parent or guardian can take them over, and otherwise they are deleted after 90 days. Before you cancel, the app shows what will be affected, and you can ask another parent or guardian to take over.
 - Cancellation takes effect at the end of the period you have paid for. You keep the plan until then, and nothing more is charged.
 - Nothing is refunded for the rest of the period, except as follows from the right of withdrawal in section 8 and the rule below.
 - As a consumer you can always cancel with one month's notice to the end of a month once five months have passed since the agreement was made, under section 28 of the Danish Consumer Contracts Act. In that case we refund the prepaid amount for the time after the cancellation takes effect.

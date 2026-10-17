@@ -74,8 +74,8 @@ updated: "Síðast uppfært: 16. október 2026"
 
 ## 9. Uppsögn
 
-- Þú getur sagt upp áskriftinni í appinu undir Áskrift eða með því að skrifa á support@kinnd.eu.
-- Ef notkun þín er umfram áskriftina Frítt, til dæmis vegna þess að þú deilir börnum með öðrum, notar umgengnisáætlun eða hefur boðið fjölskyldu, getur þú fyrst sagt upp þegar annað foreldri eða lögráðamaður hefur tekið yfir þau börn sem annars yrðu falin (11. kafli), eða þegar þú hefur aðlagað notkun þína að áskriftinni Frítt. Þannig er tryggt að gögn barnsins glatist ekki. Þú getur beðið annað foreldri eða lögráðamann að taka yfir beint í appinu.
+- Þú getur hvenær sem er sagt upp áskriftinni í appinu undir Áskrift eða með því að skrifa á support@kinnd.eu.
+- Ef notkun þín er umfram áskriftina Frítt, til dæmis vegna þess að þú deilir börnum með öðrum, notar umgengnisáætlun eða hefur boðið fjölskyldu, gilda reglurnar í 10. og 11. kafla þegar áskriftinni lýkur: börnin eru falin, annað foreldri eða lögráðamaður getur tekið þau yfir og annars er þeim eytt eftir 90 daga. Áður en þú segir upp sýnir appið hvað verður fyrir áhrifum og þú getur beðið annað foreldri eða lögráðamann að taka yfir.
 - Uppsögnin tekur gildi við lok tímabilsins sem þú hefur greitt fyrir. Þú heldur áskriftinni þangað til og ekkert meira er innheimt.
 - Ekkert er endurgreitt fyrir það sem eftir er af tímabilinu, nema það leiði af réttinum til að falla frá samningi í 8. kafla og reglunni hér að neðan.
 - Sem neytandi getur þú alltaf sagt upp með eins mánaðar fyrirvara miðað við mánaðamót þegar fimm mánuðir eru liðnir frá gerð samningsins, samkvæmt 28. gr. dönsku laganna um neytendasamninga. Í því tilviki endurgreiðum við fyrirframgreiddu upphæðina fyrir tímann eftir að uppsögnin tekur gildi.

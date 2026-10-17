@@ -74,8 +74,8 @@ Du har 14 dagars ångerrätt enligt den danska konsumentavtalslagen (forbrugeraf
 
 ## 9. Uppsägning
 
-- Du kan säga upp ditt abonnemang i appen under Abonnemang eller genom att skriva till support@kinnd.eu.
-- Om din användning överstiger abonnemanget Gratis, till exempel för att du delar barn med andra, använder umgängesschema eller har bjudit in familj, kan du först säga upp när en annan förälder eller förmyndare har tagit över de barn som annars skulle döljas (avsnitt 11), eller när du har anpassat din användning till abonnemanget Gratis. Det säkerställer att barnets data inte går förlorade. Du kan be en annan förälder eller förmyndare att ta över direkt i appen.
+- Du kan när som helst säga upp ditt abonnemang i appen under Abonnemang eller genom att skriva till support@kinnd.eu.
+- Om din användning överstiger abonnemanget Gratis, till exempel för att du delar barn med andra, använder umgängesschema eller har bjudit in familj, gäller reglerna i avsnitt 10 och 11 när abonnemanget upphör: barnen döljs, en annan förälder eller förmyndare kan ta över dem, och annars raderas de efter 90 dagar. Innan du säger upp visar appen vad som påverkas, och du kan be en annan förälder eller förmyndare att ta över.
 - Uppsägningen gäller från utgången av den period du har betalat för. Du behåller abonnemanget fram till dess, och inget mer dras.
 - Ingenting betalas tillbaka för resten av perioden, utöver vad som följer av ångerrätten i avsnitt 8 och regeln nedan.
 - Som konsument kan du alltid säga upp med en månads uppsägningstid till utgången av en månad när fem månader har gått sedan avtalet ingicks, enligt 28 § i den danska konsumentavtalslagen (forbrugeraftaleloven). I så fall betalar vi tillbaka det förskottsbetalda beloppet för tiden efter att uppsägningen har trätt i kraft.

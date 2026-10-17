@@ -74,8 +74,8 @@ Du har 14 dagers angrerett etter den danske loven om forbrukeravtaler (forbruger
 
 ## 9. Oppsigelse
 
-- Du kan si opp abonnementet ditt i appen under Abonnement eller ved å skrive til support@kinnd.eu.
-- Hvis bruken din overstiger Gratis-abonnementet, for eksempel fordi du deler barn med andre, bruker samværsplan eller har invitert familie, kan du først si opp når en annen forelder eller verge har overtatt barna som ellers ville blitt skjult (punkt 11), eller når du har tilpasset bruken til Gratis-abonnementet. Det sikrer at barnets data ikke går tapt. Du kan be en annen forelder eller verge om å overta direkte i appen.
+- Du kan når som helst si opp abonnementet ditt i appen under Abonnement eller ved å skrive til support@kinnd.eu.
+- Hvis bruken din overstiger Gratis-abonnementet, for eksempel fordi du deler barn med andre, bruker samværsplan eller har invitert familie, gjelder reglene i punkt 10 og 11 når abonnementet opphører: barna skjules, en annen forelder eller verge kan overta dem, og ellers slettes de etter 90 dager. Før du sier opp, viser appen hva som blir berørt, og du kan be en annen forelder eller verge om å overta.
 - Oppsigelsen får virkning ved utgangen av perioden du har betalt for. Du beholder abonnementet frem til da, og ingenting mer trekkes.
 - Ingenting tilbakebetales for resten av perioden, utover det som følger av angreretten i punkt 8 og regelen nedenfor.
 - Som forbruker kan du alltid si opp med én måneds varsel til utgangen av en måned når det har gått fem måneder siden avtalen ble inngått, jf. § 28 i den danske loven om forbrukeravtaler. I så fall tilbakebetaler vi det forskuddsbetalte beløpet for tiden etter at oppsigelsen har fått virkning.

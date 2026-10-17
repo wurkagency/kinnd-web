@@ -74,8 +74,8 @@ Tú hevur 14 daga angurrætt sambært donsku lógini um brúkarasáttmálar (for
 
 ## 9. Uppsøgn
 
-- Tú kanst siga haldið upp í appini undir Hald, ella við at skriva til support@kinnd.eu.
-- Fer nýtslan hjá tær út um haldið Ókeypis, t.d. tí at tú deilir børn við onnur, brúkar samveruskipan ella hevur bjóðað familju, kanst tú fyrst siga upp, tá ið eitt annað foreldur ella ein verji hevur yvirtikið tey børnini, sum annars vórðu fjald (sí part 11), ella tá ið tú hevur tillagað nýtsluna til haldið Ókeypis. Hetta tryggjar, at dátur barnsins ikki fara fyri skeyti. Tú kanst biðja eitt annað foreldur ella ein verja um at yvirtaka beinleiðis í appini.
+- Tú kanst nær sum helst siga haldið upp í appini undir Hald, ella við at skriva til support@kinnd.eu.
+- Fer nýtslan hjá tær út um haldið Ókeypis, t.d. tí at tú deilir børn við onnur, brúkar samveruskipan ella hevur bjóðað familju, eru reglurnar í parti 10 og 11 galdandi, tá ið haldið endar: børnini verða fjald, eitt annað foreldur ella ein verji kann yvirtaka tey, og annars verða tey strikað eftir 90 dagar. Áðrenn tú sigur upp, vísir appin, hvat verður ávirkað, og tú kanst biðja eitt annað foreldur ella ein verja um at yvirtaka.
 - Uppsøgnin fær gildi við enda á tí tíðarskeiðinum, tú hevur goldið fyri. Tú varðveitir haldið til tá, og einki meira verður tikið.
 - Einki verður goldið aftur fyri restina av tíðarskeiðinum, uttan tað, sum fylgir av angurrættinum í parti 8 og regluni niðanfyri.
 - Sum brúkari kanst tú altíð siga upp við eins mánaða freist til enda á einum mánaði, tá ið fimm mánaðir eru farnir, síðan sáttmálin varð gjørdur, sambært § 28 í donsku lógini um brúkarasáttmálar (forbrugeraftaleloven). Í tí føri gjalda vit frammanundan goldnu upphæddina aftur fyri tíðina, eftir at uppsøgnin hevur fingið gildi.
